@@ -107,15 +107,11 @@ M3_E2 = ttk.Entry(tabMain)
 M3_E2.grid(column = 1, row = 3, padx = 10, pady = 10)
 
 ### Tab 2: Orbits ###
-Header_2 = ttk.Label(tabOrbits,text ="Welcome to Orbits")
+Header_2 = ttk.Label(tabOrbits,text ="Welcome to Orbits!")
 Header_2.grid(column = 0, row = 0, padx = 10, pady = 10)
-L1 = tk.Label(tabOrbits, text="User Name")
-L1.grid(column = 0, row = 1)
-E1 = tk.Entry(tabOrbits)
-E1.grid(column = 1, row = 1)
 
 ### Tab 3: Payload ###
-Header_3 = ttk.Label(tabPayload,text ="Welcome to Orbits")
+Header_3 = ttk.Label(tabPayload,text ="Welcome to Payload!")
 Header_3.grid(column = 0, row = 0, padx = 10, pady = 10)
 
 ### Tab 4: Power ###
@@ -158,10 +154,8 @@ P_btn4.grid(column = 2, row = 4)
 P_btn = ttk.Button(tabPower, text = "Input", command = lambda: openPower(0))
 P_btn.grid(column = 2, row = 5, padx = 10, pady = 10)
 
-
-
 ### Tab 5: Comms ###
-Header_5 = ttk.Label(tabComms,text ="Welcome to Communications")
+Header_5 = ttk.Label(tabComms,text ="Welcome to Communications!")
 Header_5.grid(column = 0, row = 0, padx = 10, pady = 10)
 
 # Drop Down List for Use Cases
@@ -171,10 +165,29 @@ var_CM.set(CM_UseCases[0])
 CM_dropdown = tk.OptionMenu(tabComms, var_CM, *CM_UseCases)
 CM_dropdown.grid(column = 2, row = 0, padx = 5, pady = 5)
 
+### Tab 6: Thermal ###
+Header_6 = ttk.Label(tabThermal,text ="Welcome to Thermal!")
+Header_6.grid(column = 0, row = 0, padx = 10, pady = 10)
 
-### Tab 6: Finish ###
-Header_6 = ttk.Label(tabRun,text ="Press Button to Run Design and Output Parameters")
-Header_6.pack()
+### Tab 7: Thermal ###
+Header_7 = ttk.Label(tabADCS,text ="Welcome to ADCS!")
+Header_7.grid(column = 0, row = 0, padx = 10, pady = 10)
+
+### Tab 8: GNC ###
+Header_8 = ttk.Label(tabGNC,text ="Welcome to GNC!")
+Header_8.grid(column = 0, row = 0, padx = 10, pady = 10)
+
+### Tab 9: C&DH ###
+Header_9 = ttk.Label(tabCDH,text ="Welcome to C&DH!")
+Header_9.grid(column = 0, row = 0, padx = 10, pady = 10)
+
+### Tab 8: GNC ###
+Header_10 = ttk.Label(tabStructures,text ="Welcome to Structures!")
+Header_10.grid(column = 0, row = 0, padx = 10, pady = 10)
+
+### Tab 11: Finish ###
+Header_11 = ttk.Label(tabRun,text ="Press Button to Run Design and Output Parameters")
+Header_11.pack()
 RUN_btn = ttk.Button(tabRun, text = "Run", command = runDesign) # Note: Only outputs parameters now
 RUN_btn.pack()
 

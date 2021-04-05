@@ -15,38 +15,83 @@ class Power:
         self.P_AVG_margin: float
         
         # Use Case #1 Inputs:
+        self.mode1_name: str
+        self.mode2_name: str
+        self.mode3_name: str
+        self.mode4_name: str
+
         self.ADCS_P1: float
         self.ADCS_D1: float
         self.ADCS_P2: float
         self.ADCS_D2: float
+        self.ADCS_P3: float
+        self.ADCS_D3: float
+        self.ADCS_P4: float
+        self.ADCS_D4: float
+
         self.CDH_P1: float
         self.CDH_D1: float
         self.CDH_P2: float
         self.CDH_D2: float
+        self.CDH_P3: float
+        self.CDH_D3: float
+        self.CDH_P4: float
+        self.CDH_D4: float
+
         self.GNC_P1: float
         self.GNC_D1: float
         self.GNC_P2: float
         self.GNC_D2: float
+        self.GNC_P3: float
+        self.GNC_D3: float
+        self.GNC_P4: float
+        self.GNC_D4: float
+
         self.PAY_P1: float
         self.PAY_D1: float
         self.PAY_P2: float
         self.PAY_D2: float
+        self.PAY_P3: float
+        self.PAY_D3: float
+        self.PAY_P4: float
+        self.PAY_D4: float
+
         self.STRU_P1: float
         self.STRU_D1: float
         self.STRU_P2: float
         self.STRU_D2: float
+        self.STRU_P3: float
+        self.STRU_D3: float
+        self.STRU_P4: float
+        self.STRU_D4: float
+
         self.COMM_P1: float
         self.COMM_D1: float
         self.COMM_P2: float
         self.COMM_D2: float
+        self.COMM_P3: float
+        self.COMM_D3: float
+        self.COMM_P4: float
+        self.COMM_D4: float
+
         self.EPS_P1: float
         self.EPS_D1: float
         self.EPS_P2: float
         self.EPS_D2: float
+        self.EPS_P3: float
+        self.EPS_D3: float
+        self.EPS_P4: float
+        self.EPS_D4: float
+
         self.THER_P1: float
         self.THER_D1: float
         self.THER_P2: float
         self.THER_D2: float
+        self.THER_P3: float
+        self.THER_D3: float
+        self.THER_P4: float
+        self.THER_D4: float
+
 
         # Use Case #2 Inputs
         self.ADCS_AVG: float
@@ -75,24 +120,68 @@ class Power:
 
         # Other Power Parameters:
         self.solar_flux: float
-        
-
-        
-    def selectionError(self):
+    
+    def moreInfo(self, x):
         self.powergui = tk.Tk() # Instance of Tk,
         self.powergui.title("Electrical Power Subsystem Design Module") # Name
         self.powerwindow = ttk.Notebook(self.powergui) # tkk module implements "tabs" (Notebook)
-        self.tabError = ttk.Frame(self.powerwindow)
-        # Create Tab
-        self.powerwindow.add(self.tabError, text = 'Error')
+        self.tabInputs = ttk.Frame(self.powerwindow)
+        self.tabAssums = ttk.Frame(self.powerwindow)
+        self.tabCalcs = ttk.Frame(self.powerwindow)
+        self.powerwindow.add(self.tabInputs, text = 'Inputs')
+        self.powerwindow.add(self.tabAssums, text = 'Assumptions')
+        self.powerwindow.add(self.tabCalcs, text = 'Calculations')
         self.powerwindow.pack(expand = 1, fill ="both")
-        # Error Message
-        self.R0_C0 = ttk.Label(self.tabError, text='Please make a selection!', wraplength = 200)
-        self.R0_C0.grid(row = 0, column = 0, padx = 5, pady = 5)
-        # Close Button
-        self.cls_btn = ttk.Button(self.tabError, text = "Close", command = self.allDone) 
-        self.cls_btn.grid(column = 0, row = 1, padx = 5, pady = 5)
-        self.powergui.mainloop()
+
+        if x == 1:
+            self.T1_R0_C0 = ttk.Label(self.tabInputs, text='Power Budget:', wraplength = 200)
+            self.T1_R0_C0.grid(row = 0, column = 0, padx = 5, pady = 5)
+            self.T1_R0_C1 = ttk.Label(self.tabInputs, text='Power [W] and Duty Cycle [%] for all subsystems', wraplength = 200)
+            self.T1_R0_C1.grid(row = 0, column = 1, padx = 5, pady = 5)
+            self.T1_R1_C0 = ttk.Label(self.tabInputs, text='Power Margin:', wraplength = 200)
+            self.T1_R1_C0.grid(row = 1, column = 0, padx = 5, pady = 5)
+            self.T1_R1_C1 = ttk.Label(self.tabInputs, text='Margin for the power budget', wraplength = 200)
+            self.T1_R1_C1.grid(row = 1, column = 1, padx = 5, pady = 5)
+            
+            t = 'Assumed values include constants, such as solar flux, \
+                as well as design sizing parameters for the spacecraft.'
+            self.T2_R0_C0 = ttk.Label(self.tabAssums, text=t, wraplength = 200)
+            self.T2_R0_C0.grid(row = 0, column = 0, padx = 5, pady = 5)
+
+            t = 'Calculated values include size of solar panel and batteries, \
+                as well as total power values.'
+            self.T2_R0_C0 = ttk.Label(self.tabCalcs, text=t, wraplength = 200)
+            self.T2_R0_C0.grid(row = 0, column = 0, padx = 5, pady = 5)
+            
+        elif x == 2:
+            t = 'Input values include basic power levels for subsystems, \
+                as well as design sizing parameters for the spacecraft.'
+            self.T1_R0_C0 = ttk.Label(self.tabInputs, text=t, wraplength = 200)
+            self.T1_R0_C0.grid(row = 0, column = 0, padx = 5, pady = 5)
+
+            t = 'Assumed values include constants, such as solar flux, \
+                as well as design sizing parameters for the spacecraft.'
+            self.T2_R0_C0 = ttk.Label(self.tabAssums, text=t, wraplength = 200)
+            self.T2_R0_C0.grid(row = 0, column = 0, padx = 5, pady = 5)
+
+            t = 'Calculated values include size of solar panel and batteries, \
+                as well as total power values.'
+            self.T3_R0_C0 = ttk.Label(self.tabCalcs, text=t, wraplength = 200)
+            self.T3_R0_C0.grid(row = 0, column = 0, padx = 5, pady = 5)
+
+        elif x == 3:
+            t = 'something'
+            self.T1_R0_C0 = ttk.Label(self.tabInputs, text=t, wraplength = 200)
+            self.T1_R0_C0.grid(row = 0, column = 0, padx = 5, pady = 5)
+
+            t = 'something'
+            self.T2_R0_C0 = ttk.Label(self.tabAssums, text=t, wraplength = 200)
+            self.T2_R0_C0.grid(row = 0, column = 0, padx = 5, pady = 5)
+
+            t = 'something'
+            self.T3_R0_C0 = ttk.Label(self.tabCalcs, text=t, wraplength = 200)
+            self.T3_R0_C0.grid(row = 0, column = 0, padx = 5, pady = 5)
+            pass
 
 
     #def notEnoughInfo(self):
@@ -108,47 +197,80 @@ class Power:
         self.powerwindow = ttk.Notebook(self.powergui) # tkk module implements "tabs" (Notebook)
         self.tabBudget = ttk.Frame(self.powerwindow)
 
+        w = 5
+        self.E_per_margin = ttk.Entry(self.tabBudget,width=w)
 
-        self.E_ADCS_AVG = ttk.Entry(self.tabBudget, width = 6)
-        self.E_ADCS_P1 = ttk.Entry(self.tabBudget, width = 6)
-        self.E_ADCS_D1 = ttk.Entry(self.tabBudget, width = 6)
-        self.E_ADCS_P2 = ttk.Entry(self.tabBudget, width = 6)
-        self.E_ADCS_D2 = ttk.Entry(self.tabBudget, width = 6)
-        self.E_CDH_AVG = ttk.Entry(self.tabBudget, width = 6)
-        self.E_CDH_P1 = ttk.Entry(self.tabBudget, width = 6)
-        self.E_CDH_D1 = ttk.Entry(self.tabBudget, width = 6)
-        self.E_CDH_P2 = ttk.Entry(self.tabBudget, width = 6)
-        self.E_CDH_D2 = ttk.Entry(self.tabBudget, width = 6)
-        self.E_GNC_AVG = ttk.Entry(self.tabBudget, width = 6)
-        self.E_GNC_P1 = ttk.Entry(self.tabBudget, width = 6)
-        self.E_GNC_D1 = ttk.Entry(self.tabBudget, width = 6)
-        self.E_GNC_P2 = ttk.Entry(self.tabBudget, width = 6)
-        self.E_GNC_D2 = ttk.Entry(self.tabBudget, width = 6)
-        self.E_PAY_AVG = ttk.Entry(self.tabBudget, width = 6)
-        self.E_PAY_P1 = ttk.Entry(self.tabBudget, width = 6)
-        self.E_PAY_D1 = ttk.Entry(self.tabBudget, width = 6)
-        self.E_PAY_P2 = ttk.Entry(self.tabBudget, width = 6)
-        self.E_PAY_D2 = ttk.Entry(self.tabBudget, width = 6)
-        self.E_STRU_AVG = ttk.Entry(self.tabBudget, width = 6)
-        self.E_STRU_P1 = ttk.Entry(self.tabBudget, width = 6)
-        self.E_STRU_D1 = ttk.Entry(self.tabBudget, width = 6)
-        self.E_STRU_P2 = ttk.Entry(self.tabBudget, width = 6)
-        self.E_STRU_D2 = ttk.Entry(self.tabBudget, width = 6)
-        self.E_COMM_AVG = ttk.Entry(self.tabBudget, width = 6)
-        self.E_COMM_P1 = ttk.Entry(self.tabBudget, width = 6)
-        self.E_COMM_D1 = ttk.Entry(self.tabBudget, width = 6)
-        self.E_COMM_P2 = ttk.Entry(self.tabBudget, width = 6)
-        self.E_COMM_D2 = ttk.Entry(self.tabBudget, width = 6)
-        self.E_EPS_AVG = ttk.Entry(self.tabBudget, width = 6)
-        self.E_EPS_P1 = ttk.Entry(self.tabBudget, width = 6)
-        self.E_EPS_D1 = ttk.Entry(self.tabBudget, width = 6)
-        self.E_EPS_P2 = ttk.Entry(self.tabBudget, width = 6)
-        self.E_EPS_D2 = ttk.Entry(self.tabBudget, width = 6)
-        self.E_THER_AVG = ttk.Entry(self.tabBudget, width = 6)
-        self.E_THER_P1 = ttk.Entry(self.tabBudget, width = 6)
-        self.E_THER_D1 = ttk.Entry(self.tabBudget, width = 6)
-        self.E_THER_P2 = ttk.Entry(self.tabBudget, width = 6)
-        self.E_THER_D2 = ttk.Entry(self.tabBudget, width = 6)
+        self.E_ADCS_P1 = ttk.Entry(self.tabBudget, width = w)
+        self.E_ADCS_D1 = ttk.Entry(self.tabBudget, width = w)
+        self.E_ADCS_P2 = ttk.Entry(self.tabBudget, width = w)
+        self.E_ADCS_D2 = ttk.Entry(self.tabBudget, width = w)
+        self.E_ADCS_P3 = ttk.Entry(self.tabBudget, width = w)
+        self.E_ADCS_D3 = ttk.Entry(self.tabBudget, width = w)
+        self.E_ADCS_P4 = ttk.Entry(self.tabBudget, width = w)
+        self.E_ADCS_D4 = ttk.Entry(self.tabBudget, width = w)
+
+        self.E_CDH_P1 = ttk.Entry(self.tabBudget, width = w)
+        self.E_CDH_D1 = ttk.Entry(self.tabBudget, width = w)
+        self.E_CDH_P2 = ttk.Entry(self.tabBudget, width = w)
+        self.E_CDH_D2 = ttk.Entry(self.tabBudget, width = w)
+        self.E_CDH_P3 = ttk.Entry(self.tabBudget, width = w)
+        self.E_CDH_D3 = ttk.Entry(self.tabBudget, width = w)
+        self.E_CDH_P4 = ttk.Entry(self.tabBudget, width = w)
+        self.E_CDH_D4 = ttk.Entry(self.tabBudget, width = w)
+
+        self.E_GNC_P1 = ttk.Entry(self.tabBudget, width = w)
+        self.E_GNC_D1 = ttk.Entry(self.tabBudget, width = w)
+        self.E_GNC_P2 = ttk.Entry(self.tabBudget, width = w)
+        self.E_GNC_D2 = ttk.Entry(self.tabBudget, width = w)
+        self.E_GNC_P3 = ttk.Entry(self.tabBudget, width = w)
+        self.E_GNC_D3 = ttk.Entry(self.tabBudget, width = w)
+        self.E_GNC_P4 = ttk.Entry(self.tabBudget, width = w)
+        self.E_GNC_D4 = ttk.Entry(self.tabBudget, width = w)
+
+        self.E_PAY_P1 = ttk.Entry(self.tabBudget, width = w)
+        self.E_PAY_D1 = ttk.Entry(self.tabBudget, width = w)
+        self.E_PAY_P2 = ttk.Entry(self.tabBudget, width = w)
+        self.E_PAY_D2 = ttk.Entry(self.tabBudget, width = w)
+        self.E_PAY_P3 = ttk.Entry(self.tabBudget, width = w)
+        self.E_PAY_D3 = ttk.Entry(self.tabBudget, width = w)
+        self.E_PAY_P4 = ttk.Entry(self.tabBudget, width = w)
+        self.E_PAY_D4 = ttk.Entry(self.tabBudget, width = w)
+
+        self.E_STRU_P1 = ttk.Entry(self.tabBudget, width = w)
+        self.E_STRU_D1 = ttk.Entry(self.tabBudget, width = w)
+        self.E_STRU_P2 = ttk.Entry(self.tabBudget, width = w)
+        self.E_STRU_D2 = ttk.Entry(self.tabBudget, width = w)
+        self.E_STRU_P3 = ttk.Entry(self.tabBudget, width = w)
+        self.E_STRU_D3 = ttk.Entry(self.tabBudget, width = w)
+        self.E_STRU_P4 = ttk.Entry(self.tabBudget, width = w)
+        self.E_STRU_D4 = ttk.Entry(self.tabBudget, width = w)
+
+        self.E_COMM_P1 = ttk.Entry(self.tabBudget, width = w)
+        self.E_COMM_D1 = ttk.Entry(self.tabBudget, width = w)
+        self.E_COMM_P2 = ttk.Entry(self.tabBudget, width = w)
+        self.E_COMM_D2 = ttk.Entry(self.tabBudget, width = w)
+        self.E_COMM_P3 = ttk.Entry(self.tabBudget, width = w)
+        self.E_COMM_D3 = ttk.Entry(self.tabBudget, width = w)
+        self.E_COMM_P4 = ttk.Entry(self.tabBudget, width = w)
+        self.E_COMM_D4 = ttk.Entry(self.tabBudget, width = w)
+
+        self.E_EPS_P1 = ttk.Entry(self.tabBudget, width = w)
+        self.E_EPS_D1 = ttk.Entry(self.tabBudget, width = w)
+        self.E_EPS_P2 = ttk.Entry(self.tabBudget, width = w)
+        self.E_EPS_D2 = ttk.Entry(self.tabBudget, width = w)
+        self.E_EPS_P3 = ttk.Entry(self.tabBudget, width = w)
+        self.E_EPS_D3 = ttk.Entry(self.tabBudget, width = w)
+        self.E_EPS_P4 = ttk.Entry(self.tabBudget, width = w)
+        self.E_EPS_D4 = ttk.Entry(self.tabBudget, width = w)
+
+        self.E_THER_P1 = ttk.Entry(self.tabBudget, width = w)
+        self.E_THER_D1 = ttk.Entry(self.tabBudget, width = w)
+        self.E_THER_P2 = ttk.Entry(self.tabBudget, width = w)
+        self.E_THER_D2 = ttk.Entry(self.tabBudget, width = w)
+        self.E_THER_P3 = ttk.Entry(self.tabBudget, width = w)
+        self.E_THER_D3 = ttk.Entry(self.tabBudget, width = w)
+        self.E_THER_P4 = ttk.Entry(self.tabBudget, width = w)
+        self.E_THER_D4 = ttk.Entry(self.tabBudget, width = w)
 
         # Create Tab
         self.powerwindow.add(self.tabBudget, text = 'Power Budget Input')
@@ -181,34 +303,77 @@ class Power:
         self.E_ADCS_D1.grid(row = 2, column = 2, padx = 5, pady = 5)
         self.E_ADCS_P2.grid(row = 2, column = 3, padx = 5, pady = 5)
         self.E_ADCS_D2.grid(row = 2, column = 4, padx = 5, pady = 5)
+        self.E_ADCS_P3.grid(row = 2, column = 5, padx = 5, pady = 5)
+        self.E_ADCS_D3.grid(row = 2, column = 6, padx = 5, pady = 5)
+        self.E_ADCS_P4.grid(row = 2, column = 7, padx = 5, pady = 5)
+        self.E_ADCS_D4.grid(row = 2, column = 8, padx = 5, pady = 5)
+
         self.E_CDH_P1.grid(row = 3, column = 1, padx = 5, pady = 5)
         self.E_CDH_D1.grid(row = 3, column = 2, padx = 5, pady = 5)
         self.E_CDH_P2.grid(row = 3, column = 3, padx = 5, pady = 5)
         self.E_CDH_D2.grid(row = 3, column = 4, padx = 5, pady = 5)
+        self.E_CDH_P3.grid(row = 3, column = 5, padx = 5, pady = 5)
+        self.E_CDH_D3.grid(row = 3, column = 6, padx = 5, pady = 5)
+        self.E_CDH_P4.grid(row = 3, column = 7, padx = 5, pady = 5)
+        self.E_CDH_D4.grid(row = 3, column = 8, padx = 5, pady = 5)
+
         self.E_COMM_P1.grid(row = 4, column = 1, padx = 5, pady = 5)
         self.E_COMM_D1.grid(row = 4, column = 2, padx = 5, pady = 5)
         self.E_COMM_P2.grid(row = 4, column = 3, padx = 5, pady = 5)
         self.E_COMM_D2.grid(row = 4, column = 4, padx = 5, pady = 5)
+        self.E_COMM_P3.grid(row = 4, column = 5, padx = 5, pady = 5)
+        self.E_COMM_D3.grid(row = 4, column = 6, padx = 5, pady = 5)
+        self.E_COMM_P4.grid(row = 4, column = 7, padx = 5, pady = 5)
+        self.E_COMM_D4.grid(row = 4, column = 8, padx = 5, pady = 5)
+
         self.E_EPS_P1.grid(row = 5, column = 1, padx = 5, pady = 5)
         self.E_EPS_D1.grid(row = 5, column = 2, padx = 5, pady = 5)
         self.E_EPS_P2.grid(row = 5, column = 3, padx = 5, pady = 5)
         self.E_EPS_D2.grid(row = 5, column = 4, padx = 5, pady = 5)
+        self.E_EPS_P3.grid(row = 5, column = 5, padx = 5, pady = 5)
+        self.E_EPS_D3.grid(row = 5, column = 6, padx = 5, pady = 5)
+        self.E_EPS_P4.grid(row = 5, column = 7, padx = 5, pady = 5)
+        self.E_EPS_D4.grid(row = 5, column = 8, padx = 5, pady = 5)
+
         self.E_GNC_P1.grid(row = 6, column = 1, padx = 5, pady = 5)
         self.E_GNC_D1.grid(row = 6, column = 2, padx = 5, pady = 5)
         self.E_GNC_P2.grid(row = 6, column = 3, padx = 5, pady = 5)
         self.E_GNC_D2.grid(row = 6, column = 4, padx = 5, pady = 5)
+        self.E_GNC_P3.grid(row = 6, column = 5, padx = 5, pady = 5)
+        self.E_GNC_D3.grid(row = 6, column = 6, padx = 5, pady = 5)
+        self.E_GNC_P4.grid(row = 6, column = 7, padx = 5, pady = 5)
+        self.E_GNC_D4.grid(row = 6, column = 8, padx = 5, pady = 5)
+
         self.E_PAY_P1.grid(row = 7, column = 1, padx = 5, pady = 5)
         self.E_PAY_D1.grid(row = 7, column = 2, padx = 5, pady = 5)
         self.E_PAY_P2.grid(row = 7, column = 3, padx = 5, pady = 5)
         self.E_PAY_D2.grid(row = 7, column = 4, padx = 5, pady = 5)
+        self.E_PAY_P3.grid(row = 7, column = 5, padx = 5, pady = 5)
+        self.E_PAY_D3.grid(row = 7, column = 6, padx = 5, pady = 5)
+        self.E_PAY_P4.grid(row = 7, column = 7, padx = 5, pady = 5)
+        self.E_PAY_D4.grid(row = 7, column = 8, padx = 5, pady = 5)
+
         self.E_STRU_P1.grid(row = 8, column = 1, padx = 5, pady = 5)
         self.E_STRU_D1.grid(row = 8, column = 2, padx = 5, pady = 5)
         self.E_STRU_P2.grid(row = 8, column = 3, padx = 5, pady = 5)
         self.E_STRU_D2.grid(row = 8, column = 4, padx = 5, pady = 5)
+        self.E_STRU_P3.grid(row = 8, column = 5, padx = 5, pady = 5)
+        self.E_STRU_D3.grid(row = 8, column = 6, padx = 5, pady = 5)
+        self.E_STRU_P4.grid(row = 8, column = 7, padx = 5, pady = 5)
+        self.E_STRU_D4.grid(row = 8, column = 8, padx = 5, pady = 5)
+
         self.E_THER_P1.grid(row = 9, column = 1, padx = 5, pady = 5)
         self.E_THER_D1.grid(row = 9, column = 2, padx = 5, pady = 5)
         self.E_THER_P2.grid(row = 9, column = 3, padx = 5, pady = 5)
         self.E_THER_D2.grid(row = 9, column = 4, padx = 5, pady = 5)
+        self.E_THER_P3.grid(row = 9, column = 5, padx = 5, pady = 5)
+        self.E_THER_D3.grid(row = 9, column = 6, padx = 5, pady = 5)
+        self.E_THER_P4.grid(row = 9, column = 7, padx = 5, pady = 5)
+        self.E_THER_D4.grid(row = 9, column = 8, padx = 5, pady = 5)
+
+        # Power Margin
+        ttk.Label(self.tabBudget, text='Power Margin [%]').grid(row=10, column=0,padx=5, pady=5)
+        self.E_per_margin.grid(row=10,column=1,padx=5,pady=5)
         # Submit Button
         self.UseCase = 1
         self.sub_btn = ttk.Button(self.tabBudget, text = "Submit", command = self.inputPower)
@@ -400,38 +565,80 @@ class Power:
     def inputPower(self):
         if self.UseCase == 1:
             try:
+                self.per_margin = float(self.E_per_margin)
+                
                 self.ADCS_P1 = float(self.E_ADCS_P1.get())
                 self.ADCS_D1 = float(self.E_ADCS_D1.get())
                 self.ADCS_P2 = float(self.E_ADCS_P2.get())
                 self.ADCS_D2 = float(self.E_ADCS_D2.get())
+                self.ADCS_P3 = float(self.E_ADCS_P3.get())
+                self.ADCS_D3 = float(self.E_ADCS_D3.get())
+                self.ADCS_P4 = float(self.E_ADCS_P4.get())
+                self.ADCS_D4 = float(self.E_ADCS_D4.get())
+
                 self.CDH_P1 = float(self.E_CDH_P1.get())
                 self.CDH_D1 = float(self.E_CDH_D1.get())
                 self.CDH_P2 = float(self.E_CDH_P2.get())
                 self.CDH_D2 = float(self.E_CDH_D2.get())
+                self.CDH_P3 = float(self.E_CDH_P3.get())
+                self.CDH_D3 = float(self.E_CDH_D3.get())
+                self.CDH_P4 = float(self.E_CDH_P4.get())
+                self.CDH_D4 = float(self.E_CDH_D4.get())
+
                 self.COMM_P1 = float(self.E_COMM_P1.get())
                 self.COMM_D1 = float(self.E_COMM_D1.get())
                 self.COMM_P2 = float(self.E_COMM_P2.get())
                 self.COMM_D2 = float(self.E_COMM_D2.get())
+                self.COMM_P3 = float(self.E_COMM_P1.get())
+                self.COMM_D3 = float(self.E_COMM_D1.get())
+                self.COMM_P4 = float(self.E_COMM_P2.get())
+                self.COMM_D4 = float(self.E_COMM_D2.get())
+
                 self.EPS_P1 = float(self.E_EPS_P1.get())
                 self.EPS_D1 = float(self.E_EPS_D1.get())
                 self.EPS_P2 = float(self.E_EPS_P2.get())
                 self.EPS_D2 = float(self.E_EPS_D2.get())
+                self.EPS_P3 = float(self.E_EPS_P3.get())
+                self.EPS_D3 = float(self.E_EPS_D3.get())
+                self.EPS_P4 = float(self.E_EPS_P4.get())
+                self.EPS_D4 = float(self.E_EPS_D4.get())
+
                 self.GNC_P1 = float(self.E_GNC_P1.get())
                 self.GNC_D1 = float(self.E_GNC_D1.get())
                 self.GNC_P2 = float(self.E_GNC_P2.get())
                 self.GNC_D2 = float(self.E_GNC_D2.get())
+                self.GNC_P3 = float(self.E_GNC_P3.get())
+                self.GNC_D3 = float(self.E_GNC_D3.get())
+                self.GNC_P4 = float(self.E_GNC_P4.get())
+                self.GNC_D4 = float(self.E_GNC_D4.get())
+
                 self.PAY_P1 = float(self.E_PAY_P1.get())
                 self.PAY_D1 = float(self.E_PAY_D1.get())
                 self.PAY_P2 = float(self.E_PAY_P2.get())
                 self.PAY_D2 = float(self.E_PAY_D2.get())
+                self.PAY_P3 = float(self.E_PAY_P3.get())
+                self.PAY_D3 = float(self.E_PAY_D3.get())
+                self.PAY_P4 = float(self.E_PAY_P4.get())
+                self.PAY_D4 = float(self.E_PAY_D4.get())
+
                 self.STRU_P1 = float(self.E_STRU_P1.get())
                 self.STRU_D1 = float(self.E_STRU_D1.get())
                 self.STRU_P2 = float(self.E_STRU_P2.get())
                 self.STRU_D2 = float(self.E_STRU_D2.get())
+                self.STRU_P3 = float(self.E_STRU_P3.get())
+                self.STRU_D3 = float(self.E_STRU_D3.get())
+                self.STRU_P4 = float(self.E_STRU_P4.get())
+                self.STRU_D4 = float(self.E_STRU_D4.get())
+
                 self.THER_P1 = float(self.E_THER_P1.get())
                 self.THER_D1 = float(self.E_THER_D1.get())
                 self.THER_P2 = float(self.E_THER_P2.get())
                 self.THER_D2 = float(self.E_THER_D2.get())
+                self.THER_P3 = float(self.E_THER_P3.get())
+                self.THER_D3 = float(self.E_THER_D3.get())
+                self.THER_P4 = float(self.E_THER_P4.get())
+                self.THER_D4 = float(self.E_THER_D4.get())
+
             except:
                 pass
         elif self.UseCase == 2:
@@ -459,6 +666,21 @@ class Power:
             except:
                 pass
 
+    def selectionError(self):
+            self.powergui = tk.Tk() # Instance of Tk,
+            self.powergui.title("Electrical Power Subsystem Design Module") # Name
+            self.powerwindow = ttk.Notebook(self.powergui) # tkk module implements "tabs" (Notebook)
+            self.tabError = ttk.Frame(self.powerwindow)
+            # Create Tab
+            self.powerwindow.add(self.tabError, text = 'Error')
+            self.powerwindow.pack(expand = 1, fill ="both")
+            # Error Message
+            self.R0_C0 = ttk.Label(self.tabError, text='Please make a selection!', wraplength = 200)
+            self.R0_C0.grid(row = 0, column = 0, padx = 5, pady = 5)
+            # Close Button
+            self.cls_btn = ttk.Button(self.tabError, text = "Close", command = self.allDone) 
+            self.cls_btn.grid(column = 0, row = 1, padx = 5, pady = 5)
+            self.powergui.mainloop()
         
         
 

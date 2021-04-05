@@ -15,25 +15,24 @@ class PowerTool:
                 data.append(d)
         #Assign Assumptions
         p.UseCase = data[2]
-        p.per_margin = float(data[4])
         p.solar_flux = float(data[46]) # Solar Flux 
         p.SP_eff_bol = float(data[47]) # Solar Cell Efficiency, BOL
         p.cell_dens = float(data[50])
         #p.orbitalPeriod = 
 
         # Power Budget Calcs
-        p.ADCS_AVG = (p.ADCS_P1 * (p.ADCS_D1/100)) + (p.ADCS_P2 * (p.ADCS_D2/100))
-        p.CDH_AVG = (p.CDH_P1 * (p.CDH_D1/100)) + (p.CDH_P2 * (p.CDH_D2/100))
-        p.COMM_AVG = (p.COMM_P1 * (p.COMM_D1/100)) + (p.COMM_P2 * (p.COMM_D2/100))
-        p.EPS_AVG = (p.EPS_P1 * (p.EPS_D1/100)) + (p.EPS_P2 * (p.EPS_D2/100))
-        p.GNC_AVG = (p.GNC_P1 * (p.GNC_D1/100)) + (p.GNC_P2 * (p.GNC_D2/100))
-        p.PAY_AVG = (p.PAY_P1 * (p.PAY_D1/100)) + (p.PAY_P2 * (p.PAY_D2/100))
-        p.STRU_AVG = (p.STRU_P1 * (p.STRU_D1/100)) + (p.STRU_P2 * (p.STRU_D2/100))
-        p.THER_AVG = (p.THER_P1 * (p.THER_D1/100)) + (p.THER_P2 * (p.THER_D2/100))
-        p.P_AVG = p.ADCS_AVG + p.CDH_AVG + p.COMM_AVG + p.EPS_AVG + p.GNC_AVG + p.PAY_AVG + p.STRU_AVG + p.THER_AVG
+        p.ADCS_AVG = (p.ADCS_P1 * (p.ADCS_D1/100)) + (p.ADCS_P2 * (p.ADCS_D2/100)) + (p.ADCS_P3 * (p.ADCS_D3/100)) + (p.ADCS_P4 * (p.ADCS_D4/100))
+        # p.CDH_AVG = (p.CDH_P1 * (p.CDH_D1/100)) + (p.CDH_P2 * (p.CDH_D2/100)) + (p.CDH_P3 * (p.CDH_D3/100)) + (p.CDH_P4 * (p.CDH_D4/100))
+        # p.COMM_AVG = (p.COMM_P1 * (p.COMM_D1/100)) + (p.COMM_P2 * (p.COMM_D2/100)) + (p.COMM_P3 * (p.COMM_D3/100)) + (p.COMM_P4 * (p.COMM_D4/100))
+        # p.EPS_AVG = (p.EPS_P1 * (p.EPS_D1/100)) + (p.EPS_P2 * (p.EPS_D2/100)) + (p.EPS_P3 * (p.EPS_D3/100)) + (p.EPS_P4 * (p.EPS_D4/100))
+        # p.GNC_AVG = (p.GNC_P1 * (p.GNC_D1/100)) + (p.GNC_P2 * (p.GNC_D2/100)) + (p.GNC_P3 * (p.GNC_D3/100)) + (p.GNC_P4 * (p.GNC_D4/100))
+        # p.PAY_AVG = (p.PAY_P1 * (p.PAY_D1/100)) + (p.PAY_P2 * (p.PAY_D2/100)) + (p.PAY_P3 * (p.PAY_D3/100)) + (p.PAY_P4 * (p.PAY_D4/100))
+        # p.STRU_AVG = (p.STRU_P1 * (p.STRU_D1/100)) + (p.STRU_P2 * (p.STRU_D2/100)) + (p.STRU_P3 * (p.STRU_D3/100)) + (p.STRU_P4 * (p.STRU_D4/100))
+        # p.THER_AVG = (p.THER_P1 * (p.THER_D1/100)) + (p.THER_P2 * (p.THER_D2/100)) + (p.THER_P3 * (p.THER_D3/100)) + (p.THER_P4 * (p.THER_D4/100))
+        # p.P_AVG = p.ADCS_AVG + p.CDH_AVG + p.COMM_AVG + p.EPS_AVG + p.GNC_AVG + p.PAY_AVG + p.STRU_AVG + p.THER_AVG
         p.P_AVG_margin = p.ADCS_AVG * (1 + (p.per_margin/100))
 
-        orbit_hr = p
+        
         return p
                 
     def case2_PowerDesign2PayloadCapabilities(self, pd):
