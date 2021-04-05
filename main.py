@@ -16,13 +16,15 @@ import CDH_Test as CDHT
 import Stru_Test as ST
 
 
-def openPower():
-    if v0.get() == 1:
+def openPower(infoX):
+    if v0.get() == 1 and infoX == 0:
         EPS_GUI.powerbudget2powerdesign()
-    elif v0.get() == 2:
+    elif v0.get() == 2 and infoX == 0:
         EPS_GUI.powerdesign2payloadcapabilities()
-    elif v0.get() == 3:
+    elif v0.get() == 3 and infoX == 0:
         EPS_GUI.payloadcapabilities2powerdesign()
+    elif infoX != 0:
+        EPS_GUI.moreInfo(infoX)
     else:
         EPS_GUI.selectionError()
 
@@ -117,7 +119,7 @@ Header_3 = ttk.Label(tabPayload,text ="Welcome to Orbits")
 Header_3.grid(column = 0, row = 0, padx = 10, pady = 10)
 
 ### Tab 4: Power ###
-Header_4 = tk.Label(tabPower,text ="Welcome to Power!")
+Header_4 = ttk.Label(tabPower,text ="Welcome to Power!")
 Header_4.grid(column = 0, row = 0, padx = 10, pady = 10)
 
 # Radiobutton Use Case Selection
@@ -145,15 +147,15 @@ P_L4M.grid(column = 1, row = 4, padx = 10, pady = 10)
 
 P_L2R = ttk.Label(tabPower, text='Inputs, Outputs, and Assumptions:', wraplength = 125)
 P_L2R.grid(column = 2, row = 1, padx = 10, pady = 10)
-P_btn2 = ttk.Button(tabPower, text = "More Info")
+P_btn2 = ttk.Button(tabPower, text = "More Info", command = lambda: openPower(1))
 P_btn2.grid(column = 2, row = 2)
-P_btn3 = ttk.Button(tabPower, text = "More Info")
+P_btn3 = ttk.Button(tabPower, text = "More Info", command = lambda: openPower(2))
 P_btn3.grid(column = 2, row = 3)
-P_btn4 = ttk.Button(tabPower, text = "More Info")
+P_btn4 = ttk.Button(tabPower, text = "More Info", command = lambda: openPower(3))
 P_btn4.grid(column = 2, row = 4)
 
 
-P_btn = ttk.Button(tabPower, text = "Input", command = openPower)
+P_btn = ttk.Button(tabPower, text = "Input", command = lambda: openPower(0))
 P_btn.grid(column = 2, row = 5, padx = 10, pady = 10)
 
 
