@@ -374,7 +374,7 @@ class Power:
         ttk.Label(self.tabDesign, text='bps').grid(row=R, column=C+2, padx=5, pady=5)
 
         # Submit Button
-        num = 2
+        self.UseCase = 2
         self.pow_btn = ttk.Button(self.tabDesign, text = "Submit", command = self.inputPower)
         self.pow_btn.grid(column=C+2, row=R+1)
         

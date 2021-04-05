@@ -18,7 +18,7 @@ import Stru_Test as ST
 
 def openPower():
     if v0.get() == 1:
-        plist = EPS_GUI.powerbudget2powerdesign()
+        EPS_GUI.powerbudget2powerdesign()
     elif v0.get() == 2:
         EPS_GUI.powerdesign2payloadcapabilities()
     elif v0.get() == 3:
@@ -35,7 +35,7 @@ def runDesign():
 def outPutData():
     with open('parameters.csv', mode='w') as parameters:
         paramWriter = csv.writer(parameters, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
-        paramWriter.writerow(comms)
+        paramWriter.writerow('something')
         
 
 # Initialize Parameter Class:
