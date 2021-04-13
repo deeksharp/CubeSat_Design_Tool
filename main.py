@@ -3,6 +3,7 @@ import tkinter as tk
 from tkinter import ttk
 from tkinter.ttk import Combobox
 import csv
+
 # Subsystem Modules:
 import PowerGUI as p
 import PowerTool as PT
@@ -16,21 +17,25 @@ import CDH_Test as CDHT
 import Stru_Test as ST
 
 
-def openPower(infoX):
-    if v0.get() == 1 and infoX == 0:
-        EPS_GUI.powerbudget2powerdesign()
-    elif v0.get() == 2 and infoX == 0:
-        EPS_GUI.powerdesign2payloadcapabilities()
-    elif v0.get() == 3 and infoX == 0:
-        EPS_GUI.payloadcapabilities2powerdesign()
-    elif infoX != 0:
-        EPS_GUI.moreInfo(infoX)
+def openPower():
+    if v0.get() == 1:
+        EPS.powerbudget2powerdesign()
+    elif v0.get() == 3:
+        EPS.payloadcapabilities2powerdesign()
     else:
-        EPS_GUI.selectionError()
+        EPS.selectionError()
+
+def openOrbits():
+    oD.selectOrbit()
+
+def powerInfo(infoX):
+    p.Power().moreInfo(infoX)
+
 
 def runDesign():
-    pd = PT.PowerTool().case1_PowerBudget2PowerDesign(EPS_GUI,oD,payD,cD,tD,aD,gD,cdhD,sD)
-    print(pd.P_AVG_margin)
+    pd = PT.PowerTool()
+    p = pd.case1_PowerBudget2PowerDesign(EPS,oD,payD,cD,tD,aD,gD,cdhD,sD)
+    pd.writeData(p)
     
     
     
@@ -38,9 +43,7 @@ def outPutData():
     with open('parameters.csv', mode='w') as parameters:
         paramWriter = csv.writer(parameters, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
         paramWriter.writerow('something')
-        
 
-# Initialize Parameter Class:
       
 root = tk.Tk() # Instance of Tk,
 root.title("CubeSat Design Tool") # Name
@@ -81,7 +84,7 @@ aD = AT.ADCS()
 gD = GT.GNC()
 cdhD = CDHT.CDH()
 sD = ST.Structures()
-EPS_GUI = p.Power() # Power GUI start
+EPS = p.Power() # Power GUI start
 
 ### Tab 1: Main ###
 Header_1 = ttk.Label(tabMain,text ="Welcome to CubeSat Design Tool!")
@@ -95,10 +98,10 @@ M1_L2.grid(column = 1, row = 1, padx = 10, pady = 10)
 
 M2_L1 = ttk.Label(tabMain, text="CubeSat Size")
 M2_L1.grid(column = 0, row = 2, padx = 10, pady = 10)
-CubeSat_Sizes = ['1U', '2U', '3U']
+CubeSat_Sizes = ['','1U', '2U', '3U']
 var_Size = tk.StringVar(root)
 var_Size.set(CubeSat_Sizes[0])
-M2_DD1 = tk.OptionMenu(tabMain, var_Size, *CubeSat_Sizes) # Drop-Down
+M2_DD1 = ttk.OptionMenu(tabMain, var_Size, *CubeSat_Sizes) # Drop-Down
 M2_DD1.grid(column = 1, row = 2, padx = 10, pady = 10)
 
 M3_L1 = ttk.Label(tabMain, text='Design Name:')
@@ -109,6 +112,12 @@ M3_E2.grid(column = 1, row = 3, padx = 10, pady = 10)
 ### Tab 2: Orbits ###
 Header_2 = ttk.Label(tabOrbits,text ="Welcome to Orbits!")
 Header_2.grid(column = 0, row = 0, padx = 10, pady = 10)
+
+Orb_instructions = ttk.Label(tabOrbits, text='Push button to select orbital parameters')
+Orb_instructions.grid(column = 0, row = 1, padx = 10, pady = 10)
+Orb_btn = ttk.Button(tabOrbits, text = "Input", command = openOrbits)
+Orb_btn.grid(column = 2, row = 1, padx = 10, pady = 10)
+
 
 ### Tab 3: Payload ###
 Header_3 = ttk.Label(tabPayload,text ="Welcome to Payload!")
@@ -143,27 +152,19 @@ P_L4M.grid(column = 1, row = 4, padx = 10, pady = 10)
 
 P_L2R = ttk.Label(tabPower, text='Inputs, Outputs, and Assumptions:', wraplength = 125)
 P_L2R.grid(column = 2, row = 1, padx = 10, pady = 10)
-P_btn2 = ttk.Button(tabPower, text = "More Info", command = lambda: openPower(1))
+P_btn2 = ttk.Button(tabPower, text = "More Info", command = lambda: powerInfo(1))
 P_btn2.grid(column = 2, row = 2)
-P_btn3 = ttk.Button(tabPower, text = "More Info", command = lambda: openPower(2))
+P_btn3 = ttk.Button(tabPower, text = "More Info", command = lambda: powerInfo(2))
 P_btn3.grid(column = 2, row = 3)
-P_btn4 = ttk.Button(tabPower, text = "More Info", command = lambda: openPower(3))
+P_btn4 = ttk.Button(tabPower, text = "More Info", command = lambda: powerInfo(3))
 P_btn4.grid(column = 2, row = 4)
 
-
-P_btn = ttk.Button(tabPower, text = "Input", command = lambda: openPower(0))
+P_btn = ttk.Button(tabPower, text = "Input", command = openPower)
 P_btn.grid(column = 2, row = 5, padx = 10, pady = 10)
 
 ### Tab 5: Comms ###
 Header_5 = ttk.Label(tabComms,text ="Welcome to Communications!")
 Header_5.grid(column = 0, row = 0, padx = 10, pady = 10)
-
-# Drop Down List for Use Cases
-CM_UseCases = ['Use Case 1', 'Use Case 2', 'Use Case 3']
-var_CM = tk.StringVar(root)
-var_CM.set(CM_UseCases[0])
-CM_dropdown = tk.OptionMenu(tabComms, var_CM, *CM_UseCases)
-CM_dropdown.grid(column = 2, row = 0, padx = 5, pady = 5)
 
 ### Tab 6: Thermal ###
 Header_6 = ttk.Label(tabThermal,text ="Welcome to Thermal!")

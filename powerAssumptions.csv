@@ -1,62 +1,91 @@
-﻿Variable,Value,Units,Variable,Value,Units,Variable,Value,Units
-Use Case,Power Budget to Power Design,,Use Case,Power Design to Payload Capabilities,,Use Case,3,
-Average Power,,W,,,,,,
-Power Margin,20,%,,,,,,
-Average Power w/ Margin,,W,,,,,,
-ADCS Power Mode 1,,W,,,,,,
-ADCS Duty Cycle Mode 1,,%,,,,,,
-ADCS Power Mode 2,,W,,,,,,
-ADCS Duty Cycle Mode 2,,%,,,,,,
-ADCS Average Power,,W,,,,,,
-C&DH Power Mode 1,,W,,,,,,
-C&DH Duty Cycle Mode 1,,%,,,,,,
-C&DH Power Mode 2,,W,,,,,,
-C&DH Duty Cycle Mode 2,,%,,,,,,
-C&DH Average Power,,W,,,,,,
-Comms Power Mode 1,,W,,,,,,
-Comms Duty Cycle Mode 1,,%,,,,,,
-Comms Power Mode 2,,W,,,,,,
-Comms Duty Cycle Mode 2,,%,,,,,,
-Comms Average Power ,,W,,,,,,
-EPS Power Mode 1,,W,,,,,,
-EPS Duty Cycle Mode 1,,%,,,,,,
-EPS Power Mode 2,,W,,,,,,
-EPS Duty Cycle Mode 2,,%,,,,,,
-EPS Average Power ,,W,,,,,,
-GNC Power Mode 1,,W,,,,,,
-GNC Duty Cycle Mode 1,,%,,,,,,
-GNC Power Mode 2,,W,,,,,,
-GNC Duty Cycle Mode 2,,%,,,,,,
-GNC Average Power,,W,,,,,,
-Payload Power Mode 1,,W,,,,,,
-Payload Duty Cycle Mode 1,,%,,,,,,
-Payload Power Mode 2,,W,,,,,,
-Payload Duty Cycle Mode 2,,%,,,,,,
-Payload Average Power,,W,,,,,,
-Structure Power Mode 1,,W,,,,,,
-Structure Duty Cycle Mode 1,,%,,,,,,
-Structure Power Mode 2,,W,,,,,,
-Structure Duty Cycle Mode 2,,%,,,,,,
-Structure Average Power,,W,,,,,,
-Thermal Power Mode  1,,W,,,,,,
-Thermal Duty Cycle Mode 1,,%,,,,,,
-Thermal Power Mode 2,,W,,,,,,
-Thermal Duty Cycle Mode 2,,%,,,,,,
-Thermal Average Power,,W,,,,,,
-Solar Flux,1367,W/m^2,,,,,,
-Solar Cell Efficiency,29,%,,,,,,
-Solar Panel Surfaces,,-,,,,,,
-Effective Solar Area,,m^2,,,,,,
-Solar Panel Packing Density,80,%,,,,,,
-Solar Degradation (Time),,%/yr,,,,,,
-Solar Degradation (Temp),,%/yr/C,,,,,,
-Battery Energy Density,225,Wh/kg,,,,,,
-Battery DoD,0.8,,,,,,,
-Battery Degradation,0.001,%/cycle,,,,,,
-Battery Pack Density,,Wh/kg,,,,,,
-Battery Pack,,-,,,,,,
-Battery 1 Way Efficiency,,%,,,,,,
-Battery Mass,,kg,,,,,,
-PDU Efficiency,,%,,,,,,
-PDU Mass,,kg,,,,,,
-PDU Data  Rate,,bps,,,,,,
+﻿Variable,Variable Name,Value,Units
+Use Case,UseCase,Power Budget to Power Design - Custom,-
+Average Power,P_AVG,,W
+Average PDU Power Loss,P_PDU_loss,,W
+Power Margin,P_margin,,W
+Average Power w/ Margin,P_AVG_margin,,W
+Percent Power Margin,per_margin,20,%
+Mode 1 Name,mode1_name,,-
+Mode 2 Name,mode2_name,,-
+Mode 3 Name,mode3_name,,-
+Mode 4 Name,mode4_name,,-
+Mode 1 Duty Cycle,mode1_duty,,%
+Mode 2 Duty Cycle,mode2_duty,,%
+Mode 3 Duty Cycle,mode3_duty,,%
+Mode 4 Duty Cycle,mode4_duty,,%
+ADCS Power Mode 1,ADCS_P1,,W
+ADCS Power Mode 2,ADCS_P2,,W
+ADCS Power Mode 3,ADCS_P3,,W
+ADCS Power Mode 4,ADCS_P4,,W
+ADCS Average Power,ADCS_AVG,,W
+C&DH Power Mode 1,CDH_P1,,W
+C&DH Power Mode 2,CDH_P2,,W
+C&DH Power Mode 3,CDH_P3,,W
+C&DH Power Mode 4,CDH_P4,,W
+C&DH Average Power,CDH_AVG,,W
+Comms Power Mode 1,COMM_P1,,W
+Comms Power Mode 2,COMM_P2,,W
+Comms Power Mode 3,COMM_P3,,W
+Comms Power Mode 4,COMM_P4,,W
+Comms Average Power ,COMM_AVG,,W
+EPS Power Mode 1,EPS_P1,,W
+EPS Power Mode 2,EPS_P2,,W
+EPS Power Mode 3,EPS_P3,,W
+EPS Power Mode 4,EPS_P4,,W
+EPS Average Power ,EPS_AVG,,W
+GNC Power Mode 1,GNC_P1,,W
+GNC Power Mode 2,GNC_P2,,W
+GNC Power Mode 3,GNC_P3,,W
+GNC Power Mode 4,GNC_P4,,W
+GNC Average Power,GNC_AVG,,W
+Payload Power Mode 1,PAY_P1,,W
+Payload Power Mode 2,PAY_P2,,W
+Payload Power Mode 3,PAY_P3,,W
+Payload Power Mode 4,PAY_P4,,W
+Payload Average Power,PAY_AVG,,W
+Structure Power Mode 1,STRU_P1,,W
+Structure Power Mode 2,STRU_P2,,W
+Structure Power Mode 3,STRU_P3,,W
+Structure Power Mode 4,STRU_P4,,W
+Structure Average Power,STRU_AVG,,W
+Thermal Power Mode  1,THER_P1,,W
+Thermal Power Mode 2,THER_P2,,W
+Thermal Power Mode 3,THER_P3,,W
+Thermal Power Mode 4,THER_P4,,W
+Thermal Average Power,THER_AVG,,W
+Design Parameters Option,design_option,,-
+Solar Cell Efficiency BOL,SP_eff_bol,,%
+Solar Cell Degradation Rate,SP_degrad_rate,,%/yr
+Solar Cell Temp Degradation,SP_degrad_temp,,%/C
+Solar Cell Temperature,SP_temp,,C
+Solar Tracking,SP_tracking,,-
+Solar Deployable,SP_deployable,,-
+Battery One-way Efficiency,bat_eff,,%
+Battery Cell Mass,cell_mass,,kg
+Battery Cell Energy Density,cell_dens,,Wh/kg
+Battery Cell Energy Capacity,cell_cap,,Wh
+Battery Depth-of-Discharge,bat_dod,,%
+PDU Efficiency,PDU_eff,,%
+PDU Mass,PDU_mass,,kg
+PDU Data Rate,PDU_data,,kb/day
+Solar Flux,solar_flux,1367,W/m^2
+Orbit Energy,orbit_energy,,Wh
+Average Eclipse Energy,eclipse_energy_avg,,Wh
+Max Eclipse Energy,eclipse_energy_max,,Wh
+Average Sun Energy,sun_energy_avg,,Wh
+Min Sun Energy,sun_energy_min,,Wh
+Battery Round-trip Efficiency,bat_roundtrip_eff,,%
+Battery Cycles,bat_cycles,,cycles
+Battery Degradation Rate,bat_degrad_rate,,%/5000 cycles
+Battery Degradation,bat_degrad,,%
+Battery Discharge Energy,bat_discharge_energy,,Wh
+Number of Cells in Battery,num_cells,,-
+Battery Capacity,bat_cap,,Wh
+Battery Mass,bat_mass,,kg
+Solar Cell Efficiency EOL,SP_eff_eol,,%
+Lifetime Degradation,L_degrad,,%
+Temperature Degradation,T_degrad,,%
+Solar Energy Minimum Sun,SP_energy_orbit_worst,,Wh
+Average Solar Power Minimum Sun,SP_avg_power_worst,,W
+Solar Power Flux - EOL,solar_eol,,W/m^2
+Solar Effective Area,SP_area_effective,,m^2
