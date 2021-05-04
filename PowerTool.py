@@ -471,11 +471,12 @@ class PowerTool:
         p.bat_cap = p.num_cells*p.cell_cap
         p.bat_mass =  p.num_cells * p.cell_mass
 
+        
         # Solar Area Sizing:
         p.L_degrad = (1 - (p.SP_degrad_rate/100))**oD.mission_lifetime
         p.T_degrad = (1 - (p.SP_degrad_temp/100))**p.SP_temp
-        p.SP_eff_eol = p.SP_eff_bol * p.L_degrad * p.T_degrad 
-        p.solar_eol = p.solar_flux * p.SP_eff_eol # W/m^2
+        p.SP_eff_eol = p.SP_eff_bol/100 * p.L_degrad * p.T_degrad 
+        p.solar_eol = p.solar_flux * (p.SP_eff_eol/100) # W/m^2
         p.SP_area_effective = p.SP_avg_power_worst/ p.solar_eol 
 
         if p.SP_tracking == 1 and p.SP_deployable == 1: # Tumbling and no deployables

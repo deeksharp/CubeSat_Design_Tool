@@ -1,0 +1,90 @@
+﻿Variable,Variable Name,Value - Custom,Units
+Use Case,UseCase,1,-
+Design Option,design_option,Custom,
+Average Power,P_AVG,10.771299999999998,W
+Average PDU Power Loss,P_PDU_loss,11.968111111111108,W
+Power Margin,P_margin,2.3936222222222217,W
+Average Power w/ Margin,P_AVG_margin,4.893622222222222,W
+Percent Power Margin,per_margin,20.0,%
+Mode 1 Name,mode1_name,Operation,-
+Mode 2 Name,mode2_name,Standby,-
+Mode 3 Name,mode3_name,UHF Downlink,-
+Mode 4 Name,mode4_name,X-band Downlink,-
+Mode 1 Duty Cycle,mode1_duty,10.0,%
+Mode 2 Duty Cycle,mode2_duty,77.4,%
+Mode 3 Duty Cycle,mode3_duty,11.1,%
+Mode 4 Duty Cycle,mode4_duty,1.5,%
+ADCS Power Mode 1,ADCS_P1,2.5,W
+ADCS Power Mode 2,ADCS_P2,2.5,W
+ADCS Power Mode 3,ADCS_P3,2.5,W
+ADCS Power Mode 4,ADCS_P4,2.5,W
+ADCS Average Power,ADCS_AVG,2.5,W
+C&DH Power Mode 1,CDH_P1,0.3,W
+C&DH Power Mode 2,CDH_P2,0.3,W
+C&DH Power Mode 3,CDH_P3,0.3,W
+C&DH Power Mode 4,CDH_P4,0.3,W
+C&DH Average Power,CDH_AVG,0.3,W
+Comms Power Mode 1,COMM_P1,6.0,W
+Comms Power Mode 2,COMM_P2,6.0,W
+Comms Power Mode 3,COMM_P3,9.0,W
+Comms Power Mode 4,COMM_P4,51.0,W
+Comms Average Power ,COMM_AVG,7.007999999999999,W
+EPS Power Mode 1,EPS_P1,0.68,W
+EPS Power Mode 2,EPS_P2,0.18,W
+EPS Power Mode 3,EPS_P3,0.48,W
+EPS Power Mode 4,EPS_P4,0.18,W
+EPS Average Power ,EPS_AVG,0.2633,W
+GNC Power Mode 1,GNC_P1,0,W
+GNC Power Mode 2,GNC_P2,0,W
+GNC Power Mode 3,GNC_P3,0,W
+GNC Power Mode 4,GNC_P4,0,W
+GNC Average Power,GNC_AVG,0.0,W
+Payload Power Mode 1,PAY_P1,7.0,W
+Payload Power Mode 2,PAY_P2,0.0,W
+Payload Power Mode 3,PAY_P3,0.0,W
+Payload Power Mode 4,PAY_P4,0.0,W
+Payload Average Power,PAY_AVG,0.7000000000000001,W
+Structure Power Mode 1,STRU_P1,0,W
+Structure Power Mode 2,STRU_P2,0,W
+Structure Power Mode 3,STRU_P3,0,W
+Structure Power Mode 4,STRU_P4,0,W
+Structure Average Power,STRU_AVG,0.0,W
+Thermal Power Mode  1,THER_P1,0,W
+Thermal Power Mode 2,THER_P2,0,W
+Thermal Power Mode 3,THER_P3,0,W
+Thermal Power Mode 4,THER_P4,0,W
+Thermal Average Power,THER_AVG,0.0,W
+Solar Cell Efficiency BOL,SP_eff_bol,29.5,%
+Solar Cell Degradation Rate,SP_degrad_rate,2.5,%/yr
+Solar Cell Temp Degradation,SP_degrad_temp,0.5,%/C
+Solar Cell Temperature,SP_temp,75.0,C
+Solar Tracking,SP_tracking,1,-
+Solar Deployable,SP_deployable,1,-
+Solar Packing Density,SP_packing,100.0,-
+Battery One-way Efficiency,bat_eff,100.0,%
+Battery Cell Mass,cell_mass,0.05,kg
+Battery Cell Energy Capacity,cell_cap,9.14,Wh
+Battery Depth-of-Discharge,bat_dod,50.0,%
+PDU Efficiency,PDU_eff,90.0,%
+PDU Mass,PDU_mass,0.1,kg
+PDU Data Rate,PDU_data,1.5,kb/day
+Solar Flux,solar_flux,1367.0,W/m^2
+Orbit Energy,orbit_energy,7.885615691178503,Wh
+Max Eclipse Energy,eclipse_energy_max,2.894296798366163,Wh
+Min Sun Energy,sun_energy_min,4.99131889281234,Wh
+Battery Round-trip Efficiency,bat_roundtrip_eff,100.0,%
+Battery Cycles,bat_cycles,5439.9674140839315,cycles
+Battery Degradation Rate,bat_degrad_rate,15,%/5000 cycles
+Battery Degradation,bat_degrad,0.8379309871497379,%
+Battery Discharge Energy,bat_discharge_energy,3.4540992548935936,Wh
+Number of Cells in Battery,num_cells,1,-
+Battery Capacity,bat_cap,9.14,Wh
+Battery Mass,bat_mass,0.05,kg
+Solar Cell Efficiency EOL,SP_eff_eol,19.74957196779684,%
+Lifetime Degradation,L_degrad,0.975,%
+Temperature Degradation,T_degrad,0.6866430931872,%
+Solar Energy Minimum Sun,SP_energy_orbit_worst,7.885615691178503,Wh
+Average Solar Power Minimum Sun,SP_avg_power_worst,7.73126802974362,W
+Solar Power Flux - EOL,solar_eol,26997.664879978278,W/m^2
+Solar Effective Area,SP_area_effective,0.00028636802716509017,m^2
+Solar Panel Area,SP_area,0.0008591040814952705,m^2
