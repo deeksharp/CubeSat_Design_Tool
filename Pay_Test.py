@@ -10,4 +10,4 @@ class Payload:
         self.P_3 = 0
         self.P_4 = 0
 
-        self.D_pay
+        self.D_pay = 0

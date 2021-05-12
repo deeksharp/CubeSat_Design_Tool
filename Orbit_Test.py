@@ -1,5 +1,5 @@
 import math as m
-import numpy as np
+#import numpy as np
 import tkinter as tk
 from tkinter import ttk
 
