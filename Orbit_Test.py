@@ -107,7 +107,7 @@ class Orbits:
         # Custom Orbit Entry
         self.E_inc = ttk.Entry(self.orbits,width=6)
         self.E_alt = ttk.Entry(self.orbits,width=6)
-        custom_header = ttk.Label(self.orbits,text ='Custom Oribt:')
+        custom_header = ttk.Label(self.orbits,text ='Custom Orbit:')
         custom_header.grid(column = 0, row = 6, padx = 10, pady = 10,sticky='w')
         ttk.Label(self.orbits,text ='Inclination [deg]').grid(row = 7, column = 0, padx = 10, pady = 5,sticky='w')
         ttk.Label(self.orbits,text = 'Orbit Altitude [km]').grid(row = 8, column = 0, padx = 10, pady = 5,sticky='w')
