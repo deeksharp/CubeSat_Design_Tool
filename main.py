@@ -8,6 +8,7 @@ import csv
 import PowerGUI as p
 import CommsGUI as c
 import PowerTool as PT
+import CommsTool as COMT
 import Orbit_Test as OT
 import Pay_Test as PayT
 import Comm_Test as CT
@@ -24,6 +25,7 @@ def openPower():
         EPS.subsystemdesign2powerdesign()
     else:
         EPS.selectionError()
+        
 def openComms():
     if v0.get() == 1:
         cD.linkbudget4demo()
@@ -41,6 +43,9 @@ def runDesign():
     p = pd.case1_PowerBudget2PowerDesign(EPS,oD,payD,cD,tD,aD,gD,cdhD,sD)
     pd.writeData(p)
     
+    cd = COMT.CommsTool()
+    tool = cd.LinkBudget4Demo(EPS,oD,payD,cD,tD,aD,gD,cdhD,sD)
+    cd.writeData(tool)
     
 def outPutData():
     with open('parameters.csv', mode='w') as parameters:

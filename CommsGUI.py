@@ -1,5 +1,5 @@
 import tkinter as tk
-from tkinter import ttk
+from tkinter import StringVar, ttk
         
 
 class Comms:
@@ -8,19 +8,24 @@ class Comms:
         self.UseCase: int
 
         # Ground Station Tab
-        self.transPowerG = ''
+        self.transPowerxG = ''
+        self.antGainxG = ''
+        self.dishDiameterG = ''
+        self.transPoweruG = ''
+        self.antGainuG = ''
         self.lineLossG = ''
-        self.antGainG = ''
         self.maxSlantRange = ''
-        self.dishDiameter = ''
         self.EIRP = ''
         self.minElevationAngle = ''
         self.ebno = ''
 
         # Spacecraft
-        self.transPowerS = ''
+        self.transPowerxS = ''
+        self.antGainxS = ''
+        self.transPoweruS = ''
+        self.antGainuS = ''
+        self.dishDiameterS = ''
         self.lineLossS = ''
-        self.antGainS = ''
         self.maxDistanceEarth = ''
 
         # Data Generation
@@ -29,12 +34,18 @@ class Comms:
         self.housekeeping = ''
 
         # Other 
+        self.xdown = ''
+        self.udown = ''
+        self.xup = ''
+        self.uup = ''
+        self.xfreq = ''
+        self.ufreq = ''
         self.cenFreq = ''
         self.pointingLoss = ''
         self.rainLoss = ''
         self.electronLoss = ''
         self.polarLoss = ''
-        self.sysNoiseTemp = ''
+        self.sysTemp = ''
         self.fixedData = ''
 
     def moreInfo(self, x):
@@ -117,40 +128,86 @@ class Comms:
         self.commswindow.add(self.tabOther, text = 'Other')
         self.commswindow.pack(expand = 1, fill ="both")
 
+
         # Ground Station Tab Entry Values
         w = 6
-        self.ctransPowerG = ttk.Entry(self.tabGroundStation, width = w)
+        self.ctransPowerxG = ttk.Entry(self.tabGroundStation,width = w)
+        self.ctransPowerxG.insert(0, 0)
+        self.cantGainxG = ttk.Entry(self.tabGroundStation, width = w)
+        self.cantGainxG.insert(0, 0)
+        self.cdishDiameterG = ttk.Entry(self.tabGroundStation, width = w)
+        self.cdishDiameterG.insert(0, 0)
+        self.ctransPoweruG = ttk.Entry(self.tabGroundStation,width = w)
+        self.ctransPoweruG.insert(0, 0)
+        self.cantGainuG = ttk.Entry(self.tabGroundStation, width = w)
+        self.cantGainuG.insert(0, 0)
         self.clineLossG = ttk.Entry(self.tabGroundStation, width = w)
-        self.cantGainG = ttk.Entry(self.tabGroundStation, width = w)
+        self.clineLossG.insert(0, 0)
         self.cmaxSlantRange = ttk.Entry(self.tabGroundStation, width = w)
-        self.cdishDiameter = ttk.Entry(self.tabGroundStation, width = w)
+        self.cmaxSlantRange.insert(0, 0)
         self.cEIRP = ttk.Entry(self.tabGroundStation, width = w)
+        self.cEIRP.insert(0, 0)
         self.cminElevationAngle = ttk.Entry(self.tabGroundStation, width = w)
+        self.cminElevationAngle.insert(0, 0)
         self.cebno = ttk.Entry(self.tabGroundStation, width = w)
+        self.cebno.insert(0, 0)
 
         # Spacecraft Tab Entry Values
         w = 6
-        self.ctransPowerS = ttk.Entry(self.tabSpacecraft, width = w)
+        self.ctransPowerxS = ttk.Entry(self.tabSpacecraft, width = w)
+        self.ctransPowerxS.insert(0, 0)
+        self.cantGainxS = ttk.Entry(self.tabSpacecraft, width = w)
+        self.cantGainxS.insert(0, 0)
+        self.ctransPoweruS = ttk.Entry(self.tabSpacecraft, width = w)
+        self.ctransPoweruS.insert(0, 0)
+        self.cantGainuS = ttk.Entry(self.tabSpacecraft, width = w)
+        self.cantGainuS.insert(0, 0)
+        self.cdishDiameterS = ttk.Entry(self.tabSpacecraft, width = w)
+        self.cdishDiameterS.insert(0, 0)
         self.clineLossS = ttk.Entry(self.tabSpacecraft, width = w)
-        self.cantGainS = ttk.Entry(self.tabSpacecraft, width = w)
+        self.clineLossS.insert(0, 0)
         self.cmaxDistanceEarth = ttk.Entry(self.tabSpacecraft, width = w)
+        self.cmaxDistanceEarth.insert(0, 0)
 
         # Data Generation Entry Values
         w = 6
         self.catomClock = ttk.Entry(self.tabDataGen, width = w)
+        self.catomClock.insert(0, 0)
         self.cradiation = ttk.Entry(self.tabDataGen, width = w)
+        self.cradiation.insert(0, 0)
         self.chousekeeping = ttk.Entry(self.tabDataGen, width = w)
-        
+        self.chousekeeping.insert(0, 0)
+
         # Other Entry Values
         w = 6
+        self.cxdown = ttk.Entry(self.tabOther, width = w)
+        self.cxdown.insert(0, 0)
+        self.cudown = ttk.Entry(self.tabOther, width = w)
+        self.cudown.insert(0, 0)
+        self.cxup = ttk.Entry(self.tabOther, width = w)
+        self.cxup.insert(0, 0)
+        self.cuup = ttk.Entry(self.tabOther, width = w)
+        self.cuup.insert(0, 0)
+        self.cxFreq = ttk.Entry(self.tabOther, width = w)
+        self.cxFreq.insert(0, 0)
+        self.cuFreq = ttk.Entry(self.tabOther, width = w)
+        self.cuFreq.insert(0, 0)
         self.ccenFreq = ttk.Entry(self.tabOther, width = w)
+        self.ccenFreq.insert(0, 0)
         self.cpointingLoss = ttk.Entry(self.tabOther, width = w)
+        self.cpointingLoss.insert(0, 0)
         self.crainLoss = ttk.Entry(self.tabOther, width = w)
+        self.crainLoss.insert(0, 3)
         self.celectronLoss = ttk.Entry(self.tabOther, width = w)
+        self.celectronLoss.insert(0, 0)
         self.cpolarLoss = ttk.Entry(self.tabOther, width = w)
-        self.csysNoiseTemp = ttk.Entry(self.tabOther, width = w)
+        self.cpolarLoss.insert(0, 0)
+        self.csysTemp = ttk.Entry(self.tabOther, width = w)
+        self.csysTemp.insert(0, 0)
         self.cfixedData = ttk.Entry(self.tabOther, width = w)
+        self.cfixedData.insert(0, 0)
         
+
         ### Ground Station Tab ###
         # Header - NOT FINISHED
         R = 0; C = 0
@@ -158,43 +215,53 @@ class Comms:
         self.choose = ttk.Label(self.tabGroundStation,text = t_ins_design, wraplength = 250)
         self.choose.grid(row = R, column = C, columnspan = 2,rowspan=2, padx = 5, pady = 5)
 
-        # Transmitter Power
+        # Transmitter Power X
         R = 3; C = 0
-        ttk.Label(self.tabGroundStation, text='Transmitter Power [W]').grid(row=R, column=C, padx=25, pady=5,sticky='w')
-        self.ctransPowerG.grid(row=R, column=C+1, padx=5, pady=5)
+        ttk.Label(self.tabGroundStation, text='Transmitter Power X-Band [W]').grid(row=R, column=C, padx=25, pady=5,sticky='w')
+        self.ctransPowerxG.grid(row=R, column=C+1, padx=5, pady=5)
+
+        # Antenna Gain X 
+        R = 4; C = 0
+        ttk.Label(self.tabGroundStation, text='Antenna Gain X-Band [dB]').grid(row=R, column=C, padx=25, pady=5,sticky='w')
+        self.cantGainxG.grid(row=R, column=C+1, padx=5, pady=5)
+
+        # Dish Diameter
+        R = 5; C = 0
+        ttk.Label(self.tabGroundStation, text='Dish Diameter [m]').grid(row=R, column=C, padx=25, pady=5,sticky='w')
+        self.cdishDiameterG.grid(row=R, column=C+1, padx=5, pady=5,sticky='w')
+
+        # Transmitter Power U
+        R = 6; C = 0
+        ttk.Label(self.tabGroundStation, text='Transmitter Power UHF [W]').grid(row=R, column=C, padx=25, pady=5,sticky='w')
+        self.ctransPoweruG.grid(row=R, column=C+1, padx=5, pady=5)
+
+        # Antenna Gain U 
+        R = 7; C = 0
+        ttk.Label(self.tabGroundStation, text='Antenna Gain UHF [dB]').grid(row=R, column=C, padx=25, pady=5,sticky='w')
+        self.cantGainuG.grid(row=R, column=C+1, padx=5, pady=5)
 
         # Line Loss
-        R = 4; C = 0
+        R = 3; C = 2
         ttk.Label(self.tabGroundStation, text='Line Loss [dB]').grid(row=R, column=C, padx=25, pady=5,sticky='w')
         self.clineLossG.grid(row=R, column=C+1, padx=5, pady=5)
 
-        # Antenna Gain
-        R = 5; C = 0
-        ttk.Label(self.tabGroundStation, text='Antenna Gain [dB]').grid(row=R, column=C, padx=25, pady=5,sticky='w')
-        self.cantGainG.grid(row=R, column=C+1, padx=5, pady=5)
-
         # Maximum Slant Range
-        R = 6; C = 0
+        R = 4; C = 2
         ttk.Label(self.tabGroundStation, text='Max Slant Range [km]').grid(row=R, column=C, padx=25, pady=5,sticky='w')
         self.cmaxSlantRange.grid(row=R, column=C+1, padx=5, pady=5)
 
-        # Dish Diameter
-        R = 7; C = 0
-        ttk.Label(self.tabGroundStation, text='Dish Diameter [m]').grid(row=R, column=C, padx=25, pady=5,sticky='w')
-        self.cdishDiameter.grid(row=R, column=C+1, padx=5, pady=5,sticky='w')
-
         # EIRP
-        R = 3; C = 2
+        R = 5; C = 2
         ttk.Label(self.tabGroundStation, text='EIRP [dBm]').grid(row=R, column=C, padx=25, pady=5,sticky='w')
         self.cEIRP.grid(row=R, column=C+1, padx=5, pady=5,stick='w')
 
         # Minimum Elveation Angle
-        R = 4; C = 2
+        R = 6; C = 2
         ttk.Label(self.tabGroundStation, text='Minimum Elevation Angle [rad]').grid(row=R, column=C, padx=25, pady=5,sticky='w')
         self.cminElevationAngle.grid(row=R, column=C+1, padx=5, pady=5,stick='w')
 
         # Last value.  weird lookin thing
-        R = 5; C=2
+        R = 7; C=2
         ttk.Label(self.tabGroundStation, text='Eb/N0 (SNR) [dB]').grid(row=R, column=C, padx=25, pady=5,sticky='w')
         self.cebno.grid(row=R, column=C+1, padx=5, pady=5,stick='w')
 
@@ -206,23 +273,38 @@ class Comms:
         self.choose = ttk.Label(self.tabSpacecraft,text = t_ins_design, wraplength = 250)
         self.choose.grid(row = R, column = C, columnspan = 2,rowspan=2, padx = 5, pady = 5)
 
-        # Transmitter Power
+        # Transmitter Power X
         R = 3; C = 0
-        ttk.Label(self.tabSpacecraft, text='Transmitter Power [W]').grid(row=R, column=C, padx=25, pady=5,sticky='w')
-        self.ctransPowerS.grid(row=R, column=C+1, padx=5, pady=5)
+        ttk.Label(self.tabSpacecraft, text='Transmitter Power X-Band [W]').grid(row=R, column=C, padx=25, pady=5,sticky='w')
+        self.ctransPowerxS.grid(row=R, column=C+1, padx=5, pady=5)
+
+        # Antenna Gain X
+        R = 4; C = 0
+        ttk.Label(self.tabSpacecraft, text='Antenna Gain X-Band [dB]').grid(row=R, column=C, padx=25, pady=5,sticky='w')
+        self.cantGainxS.grid(row=R, column=C+1, padx=5, pady=5)
+
+        # Transmitter Power U
+        R = 5; C = 0
+        ttk.Label(self.tabSpacecraft, text='Transmitter Power UHF [W]').grid(row=R, column=C, padx=25, pady=5,sticky='w')
+        self.ctransPoweruS.grid(row=R, column=C+1, padx=5, pady=5)
+
+        # Antenna Gain U
+        R = 6; C = 0
+        ttk.Label(self.tabSpacecraft, text='Antenna Gain UHF [dB]').grid(row=R, column=C, padx=25, pady=5,sticky='w')
+        self.cantGainuS.grid(row=R, column=C+1, padx=5, pady=5)
+
+        # Dish Diameter
+        R = 3; C = 2
+        ttk.Label(self.tabSpacecraft, text='Dish Diameter [m]').grid(row=R, column=C, padx=25, pady=5,sticky='w')
+        self.cdishDiameterS.grid(row=R, column=C+1, padx=5, pady=5,sticky='w')
 
         # Line Loss
-        R = 4; C = 0
+        R = 4; C = 2
         ttk.Label(self.tabSpacecraft, text='Line Loss [dB]').grid(row=R, column=C, padx=25, pady=5,sticky='w')
         self.clineLossS.grid(row=R, column=C+1, padx=5, pady=5)
 
-        # Antenna Gain
-        R = 5; C = 0
-        ttk.Label(self.tabSpacecraft, text='Antenna Gain [dB]').grid(row=R, column=C, padx=25, pady=5,sticky='w')
-        self.cantGainS.grid(row=R, column=C+1, padx=5, pady=5)
-
         # Maximum Distance From Earth
-        R = 6; C = 0
+        R = 5; C = 2
         ttk.Label(self.tabSpacecraft, text='Max Distance from Earth [km]').grid(row=R, column=C, padx=25, pady=5,sticky='w')
         self.cmaxDistanceEarth.grid(row=R, column=C+1, padx=5, pady=5)
 
@@ -259,38 +341,68 @@ class Comms:
         self.choose = ttk.Label(self.tabOther,text = t_ins_design, wraplength = 250)
         self.choose.grid(row = R, column = C, columnspan = 2,rowspan=2, padx = 5, pady = 5)
 
-        # Central Frequency
+        #Downlink Rate X
         R = 3; C = 0
+        ttk.Label(self.tabOther, text='Downlink Datarate X-Band [bps]').grid(row=R, column=C, padx=25, pady=5,sticky='w')
+        self.cxdown.grid(row=R, column=C+1, padx=5, pady=5)
+
+        #Downlink Rate U
+        R = 4; C = 0
+        ttk.Label(self.tabOther, text='Downlink Datarate UHC [bps]').grid(row=R, column=C, padx=25, pady=5,sticky='w')
+        self.cudown.grid(row=R, column=C+1, padx=5, pady=5)
+
+        #Uplink Rate X
+        R = 5; C = 0
+        ttk.Label(self.tabOther, text='Uplink Datarate X [bps]').grid(row=R, column=C, padx=25, pady=5,sticky='w')
+        self.cxup.grid(row=R, column=C+1, padx=5, pady=5)
+
+        #Uplink Rate U
+        R = 6; C = 0
+        ttk.Label(self.tabOther, text='Uplink Datarate UHC [bps]').grid(row=R, column=C, padx=25, pady=5,sticky='w')
+        self.cuup.grid(row=R, column=C+1, padx=5, pady=5)
+
+        #Frequency X 
+        R = 7; C = 0
+        ttk.Label(self.tabOther, text='Uplink/Downlink Frequency X-Band [Hz]').grid(row=R, column=C, padx=25, pady=5,sticky='w')
+        self.cxFreq.grid(row=R, column=C+1, padx=5, pady=5)
+
+        #Frequency U
+        R = 8; C = 0
+        ttk.Label(self.tabOther, text='Uplink/Downlink Frequency UHC [Hz]').grid(row=R, column=C, padx=25, pady=5,sticky='w')
+        self.cuFreq.grid(row=R, column=C+1, padx=5, pady=5)
+
+        # Central Frequency
+        R = 3; C = 2
         ttk.Label(self.tabOther, text='Central Frequency [GHz]').grid(row=R, column=C, padx=25, pady=5,sticky='w')
         self.ccenFreq.grid(row=R, column=C+1, padx=5, pady=5)
 
         # Pointing Losses
-        R = 4; C = 0
+        R = 4; C = 2
         ttk.Label(self.tabOther, text='Pointing Losses [dB]').grid(row=R, column=C, padx=25, pady=5,sticky='w')
         self.cpointingLoss.grid(row=R, column=C+1, padx=5, pady=5)
 
         # Rain Losses
-        R = 5; C = 0
+        R = 5; C = 2
         ttk.Label(self.tabOther, text='Rain Losses [dB]').grid(row=R, column=C, padx=25, pady=5,sticky='w')
         self.crainLoss.grid(row=R, column=C+1, padx=5, pady=5)
 
         # Election Losses
-        R = 6; C = 0
+        R = 6; C = 2
         ttk.Label(self.tabOther, text='Electron Losses [dB]').grid(row=R, column=C, padx=25, pady=5,sticky='w')
         self.celectronLoss.grid(row=R, column=C+1, padx=5, pady=5)
 
         # Polarization Losses
-        R = 7; C = 0
+        R = 7; C = 2
         ttk.Label(self.tabOther, text='Polarization Losses [dB]').grid(row=R, column=C, padx=25, pady=5,sticky='w')
         self.cpolarLoss.grid(row=R, column=C+1, padx=5, pady=5,sticky='w')
 
         # System Noise Temp
-        R = 3; C = 2
-        ttk.Label(self.tabOther, text='System Noise Temp [K]').grid(row=R, column=C, padx=25, pady=5,sticky='w')
-        self.csysNoiseTemp.grid(row=R, column=C+1, padx=5, pady=5,stick='w')
+        R = 8; C = 2
+        ttk.Label(self.tabOther, text='System Temp [K]').grid(row=R, column=C, padx=25, pady=5,sticky='w')
+        self.csysTemp.grid(row=R, column=C+1, padx=5, pady=5,stick='w')
 
         # Fixed Data Rate
-        R = 4; C = 2
+        R = 9; C = 2
         ttk.Label(self.tabOther, text='Fixed Data Rate [bps]').grid(row=R, column=C, padx=25, pady=5,sticky='w')
         self.cfixedData.grid(row=R, column=C+1, padx=5, pady=5,stick='w')
 
@@ -298,7 +410,7 @@ class Comms:
         # Submit Button
         R = 14; C = 2
         self.UseCase = 1
-        self.sub_btn = ttk.Button(self.tabOther, text = "Submit", command = self.inputPower)
+        self.sub_btn = ttk.Button(self.tabOther, text = "Submit", command = self.inputComms)
         self.sub_btn.grid(column = C, row = R)
         # Done Button
         self.fin_btn = ttk.Button(self.tabOther, text = "Close", command = self.allDone)
@@ -306,18 +418,32 @@ class Comms:
         # Run
         self.commsgui.mainloop()
 
-    def inputPower(self):
+        
+
+    def inputComms(self):
         if self.UseCase == 1:
                 try:
-                    self.transPowerG= float(self.ctransPowerG.get())
+                    self.transPowerxG= float(self.ctransPowerxG.get())
                 except:
                     pass
+                try:
+                    self.antGainxG= float(self.cantGainxG.get())
+                except:
+                    pass       
+                try:
+                    self.dishDiameterG= float(self.cdishDiameterG.get())
+                except:
+                    pass
+                try:
+                    self.transPoweruG= float(self.ctransPoweruG.get())
+                except:
+                    pass
+                try:
+                    self.antGainuG= float(self.cantGainuG.get())
+                except:
+                    pass         
                 try:
                     self.lineLossG = float(self.clineLossG.get())
-                except:
-                    pass
-                try:
-                    self.antGainG = float(self.cantGainG.get())
                 except:
                     pass
                 try:
@@ -325,7 +451,7 @@ class Comms:
                 except:
                     pass
                 try:
-                    self.dishDiameter = float(self.cdishDiameter.get())
+                    self.dishDiameterS = float(self.cdishDiameterS.get())
                 except:
                     pass
                 try:
@@ -341,15 +467,23 @@ class Comms:
                 except:
                     pass
                 try:
-                    self.transPowerS= float(self.ctransPowerS.get())
+                    self.transPowerxS= float(self.ctransPowerxS.get())
+                except:
+                    pass
+                try:
+                    self.antGainxS = float(self.cantGainxS.get())
+                except:
+                    pass
+                try:
+                    self.transPoweruS= float(self.ctransPoweruS.get())
+                except:
+                    pass
+                try:
+                    self.antGainuS = float(self.cantGainuS.get())
                 except:
                     pass
                 try:
                     self.lineLossS = float(self.clineLossS.get())
-                except:
-                    pass
-                try:
-                    self.antGainS = float(self.cantGainS.get())
                 except:
                     pass
                 try:
@@ -366,6 +500,30 @@ class Comms:
                     pass
                 try:
                     self.housekeeping = float(self.chousekeeping.get())
+                except:
+                    pass   
+                try:
+                    self.xdown = float(self.cxdown.get())
+                except:
+                    pass
+                try:
+                    self.udown = float(self.cudown.get())
+                except:
+                    pass
+                try:
+                    self.xup = float(self.cxup.get())
+                except:
+                    pass
+                try:
+                    self.uup = float(self.cuup.get())
+                except:
+                    pass
+                try:
+                    self.xfreq = float(self.cxFreq.get())
+                except:
+                    pass
+                try:
+                    self.ufreq = float(self.cuFreq.get())
                 except:
                     pass
                 try:
@@ -389,7 +547,7 @@ class Comms:
                 except:
                     pass
                 try:
-                    self.sysNoiseTemp = float(self.csysNoiseTemp.get())
+                    self.sysTemp = float(self.csysTemp.get())
                 except:
                     pass
                 try:
