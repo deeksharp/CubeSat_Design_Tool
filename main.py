@@ -8,7 +8,7 @@ import csv
 import PowerGUI as p
 import CommsGUI as c
 import PowerTool as PT
-import CommsTool as COMT
+import CommsTool as CM
 import Orbit_Test as OT
 import Pay_Test as PayT
 import Comm_Test as CT
@@ -27,10 +27,7 @@ def openPower():
         EPS.selectionError()
         
 def openComms():
-    if v0.get() == 1:
         cD.linkbudget4demo()
-    else:
-        cD.selectionError()
 
 def openOrbits():
     oD.selectOrbit()
@@ -39,12 +36,13 @@ def powerInfo(infoX):
     p.Power().moreInfo(infoX)
 
 def runDesign():
+    """
     pd = PT.PowerTool()
     p = pd.case1_PowerBudget2PowerDesign(EPS,oD,payD,cD,tD,aD,gD,cdhD,sD)
-    pd.writeData(p)
+    pd.writeData(p) """
     
-    cd = COMT.CommsTool()
-    tool = cd.LinkBudget4Demo(EPS,oD,payD,cD,tD,aD,gD,cdhD,sD)
+    cd = CM.CommsTool()
+    tool = cd.LinkBudget4Demo(cD)
     cd.writeData(tool)
     
 def outPutData():
