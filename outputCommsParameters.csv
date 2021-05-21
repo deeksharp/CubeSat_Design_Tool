@@ -1,29 +1,29 @@
 Variable,Variable Name,Value,Units
-Spacecraft Transmit Power Downlink X-Band,outTransPowerDXS,0.0,dBW
+Spacecraft Transmit Power Downlink X-Band,outTransPowerDXS,10.0,dBW
 Spacecraft Transmit Power Downlink UHF,outTransPowerDUS,0.0,dBi
-Spacecraft Antenna Gain Downlink X-Band,outAntGainDXS,1.0,dBi
-Spacecraft Antenna Gain Downlink UHF,outAntGainDUS,1.0,dBi
-Spacecraft Antenna Gain Uplink X-Band,outAntGainUXS,1.0,dBi
-Spacecraft Antenna Gain Uplink UHF,outAntGainUUS,1.0,dBi
-Ground Station Transmit Power Uplink X-Band,outTransPowerUXG,0.0,dBW 
-Ground Station Transmit Power Uplink UHF,outTransPowerUUG,0.0,dBW
-Ground Station Antenna Gain Downlink X-Band,outAntGainDXG,1.0,dBi
-Ground Station Antenna Gain Downlink UHF,outAntGainDUG,1.0,dBi
-Ground Station Antenna Gain Uplink X-Band,outAntGainUXG,1.0,dBi
-Ground Station Antenna Gain Uplink UHF,outAntGainUUG,1.0,dBi
+Spacecraft Antenna Gain Downlink X-Band,outAntGainDXS,19.0,dBi
+Spacecraft Antenna Gain Downlink UHF,outAntGainDUS,0.0,dBi
+Spacecraft Antenna Gain Uplink X-Band,outAntGainUXS,19.0,dBi
+Spacecraft Antenna Gain Uplink UHF,outAntGainUUS,0.0,dBi
+Ground Station Transmit Power Uplink X-Band,outTransPowerUXG,16.989700043360187,dBW 
+Ground Station Transmit Power Uplink UHF,outTransPowerUUG,16.989700043360187,dBW
+Ground Station Antenna Gain Downlink X-Band,outAntGainDXG,30.14,dBi
+Ground Station Antenna Gain Downlink UHF,outAntGainDUG,20.0,dBi
+Ground Station Antenna Gain Uplink X-Band,outAntGainUXG,30.14,dBi
+Ground Station Antenna Gain Uplink UHF,outAntGainUUG,20.0,dBi
 System to Noise Ratio Downlink X-Band,outEBNODX,0,dB
 System to Noise Ratio Downlink UHF,outEBNODU,0,dB
 System to Noise Ratio Uplink X-Band,outEBNOUX,0,dB
 System to Noise Ratio Uplink UHF,outEBNOUU,0,dB
-Data Rate Downlink X-Band,outDataRateDX,0.0,dB-Hz
-Data Rate Downlink UHF,outDataRateDU,0.0,dB-Hz
-Data Rate Uplink X-Band,outDataRateUX,0.0,dB-Hz
-Data Rate Uplink UHF,outDataRateUU,0.0,dB-Hz
-System Noise Temperature,outNoiseTemp,0.0,dBK
-Path Losses X-Band,outPathLossX,-147.5626323063697,dB
-Path Losses UHF,outPathLossU,-147.5626323063697,dB
-Other Losses,outOtherLoss,6.0,dB
-Margin Downlink X-Band,outMarginDX,372.1626323063697,dB
-Margin Downlink UHF,outMarginDU,372.1626323063697,dB
-Margin Uplink X-Band,outMarginUX,372.1626323063697,dB
-Margin Uplink UHF,outMarginUU,372.1626323063697,dB
+Data Rate Downlink X-Band,outDataRateDX,39.82271233039568,dB-Hz
+Data Rate Downlink UHF,outDataRateDU,39.82271233039568,dB-Hz
+Data Rate Uplink X-Band,outDataRateUX,39.82271233039568,dB-Hz
+Data Rate Uplink UHF,outDataRateUU,39.82271233039568,dB-Hz
+System Noise Temperature,outNoiseTemp,24.771212547196626,dBK
+Path Losses X-Band,outPathLossX,121.07750143902226,dB
+Path Losses UHF,outPathLossU,93.88713017843071,dB
+Other Losses,outOtherLoss,10.0,dB
+Margin Downlink X-Band,outMarginDX,92.06857368338544,dB
+Margin Downlink UHF,outMarginDU,80.11894494397697,dB
+Margin Uplink X-Band,outMarginUX,99.05827372674563,dB
+Margin Uplink UHF,outMarginUU,97.10864498733713,dB
