@@ -40,10 +40,10 @@ class CommsTool:
         cD.outAntGainDUG = cD.antGainuG
         cD.outAntGainUXG = cD.antGainxG
         cD.outAntGainUUG = cD.antGainuG
-        cD.outEBNODX = 0
-        cD.outEBNODU =0
-        cD.outEBNOUX =0
-        cD.outEBNOUU =0
+        cD.outEBNODX = cD.ebnox
+        cD.outEBNODU = cD.ebnou
+        cD.outEBNOUX = cD.ebnox
+        cD.outEBNOUU = cD.ebnou
         cD.outDataRateDX = m.log10(cD.xdown)*10
         cD.outDataRateDU = m.log10(cD.udown)*10
         cD.outDataRateUX = m.log10(cD.xup)*10

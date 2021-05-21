@@ -17,7 +17,7 @@ class Comms:
         ##self.maxSlantRange = ''
         ##self.EIRP = ''
         ##self.minElevationAngle = ''
-        ##self.ebno = ''
+        
 
         # Spacecraft
         self.transPowerxS = ''
@@ -47,6 +47,8 @@ class Comms:
         ##self.electronLoss = ''
         ##self.polarLoss = ''
         self.sysTemp = ''
+        self.ebnox = ''
+        self.ebnou = ''
         ##self.fixedData = ''
 
         # outputs
@@ -181,8 +183,7 @@ class Comms:
         self.cEIRP.insert(0, 1)
         self.cminElevationAngle = ttk.Entry(self.tabGroundStation, width = w)
         self.cminElevationAngle.insert(0, 1)
-        self.cebno = ttk.Entry(self.tabGroundStation, width = w)
-        self.cebno.insert(0, 1)"""
+        """
 
         # Spacecraft Tab Entry Values
         w = 6
@@ -232,12 +233,17 @@ class Comms:
         self.cpolarLoss.insert(0, 1)
         self.cfixedData = ttk.Entry(self.tabOther, width = w)
         self.cfixedData.insert(0, 1)"""
+        self.cebnox = ttk.Entry(self.tabOther, width = w)
+        self.cebnox.insert(0, 1)
+        self.cebnou = ttk.Entry(self.tabOther, width = w)
+        self.cebnou.insert(0,1)
         self.csysTemp = ttk.Entry(self.tabOther, width = w)
         self.csysTemp.insert(0, 1)
         self.cmaxDistanceEarth = ttk.Entry(self.tabOther, width = w)
         self.cmaxDistanceEarth.insert(0, 1)
         self.crainLoss = ttk.Entry(self.tabOther, width = w)
         self.crainLoss.insert(0, 3)
+
 
         ### Ground Station Tab ###
         # Header - NOT FINISHED
@@ -290,11 +296,7 @@ class Comms:
         R = 6; C = 2
         ttk.Label(self.tabGroundStation, text='Minimum Elevation Angle [rad]').grid(row=R, column=C, padx=25, pady=5,sticky='w')
         self.cminElevationAngle.grid(row=R, column=C+1, padx=5, pady=5,stick='w')
-
-        # Last value.  weird lookin thing
-        R = 7; C=2
-        ttk.Label(self.tabGroundStation, text='Eb/N0 (SNR) [dB]').grid(row=R, column=C, padx=25, pady=5,sticky='w')
-        self.cebno.grid(row=R, column=C+1, padx=5, pady=5,stick='w')"""
+        """
 
         ## Spacecraft Tab ##
         
@@ -374,7 +376,7 @@ class Comms:
 
         #Downlink Rate U
         R = 4; C = 0
-        ttk.Label(self.tabOther, text='Downlink Datarate UHC [bps]').grid(row=R, column=C, padx=25, pady=5,sticky='w')
+        ttk.Label(self.tabOther, text='Downlink Datarate UHF [bps]').grid(row=R, column=C, padx=25, pady=5,sticky='w')
         self.cudown.grid(row=R, column=C+1, padx=5, pady=5)
 
         #Uplink Rate X
@@ -384,7 +386,7 @@ class Comms:
 
         #Uplink Rate U
         R = 6; C = 0
-        ttk.Label(self.tabOther, text='Uplink Datarate UHC [bps]').grid(row=R, column=C, padx=25, pady=5,sticky='w')
+        ttk.Label(self.tabOther, text='Uplink Datarate UHF [bps]').grid(row=R, column=C, padx=25, pady=5,sticky='w')
         self.cuup.grid(row=R, column=C+1, padx=5, pady=5)
 
         #Frequency X 
@@ -394,7 +396,7 @@ class Comms:
 
         #Frequency U
         R = 8; C = 0
-        ttk.Label(self.tabOther, text='Uplink/Downlink Frequency UHC [Hz]').grid(row=R, column=C, padx=25, pady=5,sticky='w')
+        ttk.Label(self.tabOther, text='Uplink/Downlink Frequency UHf [Hz]').grid(row=R, column=C, padx=25, pady=5,sticky='w')
         self.cuFreq.grid(row=R, column=C+1, padx=5, pady=5)
 
         # Central Frequency
@@ -436,6 +438,16 @@ class Comms:
         R = 5; C = 2
         ttk.Label(self.tabOther, text='Rain Losses [dB]').grid(row=R, column=C, padx=25, pady=5,sticky='w')
         self.crainLoss.grid(row=R, column=C+1, padx=5, pady=5)
+        
+        #EBNO X-Band
+        R = 6; C=2
+        ttk.Label(self.tabOther, text='Eb/N0 X-Band [dB]').grid(row=R, column=C, padx=25, pady=5,sticky='w')
+        self.cebnox.grid(row=R, column=C+1, padx=5, pady=5,stick='w')
+        
+        #EBNO UHF
+        R = 7; C=2
+        ttk.Label(self.tabOther, text='Eb/N0 UHF [dB]').grid(row=R, column=C, padx=25, pady=5,sticky='w')
+        self.cebnou.grid(row=R, column=C+1, padx=5, pady=5,stick='w')
 
         # Submit Button
         R = 14; C = 2
@@ -490,10 +502,6 @@ class Comms:
                 pass
             try:
                 self.minElevationAngle = int(self.cminElevationAngle.get())
-            except:
-                pass
-            try:
-                self.ebno = int(self.cebno.get())
             except:
                 pass"""
             try:
@@ -582,6 +590,14 @@ class Comms:
                 pass
             try:
                 self.rainLoss = float(self.crainLoss.get())
+            except:
+                pass
+            try:
+                self.ebnox = int(self.cebnox.get())
+            except:
+                pass            
+            try:
+                self.ebnou = int(self.cebnou.get())
             except:
                 pass
             

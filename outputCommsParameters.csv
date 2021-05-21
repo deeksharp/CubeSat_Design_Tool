@@ -11,10 +11,10 @@ Ground Station Antenna Gain Downlink X-Band,outAntGainDXG,30.14,dBi
 Ground Station Antenna Gain Downlink UHF,outAntGainDUG,20.0,dBi
 Ground Station Antenna Gain Uplink X-Band,outAntGainUXG,30.14,dBi
 Ground Station Antenna Gain Uplink UHF,outAntGainUUG,20.0,dBi
-System to Noise Ratio Downlink X-Band,outEBNODX,0,dB
-System to Noise Ratio Downlink UHF,outEBNODU,0,dB
-System to Noise Ratio Uplink X-Band,outEBNOUX,0,dB
-System to Noise Ratio Uplink UHF,outEBNOUU,0,dB
+System to Noise Ratio Downlink X-Band,outEBNODX,10,dB
+System to Noise Ratio Downlink UHF,outEBNODU,13,dB
+System to Noise Ratio Uplink X-Band,outEBNOUX,10,dB
+System to Noise Ratio Uplink UHF,outEBNOUU,13,dB
 Data Rate Downlink X-Band,outDataRateDX,39.82271233039568,dB-Hz
 Data Rate Downlink UHF,outDataRateDU,39.82271233039568,dB-Hz
 Data Rate Uplink X-Band,outDataRateUX,39.82271233039568,dB-Hz
@@ -23,7 +23,7 @@ System Noise Temperature,outNoiseTemp,24.771212547196626,dBK
 Path Losses X-Band,outPathLossX,121.07750143902226,dB
 Path Losses UHF,outPathLossU,93.88713017843071,dB
 Other Losses,outOtherLoss,10.0,dB
-Margin Downlink X-Band,outMarginDX,92.06857368338544,dB
-Margin Downlink UHF,outMarginDU,80.11894494397697,dB
-Margin Uplink X-Band,outMarginUX,99.05827372674563,dB
-Margin Uplink UHF,outMarginUU,97.10864498733713,dB
+Margin Downlink X-Band,outMarginDX,82.06857368338544,dB
+Margin Downlink UHF,outMarginDU,67.11894494397697,dB
+Margin Uplink X-Band,outMarginUX,89.05827372674563,dB
+Margin Uplink UHF,outMarginUU,84.10864498733713,dB
