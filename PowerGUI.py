@@ -5,7 +5,7 @@ from tkinter import ttk
 class Power:
     def __init__(self):
         # Initialize Power Data
-        self.UseCase: int
+        self.UseCase : int
         
         # Power Data:
         self.P_AVG: float

@@ -150,7 +150,7 @@ class Comms:
 
     def linkbudget4demo(self):
         self.commsgui = tk.Tk() # Instance of Tk,
-        self.commsgui.title("Electrical Power Subsystem Design Module") # Name
+        self.commsgui.title("Communications Subsystem Design Module") # Name
         self.commswindow = ttk.Notebook(self.commsgui) # tkk module implements "tabs" (Notebook)
         self.tabGroundStation = ttk.Frame(self.commswindow)
         self.tabSpacecraft = ttk.Frame(self.commswindow)
