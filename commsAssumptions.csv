@@ -1,0 +1,29 @@
+Variable,Variable Name,Value,Units,,,,,,
+Spacecraft Transmit Power Downlink X-Band,outTransPowerDXS,,dBW
+Spacecraft Transmit Power Downlink UHF,outTransPowerDUS,,dBi
+Spacecraft Antenna Gain Downlink X-Band,outAntGainDXS,,dBi
+Spacecraft Antenna Gain Downlink UHF,outAntGainDUS,,dBi
+Spacecraft Antenna Gain Uplink X-Band,outAntGainUXS,,dBi
+Spacecraft Antenna Gain Uplink UHF,outAntGainUUS,,dBi
+Ground Station Transmit Power Uplink X-Band,outTransPowerUXG,,dBW 
+Ground Station Transmit Power Uplink UHF,outTransPowerUUG,,dBW
+Ground Station Antenna Gain Downlink X-Band,outAntGainDXG,,dBi
+Ground Station Antenna Gain Downlink UHF,outAntGainDUG,,dBi
+Ground Station Antenna Gain Uplink X-Band,outAntGainUXG,,dBi
+Ground Station Antenna Gain Uplink UHF,outAntGainUUG,,dBi
+System to Noise Ratio Downlink X-Band,outEBNODX,,dB
+System to Noise Ratio Downlink UHF,outEBNODU,,dB
+System to Noise Ratio Uplink X-Band,outEBNOUX,,dB
+System to Noise Ratio Uplink UHF,outEBNOUU,,dB
+Data Rate Downlink X-Band,outDataRateDX,,dB-Hz
+Data Rate Downlink UHF,outDataRateDU,,dB-Hz
+Data Rate Uplink X-Band,outDataRateUX,,dB-Hz
+Data Rate Uplink UHF,outDataRateUU,,dB-Hz
+System Noise Temperature,outNoiseTemp,,dBK
+Path Losses X-Band,outPathLossX,,dB
+Path Losses UHF,outPathLossU,,dB
+Other Losses,outOtherLoss,,dB
+Margin Downlink X-Band,outMarginDX,,dB
+Margin Downlink UHF,outMarginDU,,dB
+Margin Uplink X-Band,outMarginUX,,dB
+Margin Uplink UHF,outMarginUU,,dB
