@@ -166,21 +166,13 @@ class Comms:
         # Ground Station Tab Entry Values
         w = 6
         self.ctransPowerxG = ttk.Entry(self.tabGroundStation,width = w)
-        self.ctransPowerxG.insert(0, 1)
         self.cantGainxG = ttk.Entry(self.tabGroundStation, width = w)
-        self.cantGainxG.insert(0, 1)
         ##self.cdishDiameterG = ttk.Entry(self.tabGroundStation, width = w)
-        ##self.cdishDiameterG.insert(0, 1)
         self.ctransPoweruG = ttk.Entry(self.tabGroundStation,width = w)
-        self.ctransPoweruG.insert(0, 1)
         self.cantGainuG = ttk.Entry(self.tabGroundStation, width = w)
-        self.cantGainuG.insert(0, 1)
         """self.clineLossG = ttk.Entry(self.tabGroundStation, width = w)
-        self.clineLossG.insert(0, 1)
         self.cmaxSlantRange = ttk.Entry(self.tabGroundStation, width = w)
-        self.cmaxSlantRange.insert(0, 1)
         self.cEIRP = ttk.Entry(self.tabGroundStation, width = w)
-        self.cEIRP.insert(0, 1)
         self.cminElevationAngle = ttk.Entry(self.tabGroundStation, width = w)
         self.cminElevationAngle.insert(0, 1)
         """
@@ -188,78 +180,54 @@ class Comms:
         # Spacecraft Tab Entry Values
         w = 6
         self.ctransPowerxS = ttk.Entry(self.tabSpacecraft, width = w)
-        self.ctransPowerxS.insert(0, 1)
         self.cantGainxS = ttk.Entry(self.tabSpacecraft, width = w)
-        self.cantGainxS.insert(0, 1)
         self.ctransPoweruS = ttk.Entry(self.tabSpacecraft, width = w)
-        self.ctransPoweruS.insert(0, 1)
         self.cantGainuS = ttk.Entry(self.tabSpacecraft, width = w)
-        self.cantGainuS.insert(0, 1)
         """self.cdishDiameterS = ttk.Entry(self.tabSpacecraft, width = w)
-        self.cdishDiameterS.insert(0, 1)
         self.clineLossS = ttk.Entry(self.tabSpacecraft, width = w)
         self.clineLossS.insert(0, 1)"""
 
         # Data Generation Entry Values
         w = 6
         self.catomClock = ttk.Entry(self.tabDataGen, width = w)
-        self.catomClock.insert(0, 1)
         self.cradiation = ttk.Entry(self.tabDataGen, width = w)
-        self.cradiation.insert(0, 1)
         self.chousekeeping = ttk.Entry(self.tabDataGen, width = w)
-        self.chousekeeping.insert(0, 1)
 
         # Other Entry Values
         w = 6
         self.cxdown = ttk.Entry(self.tabOther, width = w)
-        self.cxdown.insert(0, 1)
         self.cudown = ttk.Entry(self.tabOther, width = w)
-        self.cudown.insert(0, 1)
         self.cxup = ttk.Entry(self.tabOther, width = w)
-        self.cxup.insert(0, 1)
         self.cuup = ttk.Entry(self.tabOther, width = w)
-        self.cuup.insert(0, 1)
         self.cxFreq = ttk.Entry(self.tabOther, width = w)
-        self.cxFreq.insert(0, 1)
         self.cuFreq = ttk.Entry(self.tabOther, width = w)
-        self.cuFreq.insert(0, 1)
         """self.ccenFreq = ttk.Entry(self.tabOther, width = w)
-        self.ccenFreq.insert(0, 1)
         self.cpointingLoss = ttk.Entry(self.tabOther, width = w)
-        self.cpointingLoss.insert(0, 1)
         self.celectronLoss = ttk.Entry(self.tabOther, width = w)
-        self.celectronLoss.insert(0, 1)
         self.cpolarLoss = ttk.Entry(self.tabOther, width = w)
-        self.cpolarLoss.insert(0, 1)
-        self.cfixedData = ttk.Entry(self.tabOther, width = w)
-        self.cfixedData.insert(0, 1)"""
+        self.cfixedData = ttk.Entry(self.tabOther, width = w)"""
         self.cebnox = ttk.Entry(self.tabOther, width = w)
-        self.cebnox.insert(0, 1)
         self.cebnou = ttk.Entry(self.tabOther, width = w)
-        self.cebnou.insert(0,1)
         self.csysTemp = ttk.Entry(self.tabOther, width = w)
-        self.csysTemp.insert(0, 1)
         self.cmaxDistanceEarth = ttk.Entry(self.tabOther, width = w)
-        self.cmaxDistanceEarth.insert(0, 1)
         self.crainLoss = ttk.Entry(self.tabOther, width = w)
-        self.crainLoss.insert(0, 3)
 
 
         ### Ground Station Tab ###
         # Header - NOT FINISHED
         R = 0; C = 0
-        t_ins_design = 'Choose whether you want customized EPS design parameters or choose a set of assumed parameters:'
+        t_ins_design = 'Input appropriate parameter values for Ground Station comms:'
         self.choose = ttk.Label(self.tabGroundStation,text = t_ins_design, wraplength = 250)
         self.choose.grid(row = R, column = C, columnspan = 2,rowspan=2, padx = 5, pady = 5)
 
-        # Transmitter Power X
+        # Transmitter Power Primary
         R = 3; C = 0
-        ttk.Label(self.tabGroundStation, text='Transmitter Power X-Band [W]').grid(row=R, column=C, padx=25, pady=5,sticky='w')
+        ttk.Label(self.tabGroundStation, text='Primary Transmitter Power[W]').grid(row=R, column=C, padx=25, pady=5,sticky='w')
         self.ctransPowerxG.grid(row=R, column=C+1, padx=5, pady=5)
 
-        # Antenna Gain X 
+        # Antenna Gain Primary 
         R = 4; C = 0
-        ttk.Label(self.tabGroundStation, text='Antenna Gain X-Band [dB]').grid(row=R, column=C, padx=25, pady=5,sticky='w')
+        ttk.Label(self.tabGroundStation, text='Primary Antenna Gain[dB]').grid(row=R, column=C, padx=25, pady=5,sticky='w')
         self.cantGainxG.grid(row=R, column=C+1, padx=5, pady=5)
 
         # Dish Diameter
@@ -267,14 +235,14 @@ class Comms:
         ttk.Label(self.tabGroundStation, text='Dish Diameter [m]').grid(row=R, column=C, padx=25, pady=5,sticky='w')
         self.cdishDiameterG.grid(row=R, column=C+1, padx=5, pady=5,sticky='w')"""
 
-        # Transmitter Power U
+        # Transmitter Power Secondary
         R = 6; C = 0
-        ttk.Label(self.tabGroundStation, text='Transmitter Power UHF [W]').grid(row=R, column=C, padx=25, pady=5,sticky='w')
+        ttk.Label(self.tabGroundStation, text='Secondary Transmitter Power[W]').grid(row=R, column=C, padx=25, pady=5,sticky='w')
         self.ctransPoweruG.grid(row=R, column=C+1, padx=5, pady=5)
 
-        # Antenna Gain U 
+        # Antenna Gain Secondary
         R = 7; C = 0
-        ttk.Label(self.tabGroundStation, text='Antenna Gain UHF [dB]').grid(row=R, column=C, padx=25, pady=5,sticky='w')
+        ttk.Label(self.tabGroundStation, text='Secondary Antenna Gain[dB]').grid(row=R, column=C, padx=25, pady=5,sticky='w')
         self.cantGainuG.grid(row=R, column=C+1, padx=5, pady=5)
 
         # Line Loss
@@ -302,28 +270,28 @@ class Comms:
         
         # Heading - NOT FINISHED
         R = 0; C = 0
-        t_ins_design = 'Choose whether you want customized EPS design parameters or choose a set of assumed parameters:'
+        t_ins_design = 'Input appropriate parameter values for Spacecraft comms:'
         self.choose = ttk.Label(self.tabSpacecraft,text = t_ins_design, wraplength = 250)
         self.choose.grid(row = R, column = C, columnspan = 2,rowspan=2, padx = 5, pady = 5)
 
-        # Transmitter Power X
+        # Transmitter Power Primary
         R = 3; C = 0
-        ttk.Label(self.tabSpacecraft, text='Transmitter Power X-Band [W]').grid(row=R, column=C, padx=25, pady=5,sticky='w')
+        ttk.Label(self.tabSpacecraft, text='Primary Transmitter Power[W]').grid(row=R, column=C, padx=25, pady=5,sticky='w')
         self.ctransPowerxS.grid(row=R, column=C+1, padx=5, pady=5)
 
-        # Antenna Gain X
+        # Antenna Gain Primary
         R = 4; C = 0
-        ttk.Label(self.tabSpacecraft, text='Antenna Gain X-Band [dB]').grid(row=R, column=C, padx=25, pady=5,sticky='w')
+        ttk.Label(self.tabSpacecraft, text='Primary Antenna Gain[dB]').grid(row=R, column=C, padx=25, pady=5,sticky='w')
         self.cantGainxS.grid(row=R, column=C+1, padx=5, pady=5)
 
-        # Transmitter Power U
+        # Transmitter Power Secondary
         R = 5; C = 0
-        ttk.Label(self.tabSpacecraft, text='Transmitter Power UHF [W]').grid(row=R, column=C, padx=25, pady=5,sticky='w')
+        ttk.Label(self.tabSpacecraft, text='Secondary Transmitter Power[W]').grid(row=R, column=C, padx=25, pady=5,sticky='w')
         self.ctransPoweruS.grid(row=R, column=C+1, padx=5, pady=5)
 
-        # Antenna Gain U
+        # Antenna Gain Secondary
         R = 6; C = 0
-        ttk.Label(self.tabSpacecraft, text='Antenna Gain UHF [dB]').grid(row=R, column=C, padx=25, pady=5,sticky='w')
+        ttk.Label(self.tabSpacecraft, text='Secondary Antenna Gain[dB]').grid(row=R, column=C, padx=25, pady=5,sticky='w')
         self.cantGainuS.grid(row=R, column=C+1, padx=5, pady=5)
 
         # Dish Diameter
@@ -341,7 +309,7 @@ class Comms:
         
         # Heading -NOT FINISHED
         R = 0; C = 0
-        t_ins_design = 'Choose whether you want customized EPS design parameters or choose a set of assumed parameters:'
+        t_ins_design = 'Input appropriate parameter values for Data Generation:'
         self.choose = ttk.Label(self.tabDataGen,text = t_ins_design, wraplength = 250)
         self.choose.grid(row = R, column = C, columnspan = 2,rowspan=2, padx = 5, pady = 5)
 
@@ -365,38 +333,38 @@ class Comms:
 
         # Header - NOT FINISHED
         R = 0; C = 0
-        t_ins_design = 'Choose whether you want customized EPS design parameters or choose a set of assumed parameters:'
+        t_ins_design = 'Input appropriate parameter values:'
         self.choose = ttk.Label(self.tabOther,text = t_ins_design, wraplength = 250)
         self.choose.grid(row = R, column = C, columnspan = 2,rowspan=2, padx = 5, pady = 5)
 
-        #Downlink Rate X
+        #Downlink Rate Primary
         R = 3; C = 0
-        ttk.Label(self.tabOther, text='Downlink Datarate X-Band [bps]').grid(row=R, column=C, padx=25, pady=5,sticky='w')
+        ttk.Label(self.tabOther, text='Primary Downlink Datarate[bps]').grid(row=R, column=C, padx=25, pady=5,sticky='w')
         self.cxdown.grid(row=R, column=C+1, padx=5, pady=5)
 
-        #Downlink Rate U
+        #Downlink Rate Secondary
         R = 4; C = 0
-        ttk.Label(self.tabOther, text='Downlink Datarate UHF [bps]').grid(row=R, column=C, padx=25, pady=5,sticky='w')
+        ttk.Label(self.tabOther, text='Secondary Downlink Datarate[bps]').grid(row=R, column=C, padx=25, pady=5,sticky='w')
         self.cudown.grid(row=R, column=C+1, padx=5, pady=5)
 
-        #Uplink Rate X
+        #Uplink Rate Primary
         R = 5; C = 0
-        ttk.Label(self.tabOther, text='Uplink Datarate X [bps]').grid(row=R, column=C, padx=25, pady=5,sticky='w')
+        ttk.Label(self.tabOther, text='Primary Uplink Datarate[bps]').grid(row=R, column=C, padx=25, pady=5,sticky='w')
         self.cxup.grid(row=R, column=C+1, padx=5, pady=5)
 
-        #Uplink Rate U
+        #Uplink Rate Secondary
         R = 6; C = 0
-        ttk.Label(self.tabOther, text='Uplink Datarate UHF [bps]').grid(row=R, column=C, padx=25, pady=5,sticky='w')
+        ttk.Label(self.tabOther, text='Secondary Uplink Datarate[bps]').grid(row=R, column=C, padx=25, pady=5,sticky='w')
         self.cuup.grid(row=R, column=C+1, padx=5, pady=5)
 
-        #Frequency X 
+        #Frequency Primary
         R = 7; C = 0
-        ttk.Label(self.tabOther, text='Uplink/Downlink Frequency X-Band [Hz]').grid(row=R, column=C, padx=25, pady=5,sticky='w')
+        ttk.Label(self.tabOther, text='Primary Uplink/Downlink Frequency[Hz]').grid(row=R, column=C, padx=25, pady=5,sticky='w')
         self.cxFreq.grid(row=R, column=C+1, padx=5, pady=5)
 
-        #Frequency U
+        #Frequency Secondary
         R = 8; C = 0
-        ttk.Label(self.tabOther, text='Uplink/Downlink Frequency UHf [Hz]').grid(row=R, column=C, padx=25, pady=5,sticky='w')
+        ttk.Label(self.tabOther, text='Secondary Uplink/Downlink Frequency[Hz]').grid(row=R, column=C, padx=25, pady=5,sticky='w')
         self.cuFreq.grid(row=R, column=C+1, padx=5, pady=5)
 
         # Central Frequency
@@ -439,14 +407,14 @@ class Comms:
         ttk.Label(self.tabOther, text='Rain Losses [dB]').grid(row=R, column=C, padx=25, pady=5,sticky='w')
         self.crainLoss.grid(row=R, column=C+1, padx=5, pady=5)
         
-        #EBNO X-Band
+        #EBNO Primary
         R = 6; C=2
-        ttk.Label(self.tabOther, text='Eb/N0 X-Band [dB]').grid(row=R, column=C, padx=25, pady=5,sticky='w')
+        ttk.Label(self.tabOther, text='Primary Eb/N0[dB]').grid(row=R, column=C, padx=25, pady=5,sticky='w')
         self.cebnox.grid(row=R, column=C+1, padx=5, pady=5,stick='w')
         
-        #EBNO UHF
+        #EBNO Secondary
         R = 7; C=2
-        ttk.Label(self.tabOther, text='Eb/N0 UHF [dB]').grid(row=R, column=C, padx=25, pady=5,sticky='w')
+        ttk.Label(self.tabOther, text='Secondary Eb/N0[dB]').grid(row=R, column=C, padx=25, pady=5,sticky='w')
         self.cebnou.grid(row=R, column=C+1, padx=5, pady=5,stick='w')
 
         # Submit Button

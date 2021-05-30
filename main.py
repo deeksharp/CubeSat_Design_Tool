@@ -184,7 +184,7 @@ Header_5.grid(column = 0, row = 0, padx = 10, pady = 10)
 v1=tk.IntVar(root)
 C_RB1=ttk.Radiobutton(tabComms, text=" Link Budget for \n Demo Mission", variable=v0,value=1)
 C_RB1.grid(column = 0, row = 2, padx = 10, pady = 10,sticky='w')
-C_RB2=ttk.Radiobutton(tabComms, text=" TBD", variable=v0,value=2)
+C_RB2=ttk.Radiobutton(tabComms, text=" Custom Link Budget for \n Demo Mission", variable=v0,value=2)
 C_RB2.grid(column = 0, row = 3, padx = 10, pady = 10,sticky='w')
 
 C_L1L = P_L2 = ttk.Label(tabComms, text='Use Case:')
@@ -194,7 +194,7 @@ C_L1M.grid(column = 1, row = 1, padx = 10, pady = 10)
 t = 'Standard Communications Design for a technology demonstration mission.'
 C_L2M = ttk.Label(tabComms, text=t, wraplength = 300)
 C_L2M.grid(column = 1, row = 2, padx = 10, pady = 10,sticky='w')
-t = 'TBD '
+t = 'Custom Communications Design for a technology demonstration mission.'
 C_L3M = ttk.Label(tabComms, text=t, wraplength = 300)
 C_L3M.grid(column = 1, row = 3, padx = 10, pady = 10,sticky='w')
 
