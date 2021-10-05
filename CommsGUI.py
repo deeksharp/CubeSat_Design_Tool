@@ -97,28 +97,28 @@ class Comms:
 
         if x == 1:
             # Inputs
-            self.T1_R0_C0 = ttk.Label(self.tabInputs, text='Line Budget:', wraplength = 100)
+            self.T1_R0_C0 = ttk.Label(self.tabInputs, text='Link Budget:', wraplength = 100)
             self.T1_R0_C0.grid(row = 0, column = 0, padx = 5, pady = 5,sticky='w')
             t='Ground Station and Spacecraft parameters are prepopulated with assumed values and can be changed to reflect current design parameters. '
             self.T1_R0_C1 = ttk.Label(self.tabInputs, text=t, wraplength = 300)
             self.T1_R0_C1.grid(row = 0, column = 1, padx = 5, pady = 5,sticky='w')
-            self.T1_R1_C0 = ttk.Label(self.tabInputs, text='EPS Design Parameters:', wraplength = 100)
+            self.T1_R1_C0 = ttk.Label(self.tabInputs, text='Comms Design Parameters:', wraplength = 100)
             self.T1_R1_C0.grid(row = 1, column = 0, padx = 5, pady = 5,sticky='w')
-            t ='Parameters for capabilities of solar system, battery system, and PMAD system.'
+            t ='Parameters for a link budget based off of antenna sizing.'
             self.T1_R1_C1 = ttk.Label(self.tabInputs, text=t, wraplength = 300)
             self.T1_R1_C1.grid(row = 1, column = 1, padx = 5, pady = 5,sticky='w')
             
             # Assumptions
-            t = 'Assumed values include constants, such as solar flux, '\
+            t = 'Assumed values include line losses, system temp, '\
                 'as well as design sizing parameters for the spacecraft '\
-                'if non-custom is chosen.'
+                'if standard comms is chosen.'
             self.T2_R0_C0 = ttk.Label(self.tabAssums, text=t, wraplength = 350)
             self.T2_R0_C0.grid(row = 0, column = 0, padx = 5, pady = 5,sticky='w')
 
             # Calculations
-            t = 'Calculated values include sizing of solar panel and batteries, '\
-                'based on calculated total power values, with appropriate '\
-                'degradating and orbit considerations in place.'
+            t = 'Calculated values include data rates and link margin, '\
+                'based on calculated transmit power values, with appropriate '\
+                'losses and orbit radius considerations in place.'
             self.T3_R0_C0 = ttk.Label(self.tabCalcs, text=t, wraplength = 350)
             self.T3_R0_C0.grid(row = 0, column = 0, padx = 5, pady = 5,sticky='w')
             
@@ -157,8 +157,8 @@ class Comms:
         self.tabSpacecraft = ttk.Frame(self.commswindow)
         self.tabDataGen = ttk.Frame(self.commswindow)
         self.tabOther = ttk.Frame(self.commswindow)
-        self.commswindow.add(self.tabGroundStation, text = 'Ground Station')
-        self.commswindow.add(self.tabSpacecraft, text = 'Spacecraft')
+        self.commswindow.add(self.tabGroundStation, text = 'Uplink')
+        self.commswindow.add(self.tabSpacecraft, text = 'Downlink')
         self.commswindow.add(self.tabDataGen, text = 'Data Generation')
         self.commswindow.add(self.tabOther, text = 'Other')
         self.commswindow.pack(expand = 1, fill ="both")
