@@ -49,6 +49,7 @@ class Comms:
         self.sysTemp = ''
         self.ebnox = ''
         self.ebnou = ''
+        self.lineLoss = ''
         ##self.fixedData = ''
 
         # outputs
@@ -190,8 +191,11 @@ class Comms:
         # Data Generation Entry Values
         w = 6
         self.catomClock = ttk.Entry(self.tabDataGen, width = w)
+        self.catomClock.insert(0, '1')
         self.cradiation = ttk.Entry(self.tabDataGen, width = w)
+        self.cradiation.insert(0, '1.5')
         self.chousekeeping = ttk.Entry(self.tabDataGen, width = w)
+        self.chousekeeping.insert(0, '54')
 
         # Other Entry Values
         w = 6
@@ -209,8 +213,13 @@ class Comms:
         self.cebnox = ttk.Entry(self.tabOther, width = w)
         self.cebnou = ttk.Entry(self.tabOther, width = w)
         self.csysTemp = ttk.Entry(self.tabOther, width = w)
+        self.csysTemp.insert(0, "300")
         self.cmaxDistanceEarth = ttk.Entry(self.tabOther, width = w)
+        self.cmaxDistanceEarth.insert(0, "2704")
         self.crainLoss = ttk.Entry(self.tabOther, width = w)
+        self.crainLoss.insert(0, "3")
+        self.clineLoss = ttk.Entry(self.tabOther, width = w)
+        self.clineLoss.insert(0, "3")
 
 
         ### Ground Station Tab ###
@@ -265,6 +274,7 @@ class Comms:
         ttk.Label(self.tabGroundStation, text='Minimum Elevation Angle [rad]').grid(row=R, column=C, padx=25, pady=5,sticky='w')
         self.cminElevationAngle.grid(row=R, column=C+1, padx=5, pady=5,stick='w')
         """
+        
 
         ## Spacecraft Tab ##
         
@@ -305,6 +315,7 @@ class Comms:
         self.clineLossS.grid(row=R, column=C+1, padx=5, pady=5)"""
 
 
+
         ## Data Generation Tab ##
         
         # Heading -NOT FINISHED
@@ -315,19 +326,34 @@ class Comms:
 
         # Atomic Clock
         R = 3; C = 0
-        ttk.Label(self.tabDataGen, text='Atomic Clock [Mbyte/day]').grid(row=R, column=C, padx=25, pady=5,sticky='w')
+        ttk.Label(self.tabDataGen, text='Atomic Clock [Mbyte/day]       ').grid(row=R, column=C, padx=25, pady=5,sticky='w')
         self.catomClock.grid(row=R, column=C+1, padx=5, pady=5)
 
         # Radiation
         R = 4; C = 0
-        ttk.Label(self.tabDataGen, text='Radiation [Mbyte/day]').grid(row=R, column=C, padx=25, pady=5,sticky='w')
+        ttk.Label(self.tabDataGen, text='Radiation [Mbyte/day]        ').grid(row=R, column=C, padx=25, pady=5,sticky='w')
         self.cradiation.grid(row=R, column=C+1, padx=5, pady=5)
 
         # House Keeping
         R = 5; C = 0
-        ttk.Label(self.tabDataGen, text='House Keeping [Mbyte/day]').grid(row=R, column=C, padx=25, pady=5,sticky='w')
+        ttk.Label(self.tabDataGen, text='House Keeping [Mbyte/day]        ').grid(row=R, column=C, padx=25, pady=5,sticky='w')
         self.chousekeeping.grid(row=R, column=C+1, padx=5, pady=5)
+
+        # Spacer 
+        R = 6; C = 0
+        ttk.Label(self.tabDataGen, text=' ').grid(row=R, column=C, padx=25, pady=5,sticky='w')
         
+
+        # Back Button
+        """R = 14; C = 2
+        self.UseCase = 1
+        self.back_btn = ttk.Button(self.tabDataGen, text = "Back", command = self.tabSpacecraft)
+        self.back_btn.grid(column = C, row = R)
+        
+        # Next Button
+        self.next_btn = ttk.Button(self.tabDataGen, text = "Next", command = self.tabOther)
+        self.next_btn.grid(column = C+1, row = R,sticky='w')"""
+
 
         ## Other Tab ##
 
@@ -417,6 +443,11 @@ class Comms:
         ttk.Label(self.tabOther, text='Secondary Eb/N0[dB]').grid(row=R, column=C, padx=25, pady=5,sticky='w')
         self.cebnou.grid(row=R, column=C+1, padx=5, pady=5,stick='w')
 
+        # Line Losses
+        R = 8; C = 2
+        ttk.Label(self.tabOther, text='Line Losses [dB]').grid(row=R, column=C, padx=25, pady=5,sticky='w')
+        self.clineLoss.grid(row=R, column=C+1, padx=5, pady=5)
+
         # Submit Button
         R = 14; C = 2
         self.UseCase = 1
@@ -427,8 +458,7 @@ class Comms:
         self.fin_btn.grid(column = C+1, row = R,stick='w')
         # Run
         self.commsgui.mainloop()
-
-        
+   
 
     def inputComms(self):
         if self.UseCase == 1:
@@ -568,7 +598,10 @@ class Comms:
                 self.ebnou = int(self.cebnou.get())
             except:
                 pass
-            
+            try:
+                self.lineLoss = float(self.clineLoss.get())
+            except:
+                pass
     
     def selectionError(self):
             self.commsgui = tk.Tk() # Instance of Tk,

@@ -51,7 +51,7 @@ class CommsTool:
         cD.outNoiseTemp = m.log10(cD.sysTemp)*10
         cD.outPathLossX = m.log10(4*3.14*cD.maxDistanceEarth*cD.xfreq/300000000)*20
         cD.outPathLossU = m.log10(4*3.14*cD.maxDistanceEarth*cD.ufreq/300000000)*20
-        cD.outOtherLoss = cD.rainLoss ##cD.pointingLoss + cD.rainLoss + cD.electronLoss + cD.polarLoss
+        cD.outOtherLoss = cD.rainLoss + cD.lineLoss ##cD.pointingLoss + cD.rainLoss + cD.electronLoss + cD.polarLoss + cD.lineLoss
         cD.outMarginDX = cD.outTransPowerDXS + cD.outAntGainDXS + cD.outAntGainDXG + 228.6 - cD.outEBNODX - cD.outDataRateDX - cD.outNoiseTemp - cD.outPathLossX - cD.outOtherLoss
         cD.outMarginDU = cD.outTransPowerDUS + cD.outAntGainDUS + cD.outAntGainDUG + 228.6 - cD.outEBNODU - cD.outDataRateDU - cD.outNoiseTemp - cD.outPathLossU - cD.outOtherLoss
         cD.outMarginUX = cD.outTransPowerUXG + cD.outAntGainUXS + cD.outAntGainUXG + 228.6 - cD.outEBNOUX - cD.outDataRateUX - cD.outNoiseTemp - cD.outPathLossX - cD.outOtherLoss

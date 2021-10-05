@@ -35,6 +35,9 @@ def openOrbits():
 def powerInfo(infoX):
     p.Power().moreInfo(infoX)
 
+def commsInfo(infoX):
+    c.Comms().moreInfo(infoX)
+
 def runDesign():
     """
     pd = PT.PowerTool()
@@ -182,9 +185,9 @@ Header_5.grid(column = 0, row = 0, padx = 10, pady = 10)
 
 # Radiobutton Use Case Selection
 v1=tk.IntVar(root)
-C_RB1=ttk.Radiobutton(tabComms, text=" Link Budget for \n Demo Mission", variable=v0,value=1)
+C_RB1=ttk.Radiobutton(tabComms, text=" Link Budget for \n Standard Communications Design", variable=v0,value=1)
 C_RB1.grid(column = 0, row = 2, padx = 10, pady = 10,sticky='w')
-C_RB2=ttk.Radiobutton(tabComms, text=" Custom Link Budget for \n Demo Mission", variable=v0,value=2)
+C_RB2=ttk.Radiobutton(tabComms, text=" Custom Link Budget", variable=v0,value=2)
 C_RB2.grid(column = 0, row = 3, padx = 10, pady = 10,sticky='w')
 
 C_L1L = P_L2 = ttk.Label(tabComms, text='Use Case:')
@@ -194,16 +197,16 @@ C_L1M.grid(column = 1, row = 1, padx = 10, pady = 10)
 t = 'Standard Communications Design for a technology demonstration mission.'
 C_L2M = ttk.Label(tabComms, text=t, wraplength = 300)
 C_L2M.grid(column = 1, row = 2, padx = 10, pady = 10,sticky='w')
-t = 'Custom Communications Design for a technology demonstration mission.'
+t = 'Custom Communications Design for various mission types.'
 C_L3M = ttk.Label(tabComms, text=t, wraplength = 300)
 C_L3M.grid(column = 1, row = 3, padx = 10, pady = 10,sticky='w')
 
 
 C_L2R = ttk.Label(tabComms, text='Inputs, Outputs, and Assumptions:', wraplength = 150)
 C_L2R.grid(column = 2, row = 1, padx = 10, pady = 10)
-C_btn2 = ttk.Button(tabComms, text = "More Info", command = lambda: powerInfo(1))
+C_btn2 = ttk.Button(tabComms, text = "More Info", command = lambda: commsInfo(1))
 C_btn2.grid(column = 2, row = 2)
-C_btn3 = ttk.Button(tabComms, text = "More Info", command = lambda: powerInfo(2))
+C_btn3 = ttk.Button(tabComms, text = "More Info", command = lambda: commsInfo(2))
 C_btn3.grid(column = 2, row = 3)
 
 P_btn = ttk.Button(tabComms, text = "Select", command = openComms)
