@@ -1,29 +1,37 @@
 Variable,Variable Name,Value,Units,,,,,,
-Spacecraft Transmit Power Downlink X-Band,outTransPowerDXS,,dBW
-Spacecraft Transmit Power Downlink UHF,outTransPowerDUS,,dBi
-Spacecraft Antenna Gain Downlink X-Band,outAntGainDXS,,dBi
-Spacecraft Antenna Gain Downlink UHF,outAntGainDUS,,dBi
-Spacecraft Antenna Gain Uplink X-Band,outAntGainUXS,,dBi
-Spacecraft Antenna Gain Uplink UHF,outAntGainUUS,,dBi
-Ground Station Transmit Power Uplink X-Band,outTransPowerUXG,,dBW 
-Ground Station Transmit Power Uplink UHF,outTransPowerUUG,,dBW
-Ground Station Antenna Gain Downlink X-Band,outAntGainDXG,,dBi
-Ground Station Antenna Gain Downlink UHF,outAntGainDUG,,dBi
-Ground Station Antenna Gain Uplink X-Band,outAntGainUXG,,dBi
-Ground Station Antenna Gain Uplink UHF,outAntGainUUG,,dBi
-System to Noise Ratio Downlink X-Band,outEBNODX,,dB
-System to Noise Ratio Downlink UHF,outEBNODU,,dB
-System to Noise Ratio Uplink X-Band,outEBNOUX,,dB
-System to Noise Ratio Uplink UHF,outEBNOUU,,dB
-Data Rate Downlink X-Band,outDataRateDX,,dB-Hz
-Data Rate Downlink UHF,outDataRateDU,,dB-Hz
-Data Rate Uplink X-Band,outDataRateUX,,dB-Hz
-Data Rate Uplink UHF,outDataRateUU,,dB-Hz
-System Noise Temperature,outNoiseTemp,,dBK
-Path Losses X-Band,outPathLossX,,dB
-Path Losses UHF,outPathLossU,,dB
-Other Losses,outOtherLoss,,dB
-Margin Downlink X-Band,outMarginDX,,dB
-Margin Downlink UHF,outMarginDU,,dB
-Margin Uplink X-Band,outMarginUX,,dB
-Margin Uplink UHF,outMarginUU,,dB
+Spacecraft Transmit Power Uplink Primary,out_up_p_sc_transpower,,dBW
+Spacecraft Transmit Power Uplink Secondary,out_up_s_sc_transpower,,dBW
+Spacecraft Transmit Power Downlink Primary,out_down_p_sc_transpower,,dBW
+Spacecraft Transmit Power Downlink Secondary,out_down_s_sc_transpower,,dBW
+Spacecraft Antenna Gain Uplink Primary,out_up_p_sc_antgain,,dBi
+Spacecraft Antenna Gain Uplink Secondary,out_up_s_sc_antgain,,dBi
+Spacecraft Antenna Gain Downlink Primary,out_down_p_sc_antgain,,dBi
+Spacecraft Antenna Gain Downlink Secondary,out_down_s_sc_antgain,,dBi
+Ground Station Transmit Power Uplink Primary,out_up_p_gs_transpower,,dBW 
+Ground Station Transmit Power Uplink Secondary,out_up_s_gs_transpower,,dBW
+Ground Station Transmit Power Downlink Primary,out_down_p_gs_transpower,,dBW
+Ground Station Transmit Power Downlink Secondary,out_down_s_gs_transpower,,dBW
+Ground Station Antenna Gain Uplink Primary,out_up_p_gs_antgain,,dBi
+Ground Station Antenna Gain Uplink Secondary,out_up_s_gs_antgain,,dBi
+Ground Station Antenna Gain Downlink Primary,out_down_p_gs_antgain,,dBi
+Ground Station Antenna Gain Downlink Secondary,out_down_s_gs_antgain,,dBi
+Data Rate Uplink Primary,out_up_p_datarate,,dB-Hz
+Data Rate Uplink Secondary,out_up_s_datarate,,dB-Hz
+Data Rate Downlink Primary,out_down_p_datarate,,dB-Hz
+Data Rate Downlink Secondary,out_down_s_datarate,,dB-Hz
+System to Noise Ratio Uplink Primary(EB/No),out_up_p_EBNo,,dB
+System to Noise Ratio Uplink Secondary(EB/No),out_up_s_EBNo,,dB
+System to Noise Ratio Downlink Primary(EB/No),out_down_p_EBNo,,dB
+System to Noise Ratio Downlink Secondary(EB/No),out_down_s_EBNo,,dB
+System Noise Temperature Ground,out_up_systemp,,dBK
+System Noise Temperature Spacecraft,out_down_systemp,,dBK
+Path Losses Uplink Primary,out_up_p_pathloss,,dB
+Path Losses Uplink Secondary,out_up_s_pathloss,,dB
+Path Losses Downlink Primary,out_down_p_pathloss,,dB
+Path Losses Downlink Secondary,out_down_s_pathloss,,dB
+Other Losses Uplink,out_up_otherloss,,dB
+Other Losses Downlink,out_down_otherloss,,dB
+Margin Uplink Primary,out_up_p_margin,,dB
+Margin Uplink Secondary,out_up_s_margin,,dB
+Margin Downlink Primary,out_down_p_margin,,dB
+Margin Downlink Secondary,out_down_s_margin,,dB

@@ -179,7 +179,7 @@ P_btn3.grid(column = 2, row = 3)
 P_btn = ttk.Button(tabPower, text = "Select", command = openPower)
 P_btn.grid(column = 2, row = 4, padx = 10, pady = 10)
 
-### Tab 5: Comms ### commenting to test commits
+### Tab 5: Comms 
 Header_5 = ttk.Label(tabComms,text ="Welcome to Communications!")
 Header_5.grid(column = 0, row = 0, padx = 10, pady = 10)
 

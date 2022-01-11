@@ -28,69 +28,87 @@ class CommsTool:
 
         # Line Budget Calcs
         
-        cD.outTransPowerDXS = m.log10(cD.transPowerxS)*10
-        cD.outTransPowerDUS = m.log10(cD.transPoweruS)*10
-        cD.outAntGainDXS = cD.antGainxS
-        cD.outAntGainDUS = cD.antGainuS
-        cD.outAntGainUXS = cD.antGainxS
-        cD.outAntGainUUS = cD.antGainuS
-        cD.outTransPowerUXG = m.log10(cD.transPowerxG)*10
-        cD.outTransPowerUUG = m.log10(cD.transPoweruG)*10
-        cD.outAntGainDXG = cD.antGainxG
-        cD.outAntGainDUG = cD.antGainuG
-        cD.outAntGainUXG = cD.antGainxG
-        cD.outAntGainUUG = cD.antGainuG
-        cD.outEBNODX = cD.ebnox
-        cD.outEBNODU = cD.ebnou
-        cD.outEBNOUX = cD.ebnox
-        cD.outEBNOUU = cD.ebnou
-        cD.outDataRateDX = m.log10(cD.xdown)*10
-        cD.outDataRateDU = m.log10(cD.udown)*10
-        cD.outDataRateUX = m.log10(cD.xup)*10
-        cD.outDataRateUU = m.log10(cD.uup)*10
-        cD.outNoiseTemp = m.log10(cD.sysTemp)*10
-        cD.outPathLossX = m.log10(4*3.14*cD.maxDistanceEarth*cD.xfreq/300000000)*20
-        cD.outPathLossU = m.log10(4*3.14*cD.maxDistanceEarth*cD.ufreq/300000000)*20
-        cD.outOtherLoss = cD.rainLoss + cD.lineLoss ##cD.pointingLoss + cD.rainLoss + cD.electronLoss + cD.polarLoss + cD.lineLoss
-        cD.outMarginDX = cD.outTransPowerDXS + cD.outAntGainDXS + cD.outAntGainDXG + 228.6 - cD.outEBNODX - cD.outDataRateDX - cD.outNoiseTemp - cD.outPathLossX - cD.outOtherLoss
-        cD.outMarginDU = cD.outTransPowerDUS + cD.outAntGainDUS + cD.outAntGainDUG + 228.6 - cD.outEBNODU - cD.outDataRateDU - cD.outNoiseTemp - cD.outPathLossU - cD.outOtherLoss
-        cD.outMarginUX = cD.outTransPowerUXG + cD.outAntGainUXS + cD.outAntGainUXG + 228.6 - cD.outEBNOUX - cD.outDataRateUX - cD.outNoiseTemp - cD.outPathLossX - cD.outOtherLoss
-        cD.outMarginUU = cD.outTransPowerUUG + cD.outAntGainUUS + cD.outAntGainUUG + 228.6 - cD.outEBNOUU - cD.outDataRateUU - cD.outNoiseTemp - cD.outPathLossU - cD.outOtherLoss
-                
+        cD.out_up_p_sc_transpower = m.log10(cD.up_p_sc_transpower)*10
+        cD.out_up_p_gs_transpower = m.log10(cD.up_p_gs_transpower)*10
+        cD.out_up_s_sc_transpower = m.log10(cD.up_s_sc_transpower)*10
+        cD.out_up_s_gs_transpower = m.log10(cD.up_s_gs_transpower)*10
+        cD.out_down_p_sc_transpower = m.log10(cD.down_p_sc_transpower)*10
+        cD.out_down_p_gs_transpower = m.log10(cD.down_p_gs_transpower)*10
+        cD.out_down_s_sc_transpower = m.log10(cD.down_s_sc_transpower)*10
+        cD.out_down_s_gs_transpower = m.log10(cD.down_s_gs_transpower)*10
+        cD.out_up_p_sc_antgain = cD.up_p_sc_antgain
+        cD.out_up_p_gs_antgain = cD.up_p_gs_antgain
+        cD.out_up_s_sc_antgain = cD.up_s_sc_antgain
+        cD.out_up_s_gs_antgain = cD.up_s_gs_antgain
+        cD.out_down_p_sc_antgain = cD.down_p_sc_antgain
+        cD.out_down_p_gs_antgain = cD.down_p_gs_antgain
+        cD.out_down_s_sc_antgain = cD.down_s_sc_antgain
+        cD.out_down_s_gs_antgain = cD.down_s_gs_antgain
+        cD.out_up_p_datarate = m.log10(cD.up_p_datarate)*10
+        cD.out_up_s_datarate = m.log10(cD.up_s_datarate)*10
+        cD.out_down_p_datarate = m.log10(cD.down_p_datarate)*10
+        cD.out_down_s_datarate = m.log10(cD.down_s_datarate)*10
+        cD.out_up_p_EBNo = cD.up_p_EBNo
+        cD.out_up_s_EBNo = cD.up_s_EBNo
+        cD.out_down_p_EBNo = cD.down_p_EBNo
+        cD.out_down_s_EBNo = cD.down_s_EBNo
+        cD.out_up_systemp = m.log10(cD.up_systemp)*10 #aka Noise temp
+        cD.out_down_systemp = m.log10(cD.down_systemp)*10
+        cD.out_up_p_pathloss = m.log10(4*3.14*cD.up_maxdistanceEarth*cD.up_p_frequency/300000000)*20
+        cD.out_up_s_pathloss = m.log10(4*3.14*cD.up_maxdistanceEarth*cD.up_s_frequency/300000000)*20
+        cD.out_down_p_pathloss = m.log10(4*3.14*cD.down_maxdistanceEarth*cD.down_p_frequency/300000000)*20
+        cD.out_down_s_pathloss = m.log10(4*3.14*cD.down_maxdistanceEarth*cD.down_s_frequency/300000000)*20
+        cD.out_up_otherloss = cD.up_rainloss + cD.up_lineloss + cD.up_otherloss
+        cD.out_down_otherloss = cD.down_rainloss + cD.down_lineloss + cD.down_otherloss
+        cD.out_up_p_margin = cD.out_up_p_gs_transpower + cD.out_up_p_gs_antgain + cD.out_up_p_sc_antgain + 228.6 - cD.out_up_p_EBNo - cD.out_up_p_datarate - cD.out_up_systemp - cD.out_up_p_pathloss - cD.out_up_otherloss
+        cD.out_up_s_margin = cD.out_up_s_gs_transpower + cD.out_up_s_gs_antgain + cD.out_up_s_sc_antgain + 228.6 - cD.out_up_s_EBNo - cD.out_up_s_datarate - cD.out_up_systemp - cD.out_up_s_pathloss - cD.out_up_otherloss
+        cD.out_down_p_margin = cD.out_down_p_sc_transpower + cD.out_down_p_sc_antgain + cD.out_down_p_gs_antgain + 228.6 - cD.out_down_p_EBNo - cD.out_down_p_datarate - cD.out_down_systemp - cD.out_down_p_pathloss - cD.out_down_otherloss
+        cD.out_down_s_margin = cD.out_down_s_sc_transpower + cD.out_down_s_sc_antgain + cD.out_down_s_gs_antgain + 228.6 - cD.out_down_s_EBNo - cD.out_down_s_datarate - cD.out_down_systemp - cD.out_down_s_pathloss - cD.out_down_otherloss
+
         return cD
 
     def writeData(self, cD):
+        print("START WRITE DATA")
         with open('outputCommsParameters.csv', mode='w', newline='') as parameters:
             paramWriter = csv.writer(parameters, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
             self.dataList = [self.data[1],
-                            cD.outTransPowerDXS,
-                            cD.outTransPowerDUS,
-                            cD.outAntGainDXS,
-                            cD.outAntGainDUS,
-                            cD.outAntGainUXS,
-                            cD.outAntGainUUS,
-                            cD.outTransPowerUXG,
-                            cD.outTransPowerUUG,
-                            cD.outAntGainDXG,
-                            cD.outAntGainDUG,
-                            cD.outAntGainUXG,
-                            cD.outAntGainUUG,
-                            cD.outEBNODX, 
-                            cD.outEBNODU,
-                            cD.outEBNOUX,
-                            cD.outEBNOUU,
-                            cD.outDataRateDX,
-                            cD.outDataRateDU,
-                            cD.outDataRateUX,
-                            cD.outDataRateUU,
-                            cD.outNoiseTemp,
-                            cD.outPathLossX,
-                            cD.outPathLossU,
-                            cD.outOtherLoss,
-                            cD.outMarginDX,
-                            cD.outMarginDU,
-                            cD.outMarginUX,
-                            cD.outMarginUU]
+                            cD.out_up_p_sc_transpower,
+                            cD.out_up_s_sc_transpower,
+                            cD.out_down_p_sc_transpower,
+                            cD.out_down_s_sc_transpower,
+                            cD.out_up_p_sc_antgain,
+                            cD.out_up_s_sc_antgain,
+                            cD.out_down_p_sc_antgain,
+                            cD.out_down_s_sc_antgain,
+                            cD.out_up_p_gs_transpower,
+                            cD.out_up_s_gs_transpower,
+                            cD.out_down_p_gs_transpower,
+                            cD.out_down_s_gs_transpower,
+                            cD.out_up_p_gs_antgain,
+                            cD.out_up_s_gs_antgain,
+                            cD.out_down_p_gs_antgain,
+                            cD.out_down_s_gs_antgain,
+                            cD.out_up_p_datarate,
+                            cD.out_up_s_datarate,
+                            cD.out_down_p_datarate,
+                            cD.out_down_s_datarate,
+                            cD.out_up_p_EBNo,
+                            cD.out_up_s_EBNo,
+                            cD.out_down_p_EBNo,
+                            cD.out_down_s_EBNo,
+                            cD.out_up_systemp,
+                            cD.out_down_systemp,
+                            cD.out_up_p_pathloss,
+                            cD.out_up_s_pathloss,
+                            cD.out_down_p_pathloss,
+                            cD.out_down_s_pathloss,
+                            cD.out_up_otherloss,
+                            cD.out_down_otherloss,
+                            cD.out_up_p_margin,
+                            cD.out_up_s_margin,
+                            cD.out_down_p_margin,
+                            cD.out_down_s_margin]
             length = len(self.data)
+            print("HELLOOOOOO I RANNNNNNNNNNNNNJ")
             for row in range(1,length):
                 paramWriter.writerow([self.var[row],self.var_name[row],self.dataList[row-1],self.units[row]])
