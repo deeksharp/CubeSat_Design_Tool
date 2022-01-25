@@ -284,28 +284,27 @@ class Comms:
             
         elif x == 2:
              # Inputs
-            self.T1_R0_C0 = ttk.Label(self.tabInputs, text='Power Budget:', wraplength = 100)
+            self.T1_R0_C0 = ttk.Label(self.tabInputs, text='Link Budget:', wraplength = 100)
             self.T1_R0_C0.grid(row = 0, column = 0, padx = 5, pady = 5,sticky='w')
-            t='Collected from subsystem design modules.'
+            t='Ground Sation and Spacecraft parameters for an uplink and downlink budget.'
             self.T1_R0_C1 = ttk.Label(self.tabInputs, text=t, wraplength = 300)
             self.T1_R0_C1.grid(row = 0, column = 1, padx = 5, pady = 5,sticky='w')
             self.T1_R1_C0 = ttk.Label(self.tabInputs, text='EPS Design Parameters:', wraplength = 100)
             self.T1_R1_C0.grid(row = 1, column = 0, padx = 5, pady = 5,sticky='w')
-            t ='Parameters for capabilities of solar system, battery system, and PMAD system, along with power margin.'
+            t ='Parameters for calculating transmitter power or max data rates, along with link margin.'
             self.T1_R1_C1 = ttk.Label(self.tabInputs, text=t, wraplength = 300)
             self.T1_R1_C1.grid(row = 1, column = 1, padx = 5, pady = 5,sticky='w')
             
             # Assumptions
-            t = 'Assumed values include constants, such as solar flux, '\
-                'as well as design sizing parameters for the spacecraft '\
+            t = 'Assumed values include frequency (Hz), Eb/No for FSK and BSK modulation, '\
+                'as well as values for losses '\
                 'if non-custom is chosen'
             self.T2_R0_C0 = ttk.Label(self.tabAssums, text=t, wraplength = 350)
             self.T2_R0_C0.grid(row = 0, column = 0, padx = 5, pady = 5,sticky='w')
 
             # Calculations
-            t = 'Calculated values include sizing of solar panel and batteries, '\
-                'based on calculated total power values, with appropriate '\
-                'degradating and orbit considerations in place.'
+            t = 'Calculated values include antenna gains, EIRP, power, data rate, '\
+                'based on selected frequency and modulation. '
             self.T3_R0_C0 = ttk.Label(self.tabCalcs, text=t, wraplength = 350)
             self.T3_R0_C0.grid(row = 0, column = 0, padx = 5, pady = 5,sticky='w')
 
@@ -405,8 +404,9 @@ class Comms:
         ### Uplink: Ground Station to Spacecraft Tab ###
         # Header - NOT FINISHED
         R = 0; C = 0
-        t_ins_design = 'Input appropriate parameter values for Ground Station comms:'
-        self.choose = ttk.Label(self.tabUplink,text = t_ins_design, wraplength = 250)
+        t_ins_design = 'Uplink is Ground Station to Spacecraft communication. '\
+        'Input appropriate parameter values for Ground Station communications. Change assumed values for parameters according to desired link budget. '    
+        self.choose = ttk.Label(self.tabUplink,text = t_ins_design, wraplength = 450)
         self.choose.grid(row = R, column = C, columnspan = 2,rowspan=2, padx = 5, pady = 5)
 
         # Primary Spacecraft Transmitter Power
@@ -508,7 +508,7 @@ class Comms:
         
         # Heading - NOT FINISHED
         R = 0; C = 0
-        t_ins_design = 'Input appropriate parameter values for Spacecraft comms:'
+        t_ins_design = 'Downlink is Spacecraft to Ground Station Communication. Input appropriate parameter values for Spacecraft communications:'
         self.choose = ttk.Label(self.tabDownlink,text = t_ins_design, wraplength = 250)
         self.choose.grid(row = R, column = C, columnspan = 2,rowspan=2, padx = 5, pady = 5)
 

@@ -1,37 +1,37 @@
 Variable,Variable Name,Value,Units
-Spacecraft Transmit Power Uplink Primary,out_up_p_sc_transpower,10.0,dBW
+Spacecraft Transmit Power Uplink Primary,out_up_p_sc_transpower,0,dBW
 Spacecraft Transmit Power Uplink Secondary,out_up_s_sc_transpower,0,dBW
-Spacecraft Transmit Power Downlink Primary,out_down_p_sc_transpower,10.0,dBW
+Spacecraft Transmit Power Downlink Primary,out_down_p_sc_transpower,0,dBW
 Spacecraft Transmit Power Downlink Secondary,out_down_s_sc_transpower,0,dBW
-Spacecraft Antenna Gain Uplink Primary,out_up_p_sc_antgain,19.0,dBi
+Spacecraft Antenna Gain Uplink Primary,out_up_p_sc_antgain,0.0,dBi
 Spacecraft Antenna Gain Uplink Secondary,out_up_s_sc_antgain,0.0,dBi
-Spacecraft Antenna Gain Downlink Primary,out_down_p_sc_antgain,19.0,dBi
+Spacecraft Antenna Gain Downlink Primary,out_down_p_sc_antgain,0.0,dBi
 Spacecraft Antenna Gain Downlink Secondary,out_down_s_sc_antgain,0.0,dBi
-Ground Station Transmit Power Uplink Primary,out_up_p_gs_transpower,12.301933788690455,dBW 
+Ground Station Transmit Power Uplink Primary,out_up_p_gs_transpower,0,dBW 
 Ground Station Transmit Power Uplink Secondary,out_up_s_gs_transpower,0,dBW
-Ground Station Transmit Power Downlink Primary,out_down_p_gs_transpower,12.301933788690455,dBW
+Ground Station Transmit Power Downlink Primary,out_down_p_gs_transpower,0,dBW
 Ground Station Transmit Power Downlink Secondary,out_down_s_gs_transpower,0,dBW
-Ground Station Antenna Gain Uplink Primary,out_up_p_gs_antgain,30.14,dBi
+Ground Station Antenna Gain Uplink Primary,out_up_p_gs_antgain,0.0,dBi
 Ground Station Antenna Gain Uplink Secondary,out_up_s_gs_antgain,0.0,dBi
-Ground Station Antenna Gain Downlink Primary,out_down_p_gs_antgain,30.14,dBi
+Ground Station Antenna Gain Downlink Primary,out_down_p_gs_antgain,0.0,dBi
 Ground Station Antenna Gain Downlink Secondary,out_down_s_gs_antgain,0.0,dBi
-Data Rate Uplink Primary,out_up_p_datarate,39.82271233039568,dB-Hz
+Data Rate Uplink Primary,out_up_p_datarate,0,dB-Hz
 Data Rate Uplink Secondary,out_up_s_datarate,0,dB-Hz
-Data Rate Downlink Primary,out_down_p_datarate,39.82271233039568,dB-Hz
+Data Rate Downlink Primary,out_down_p_datarate,0,dB-Hz
 Data Rate Downlink Secondary,out_down_s_datarate,0,dB-Hz
-System to Noise Ratio Uplink Primary(EB/No),out_up_p_EBNo,10.0,dB
+System to Noise Ratio Uplink Primary(EB/No),out_up_p_EBNo,0.0,dB
 System to Noise Ratio Uplink Secondary(EB/No),out_up_s_EBNo,0.0,dB
-System to Noise Ratio Downlink Primary(EB/No),out_down_p_EBNo,10.0,dB
+System to Noise Ratio Downlink Primary(EB/No),out_down_p_EBNo,0.0,dB
 System to Noise Ratio Downlink Secondary(EB/No),out_down_s_EBNo,0.0,dB
 System Noise Temperature Ground,out_up_systemp,24.771212547196626,dBK
 System Noise Temperature Spacecraft,out_down_systemp,24.771212547196626,dBK
-Path Losses Uplink Primary,out_up_p_pathloss,121.07750143902226,dB
+Path Losses Uplink Primary,out_up_p_pathloss,0,dB
 Path Losses Uplink Secondary,out_up_s_pathloss,0,dB
-Path Losses Downlink Primary,out_down_p_pathloss,121.07750143902226,dB
+Path Losses Downlink Primary,out_down_p_pathloss,0,dB
 Path Losses Downlink Secondary,out_down_s_pathloss,0,dB
-Other Losses Uplink,out_up_otherloss,10.0,dB
-Other Losses Downlink,out_down_otherloss,10.0,dB
-Margin Uplink Primary,out_up_p_margin,84.3705074720759,dB
-Margin Uplink Secondary,out_up_s_margin,193.82878745280337,dB
-Margin Downlink Primary,out_down_p_margin,82.06857368338544,dB
-Margin Downlink Secondary,out_down_s_margin,193.82878745280337,dB
+Other Losses Uplink,out_up_otherloss,6.0,dB
+Other Losses Downlink,out_down_otherloss,6.0,dB
+Margin Uplink Primary,out_up_p_margin,197.82878745280337,dB
+Margin Uplink Secondary,out_up_s_margin,197.82878745280337,dB
+Margin Downlink Primary,out_down_p_margin,197.82878745280337,dB
+Margin Downlink Secondary,out_down_s_margin,197.82878745280337,dB

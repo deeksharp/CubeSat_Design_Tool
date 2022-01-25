@@ -199,10 +199,10 @@ C_L1L = P_L2 = ttk.Label(tabComms, text='Use Case:')
 C_L1L.grid(column = 0, row = 1, padx = 10, pady = 10)
 C_L1M = P_L2 = ttk.Label(tabComms, text='Description:')
 C_L1M.grid(column = 1, row = 1, padx = 10, pady = 10)
-t = 'Standard Communications Design for a technology demonstration mission.'
+t = 'Communications link budget has already been developed. Input is necessary for margins and for overall CubeSat design.'
 C_L2M = ttk.Label(tabComms, text=t, wraplength = 300)
 C_L2M.grid(column = 1, row = 2, padx = 10, pady = 10,sticky='w')
-t = 'Custom Communications Design for various mission types.'
+t = 'Custom Communications link budget for various mission types.'
 C_L3M = ttk.Label(tabComms, text=t, wraplength = 300)
 C_L3M.grid(column = 1, row = 3, padx = 10, pady = 10,sticky='w')
 
