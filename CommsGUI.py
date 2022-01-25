@@ -1,7 +1,7 @@
 import tkinter as tk
 from tkinter import StringVar, ttk
         
-#########           NAMING CONVENTION       ########### 
+#########           NAMING CONVENTION USE CASE 1      ########### 
 #               TAB_*ORDER_*ENTITY_VARIABLE            #
 ## TAB specifies which tab: 'up' or 'down' for uplink or downlink
 ## *ORDER specifies which band: 'p' or 's' for primary or secondary
@@ -10,104 +10,132 @@ from tkinter import StringVar, ttk
 ######### please note: * means value is not necessarily required.  ORDER and ENTITY 
 ######### labels don't apply to certain variables and may be skipped.  Ex: up_systemp or up_p_datarate
 
+#########           NAMING CONVENTION USE CASE 2      ########### 
+#               TAB_*ORDER_VARIABLE            #
+## TAB specifies which tab: 'up' or 'down' for uplink or downlink
+## *ORDER specifies which band: '1' or '2' for primary or secondary.  different from use case 1 to avoid clashing variable names
+## VARIABLE specifies variable name: ex: 'transpower', 'antgain', etc. 
 
 class Comms:
     def __init__(self):
         # Initialize Comms Data
         self.UseCase: int
 
-
-        # UPLINK TAB
+        # UPLINK TAB - 1
         self.up_p_sc_transpower = ''
         self.up_p_sc_antgain = ''
         self.up_p_gs_transpower = ''
         self.up_p_gs_antgain = ''
         self.up_p_datarate = ''
-        self.up_p_frequency = ''
-        self.up_p_EBNo = ''
+        self.up_p_frequency = '' 
+        self.up_p_EBNo = '' 
         self.up_s_sc_transpower = ''
         self.up_s_sc_antgain = ''
         self.up_s_gs_transpower = ''
         self.up_s_gs_antgain = ''
         self.up_s_datarate = ''
-        self.up_s_frequency = ''
-        self.up_s_EBNo = ''
-        self.up_systemp = ''
+        self.up_s_frequency = '' 
+        self.up_s_EBNo = '' 
+        self.up_systemp = '' 
         self.up_maxdistanceEarth = ''
-        self.up_rainloss = ''
-        self.up_lineloss = ''
-        self.up_otherloss = ''
+        self.up_rainloss = '' 
+        self.up_lineloss = '' 
+        self.up_otherloss = '' 
         
-        # Uplink Tab
-        #self.transPowerxG = ''
-        #self.antGainxG = ''
-        #self.dishDiameterG = ''
-        #self.transPoweruG = ''
-        #self.antGainuG = ''
-        #self.xup = ''
-        #self.uup = ''
-        #self.xfreqG = ''
-        #self.ufreqG = ''
-        #self.maxDistanceEarthG = ''
-        #self.rainLossG = ''
-        #self.sysTempG = ''
-        #self.ebnoxG = ''
-        #self.ebnouG = ''
-        #self.lineLossG = ''
-        ##self.cenFreq = '' 
-        ##self.pointingLoss = ''
-        ##self.electronLoss = ''
-        ##self.polarLoss = ''
-        ##self.maxSlantRange = ''
-        ##self.EIRP = ''
-        ##self.minElevationAngle = ''
-        
-
-        # DOWNLINK TAB
+        # DOWNLINK TAB - 1
         self.down_p_sc_transpower = ''
         self.down_p_sc_antgain = ''
         self.down_p_gs_transpower = ''
         self.down_p_gs_antgain = ''
         self.down_p_datarate = ''
-        self.down_p_frequency = ''
-        self.down_p_EBNo = ''
+        self.down_p_frequency = '' 
+        self.down_p_EBNo = '' 
         self.down_s_sc_transpower = ''
         self.down_s_sc_antgain = ''
         self.down_s_gs_transpower = ''
         self.down_s_gs_antgain = ''
         self.down_s_datarate = ''
-        self.down_s_frequency = ''
-        self.down_s_EBNo = ''
-        self.down_systemp = ''
+        self.down_s_frequency = '' 
+        self.down_s_EBNo = '' 
+        self.down_systemp = '' 
         self.down_maxdistanceEarth = ''
         self.down_rainloss = ''
-        self.down_lineloss = ''
+        self.down_lineloss = '' 
         self.down_otherloss = ''
-
-        # self.transPowerxS = ''
-        # self.antGainxS = ''
-        # self.transPoweruS = ''
-        # self.antGainuS = ''
-        # self.xdown = ''
-        # self.udown = ''
-        # self.xfreqS = ''
-        # self.ufreqS = ''
-        # self.maxDistanceEarthS = ''
-        # self.rainLossS = ''
-        # self.sysTempS = ''
-        # self.ebnoxS = ''
-        # self.ebnouS = ''
-        # self.lineLossS = ''
-        ##self.dishDiameterS = ''
         
+        # UPLINK TAB - 2
+        self.up_1_frequency = ''
+        self.up_1_EBNo = ''
+        self.up_1_BER = ''
+        self.up_1_antennatype = ''
+        self.up_1_beamwidth = ''
+        self.up_1_atmosphereattenuation = ''
+        self.up_1_rainattenuation = ''
+        self.up_1_systemtemp = ''
+        self.up_1_lineloss = ''
+        self.up_1_spaceloss = ''
+        self.up_1_polarizationloss = ''
+        self.up_1_transmitterpointingloss = ''
+        self.up_1_receiverpointingloss = ''
+        self.up_1_transmitterdishdiameter = ''
+        self.up_1_receiverdishdiameter = ''
+        self.up_1_transmitterefficiency = ''
+        self.up_1_receiverefficiency = ''
+        self.up_2_frequency = ''
+        self.up_2_EBNo = ''
+        self.up_2_BER = ''
+        self.up_2_antennatype = ''
+        self.up_2_beamwidth = ''
+        self.up_2_atmosphereattenuation = ''
+        self.up_2_rainattenuation = ''
+        self.up_2_systemtemp = ''
+        self.up_2_lineloss = ''
+        self.up_2_spaceloss = ''
+        self.up_2_polarizationloss = ''
+        self.up_2_transmitterpointingloss = ''
+        self.up_2_receiverpointingloss = ''
+        self.up_2_transmitterdishdiameter = ''
+        self.up_2_receiverdishdiameter = ''
+        self.up_2_transmitterefficiency = ''
+        self.up_2_receiverefficiency = ''
 
-        # Data Generation
-        # self.atomClock = ''
-        # self.radiation = ''
-        # self.housekeeping = ''
-        
+        # DOWNLINK TAB - 2
+        self.down_1_frequency = ''
+        self.down_1_EBNo = ''
+        self.down_1_BER = ''
+        self.down_1_antennatype = ''
+        self.down_1_beamwidth = ''
+        self.down_1_atmosphereattenuation = ''
+        self.down_1_rainattenuation = ''
+        self.down_1_systemtemp = ''
+        self.down_1_lineloss = ''
+        self.down_1_spaceloss = ''
+        self.down_1_polarizationloss = ''
+        self.down_1_transmitterpointingloss = ''
+        self.down_1_receiverpointingloss = ''
+        self.down_1_transmitterdishdiameter = ''
+        self.down_1_receiverdishdiameter = ''
+        self.down_1_transmitterefficiency = ''
+        self.down_1_receiverefficiency = ''
+        self.down_2_frequency = ''
+        self.down_2_EBNo = ''
+        self.down_2_BER = ''
+        self.down_2_antennatype = ''
+        self.down_2_beamwidth = ''
+        self.down_2_atmosphereattenuation = ''
+        self.down_2_rainattenuation = ''
+        self.down_2_systemtemp = ''
+        self.down_2_lineloss = ''
+        self.down_2_spaceloss = ''
+        self.down_2_polarizationloss = ''
+        self.down_2_transmitterpointingloss = ''
+        self.down_2_receiverpointingloss = ''
+        self.down_2_transmitterdishdiameter = ''
+        self.down_2_receiverdishdiameter = ''
+        self.down_2_transmitterefficiency = ''
+        self.down_2_receiverefficiency = ''
 
-        # OUTPUTS 
+        # OUTPUTS - 1
         self.out_up_p_sc_transpower: float
         self.out_up_p_gs_transpower: float
         self.out_up_s_sc_transpower: float
@@ -145,39 +173,75 @@ class Comms:
         self.out_down_p_margin: float
         self.out_down_s_margin: float
 
-        # self.outTransPowerDXS: float
-        # self.outTransPowerDUS: float
-        # self.outAntGainDXS: float
-        # self.outAntGainDUS: float
-        # self.outAntGainUXS: float
-        # self.outAntGainUUS: float 
-        # self.outTransPowerUXG: float
-        # self.outTransPowerUUG: float
-        # self.outAntGainDXG: float
-        # self.outAntGainDUG: float
-        # self.outAntGainUXG: float
-        # self.outAntGainUUG: float
-        # self.outEBNODXS: float
-        # self.outEBNODUS: float
-        # self.outEBNOUXG: float
-        # self.outEBNOUUG: float
-        # self.outDataRateDX: float
-        # self.outDataRateDU: float
-        # self.outDataRateUX: float
-        # self.outDataRateUU: float
-        # self.outNoiseTempG: float
-        # self.outNoiseTempS: float
-        # self.outPathLossXG: float
-        # self.outPathLossUG: float
-        # self.outPathLossXS: float
-        # self.outPathLossUS: float
-        # self.outOtherLossG: float
-        # self.outOtherLossS: float
-        # self.outMarginDX: float
-        # self.outMarginDU: float
-        # self.outMarginUX: float
-        # self.outMarginUU: float
-
+        #OUTPUT - 2
+        self.out_up_1_frequency: float
+        self.out_up_2_frequency: float
+        self.out_down_1_frequency: float
+        self.out_down_2_frequency: float
+        self.out_up_1_EBNo: float
+        self.out_up_2_EBNo: float
+        self.out_down_1_EBNo: float
+        self.out_down_2_EBNo: float
+        self.out_up_1_BER: float
+        self.out_up_2_BER: float
+        self.out_down_1_BER: float
+        self.out_down_2_BER: float
+        self.out_up_1_antennatype: float
+        self.out_up_2_antennatype: float
+        self.out_down_1_antennatype: float
+        self.out_down_2_antennatype: float
+        self.out_up_1_beamwidth: float
+        self.out_up_2_beamwidth: float
+        self.out_down_1_beamwidth: float
+        self.out_down_2_beamwidth: float
+        self.out_up_1_atmosphereattenuation: float
+        self.out_up_2_atmosphereattenuation: float
+        self.out_down_1_atmosphereattenuation: float
+        self.out_down_2_atmosphereattenuation: float
+        self.out_up_1_rainattenuation: float
+        self.out_up_2_rainattenuation: float
+        self.out_down_1_rainattenuation: float
+        self.out_down_2_rainattenuation: float
+        self.out_up_1_systemtemp: float
+        self.out_up_2_systemtemp: float
+        self.out_down_1_systemtemp: float
+        self.out_down_2_systemtemp: float
+        self.out_up_1_lineloss: float
+        self.out_up_2_lineloss: float
+        self.out_down_1_lineloss: float
+        self.out_down_2_lineloss: float
+        self.out_up_1_spaceloss: float
+        self.out_up_2_spaceloss: float
+        self.out_down_1_spaceloss: float
+        self.out_down_2_spaceloss: float
+        self.out_up_1_polarizationloss: float
+        self.out_up_2_polarizationloss: float
+        self.out_down_1_polarizationloss: float
+        self.out_down_2_polarizationloss: float
+        self.out_up_1_transmitterpointingloss: float
+        self.out_up_2_transmitterpointingloss: float
+        self.out_down_1_transmitterpointingloss: float
+        self.out_down_2_transmitterpointingloss: float
+        self.out_up_1_receiverpointingloss: float
+        self.out_up_2_receiverpointingloss: float
+        self.out_down_1_receiverpointingloss: float
+        self.out_down_2_receiverpointingloss: float
+        self.out_up_1_transmitterdishdiameter: float
+        self.out_up_2_transmitterdishdiameter: float
+        self.out_down_1_transmitterdishdiameter: float
+        self.out_down_2_transmitterdishdiameter: float
+        self.out_up_1_receiverdishdiameter: float
+        self.out_up_2_receiverdishdiameter: float
+        self.out_down_1_receiverdishdiameter: float
+        self.out_down_2_receiverdishdiameter: float
+        self.out_up_1_transmitterefficiency: float
+        self.out_up_2_transmitterefficiency: float
+        self.out_down_1_transmitterefficiency: float
+        self.out_down_2_transmitterefficiency: float
+        self.out_up_1_receiverefficiency: float
+        self.out_up_2_receiverefficiency: float
+        self.out_down_1_receiverefficiency: float
+        self.out_down_2_receiverefficiency: float
 
     def moreInfo(self, x):
         self.commsgui = tk.Tk() # Instance of Tk,
@@ -245,7 +309,7 @@ class Comms:
             self.T3_R0_C0 = ttk.Label(self.tabCalcs, text=t, wraplength = 350)
             self.T3_R0_C0.grid(row = 0, column = 0, padx = 5, pady = 5,sticky='w')
 
-    def linkbudget4demo(self):
+    def linkbudget4demo_standard(self):
         self.commsgui = tk.Tk() # Instance of Tk,
         self.commsgui.title("Communications Subsystem Design Module") # Name
         self.commswindow = ttk.Notebook(self.commsgui) # tkk module implements "tabs" (Notebook)
@@ -253,7 +317,6 @@ class Comms:
         self.tabDownlink = ttk.Frame(self.commswindow)
         self.commswindow.add(self.tabUplink, text = 'Uplink')
         self.commswindow.add(self.tabDownlink, text = 'Downlink')
-        ##self.commswindow.add(self.tabDataGen, text = 'Data Generation')
         self.commswindow.pack(expand = 1, fill ="both")
 
 
@@ -297,42 +360,6 @@ class Comms:
         self.entry_up_lineloss.insert(0,3)
         self.entry_up_otherloss = ttk.Entry(self.tabUplink, width = w)
         self.entry_up_otherloss.insert(0,0)
-        
-        # self.ctransPowerxG = ttk.Entry(self.tabGroundStation,width = w)
-        # self.ctransPowerxG.insert(0,0)
-        # self.cantGainxG = ttk.Entry(self.tabGroundStation, width = w)
-        # self.cantGainxG.insert(0,0)
-        # ##self.cdishDiameterG = ttk.Entry(self.tabGroundStation, width = w)
-        # self.ctransPoweruG = ttk.Entry(self.tabGroundStation,width = w)
-        # self.ctransPoweruG.insert(0,0)
-        # self.cantGainuG = ttk.Entry(self.tabGroundStation, width = w)
-        # self.cantGainuG.insert(0,0)
-        # self.cxup = ttk.Entry(self.tabGroundStation, width = w)
-        # self.cxup.insert(0,0)
-        # self.cuup = ttk.Entry(self.tabGroundStation, width = w)
-        # self.cuup.insert(0,0)
-        # self.cxUpFreq = ttk.Entry(self.tabGroundStation, width = w)
-        # self.cxUpFreq.insert(0,0)
-        # self.cuUpFreq = ttk.Entry(self.tabGroundStation, width = w)
-        # self.cuUpFreq.insert(0,0)
-        # self.cebnoxG = ttk.Entry(self.tabGroundStation, width = w)
-        # self.cebnoxG.insert(0,0)
-        # self.cebnouG = ttk.Entry(self.tabGroundStation, width = w)
-        # self.cebnouG.insert(0,0)
-        # self.csysTempG = ttk.Entry(self.tabGroundStation, width = w)
-        # self.csysTempG.insert(0, 300)
-        # self.cmaxDistanceEarthG = ttk.Entry(self.tabGroundStation, width = w)
-        # self.cmaxDistanceEarthG.insert(0, 2704)
-        # self.crainLossG = ttk.Entry(self.tabGroundStation, width = w)
-        # self.crainLossG.insert(0, 3)
-        # self.clineLossG = ttk.Entry(self.tabGroundStation, width = w)
-        # self.clineLossG.insert(0, 3)
-        # self.clineLossG = ttk.Entry(self.tabGroundStation, width = w)
-        # self.cmaxSlantRange = ttk.Entry(self.tabGroundStation, width = w)
-        # self.cEIRP = ttk.Entry(self.tabGroundStation, width = w)
-        # self.cminElevationAngle = ttk.Entry(self.tabGroundStation, width = w)
-        # self.cminElevationAngle.insert(0, 1)
-        
 
         # Downlink Tab Entry Values
         w = 6
@@ -375,48 +402,6 @@ class Comms:
         self.entry_down_otherloss = ttk.Entry(self.tabDownlink, width = w)
         self.entry_down_otherloss.insert(0,0)
 
-        # self.ctransPowerxS = ttk.Entry(self.tabDownlink, width = w)
-        # self.ctransPowerxS.insert(0,0)
-        # self.cantGainxS = ttk.Entry(self.tabDownlink, width = w)
-        # self.cantGainxS.insert(0,0)
-        # self.ctransPoweruS = ttk.Entry(self.tabDownlink, width = w)
-        # self.ctransPoweruS.insert(0,0)
-        # self.cantGainuS = ttk.Entry(self.tabDownlink, width = w)
-        # self.cantGainuS.insert(0,0)
-        # self.cxdown = ttk.Entry(self.tabDownlink, width = w)
-        # self.cxdown.insert(0,0)
-        # self.cudown = ttk.Entry(self.tabDownlink, width = w)
-        # self.cudown.insert(0,0)
-        # self.cxDownFreq = ttk.Entry(self.tabDownlink, width = w)
-        # self.cxDownFreq.insert(0,0)
-        # self.cuDownFreq = ttk.Entry(self.tabDownlink, width = w)
-        # self.cuDownFreq.insert(0,0)
-        # self.cebnoxS = ttk.Entry(self.tabDownlink, width = w)
-        # self.cebnoxS.insert(0,0)
-        # self.cebnouS = ttk.Entry(self.tabDownlink, width = w)
-        # self.cebnouS.insert(0,0)
-        # self.csysTempS = ttk.Entry(self.tabDownlink, width = w)
-        # self.csysTempS.insert(0, 300)
-        # self.cmaxDistanceEarthS = ttk.Entry(self.tabDownlink, width = w)
-        # self.cmaxDistanceEarthS.insert(0, 2704)
-        # self.crainLossS = ttk.Entry(self.tabDownlink, width = w)
-        # self.crainLossS.insert(0, 3)
-        # self.clineLossS = ttk.Entry(self.tabDownlink, width = w)
-        # self.clineLossS.insert(0, 3)
-        # self.cdishDiameterS = ttk.Entry(self.tabSpacecraft, width = w)
-        # self.clineLossS = ttk.Entry(self.tabSpacecraft, width = w)
-        # self.clineLossS.insert(0, 1)
-
-        # Data Generation Entry Values
-        # w = 6
-        # self.catomClock = ttk.Entry(self.tabDataGen, width = w)
-        # self.catomClock.insert(0, '1')
-        # self.cradiation = ttk.Entry(self.tabDataGen, width = w)
-        # self.cradiation.insert(0, '1.5')
-        # self.chousekeeping = ttk.Entry(self.tabDataGen, width = w)
-        # self.chousekeeping.insert(0, '54')
-
-
         ### Uplink: Ground Station to Spacecraft Tab ###
         # Header - NOT FINISHED
         R = 0; C = 0
@@ -443,11 +428,6 @@ class Comms:
         R = 6; C = 0
         ttk.Label(self.tabUplink, text='Primary GroundStation Antenna Gain [dB]').grid(row=R, column=C, padx=25, pady=5,sticky='w')
         self.entry_up_p_gs_antgain.grid(row=R, column=C+1, padx=5, pady=5)
-
-        # Dish Diameter
-        # R = 5; C = 0
-        # ttk.Label(self.tabGroundStation, text='Dish Diameter [m]').grid(row=R, column=C, padx=25, pady=5,sticky='w')
-        # self.cdishDiameterG.grid(row=R, column=C+1, padx=5, pady=5,sticky='w')
 
         #Primary Datarate
         R = 7; C = 0
@@ -524,28 +504,6 @@ class Comms:
         ttk.Label(self.tabUplink, text='Other Losses [dB]').grid(row=R, column=C, padx=25, pady=5,sticky='w')
         self.entry_up_otherloss.grid(row=R, column=C+1, padx=5, pady=5)
 
-        # Line Loss
-        # R = 3; C = 2
-        # ttk.Label(self.tabGroundStation, text='Line Loss [dB]').grid(row=R, column=C, padx=25, pady=5,sticky='w')
-        # self.clineLossG.grid(row=R, column=C+1, padx=5, pady=5)
-
-        # # Maximum Slant Range
-        # R = 4; C = 2
-        # ttk.Label(self.tabGroundStation, text='Max Slant Range [km]').grid(row=R, column=C, padx=25, pady=5,sticky='w')
-        # self.cmaxSlantRange.grid(row=R, column=C+1, padx=5, pady=5)
-
-        # # EIRP
-        # R = 5; C = 2
-        # ttk.Label(self.tabGroundStation, text='EIRP [dBm]').grid(row=R, column=C, padx=25, pady=5,sticky='w')
-        # self.cEIRP.grid(row=R, column=C+1, padx=5, pady=5,stick='w')
-
-        # # Minimum Elevation Angle
-        # R = 6; C = 2
-        # ttk.Label(self.tabGroundStation, text='Minimum Elevation Angle [rad]').grid(row=R, column=C, padx=25, pady=5,sticky='w')
-        # self.cminElevationAngle.grid(row=R, column=C+1, padx=5, pady=5,stick='w')
-        
-        
-
         ## Downlink: Spacecraft to Groundstation Tab ##
         
         # Heading - NOT FINISHED
@@ -573,11 +531,6 @@ class Comms:
         R = 6; C = 0
         ttk.Label(self.tabDownlink, text='Primary GroundStation Antenna Gain [dB]').grid(row=R, column=C, padx=25, pady=5,sticky='w')
         self.entry_down_p_gs_antgain.grid(row=R, column=C+1, padx=5, pady=5)
-
-        # Dish Diameter
-        # R = 5; C = 0
-        # ttk.Label(self.tabGroundStation, text='Dish Diameter [m]').grid(row=R, column=C, padx=25, pady=5,sticky='w')
-        # self.cdishDiameterG.grid(row=R, column=C+1, padx=5, pady=5,sticky='w')
 
         #Primary Datarate
         R = 7; C = 0
@@ -654,52 +607,6 @@ class Comms:
         ttk.Label(self.tabDownlink, text='Other Losses [dB]').grid(row=R, column=C, padx=25, pady=5,sticky='w')
         self.entry_down_otherloss.grid(row=R, column=C+1, padx=5, pady=5)
 
-        # Dish Diameter
-        # R = 3; C = 2
-        # ttk.Label(self.tabSpacecraft, text='Dish Diameter [m]').grid(row=R, column=C, padx=25, pady=5,sticky='w')
-        # self.cdishDiameterS.grid(row=R, column=C+1, padx=5, pady=5,sticky='w')
-
-        
-
-
-        ## Data Generation Tab ##
-        
-        # Heading -NOT FINISHED
-        # R = 0; C = 0
-        # t_ins_design = 'Input appropriate parameter values for Data Generation:'
-        # self.choose = ttk.Label(self.tabDataGen,text = t_ins_design, wraplength = 250)
-        # self.choose.grid(row = R, column = C, columnspan = 2,rowspan=2, padx = 5, pady = 5)
-
-        # # Atomic Clock
-        # R = 3; C = 0
-        # ttk.Label(self.tabDataGen, text='Atomic Clock [Mbyte/day]       ').grid(row=R, column=C, padx=25, pady=5,sticky='w')
-        # self.catomClock.grid(row=R, column=C+1, padx=5, pady=5)
-
-        # # Radiation
-        # R = 4; C = 0
-        # ttk.Label(self.tabDataGen, text='Radiation [Mbyte/day]        ').grid(row=R, column=C, padx=25, pady=5,sticky='w')
-        # self.cradiation.grid(row=R, column=C+1, padx=5, pady=5)
-
-        # # House Keeping
-        # R = 5; C = 0
-        # ttk.Label(self.tabDataGen, text='House Keeping [Mbyte/day]        ').grid(row=R, column=C, padx=25, pady=5,sticky='w')
-        # self.chousekeeping.grid(row=R, column=C+1, padx=5, pady=5)
-
-        # # Spacer 
-        # R = 6; C = 0
-        # ttk.Label(self.tabDataGen, text=' ').grid(row=R, column=C, padx=25, pady=5,sticky='w')
-        
-
-        # Back Button
-        # R = 14; C = 2
-        # self.UseCase = 1
-        # self.back_btn = ttk.Button(self.tabDataGen, text = "Back", command = self.tabSpacecraft)
-        # self.back_btn.grid(column = C, row = R)
-        
-        # # Next Button
-        # self.next_btn = ttk.Button(self.tabDataGen, text = "Next", command = self.tabOther)
-        # self.next_btn.grid(column = C+1, row = R,sticky='w')
-
         # Submit Button
         R = 14; C = 5
         self.UseCase = 1
@@ -708,78 +615,427 @@ class Comms:
         # Done Button
         self.fin_btn = ttk.Button(self.tabDownlink, text = "Close", command = self.allDone)
         self.fin_btn.grid(column = C+1, row = R,stick='w')
-
-
-        ## Other Tab ##
-
-        # # Header - NOT FINISHED
-        # R = 0; C = 0
-        # t_ins_design = 'Input appropriate parameter values:'
-        # self.choose = ttk.Label(self.tabOther,text = t_ins_design, wraplength = 250)
-        # self.choose.grid(row = R, column = C, columnspan = 2,rowspan=2, padx = 5, pady = 5)
-
-        
-
-        # # Central Frequency
-        # # R = 3; C = 2
-        # # ttk.Label(self.tabOther, text='Central Frequency [GHz]').grid(row=R, column=C, padx=25, pady=5,sticky='w')
-        # # self.ccenFreq.grid(row=R, column=C+1, padx=5, pady=5)
-
-        # # # Pointing Losses
-        # # R = 4; C = 2
-        # # ttk.Label(self.tabOther, text='Pointing Losses [dB]').grid(row=R, column=C, padx=25, pady=5,sticky='w')
-        # # self.cpointingLoss.grid(row=R, column=C+1, padx=5, pady=5)
-
-        # # # Election Losses
-        # # R = 6; C = 2
-        # # ttk.Label(self.tabOther, text='Electron Losses [dB]').grid(row=R, column=C, padx=25, pady=5,sticky='w')
-        # # self.celectronLoss.grid(row=R, column=C+1, padx=5, pady=5)
-
-        # # # Polarization Losses
-        # # R = 7; C = 2
-        # # ttk.Label(self.tabOther, text='Polarization Losses [dB]').grid(row=R, column=C, padx=25, pady=5,sticky='w')
-        # # self.cpolarLoss.grid(row=R, column=C+1, padx=5, pady=5,sticky='w')
-
-        # # # Fixed Data Rate
-        # # R = 9; C = 2
-        # # ttk.Label(self.tabOther, text='Fixed Data Rate [bps]').grid(row=R, column=C, padx=25, pady=5,sticky='w')
-        # # self.cfixedData.grid(row=R, column=C+1, padx=5, pady=5,stick='w') 
-
-        # # System Noise Temp
-        # R = 3; C = 2
-        # ttk.Label(self.tabOther, text='System Temp [K]').grid(row=R, column=C, padx=25, pady=5,sticky='w')
-        # self.csysTemp.grid(row=R, column=C+1, padx=5, pady=5,stick='w')
-
-        # # Maximum Distance From Earth
-        # R = 4; C = 2
-        # ttk.Label(self.tabOther, text='Max Distance from Earth [km]').grid(row=R, column=C, padx=25, pady=5,sticky='w')
-        # self.cmaxDistanceEarth.grid(row=R, column=C+1, padx=5, pady=5)
-
-        # # Rain Losses
-        # R = 5; C = 2
-        # ttk.Label(self.tabOther, text='Rain Losses [dB]').grid(row=R, column=C, padx=25, pady=5,sticky='w')
-        # self.crainLoss.grid(row=R, column=C+1, padx=5, pady=5)
-        
-        # #EBNO Primary
-        # R = 6; C=2
-        # ttk.Label(self.tabOther, text='Primary Eb/N0[dB]').grid(row=R, column=C, padx=25, pady=5,sticky='w')
-        # self.cebnox.grid(row=R, column=C+1, padx=5, pady=5,stick='w')
-        
-        # #EBNO Secondary
-        # R = 7; C=2
-        # ttk.Label(self.tabOther, text='Secondary Eb/N0[dB]').grid(row=R, column=C, padx=25, pady=5,sticky='w')
-        # self.cebnou.grid(row=R, column=C+1, padx=5, pady=5,stick='w')
-
-        # # Line Losses
-        # R = 8; C = 2
-        # ttk.Label(self.tabOther, text='Line Losses [dB]').grid(row=R, column=C, padx=25, pady=5,sticky='w')
-        # self.clineLoss.grid(row=R, column=C+1, padx=5, pady=5)
-
         
         # Run
         self.commsgui.mainloop()
    
+    def linkbudget4demo_custom(self):
+        self.commsgui = tk.Tk() # Instance of Tk,
+        self.commsgui.title("Communications Subsystem Custom Design Module") # Name
+        self.commswindow = ttk.Notebook(self.commsgui) # tkk module implements "tabs" (Notebook)
+        self.tabUplink = ttk.Frame(self.commswindow)
+        self.tabDownlink = ttk.Frame(self.commswindow)
+        self.commswindow.add(self.tabUplink, text = 'Uplink')
+        self.commswindow.add(self.tabDownlink, text = 'Downlink')
+        self.commswindow.pack(expand = 1, fill ="both")
 
+        ## Function to check if other button is selected
+        def otherCheck(entry, var1):
+            if var1.get() != -1:
+                entry.configure(state='disabled')
+            else:
+                entry.configure(state='normal')
+
+        # Uplink Tab Entry Values
+        w = 6
+        self.entry_up_1_frequency = tk.IntVar(self.commsgui)
+
+        freq_other = ttk.Entry(self.tabUplink, width = w)
+        freq_other.insert(0,0)
+        freq_other.configure(state='disabled')
+        freq_btn1 = ttk.Radiobutton(self.tabUplink, text="UHF", variable=self.entry_up_1_frequency, value=435, command=lambda e=freq_other, v=self.entry_up_1_frequency: otherCheck(e, v))
+        freq_btn2 = ttk.Radiobutton(self.tabUplink, text="S-Band", variable=self.entry_up_1_frequency, value=2400, command=lambda e=freq_other, v=self.entry_up_1_frequency: otherCheck(e, v))
+        freq_btn3 = ttk.Radiobutton(self.tabUplink, text="Other", variable=self.entry_up_1_frequency, value=-1, command=lambda e=freq_other, v=self.entry_up_1_frequency: otherCheck(e, v))
+        
+
+        ##self.entry_up_2_frequency = ttk.Radiobutton(self.tabUplink, text="Secondary Frequency")##, variable=,value=)
+        ##self.entry_up_2_frequency.grid(column = 0, row = 3, padx = 10, pady = 10,sticky='w')
+        self.entry_up_1_EBNo = ttk.Entry(self.tabUplink, width = w)
+        self.entry_up_1_EBNo.insert(0,0)
+        self.entry_up_2_EBNo = ttk.Entry(self.tabUplink, width = w)
+        self.entry_up_2_EBNo.insert(0,0)
+        self.entry_up_1_BER = ttk.Entry(self.tabUplink, width = w)
+        self.entry_up_1_BER.insert(0,0)
+        self.entry_up_2_BER = ttk.Entry(self.tabUplink, width = w)
+        self.entry_up_2_BER.insert(0,0)
+        self.entry_up_1_antennatype = ttk.Entry(self.tabUplink, width = w)
+        self.entry_up_1_antennatype.insert(0,0)
+        self.entry_up_2_antennatype = ttk.Entry(self.tabUplink, width = w)
+        self.entry_up_2_antennatype.insert(0,0)
+        self.entry_up_1_beamwidth = ttk.Entry(self.tabUplink, width = w)
+        self.entry_up_1_beamwidth.insert(0,0)
+        self.entry_up_2_beamwidth = ttk.Entry(self.tabUplink, width = w)
+        self.entry_up_2_beamwidth.insert(0,0)
+        self.entry_up_1_atmosphereattenuation = ttk.Entry(self.tabUplink, width = w)
+        self.entry_up_1_atmosphereattenuation.insert(0,0)
+        self.entry_up_2_atmosphereattenuation = ttk.Entry(self.tabUplink, width = w)
+        self.entry_up_2_atmosphereattenuation.insert(0,0)
+        self.entry_up_1_rainattenuation = ttk.Entry(self.tabUplink, width = w)
+        self.entry_up_1_rainattenuation.insert(0,0)
+        self.entry_up_2_rainattenuation = ttk.Entry(self.tabUplink, width = w)
+        self.entry_up_2_rainattenuation.insert(0,0)
+        self.entry_up_1_systemtemp = ttk.Entry(self.tabUplink, width = w)
+        self.entry_up_1_systemtemp.insert(0,0)
+        self.entry_up_2_systemtemp = ttk.Entry(self.tabUplink, width = w)
+        self.entry_up_2_systemtemp.insert(0,0)
+        self.entry_up_1_lineloss = ttk.Entry(self.tabUplink, width = w)
+        self.entry_up_1_lineloss.insert(0,0)
+        self.entry_up_2_lineloss = ttk.Entry(self.tabUplink, width = w)
+        self.entry_up_2_lineloss.insert(0,0)
+        self.entry_up_1_spaceloss = ttk.Entry(self.tabUplink, width = w)
+        self.entry_up_1_spaceloss.insert(0,0)
+        self.entry_up_2_spaceloss = ttk.Entry(self.tabUplink, width = w)
+        self.entry_up_2_spaceloss.insert(0,0)
+        self.entry_up_1_polarizationloss = ttk.Entry(self.tabUplink, width = w)
+        self.entry_up_1_polarizationloss.insert(0,0)
+        self.entry_up_1_transmitterpointingloss = ttk.Entry(self.tabUplink, width = w)
+        self.entry_up_1_transmitterpointingloss.insert(0,0)
+        self.entry_up_2_transmitterpointingloss = ttk.Entry(self.tabUplink, width = w)
+        self.entry_up_2_transmitterpointingloss.insert(0,0)
+        self.entry_up_1_receiverpointingloss = ttk.Entry(self.tabUplink, width = w)
+        self.entry_up_1_receiverpointingloss.insert(0,0)
+        self.entry_up_2_receiverpointingloss = ttk.Entry(self.tabUplink, width = w)
+        self.entry_up_2_receiverpointingloss.insert(0,0)
+        self.entry_up_1_transmitterdishdiameter = ttk.Entry(self.tabUplink, width = w)
+        self.entry_up_1_transmitterdishdiameter.insert(0,0)
+        self.entry_up_2_transmitterdishdiameter = ttk.Entry(self.tabUplink, width = w)
+        self.entry_up_2_transmitterdishdiameter.insert(0,0)
+        self.entry_up_1_receiverdishdiameter = ttk.Entry(self.tabUplink, width = w)
+        self.entry_up_1_receiverdishdiameter.insert(0,0)
+        self.entry_up_2_receiverdishdiameter = ttk.Entry(self.tabUplink, width = w)
+        self.entry_up_2_receiverdishdiameter.insert(0,0)
+        self.entry_up_1_transmitterefficiency = ttk.Entry(self.tabUplink, width = w)
+        self.entry_up_1_transmitterefficiency.insert(0,0)
+        self.entry_up_2_transmitterefficiency = ttk.Entry(self.tabUplink, width = w)
+        self.entry_up_2_transmitterefficiency.insert(0,0)
+        self.entry_up_1_receiverefficiency = ttk.Entry(self.tabUplink, width = w)
+        self.entry_up_1_receiverefficiency.insert(0,0)
+        self.entry_up_2_receiverefficiency = ttk.Entry(self.tabUplink, width = w)
+        self.entry_up_2_receiverefficiency.insert(0,0)
+
+        # Downlink Tab Entry Values
+        w = 6
+        self.entry_down_1_frequency = ttk.Entry(self.tabDownlink, width = w)
+        self.entry_down_1_frequency.insert(0,0)
+        self.entry_down_2_frequency = ttk.Entry(self.tabDownlink, width = w)
+        self.entry_down_2_frequency.insert(0,0)
+        self.entry_down_1_EBNo = ttk.Entry(self.tabDownlink, width = w)
+        self.entry_down_1_EBNo.insert(0,0)
+        self.entry_down_2_EBNo = ttk.Entry(self.tabDownlink, width = w)
+        self.entry_down_2_EBNo.insert(0,0)
+        self.entry_down_1_BER = ttk.Entry(self.tabDownlink, width = w)
+        self.entry_down_1_BER.insert(0,0)
+        self.entry_down_2_BER = ttk.Entry(self.tabDownlink, width = w)
+        self.entry_down_2_BER.insert(0,0)
+        self.entry_down_1_antennatype = ttk.Entry(self.tabDownlink, width = w)
+        self.entry_down_1_antennatype.insert(0,0)
+        self.entry_down_2_antennatype = ttk.Entry(self.tabDownlink, width = w)
+        self.entry_down_2_antennatype.insert(0,0)
+        self.entry_down_1_beamwidth = ttk.Entry(self.tabDownlink, width = w)
+        self.entry_down_1_beamwidth.insert(0,0)
+        self.entry_down_2_beamwidth = ttk.Entry(self.tabDownlink, width = w)
+        self.entry_down_2_beamwidth.insert(0,0)
+        self.entry_down_1_atmosphereattenuation = ttk.Entry(self.tabDownlink, width = w)
+        self.entry_down_1_atmosphereattenuation.insert(0,0)
+        self.entry_down_2_atmosphereattenuation = ttk.Entry(self.tabDownlink, width = w)
+        self.entry_down_2_atmosphereattenuation.insert(0,0)
+        self.entry_down_1_rainattenuation = ttk.Entry(self.tabDownlink, width = w)
+        self.entry_down_1_rainattenuation.insert(0,0)
+        self.entry_down_2_rainattenuation = ttk.Entry(self.tabDownlink, width = w)
+        self.entry_down_2_rainattenuation.insert(0,0)
+        self.entry_down_1_systemtemp = ttk.Entry(self.tabDownlink, width = w)
+        self.entry_down_1_systemtemp.insert(0,0)
+        self.entry_down_2_systemtemp = ttk.Entry(self.tabDownlink, width = w)
+        self.entry_down_2_systemtemp.insert(0,0)
+        self.entry_down_1_lineloss = ttk.Entry(self.tabDownlink, width = w)
+        self.entry_down_1_lineloss.insert(0,0)
+        self.entry_down_2_lineloss = ttk.Entry(self.tabDownlink, width = w)
+        self.entry_down_2_lineloss.insert(0,0)
+        self.entry_down_1_spaceloss = ttk.Entry(self.tabDownlink, width = w)
+        self.entry_down_1_spaceloss.insert(0,0)
+        self.entry_down_2_spaceloss = ttk.Entry(self.tabDownlink, width = w)
+        self.entry_down_2_spaceloss.insert(0,0)
+        self.entry_down_1_polarizationloss = ttk.Entry(self.tabDownlink, width = w)
+        self.entry_down_1_polarizationloss.insert(0,0)
+        self.entry_down_1_transmitterpointingloss = ttk.Entry(self.tabDownlink, width = w)
+        self.entry_down_1_transmitterpointingloss.insert(0,0)
+        self.entry_down_2_transmitterpointingloss = ttk.Entry(self.tabDownlink, width = w)
+        self.entry_down_2_transmitterpointingloss.insert(0,0)
+        self.entry_down_1_receiverpointingloss = ttk.Entry(self.tabDownlink, width = w)
+        self.entry_down_1_receiverpointingloss.insert(0,0)
+        self.entry_down_2_receiverpointingloss = ttk.Entry(self.tabDownlink, width = w)
+        self.entry_down_2_receiverpointingloss.insert(0,0)
+        self.entry_down_1_transmitterdishdiameter = ttk.Entry(self.tabDownlink, width = w)
+        self.entry_down_1_transmitterdishdiameter.insert(0,0)
+        self.entry_down_2_transmitterdishdiameter = ttk.Entry(self.tabDownlink, width = w)
+        self.entry_down_2_transmitterdishdiameter.insert(0,0)
+        self.entry_down_1_receiverdishdiameter = ttk.Entry(self.tabDownlink, width = w)
+        self.entry_down_1_receiverdishdiameter.insert(0,0)
+        self.entry_down_2_receiverdishdiameter = ttk.Entry(self.tabDownlink, width = w)
+        self.entry_down_2_receiverdishdiameter.insert(0,0)
+        self.entry_down_1_transmitterefficiency = ttk.Entry(self.tabDownlink, width = w)
+        self.entry_down_1_transmitterefficiency.insert(0,0)
+        self.entry_down_2_transmitterefficiency = ttk.Entry(self.tabDownlink, width = w)
+        self.entry_down_2_transmitterefficiency.insert(0,0)
+        self.entry_down_1_receiverefficiency = ttk.Entry(self.tabDownlink, width = w)
+        self.entry_down_1_receiverefficiency.insert(0,0)
+        self.entry_down_2_receiverefficiency = ttk.Entry(self.tabDownlink, width = w)
+        self.entry_down_2_receiverefficiency.insert(0,0)
+
+        ##Start hereee##
+
+
+        ### Uplink: Ground Station to Spacecraft Tab ###
+
+        ## Need to figure out placement and entry type/formatting
+
+        #Header
+        R = 0; C = 0
+        t_ins_design = 'Input appropriate parameter values for Ground Station comms:'
+        self.choose = ttk.Label(self.tabUplink,text = t_ins_design, wraplength = 250)
+        self.choose.grid(row = R, column = C, columnspan = 2,rowspan=2, padx = 5, pady = 5)
+
+        # Primary Uplink Frequency
+        R = 3; C = 0
+        ttk.Label(self.tabUplink, text='Primary Uplink Frequency [Hz]').grid(row=R, column=C, padx=25, pady=5,sticky='w')
+        ##self.entry_up_1_frequency.grid(row=R, column=C+1, padx=5, pady=5)
+        freq_btn1.grid(column=C, row=R+1, columnspan = 2, padx = 25, pady = 5,sticky='w')
+        freq_btn2.grid(column=C, row=R+2, columnspan = 2, padx = 25, pady = 5,sticky='w')
+        freq_btn3.grid(column=C, row=R+3, columnspan = 2, padx = 25, pady = 5,sticky='w')
+        freq_other.grid(column=C+1, row=R+3, columnspan = 2, padx = 25, pady = 5,sticky='w')
+        ttk.Label(self.tabUplink, text='435 MHz').grid(row=R+1, column=C+1, padx=25, pady=5,sticky='w')
+        ttk.Label(self.tabUplink, text='2.4 GHz').grid(row=R+2, column=C+1, padx=25, pady=5,sticky='w')
+
+
+        
+        # Primary Uplink EB/No 
+        R = 4; C = 2
+        ttk.Label(self.tabUplink, text='Primary Uplink EB/No [dB]').grid(row=R, column=C, padx=25, pady=5,sticky='w')
+        self.entry_up_1_EBNo.grid(row=R, column=C+1, padx=5, pady=5)
+
+         # Primary Uplink BER
+        R = 5; C = 2
+        ttk.Label(self.tabUplink, text='Primary Uplink BER').grid(row=R, column=C, padx=25, pady=5,sticky='w')
+        self.entry_up_1_BER.grid(row=R, column=C+1, padx=5, pady=5)
+
+        # Primary Uplink Antenna Type 
+        R = 6; C = 2
+        ttk.Label(self.tabUplink, text='Primary Uplink Antenna Type').grid(row=R, column=C, padx=25, pady=5,sticky='w')
+        self.entry_up_1_antennatype.grid(row=R, column=C+1, padx=5, pady=5)
+
+        #Primary Uplink Beamwidth
+        R = 7; C = 2
+        ttk.Label(self.tabUplink, text='Primary Uplink Beamwidth').grid(row=R, column=C, padx=25, pady=5,sticky='w')
+        self.entry_up_1_beamwidth.grid(row=R, column=C+1, padx=5, pady=5)
+
+        #Primary Uplink Atmosphere Attenuation
+        R = 8; C = 2
+        ttk.Label(self.tabUplink, text='Primary Uplink Atmosphere Attenuation').grid(row=R, column=C, padx=25, pady=5,sticky='w')
+        self.entry_up_1_atmosphereattenuation.grid(row=R, column=C+1, padx=5, pady=5)
+
+        #Primary Uplink Rain Attenuation
+        R = 9; C = 2
+        ttk.Label(self.tabUplink, text='Primary Uplink Rain Attenuation').grid(row=R, column=C, padx=25, pady=5,sticky='w')
+        self.entry_up_1_rainattenuation.grid(row=R, column=C+1, padx=5, pady=5,stick='w')
+
+        #Primary Uplink System Temperature
+        R = 9; C = 0
+        ttk.Label(self.tabUplink, text='Primary Uplink System Temperature').grid(row=R, column=C, padx=25, pady=5,sticky='w')
+        self.entry_up_1_systemtemp.grid(row=R, column=C+1, padx=5, pady=5,stick='w')
+
+        #Primary Uplink Line Loss
+        R = 9; C = 0
+        ttk.Label(self.tabUplink, text='Primary Uplink Line Loss').grid(row=R, column=C, padx=25, pady=5,sticky='w')
+        self.entry_up_1_lineloss.grid(row=R, column=C+1, padx=5, pady=5,stick='w')
+
+        #Primary Uplink Space Loss
+        R = 9; C = 0
+        ttk.Label(self.tabUplink, text='Primary Uplink Space Loss').grid(row=R, column=C, padx=25, pady=5,sticky='w')
+        self.entry_up_1_spaceloss.grid(row=R, column=C+1, padx=5, pady=5,stick='w')
+
+        #Primary Uplink Polarization Loss
+        R = 9; C = 0
+        ttk.Label(self.tabUplink, text='Primary Uplink Polarization Loss').grid(row=R, column=C, padx=25, pady=5,sticky='w')
+        self.entry_up_1_polarizationloss.grid(row=R, column=C+1, padx=5, pady=5,stick='w')
+
+        #Primary Uplink Transmitter Pointing Loss
+        R = 9; C = 0
+        ttk.Label(self.tabUplink, text='Primary Uplink Transmitter Pointing Loss').grid(row=R, column=C, padx=25, pady=5,sticky='w')
+        self.entry_up_1_transmitterpointingloss.grid(row=R, column=C+1, padx=5, pady=5,stick='w')
+
+        #Primary Uplink Receiving Pointing Loss
+        R = 9; C = 0
+        ttk.Label(self.tabUplink, text='Primary Uplink Receiver Pointing Loss').grid(row=R, column=C, padx=25, pady=5,sticky='w')
+        self.entry_up_1_receiverpointingloss.grid(row=R, column=C+1, padx=5, pady=5,stick='w')
+
+        #Primary Uplink Transmitter Dish Diameter
+        R = 9; C = 0
+        ttk.Label(self.tabUplink, text='Primary Uplink Transmitter Dish Diameter').grid(row=R, column=C, padx=25, pady=5,sticky='w')
+        self.entry_up_1_transmitterdishdiameter.grid(row=R, column=C+1, padx=5, pady=5,stick='w')
+
+        #Primary Uplink Receiver Dish Diameter
+        R = 9; C = 0
+        ttk.Label(self.tabUplink, text='Primary Uplink Receiver Dish Diameter').grid(row=R, column=C, padx=25, pady=5,sticky='w')
+        self.entry_up_1_receiverdishdiameter.grid(row=R, column=C+1, padx=5, pady=5,stick='w')
+
+        #Primary Uplink Transmitter Efficiency
+        R = 9; C = 0
+        ttk.Label(self.tabUplink, text='Primary Uplink Transmitter Efficiency').grid(row=R, column=C, padx=25, pady=5,sticky='w')
+        self.entry_up_1_transmitterefficiency.grid(row=R, column=C+1, padx=5, pady=5,stick='w')
+
+        #Primary Uplink Receiver Efficiency
+        R = 9; C = 0
+        ttk.Label(self.tabUplink, text='Primary Uplink Receiver Efficiency').grid(row=R, column=C, padx=25, pady=5,sticky='w')
+        self.entry_up_1_receiverefficiency.grid(row=R, column=C+1, padx=5, pady=5,stick='w')
+
+
+        ### Secondary Spacecraft Transmitter Power ###
+        R = 3; C = 2
+        ttk.Label(self.tabUplink, text='Secondary Spacecraft Transmitter Power [W]').grid(row=R, column=C, padx=25, pady=5,sticky='w')
+        self.entry_up_s_sc_transpower.grid(row=R, column=C+1, padx=5, pady=5)
+
+        
+
+         # System Noise Temp
+        R = 3; C = 4
+        ttk.Label(self.tabUplink, text='System Temp [K]').grid(row=R, column=C, padx=25, pady=5,sticky='w')
+        self.entry_up_systemp.grid(row=R, column=C+1, padx=5, pady=5,stick='w')
+
+        # Maximum Distance From Earth
+        R = 4; C = 4
+        ttk.Label(self.tabUplink, text='Max Distance from Earth [km]').grid(row=R, column=C, padx=25, pady=5,sticky='w')
+        self.entry_up_maxdistanceEarth.grid(row=R, column=C+1, padx=5, pady=5)
+
+        # Rain Losses
+        R = 5; C = 4
+        ttk.Label(self.tabUplink, text='Rain Losses [dB]').grid(row=R, column=C, padx=25, pady=5,sticky='w')
+        self.entry_up_rainloss.grid(row=R, column=C+1, padx=5, pady=5)
+        
+        # Line Losses
+        R = 6; C = 4
+        ttk.Label(self.tabUplink, text='Line Losses [dB]').grid(row=R, column=C, padx=25, pady=5,sticky='w')
+        self.entry_up_lineloss.grid(row=R, column=C+1, padx=5, pady=5)
+
+        # Other Losses
+        R = 7; C = 4
+        ttk.Label(self.tabUplink, text='Other Losses [dB]').grid(row=R, column=C, padx=25, pady=5,sticky='w')
+        self.entry_up_otherloss.grid(row=R, column=C+1, padx=5, pady=5)
+
+        ## Downlink: Spacecraft to Groundstation Tab ##
+        
+        # Heading - NOT FINISHED
+        R = 0; C = 0
+        t_ins_design = 'Input appropriate parameter values for Spacecraft comms:'
+        self.choose = ttk.Label(self.tabDownlink,text = t_ins_design, wraplength = 250)
+        self.choose.grid(row = R, column = C, columnspan = 2,rowspan=2, padx = 5, pady = 5)
+
+        # Primary Spacecraft Transmitter Power
+        R = 3; C = 0
+        ttk.Label(self.tabDownlink, text='Primary Spacecraft Transmitter Power [W]').grid(row=R, column=C, padx=25, pady=5,sticky='w')
+        self.entry_down_p_sc_transpower.grid(row=R, column=C+1, padx=5, pady=5)
+
+        # Primary Spacecraft Antenna Gain 
+        R = 4; C = 0
+        ttk.Label(self.tabDownlink, text='Primary Spacecraft Antenna Gain [dB]').grid(row=R, column=C, padx=25, pady=5,sticky='w')
+        self.entry_down_p_sc_antgain.grid(row=R, column=C+1, padx=5, pady=5)
+
+         # Primary GroundStation Transmitter Power
+        R = 5; C = 0
+        ttk.Label(self.tabDownlink, text='Primary GroundStation Transmitter Power [W]').grid(row=R, column=C, padx=25, pady=5,sticky='w')
+        self.entry_down_p_gs_transpower.grid(row=R, column=C+1, padx=5, pady=5)
+
+        # Primary GroundStation Antenna Gain 
+        R = 6; C = 0
+        ttk.Label(self.tabDownlink, text='Primary GroundStation Antenna Gain [dB]').grid(row=R, column=C, padx=25, pady=5,sticky='w')
+        self.entry_down_p_gs_antgain.grid(row=R, column=C+1, padx=5, pady=5)
+
+        #Primary Datarate
+        R = 7; C = 0
+        ttk.Label(self.tabDownlink, text='Primary Datarate [bps]').grid(row=R, column=C, padx=25, pady=5,sticky='w')
+        self.entry_down_p_datarate.grid(row=R, column=C+1, padx=5, pady=5)
+
+        #Primary Frequency
+        R = 8; C = 0
+        ttk.Label(self.tabDownlink, text='Primary Frequency [Hz]').grid(row=R, column=C, padx=25, pady=5,sticky='w')
+        self.entry_down_p_frequency.grid(row=R, column=C+1, padx=5, pady=5)
+
+        #Primary Eb/N0 
+        R = 9; C = 0
+        ttk.Label(self.tabDownlink, text='Primary Eb/N0 [dB]').grid(row=R, column=C, padx=25, pady=5,sticky='w')
+        self.entry_down_p_EBNo.grid(row=R, column=C+1, padx=5, pady=5,stick='w')
+
+        # Secondary Spacecraft Transmitter Power
+        R = 3; C = 2
+        ttk.Label(self.tabDownlink, text='Secondary Spacecraft Transmitter Power [W]').grid(row=R, column=C, padx=25, pady=5,sticky='w')
+        self.entry_down_s_sc_transpower.grid(row=R, column=C+1, padx=5, pady=5)
+
+        # Secondary Spacecraft Antenna Gain
+        R = 4; C = 2
+        ttk.Label(self.tabDownlink, text='Secondary Spacecraft Antenna Gain [dB]').grid(row=R, column=C, padx=25, pady=5,sticky='w')
+        self.entry_down_s_sc_antgain.grid(row=R, column=C+1, padx=5, pady=5)
+
+        # Secondary Spacecraft Transmitter Power
+        R = 5; C = 2
+        ttk.Label(self.tabDownlink, text='Secondary Spacecraft Transmitter Power [W]').grid(row=R, column=C, padx=25, pady=5,sticky='w')
+        self.entry_down_s_gs_transpower.grid(row=R, column=C+1, padx=5, pady=5)
+
+        # Secondary Spacecraft Antenna Gain
+        R = 6; C = 2
+        ttk.Label(self.tabDownlink, text='Secondary Spacecraft Antenna Gain [dB]').grid(row=R, column=C, padx=25, pady=5,sticky='w')
+        self.entry_down_s_gs_antgain.grid(row=R, column=C+1, padx=5, pady=5)
+
+        #Secondary Datarate
+        R = 7; C = 2
+        ttk.Label(self.tabDownlink, text='Secondary Datarate [bps]').grid(row=R, column=C, padx=25, pady=5,sticky='w')
+        self.entry_down_s_datarate.grid(row=R, column=C+1, padx=5, pady=5)
+
+        #Frequency Secondary
+        R = 8; C = 2
+        ttk.Label(self.tabDownlink, text='Secondary Frequency [Hz]').grid(row=R, column=C, padx=25, pady=5,sticky='w')
+        self.entry_down_s_frequency.grid(row=R, column=C+1, padx=5, pady=5)
+
+        #EBNO Secondary 
+        R = 9; C = 2 
+        ttk.Label(self.tabDownlink, text='Secondary Eb/N0 [dB]').grid(row=R, column=C, padx=25, pady=5,sticky='w')
+        self.entry_down_s_EBNo.grid(row=R, column=C+1, padx=5, pady=5,stick='w')
+
+         # System Noise Temp
+        R = 3; C = 4
+        ttk.Label(self.tabDownlink, text='System Temp [K]').grid(row=R, column=C, padx=25, pady=5,sticky='w')
+        self.entry_down_systemp.grid(row=R, column=C+1, padx=5, pady=5,stick='w')
+
+        # Maximum Distance From Earth
+        R = 4; C = 4
+        ttk.Label(self.tabDownlink, text='Max Distance from Earth [km]').grid(row=R, column=C, padx=25, pady=5,sticky='w')
+        self.entry_down_maxdistanceEarth.grid(row=R, column=C+1, padx=5, pady=5)
+
+        # Rain Losses
+        R = 5; C = 4
+        ttk.Label(self.tabDownlink, text='Rain Losses [dB]').grid(row=R, column=C, padx=25, pady=5,sticky='w')
+        self.entry_down_rainloss.grid(row=R, column=C+1, padx=5, pady=5)
+        
+        # Line Losses
+        R = 6; C = 4
+        ttk.Label(self.tabDownlink, text='Line Losses [dB]').grid(row=R, column=C, padx=25, pady=5,sticky='w')
+        self.entry_down_lineloss.grid(row=R, column=C+1, padx=5, pady=5)
+
+        # Other Losses
+        R = 7; C = 4
+        ttk.Label(self.tabDownlink, text='Other Losses [dB]').grid(row=R, column=C, padx=25, pady=5,sticky='w')
+        self.entry_down_otherloss.grid(row=R, column=C+1, padx=5, pady=5)
+
+        # Submit Button
+        R = 14; C = 5
+        self.UseCase = 2
+        self.sub_btn = ttk.Button(self.tabDownlink, text = "Submit", command = self.inputComms)
+        self.sub_btn.grid(column = C, row = R)
+        # Done Button
+        self.fin_btn = ttk.Button(self.tabDownlink, text = "Close", command = self.allDone)
+        self.fin_btn.grid(column = C+1, row = R,stick='w')
+        
+        # Run
+        self.commsgui.mainloop()
+   
     def inputComms(self):
         if self.UseCase == 1:
             try:
@@ -858,54 +1114,6 @@ class Comms:
                 self.up_otherloss = int(self.entry_up_otherloss.get())
             except:
                 pass
-            # try:
-            #     self.maxSlantRange = float(self.cmaxSlantRange.get())
-            # except:
-            #     pass
-            # try:
-            #     self.dishDiameterS = float(self.cdishDiameterS.get())
-            # except:
-            #     pass
-            # try:
-            #     self.EIRP = float(self.cEIRP.get())
-            # except:
-            #     pass
-            # try:
-            #     self.minElevationAngle = int(self.cminElevationAngle.get())
-            # except:
-            #     pass
-            # try:
-            #     self.atomClock = float(self.catomClock.get())
-            # except:
-            #     pass
-            # try:
-            #     self.radiation = float(self.cradiation.get())
-            # except:
-            #     pass
-            # try:
-            #     self.housekeeping = float(self.chousekeeping.get())
-            # except:
-            #     pass   
-            """try:
-                self.cenFreq= float(self.ccenFreq.get())
-            except:
-                pass
-            try:
-                self.pointingLoss = float(self.cpointingLoss.get())
-            except:
-                pass
-            try:
-                self.electronLoss = float(self.celectronLoss.get())
-            except:
-                pass
-            try:
-                self.polarLoss = float(self.cpolarLoss.get())
-            except:
-                pass
-            try:
-                self.fixedData = int(self.cfixedData.get())
-            except:
-                pass"""
             try:
                 self.down_p_sc_transpower= float(self.entry_down_p_sc_transpower.get())
             except:
@@ -982,6 +1190,11 @@ class Comms:
                 self.down_otherloss = int(self.entry_down_otherloss.get())
             except:
                 pass
+        # elif self.UseCase == 2:
+        #     try:
+        #         #self.up_p_sc_transpower= float(self.entry_up_p_sc_transpower.get())
+        #     except:
+        #         pass
     
     def selectionError(self):
             self.commsgui = tk.Tk() # Instance of Tk,

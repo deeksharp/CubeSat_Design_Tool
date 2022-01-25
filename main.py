@@ -27,7 +27,12 @@ def openPower():
         EPS.selectionError()
         
 def openComms():
-        cD.linkbudget4demo()
+    if(v1.get() == 1):
+        cD.linkbudget4demo_standard()
+    elif v1.get() == 2:
+        cD.linkbudget4demo_custom()
+    else: 
+        cD.selectionError()
 
 def openOrbits():
     oD.selectOrbit()
@@ -45,7 +50,7 @@ def runDesign():
     pd.writeData(p) """
     
     cd = CM.CommsTool()
-    tool = cd.LinkBudget4Demo(cD)
+    tool = cd.LinkBudget4Demo_case1(cD) if v1.get() == 1 else cd.LinkBudget4Demo_case2
     cd.writeData(tool)
     
 def outPutData():
@@ -185,9 +190,9 @@ Header_5.grid(column = 0, row = 0, padx = 10, pady = 10)
 
 # Radiobutton Use Case Selection
 v1=tk.IntVar(root)
-C_RB1=ttk.Radiobutton(tabComms, text=" Link Budget for \n Standard Communications Design", variable=v0,value=1)
+C_RB1=ttk.Radiobutton(tabComms, text=" Link Budget for \n Standard Communications Design", variable=v1,value=1)
 C_RB1.grid(column = 0, row = 2, padx = 10, pady = 10,sticky='w')
-C_RB2=ttk.Radiobutton(tabComms, text=" Custom Link Budget", variable=v0,value=2)
+C_RB2=ttk.Radiobutton(tabComms, text=" Custom Link Budget", variable=v1,value=2)
 C_RB2.grid(column = 0, row = 3, padx = 10, pady = 10,sticky='w')
 
 C_L1L = P_L2 = ttk.Label(tabComms, text='Use Case:')
