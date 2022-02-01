@@ -648,14 +648,14 @@ class Comms:
                 self.entry_up_1_beamwidth.set(0)
 
         ## Function to check which menu uption is selected.  Sets entry field accordingly
-        def BERCheck(val1):                   # ..is getting the right value of modulationtype 
+        def BERCheck(val1):                   
+            print("BERCHECK START") 
             val2 = self.entry_up_1_modulationtype.get()
             if val1 == '10^-2':
-                print('\n2\n')
                 if val2 == 'FSK':
                     self.entry_up_1_EBNo.set(8.9)
                 elif val2 == 'BPSK':
-                    print('\n1\n')
+                    print('\n2\n')
                     self.entry_up_1_EBNo.set(4.3)
             elif val1 == '10^-3':
                 if val2 == 'FSK':
@@ -690,6 +690,8 @@ class Comms:
                 self.up_1_BERmenu.configure(state='normal')
                 #disable entry
             
+            
+            
 
         # Uplink Tab Entry Values
 
@@ -715,8 +717,9 @@ class Comms:
         #
         self.up_1_modulationtypes = ('FSK', 'BPSK', 'Other')
         self.entry_up_1_BER = tk.StringVar(self.commsgui)
+        #self.entry_up_1_modulationtype.trace('w', lambda e=self.entry_up_1_BER.get() : BERCheck(self,e))
         self.up_1_BERs = ('10^-2', '10^-3', '10^-4', '10^-5', '10^-6')
-        self.up_1_modmenu = ttk.OptionMenu(self.tabUplink, self.entry_up_1_modulationtype, self.up_1_modulationtypes[0], *self.up_1_modulationtypes, command=lambda e=self.entry_up_1_modulationtype.get(): modCheck(e))
+        self.up_1_modmenu = ttk.OptionMenu(self.tabUplink, self.entry_up_1_modulationtype, self.up_1_modulationtypes[0], *self.up_1_modulationtypes, command=lambda e=self.entry_up_1_modulationtype.get() : modCheck(e))
         self.up_1_BERmenu = ttk.OptionMenu(self.tabUplink, self.entry_up_1_BER, self.up_1_BERs[0], *self.up_1_BERs, command=lambda e=self.entry_up_1_BER.get() : BERCheck(e))
 
 
@@ -871,9 +874,9 @@ class Comms:
         # Primary Uplink Frequency
         R = 3; C = 0
         ttk.Label(self.tabUplink, text='Frequency Type').grid(row=R, column=C, padx=25, pady=5,sticky='w')
-        ttk.Label(self.tabUplink, text='Frequency [Hz]').grid(row=R, column=C+1, padx=25, pady=5,sticky='w')
+        ttk.Label(self.tabUplink, text='Frequency [Hz]').grid(row=R, column=C+2, padx=25, pady=5,sticky='w')
         self.up_1_freqmenu.grid(column=C, row=R+1, columnspan = 2, padx = 25, pady = 5,sticky='w')
-        self.entry_up_1_frequencyVal.grid(column=C+1, row=R+1, columnspan = 2, padx = 25, pady = 5,sticky='w')
+        self.entry_up_1_frequencyVal.grid(column=C+2, row=R+1, columnspan = 2, padx = 25, pady = 5,sticky='w')
         
         # Primary Uplink EB/No 
         R = 5; C = 0
@@ -887,13 +890,13 @@ class Comms:
         # Primary Uplink Antenna Type 
         R = 7; C = 0
         ttk.Label(self.tabUplink, text='Antenna Type').grid(row=R, column=C, padx=25, pady=5,sticky='w')
-        ttk.Label(self.tabUplink, text='Beamwidth [deg]').grid(row=R, column=C+1, padx=25, pady=5,sticky='w')
+        ttk.Label(self.tabUplink, text='Beamwidth [deg]').grid(row=R, column=C+2, padx=25, pady=5,sticky='w')
         self.up_1_antmenu.grid(column=C, row=R+1, columnspan = 2, padx = 25, pady = 5,sticky='w')
-        self.entry_up_1_beamwidthVal.grid(column=C+1, row=R+1, columnspan = 2, padx = 25, pady = 5,sticky='w')
+        self.entry_up_1_beamwidthVal.grid(column=C+2, row=R+1, columnspan = 2, padx = 25, pady = 5,sticky='w')
 
 
         #Primary Uplink Atmosphere Attenuation
-        R = 8; C = 2
+        R = 8; C = 4
         ttk.Label(self.tabUplink, text='Primary Uplink Atmosphere Attenuation').grid(row=R, column=C, padx=25, pady=5,sticky='w')
         self.entry_up_1_atmosphereattenuation.grid(row=R, column=C+1, padx=5, pady=5)
 
@@ -954,7 +957,7 @@ class Comms:
 
 
         ### Secondary Spacecraft Transmitter Power ###
-        R = 3; C = 2
+        R = 3; C = 4
         ttk.Label(self.tabUplink, text='Secondary Spacecraft Transmitter Power [W]').grid(row=R, column=C, padx=25, pady=5,sticky='w')
         self.entry_up_s_sc_transpower.grid(row=R, column=C+1, padx=5, pady=5)
 
@@ -1014,11 +1017,11 @@ class Comms:
         self.entry_down_p_gs_antgain.grid(row=R, column=C+1, padx=5, pady=5)
 
         #Primary Datarate
-        R = 7; C = 0
+        R = 7; C = 4
         ttk.Label(self.tabDownlink, text='Primary Datarate [bps]').grid(row=R, column=C, padx=25, pady=5,sticky='w')
         self.entry_down_p_datarate.grid(row=R, column=C+1, padx=5, pady=5)
 
-        #Primary Frequency
+        #Primary Freqency
         R = 8; C = 0
         ttk.Label(self.tabDownlink, text='Primary Frequency [Hz]').grid(row=R, column=C, padx=25, pady=5,sticky='w')
         self.entry_down_p_frequency.grid(row=R, column=C+1, padx=5, pady=5)
@@ -1029,7 +1032,7 @@ class Comms:
         self.entry_down_p_EBNo.grid(row=R, column=C+1, padx=5, pady=5,stick='w')
 
         # Secondary Spacecraft Transmitter Power
-        R = 3; C = 2
+        R = 3; C = 4
         ttk.Label(self.tabDownlink, text='Secondary Spacecraft Transmitter Power [W]').grid(row=R, column=C, padx=25, pady=5,sticky='w')
         self.entry_down_s_sc_transpower.grid(row=R, column=C+1, padx=5, pady=5)
 
@@ -1049,7 +1052,7 @@ class Comms:
         self.entry_down_s_gs_antgain.grid(row=R, column=C+1, padx=5, pady=5)
 
         #Secondary Datarate
-        R = 7; C = 2
+        R = 7; C = 4
         ttk.Label(self.tabDownlink, text='Secondary Datarate [bps]').grid(row=R, column=C, padx=25, pady=5,sticky='w')
         self.entry_down_s_datarate.grid(row=R, column=C+1, padx=5, pady=5)
 
