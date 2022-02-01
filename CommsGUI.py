@@ -648,9 +648,8 @@ class Comms:
                 self.entry_up_1_beamwidth.set(0)
 
         ## Function to check which menu uption is selected.  Sets entry field accordingly
-        def BERCheck(val1, val2):
-            print(self.entry_up_1_modulationtype.get())
-            print(val2)
+        def BERCheck(val1):                   # ..is getting the right value of modulationtype 
+            val2 = self.entry_up_1_modulationtype.get()
             if val1 == '10^-2':
                 print('\n2\n')
                 if val2 == 'FSK':
@@ -680,7 +679,7 @@ class Comms:
                 if val2 == 'FSK':
                     self.entry_up_1_EBNo.set(0.0)
                 elif val2 == 'BPSK':
-                    self.entry_up_1_EBNo.set(0.6)
+                    self.entry_up_1_EBNo.set(10.6)
 
         ## Function to check which menu uption is selected.  Sets entry field accordingly
         def modCheck(val1):
@@ -718,7 +717,7 @@ class Comms:
         self.entry_up_1_BER = tk.StringVar(self.commsgui)
         self.up_1_BERs = ('10^-2', '10^-3', '10^-4', '10^-5', '10^-6')
         self.up_1_modmenu = ttk.OptionMenu(self.tabUplink, self.entry_up_1_modulationtype, self.up_1_modulationtypes[0], *self.up_1_modulationtypes, command=lambda e=self.entry_up_1_modulationtype.get(): modCheck(e))
-        self.up_1_BERmenu = ttk.OptionMenu(self.tabUplink, self.entry_up_1_BER, self.up_1_BERs[0], *self.up_1_BERs, command=lambda e=self.entry_up_1_BER.get(), f=self.entry_up_1_modulationtype.get() : BERCheck(e, f))
+        self.up_1_BERmenu = ttk.OptionMenu(self.tabUplink, self.entry_up_1_BER, self.up_1_BERs[0], *self.up_1_BERs, command=lambda e=self.entry_up_1_BER.get() : BERCheck(e))
 
 
         self.entry_up_1_antennatype = tk.StringVar(self.commsgui)
