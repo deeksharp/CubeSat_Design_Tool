@@ -632,6 +632,7 @@ class Comms:
         self.commswindow.add(self.tabUplink, text = 'Uplink')
         self.commswindow.add(self.tabDownlink, text = 'Downlink')
         self.commswindow.pack(expand = 1, fill ="both")
+        font1 = "Helvetica 14 bold"
 
         ## Function to check which menu option is selected.  Sets entry field accordingly
         def bandCheck(value):
@@ -876,110 +877,110 @@ class Comms:
 
         #Header
         R = 0; C = 0
-        t_ins_design = 'Uplink is communication \nfrom Ground Station to \nSpacecraft. Select frequency,\n modulation and antenna \ntype, then input values for \nall remaining parameters.'
-        self.choose = ttk.Label(self.tabUplink,text = t_ins_design, wraplength = 250)
+        t_ins_design = 'Uplink is communication \nfrom Ground Station to \nSpacecraft. Select frequency, \nmodulation and antenna \ntype, then input values for \nall remaining parameters.'
+        self.choose = ttk.Label(self.tabUplink,text = t_ins_design)
         self.choose.grid(row = R, column = C, columnspan = 2,rowspan=2, padx = 5, pady = 5)
-        mod_instructions = 'NOTE: Eb/No values only update upon selecting a value for BER.  Example: Select BPSK/FSK, then select a BER value will update Eb/No.  Select BER value, then select BPSK/FSK will NOT update Eb/No.'
-        self.modInstruction = ttk.Label(self.tabUplink,text =mod_instructions, wraplength = 250)
+        mod_instructions = 'NOTE: Eb/No values only \nupdate upon selecting \na value for BER.  \nExample: Select BPSK/FSK, \nthen select a BER value will \nupdate Eb/No.  Select BER \nvalue, then select BPSK/FSK \nwill NOT update Eb/No.'
+        self.modInstruction = ttk.Label(self.tabUplink,text =mod_instructions)
         self.modInstruction.grid(row = R, column = C + 2, columnspan = 2,rowspan=2, padx = 5, pady = 5)
         # Primary Uplink Frequency
         R = 3; C = 0
-        ttk.Label(self.tabUplink, text='Frequency Type', font='Helvetica 10 bold').grid(row=R, column=C, padx=25, pady=5,sticky='w')
-        ttk.Label(self.tabUplink, text='Frequency [Hz]', font='Helvetica 10 bold').grid(row=R, column=C+2, padx=25, pady=5,sticky='w')
+        ttk.Label(self.tabUplink, text='Frequency Type', font=font1).grid(row=R, column=C, padx=25, pady=5,sticky='w')
+        ttk.Label(self.tabUplink, text='Frequency [Hz]', font=font1).grid(row=R, column=C+2, padx=25, pady=5,sticky='w')
         self.up_1_freqmenu.grid(column=C, row=R+1, columnspan = 2, padx = 25, pady = 5,sticky='w')
         self.entry_up_1_frequencyVal.grid(column=C+2, row=R+1, columnspan = 2, padx = 25, pady = 5,sticky='w')
         
         # Primary Uplink EB/No 
         R = 5; C = 0
-        ttk.Label(self.tabUplink, text='Modulation Type', font='Helvetica 10 bold').grid(row=R, column=C, padx=25, pady=5,sticky='w')
-        ttk.Label(self.tabUplink, text='BER', font='Helvetica 10 bold').grid(row=R, column=C+1, padx=25, pady=5,sticky='w')
-        ttk.Label(self.tabUplink, text='EB/No [dB]', font='Helvetica 10 bold').grid(row=R, column=C+2, padx=25, pady=5,sticky='w')
+        ttk.Label(self.tabUplink, text='Modulation Type', font=font1).grid(row=R, column=C, padx=25, pady=5,sticky='w')
+        ttk.Label(self.tabUplink, text='BER', font=font1).grid(row=R, column=C+1, padx=35, pady=5,sticky='w')
+        ttk.Label(self.tabUplink, text='EB/No [dB]', font=font1).grid(row=R, column=C+2, padx=25, pady=5,sticky='w')
         self.up_1_modmenu.grid(column=C, row=R+1, columnspan = 2, padx = 25, pady = 5,sticky='w')
-        self.up_1_BERmenu.grid(column=C+1, row=R+1, columnspan = 2, padx = 25, pady = 5,sticky='w')
+        self.up_1_BERmenu.grid(column=C+1, row=R+1, columnspan = 2, padx = 35, pady = 5,sticky='w')
         self.entry_up_1_EBNoVal.grid(row=R+1, column=C+2, padx=25, pady=5,sticky='w')
 
         # Primary Uplink Antenna Type 
         R = 7; C = 0
-        ttk.Label(self.tabUplink, text='Antenna Type', font='Helvetica 10 bold').grid(row=R, column=C, padx=25, pady=5,sticky='w')
-        ttk.Label(self.tabUplink, text='Beamwidth [deg]', font='Helvetica 10 bold').grid(row=R, column=C+2, padx=25, pady=5,sticky='w')
+        ttk.Label(self.tabUplink, text='Antenna Type', font=font1).grid(row=R, column=C, padx=25, pady=5,sticky='w')
+        ttk.Label(self.tabUplink, text='Beamwidth [deg]', font=font1).grid(row=R, column=C+2, padx=25, pady=5,sticky='w')
         self.up_1_antmenu.grid(column=C, row=R+1, columnspan = 2, padx = 25, pady = 5,sticky='w')
         self.entry_up_1_beamwidthVal.grid(column=C+2, row=R+1, columnspan = 2, padx = 25, pady = 5,sticky='w')
 
 
         #Primary Uplink Atmosphere Attenuation
         R = 3; C = 4
-        ttk.Label(self.tabUplink, text='Atmosphere Attenuation', font='Helvetica 10 bold').grid(row=R, column=C, padx=25, pady=5,sticky='w')
+        ttk.Label(self.tabUplink, text='Atmosphere Attenuation', font=font1).grid(row=R, column=C, padx=25, pady=5,sticky='w')
         self.entry_up_1_atmosphereattenuation.grid(row=R, column=C+1, padx=5, pady=5)
 
         #Primary Uplink Rain Attenuation
         R = 4; C = 4
-        ttk.Label(self.tabUplink, text='Rain Attenuation', font='Helvetica 10 bold').grid(row=R, column=C, padx=25, pady=5,sticky='w')
+        ttk.Label(self.tabUplink, text='Rain Attenuation', font=font1).grid(row=R, column=C, padx=25, pady=5,sticky='w')
         self.entry_up_1_rainattenuation.grid(row=R, column=C+1, padx=5, pady=5,stick='w')
 
         #Primary Uplink System Temperature
         R = 5; C = 4
-        ttk.Label(self.tabUplink, text='System Temperature', font='Helvetica 10 bold').grid(row=R, column=C, padx=25, pady=5,sticky='w')
+        ttk.Label(self.tabUplink, text='System Temperature', font=font1).grid(row=R, column=C, padx=25, pady=5,sticky='w')
         self.entry_up_1_systemtemp.grid(row=R, column=C+1, padx=5, pady=5,stick='w')
 
         #Primary Uplink Line Loss
         R = 6; C = 4
-        ttk.Label(self.tabUplink, text='Line Loss', font='Helvetica 10 bold').grid(row=R, column=C, padx=25, pady=5,sticky='w')
+        ttk.Label(self.tabUplink, text='Line Loss', font=font1).grid(row=R, column=C, padx=25, pady=5,sticky='w')
         self.entry_up_1_lineloss.grid(row=R, column=C+1, padx=5, pady=5,stick='w')
 
         #Primary Uplink Space Loss
         R = 7; C = 4
-        ttk.Label(self.tabUplink, text='Space Loss', font='Helvetica 10 bold').grid(row=R, column=C, padx=25, pady=5,sticky='w')
+        ttk.Label(self.tabUplink, text='Space Loss', font=font1).grid(row=R, column=C, padx=25, pady=5,sticky='w')
         self.entry_up_1_spaceloss.grid(row=R, column=C+1, padx=5, pady=5,stick='w')
 
         #Primary Uplink Polarization Loss
         R = 8; C = 4
-        ttk.Label(self.tabUplink, text='Polarization Loss', font='Helvetica 10 bold').grid(row=R, column=C, padx=25, pady=5,sticky='w')
+        ttk.Label(self.tabUplink, text='Polarization Loss', font=font1).grid(row=R, column=C, padx=25, pady=5,sticky='w')
         self.entry_up_1_polarizationloss.grid(row=R, column=C+1, padx=5, pady=5,stick='w')
 
         #Primary Uplink Transmitter Pointing Loss
         R = 9; C = 4
-        ttk.Label(self.tabUplink, text='Transmitter Pointing Loss', font='Helvetica 10 bold').grid(row=R, column=C, padx=25, pady=5,sticky='w')
+        ttk.Label(self.tabUplink, text='Transmitter Pointing Loss', font=font1).grid(row=R, column=C, padx=25, pady=5,sticky='w')
         self.entry_up_1_transmitterpointingloss.grid(row=R, column=C+1, padx=5, pady=5,stick='w')
 
         #Primary Uplink Receiving Pointing Loss
         R = 10; C = 4
-        ttk.Label(self.tabUplink, text='Receiver Pointing Loss', font='Helvetica 10 bold').grid(row=R, column=C, padx=25, pady=5,sticky='w')
+        ttk.Label(self.tabUplink, text='Receiver Pointing Loss', font=font1).grid(row=R, column=C, padx=25, pady=5,sticky='w')
         self.entry_up_1_receiverpointingloss.grid(row=R, column=C+1, padx=5, pady=5,stick='w')
 
         #Primary Uplink Transmitter Dish Diameter
         R = 11; C = 4
-        ttk.Label(self.tabUplink, text='Transmitter Dish Diameter', font='Helvetica 10 bold').grid(row=R, column=C, padx=25, pady=5,sticky='w')
+        ttk.Label(self.tabUplink, text='Transmitter Dish Diameter', font=font1).grid(row=R, column=C, padx=25, pady=5,sticky='w')
         self.entry_up_1_transmitterdishdiameter.grid(row=R, column=C+1, padx=5, pady=5,stick='w')
 
         #Primary Uplink Receiver Dish Diameter
         R = 12; C = 4
-        ttk.Label(self.tabUplink, text='Receiver Dish Diameter', font='Helvetica 10 bold').grid(row=R, column=C, padx=25, pady=5,sticky='w')
+        ttk.Label(self.tabUplink, text='Receiver Dish Diameter', font=font1).grid(row=R, column=C, padx=25, pady=5,sticky='w')
         self.entry_up_1_receiverdishdiameter.grid(row=R, column=C+1, padx=5, pady=5,stick='w')
 
         #Primary Uplink Transmitter Efficiency
         R = 13; C = 4
-        ttk.Label(self.tabUplink, text='Transmitter Efficiency', font='Helvetica 10 bold').grid(row=R, column=C, padx=25, pady=5,sticky='w')
+        ttk.Label(self.tabUplink, text='Transmitter Efficiency', font=font1).grid(row=R, column=C, padx=25, pady=5,sticky='w')
         self.entry_up_1_transmitterefficiency.grid(row=R, column=C+1, padx=5, pady=5,stick='w')
 
         #Primary Uplink Receiver Efficiency
         R = 14; C = 4
-        ttk.Label(self.tabUplink, text='Receiver Efficiency', font='Helvetica 10 bold').grid(row=R, column=C, padx=25, pady=5,sticky='w')
+        ttk.Label(self.tabUplink, text='Receiver Efficiency', font=font1).grid(row=R, column=C, padx=25, pady=5,sticky='w')
         self.entry_up_1_receiverefficiency.grid(row=R, column=C+1, padx=5, pady=5,stick='w')
 
         #TransPower/Datarate Instructions
         R=0; C=6
-        ttk.Label(self.tabUplink, text='If you need to calculate datarate, \ninput transmitter power, and \nleave datarate blank.').grid(row=R, column=C, padx=25, pady=5,sticky='w')
-        ttk.Label(self.tabUplink, text='If you need to calculate transmitter \npower, input datarate, and \nleave transmitter power blank.').grid(row=R+1, column=C, padx=25, pady=5,sticky='w')
+        ttk.Label(self.tabUplink, text='If you need to calculate datarate, \ninput transmitter power, and \nleave datarate blank.').grid(row=R, column=C, columnspan = 2, padx=25, pady=5,sticky='w')
+        ttk.Label(self.tabUplink, text='If you need to calculate transmitter \npower, input datarate, and \nleave transmitter power blank.').grid(row=R+1, columnspan = 2, column=C, padx=25, pady=5,sticky='w')
 
 
         #Primary Uplink Transmitter Power
         R = 3; C = 6
-        ttk.Label(self.tabUplink, text='Transmitter Power [W]', font='Helvetica 10 bold').grid(row=R, column=C, padx=25, pady=5,sticky='w')
+        ttk.Label(self.tabUplink, text='Transmitter Power [W]', font=font1).grid(row=R, column=C, padx=25, pady=5,sticky='w')
         self.entry_up_1_transmitterpower.grid(row=R, column=C+1, padx=5, pady=5,stick='w')
 
         #Primary Uplink Data rate
         R = 4; C = 6
-        ttk.Label(self.tabUplink, text='Data Rate [bps]', font='Helvetica 10 bold').grid(row=R, column=C, padx=25, pady=5,sticky='w')
+        ttk.Label(self.tabUplink, text='Data Rate [bps]', font=font1).grid(row=R, column=C, padx=25, pady=5,sticky='w')
         self.entry_up_1_datarate.grid(row=R, column=C+1, padx=5, pady=5,stick='w')
 
         ### Secondary Spacecraft Transmitter Power ###
