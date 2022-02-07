@@ -896,7 +896,7 @@ class Comms:
         ttk.Label(self.tabUplink, text='BER', font=font1).grid(row=R, column=C+1, padx=35, pady=5,sticky='w')
         ttk.Label(self.tabUplink, text='EB/No [dB]', font=font1).grid(row=R, column=C+2, padx=25, pady=5,sticky='w')
         self.up_1_modmenu.grid(column=C, row=R+1, columnspan = 2, padx = 25, pady = 5,sticky='w')
-        self.up_1_BERmenu.grid(column=C+1, row=R+1, columnspan = 2, padx = 35, pady = 5,sticky='w')
+        self.up_1_BERmenu.grid(column=C+1, row=R+1, columnspan = 2, padx = 25, pady = 5,sticky='w')
         self.entry_up_1_EBNoVal.grid(row=R+1, column=C+2, padx=25, pady=5,sticky='w')
 
         # Primary Uplink Antenna Type 
