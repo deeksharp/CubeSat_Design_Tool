@@ -972,7 +972,7 @@ class Comms:
         ttk.Label(self.tabUplink, text='If you need to calculate datarate, \ninput transmitter power, and \nleave datarate blank.').grid(row=R, column=C, columnspan = 2, padx=25, pady=5,sticky='w')
         ttk.Label(self.tabUplink, text='If you need to calculate transmitter \npower, input datarate, and \nleave transmitter power blank.').grid(row=R+1, columnspan = 2, column=C, padx=25, pady=5,sticky='w')
 
-
+ 
         #Primary Uplink Transmitter Power
         R = 3; C = 6
         ttk.Label(self.tabUplink, text='Transmitter Power [W]', font=font1).grid(row=R, column=C, padx=25, pady=5,sticky='w')
