@@ -28,14 +28,14 @@ class Comms:
         self.up_p_gs_antgain = ''
         self.up_p_datarate = ''
         self.up_p_frequency = '' 
-        self.up_p_EBNo = '' 
+        self.up_p_EbNo = '' 
         self.up_s_sc_transpower = ''
         self.up_s_sc_antgain = ''
         self.up_s_gs_transpower = ''
         self.up_s_gs_antgain = ''
         self.up_s_datarate = ''
         self.up_s_frequency = '' 
-        self.up_s_EBNo = '' 
+        self.up_s_EbNo = '' 
         self.up_systemp = '' 
         self.up_maxdistanceEarth = ''
         self.up_rainloss = '' 
@@ -49,14 +49,14 @@ class Comms:
         self.down_p_gs_antgain = ''
         self.down_p_datarate = ''
         self.down_p_frequency = '' 
-        self.down_p_EBNo = '' 
+        self.down_p_EbNo = '' 
         self.down_s_sc_transpower = ''
         self.down_s_sc_antgain = ''
         self.down_s_gs_transpower = ''
         self.down_s_gs_antgain = ''
         self.down_s_datarate = ''
         self.down_s_frequency = '' 
-        self.down_s_EBNo = '' 
+        self.down_s_EbNo = '' 
         self.down_systemp = '' 
         self.down_maxdistanceEarth = ''
         self.down_rainloss = ''
@@ -65,7 +65,8 @@ class Comms:
         
         # UPLINK TAB - 2
         self.up_1_frequency = ''
-        self.up_1_EBNo = ''
+        self.up_1_modulationtype = ''
+        self.up_1_EbNo = ''
         self.up_1_BER = ''
         self.up_1_antennatype = ''
         self.up_1_beamwidth = ''
@@ -84,7 +85,8 @@ class Comms:
         self.up_1_transmitterpower = ''
         self.up_1_datarate = ''
         self.up_2_frequency = ''
-        self.up_2_EBNo = ''
+        self.up_2_modulationtype = ''
+        self.up_2_EbNo = ''
         self.up_2_BER = ''
         self.up_2_antennatype = ''
         self.up_2_beamwidth = ''
@@ -103,7 +105,8 @@ class Comms:
 
         # DOWNLINK TAB - 2
         self.down_1_frequency = ''
-        self.down_1_EBNo = ''
+        self.down_1_modulationtype = ''
+        self.down_1_EbNo = ''
         self.down_1_BER = ''
         self.down_1_antennatype = ''
         self.down_1_beamwidth = ''
@@ -120,7 +123,8 @@ class Comms:
         self.down_1_transmitterefficiency = ''
         self.down_1_receiverefficiency = ''
         self.down_2_frequency = ''
-        self.down_2_EBNo = ''
+        self.down_2_modulationtype = ''
+        self.down_2_EbNo = ''
         self.down_2_BER = ''
         self.down_2_antennatype = ''
         self.down_2_beamwidth = ''
@@ -154,10 +158,10 @@ class Comms:
         self.out_down_p_gs_antgain: float
         self.out_down_s_sc_antgain: float
         self.out_down_s_gs_antgain: float
-        self.out_up_p_EBNo: float
-        self.out_up_s_EBNo: float
-        self.out_down_p_EBNo: float
-        self.out_down_s_EBNo: float
+        self.out_up_p_EbNo: float
+        self.out_up_s_EbNo: float
+        self.out_down_p_EbNo: float
+        self.out_down_s_EbNo: float
         self.out_up_p_datarate: float
         self.out_up_s_datarate: float
         self.out_down_p_datarate: float
@@ -180,10 +184,10 @@ class Comms:
         self.out_up_2_frequency: float
         self.out_down_1_frequency: float
         self.out_down_2_frequency: float
-        self.out_up_1_EBNo: float
-        self.out_up_2_EBNo: float
-        self.out_down_1_EBNo: float
-        self.out_down_2_EBNo: float
+        self.out_up_1_EbNo: float
+        self.out_up_2_EbNo: float
+        self.out_down_1_EbNo: float
+        self.out_down_2_EbNo: float
         self.out_up_1_BER: float
         self.out_up_2_BER: float
         self.out_down_1_BER: float
@@ -287,7 +291,7 @@ class Comms:
 
             # Calculations
             t = 'Calculated values include data rates and link margin, '\
-                'based on calculated transmit power values, with appropriate '\
+                'based on calculated transmit RF power values, with appropriate '\
                 'losses and orbit radius considerations in place.'
             self.T3_R0_C0 = ttk.Label(self.tabCalcs, text=t, wraplength = 350)
             self.T3_R0_C0.grid(row = 0, column = 0, padx = 5, pady = 5,sticky='w')
@@ -301,7 +305,7 @@ class Comms:
             self.T1_R0_C1.grid(row = 0, column = 1, padx = 5, pady = 5,sticky='w')
             self.T1_R1_C0 = ttk.Label(self.tabInputs, text='EPS Design Parameters:', wraplength = 100)
             self.T1_R1_C0.grid(row = 1, column = 0, padx = 5, pady = 5,sticky='w')
-            t ='Parameters for calculating transmitter power or max data rates, along with link margin.'
+            t ='Parameters for calculating transmitter  RF power or max data rates, along with link margin.'
             self.T1_R1_C1 = ttk.Label(self.tabInputs, text=t, wraplength = 300)
             self.T1_R1_C1.grid(row = 1, column = 1, padx = 5, pady = 5,sticky='w')
             
@@ -342,8 +346,8 @@ class Comms:
         self.entry_up_p_datarate.insert(0,0)
         self.entry_up_p_frequency = ttk.Entry(self.tabUplink, width = w)
         self.entry_up_p_frequency.insert(0,0)
-        self.entry_up_p_EBNo = ttk.Entry(self.tabUplink, width = w)
-        self.entry_up_p_EBNo.insert(0,0)
+        self.entry_up_p_EbNo = ttk.Entry(self.tabUplink, width = w)
+        self.entry_up_p_EbNo.insert(0,0)
         self.entry_up_s_sc_transpower = ttk.Entry(self.tabUplink, width = w)
         self.entry_up_s_sc_transpower.insert(0,0)
         self.entry_up_s_sc_antgain = ttk.Entry(self.tabUplink, width = w)
@@ -356,8 +360,8 @@ class Comms:
         self.entry_up_s_datarate.insert(0,0)
         self.entry_up_s_frequency = ttk.Entry(self.tabUplink, width = w)
         self.entry_up_s_frequency.insert(0,0)
-        self.entry_up_s_EBNo = ttk.Entry(self.tabUplink, width = w)
-        self.entry_up_s_EBNo.insert(0,0)
+        self.entry_up_s_EbNo = ttk.Entry(self.tabUplink, width = w)
+        self.entry_up_s_EbNo.insert(0,0)
         self.entry_up_systemp = ttk.Entry(self.tabUplink, width = w)
         self.entry_up_systemp.insert(0, 300)
         self.entry_up_maxdistanceEarth = ttk.Entry(self.tabUplink, width = w)
@@ -383,8 +387,8 @@ class Comms:
         self.entry_down_p_datarate.insert(0,0)
         self.entry_down_p_frequency = ttk.Entry(self.tabDownlink, width = w)
         self.entry_down_p_frequency.insert(0,0)
-        self.entry_down_p_EBNo = ttk.Entry(self.tabDownlink, width = w)
-        self.entry_down_p_EBNo.insert(0,0)
+        self.entry_down_p_EbNo = ttk.Entry(self.tabDownlink, width = w)
+        self.entry_down_p_EbNo.insert(0,0)
         self.entry_down_s_sc_transpower = ttk.Entry(self.tabDownlink, width = w)
         self.entry_down_s_sc_transpower.insert(0,0)
         self.entry_down_s_sc_antgain = ttk.Entry(self.tabDownlink, width = w)
@@ -397,8 +401,8 @@ class Comms:
         self.entry_down_s_datarate.insert(0,0)
         self.entry_down_s_frequency = ttk.Entry(self.tabDownlink, width = w)
         self.entry_down_s_frequency.insert(0,0)
-        self.entry_down_s_EBNo = ttk.Entry(self.tabDownlink, width = w)
-        self.entry_down_s_EBNo.insert(0,0)
+        self.entry_down_s_EbNo = ttk.Entry(self.tabDownlink, width = w)
+        self.entry_down_s_EbNo.insert(0,0)
         self.entry_down_systemp = ttk.Entry(self.tabDownlink, width = w)
         self.entry_down_systemp.insert(0, 300)
         self.entry_down_maxdistanceEarth = ttk.Entry(self.tabDownlink, width = w)
@@ -420,7 +424,7 @@ class Comms:
 
         # Primary Spacecraft Transmitter Power
         R = 3; C = 0
-        ttk.Label(self.tabUplink, text='Primary Spacecraft Transmitter Power [W]').grid(row=R, column=C, padx=25, pady=5,sticky='w')
+        ttk.Label(self.tabUplink, text='Primary Spacecraft Transmitter RF Power [W]').grid(row=R, column=C, padx=25, pady=5,sticky='w')
         self.entry_up_p_sc_transpower.grid(row=R, column=C+1, padx=5, pady=5)
 
         # Primary Spacecraft Antenna Gain 
@@ -430,7 +434,7 @@ class Comms:
 
          # Primary GroundStation Transmitter Power
         R = 5; C = 0
-        ttk.Label(self.tabUplink, text='Primary GroundStation Transmitter Power [W]').grid(row=R, column=C, padx=25, pady=5,sticky='w')
+        ttk.Label(self.tabUplink, text='Primary GroundStation Transmitter RF Power [W]').grid(row=R, column=C, padx=25, pady=5,sticky='w')
         self.entry_up_p_gs_transpower.grid(row=R, column=C+1, padx=5, pady=5)
 
         # Primary GroundStation Antenna Gain 
@@ -451,11 +455,11 @@ class Comms:
         #Primary Eb/N0 
         R = 9; C = 0
         ttk.Label(self.tabUplink, text='Primary Eb/N0 [dB]').grid(row=R, column=C, padx=25, pady=5,sticky='w')
-        self.entry_up_p_EBNo.grid(row=R, column=C+1, padx=5, pady=5,stick='w')
+        self.entry_up_p_EbNo.grid(row=R, column=C+1, padx=5, pady=5,stick='w')
 
         # Secondary Spacecraft Transmitter Power
         R = 3; C = 2
-        ttk.Label(self.tabUplink, text='Secondary Spacecraft Transmitter Power [W]').grid(row=R, column=C, padx=25, pady=5,sticky='w')
+        ttk.Label(self.tabUplink, text='Secondary Spacecraft Transmitter RF Power [W]').grid(row=R, column=C, padx=25, pady=5,sticky='w')
         self.entry_up_s_sc_transpower.grid(row=R, column=C+1, padx=5, pady=5)
 
         # Secondary Spacecraft Antenna Gain
@@ -465,7 +469,7 @@ class Comms:
 
         # Secondary Spacecraft Transmitter Power
         R = 5; C = 2
-        ttk.Label(self.tabUplink, text='Secondary Spacecraft Transmitter Power [W]').grid(row=R, column=C, padx=25, pady=5,sticky='w')
+        ttk.Label(self.tabUplink, text='Secondary Spacecraft Transmitter RF Power [W]').grid(row=R, column=C, padx=25, pady=5,sticky='w')
         self.entry_up_s_gs_transpower.grid(row=R, column=C+1, padx=5, pady=5)
 
         # Secondary Spacecraft Antenna Gain
@@ -483,10 +487,10 @@ class Comms:
         ttk.Label(self.tabUplink, text='Secondary Frequency [Hz]').grid(row=R, column=C, padx=25, pady=5,sticky='w')
         self.entry_up_s_frequency.grid(row=R, column=C+1, padx=5, pady=5)
 
-        #EBNO Secondary 
+        #EbNo Secondary 
         R = 9; C = 2 
         ttk.Label(self.tabUplink, text='Secondary Eb/N0 [dB]').grid(row=R, column=C, padx=25, pady=5,sticky='w')
-        self.entry_up_s_EBNo.grid(row=R, column=C+1, padx=5, pady=5,stick='w')
+        self.entry_up_s_EbNo.grid(row=R, column=C+1, padx=5, pady=5,stick='w')
 
          # System Noise Temp
         R = 3; C = 4
@@ -523,7 +527,7 @@ class Comms:
 
         # Primary Spacecraft Transmitter Power
         R = 3; C = 0
-        ttk.Label(self.tabDownlink, text='Primary Spacecraft Transmitter Power [W]').grid(row=R, column=C, padx=25, pady=5,sticky='w')
+        ttk.Label(self.tabDownlink, text='Primary Spacecraft Transmitter RF Power [W]').grid(row=R, column=C, padx=25, pady=5,sticky='w')
         self.entry_down_p_sc_transpower.grid(row=R, column=C+1, padx=5, pady=5)
 
         # Primary Spacecraft Antenna Gain 
@@ -533,7 +537,7 @@ class Comms:
 
          # Primary GroundStation Transmitter Power
         R = 5; C = 0
-        ttk.Label(self.tabDownlink, text='Primary GroundStation Transmitter Power [W]').grid(row=R, column=C, padx=25, pady=5,sticky='w')
+        ttk.Label(self.tabDownlink, text='Primary GroundStation Transmitter RF Power [W]').grid(row=R, column=C, padx=25, pady=5,sticky='w')
         self.entry_down_p_gs_transpower.grid(row=R, column=C+1, padx=5, pady=5)
 
         # Primary GroundStation Antenna Gain 
@@ -554,11 +558,11 @@ class Comms:
         #Primary Eb/N0 
         R = 9; C = 0
         ttk.Label(self.tabDownlink, text='Primary Eb/N0 [dB]').grid(row=R, column=C, padx=25, pady=5,sticky='w')
-        self.entry_down_p_EBNo.grid(row=R, column=C+1, padx=5, pady=5,stick='w')
+        self.entry_down_p_EbNo.grid(row=R, column=C+1, padx=5, pady=5,stick='w')
 
         # Secondary Spacecraft Transmitter Power
         R = 3; C = 2
-        ttk.Label(self.tabDownlink, text='Secondary Spacecraft Transmitter Power [W]').grid(row=R, column=C, padx=25, pady=5,sticky='w')
+        ttk.Label(self.tabDownlink, text='Secondary Spacecraft Transmitter RF Power [W]').grid(row=R, column=C, padx=25, pady=5,sticky='w')
         self.entry_down_s_sc_transpower.grid(row=R, column=C+1, padx=5, pady=5)
 
         # Secondary Spacecraft Antenna Gain
@@ -568,7 +572,7 @@ class Comms:
 
         # Secondary Spacecraft Transmitter Power
         R = 5; C = 2
-        ttk.Label(self.tabDownlink, text='Secondary Spacecraft Transmitter Power [W]').grid(row=R, column=C, padx=25, pady=5,sticky='w')
+        ttk.Label(self.tabDownlink, text='Secondary Spacecraft Transmitter RF Power [W]').grid(row=R, column=C, padx=25, pady=5,sticky='w')
         self.entry_down_s_gs_transpower.grid(row=R, column=C+1, padx=5, pady=5)
 
         # Secondary Spacecraft Antenna Gain
@@ -586,10 +590,10 @@ class Comms:
         ttk.Label(self.tabDownlink, text='Secondary Frequency [Hz]').grid(row=R, column=C, padx=25, pady=5,sticky='w')
         self.entry_down_s_frequency.grid(row=R, column=C+1, padx=5, pady=5)
 
-        #EBNO Secondary 
+        #EbNo Secondary 
         R = 9; C = 2 
         ttk.Label(self.tabDownlink, text='Secondary Eb/N0 [dB]').grid(row=R, column=C, padx=25, pady=5,sticky='w')
-        self.entry_down_s_EBNo.grid(row=R, column=C+1, padx=5, pady=5,stick='w')
+        self.entry_down_s_EbNo.grid(row=R, column=C+1, padx=5, pady=5,stick='w')
 
          # System Noise Temp
         R = 3; C = 4
@@ -671,33 +675,33 @@ class Comms:
             val2 = self.entry_up_1_modulationtype.get()
             if val1 == '10^-2':
                 if val2 == 'FSK':
-                    self.entry_up_1_EBNo.set(8.9)
+                    self.entry_up_1_EbNo.set(8.9)
                 elif val2 == 'BPSK':
                     print('\n2\n')
-                    self.entry_up_1_EBNo.set(4.3)
+                    self.entry_up_1_EbNo.set(4.3)
             elif val1 == '10^-3':
                 if val2 == 'FSK':
-                    self.entry_up_1_EBNo.set(10.9)
+                    self.entry_up_1_EbNo.set(10.9)
                 elif val2 == 'BPSK':
                     print('\n3\n')
-                    self.entry_up_1_EBNo.set(6.5)
+                    self.entry_up_1_EbNo.set(6.5)
             elif val1 == '10^-4':
                 if val2 == 'FSK':
-                    self.entry_up_1_EBNo.set(12)
+                    self.entry_up_1_EbNo.set(12)
                 elif val2 == 'BPSK':
                     print('\n4\n')
-                    self.entry_up_1_EBNo.set(8.1)
+                    self.entry_up_1_EbNo.set(8.1)
             elif val1 == '10^-5':
                 if val2 == 'FSK':
-                    self.entry_up_1_EBNo.set(13.5)
+                    self.entry_up_1_EbNo.set(13.5)
                 elif val2 == 'BPSK':
                     print('\n5\n')
-                    self.entry_up_1_EBNo.set(9.6)
+                    self.entry_up_1_EbNo.set(9.6)
             elif val1 == '10^-6':
                 if val2 == 'FSK':
-                    self.entry_up_1_EBNo.set(0.0)
+                    self.entry_up_1_EbNo.set(0.0)
                 elif val2 == 'BPSK':
-                    self.entry_up_1_EBNo.set(10.6)
+                    self.entry_up_1_EbNo.set(10.6)
 
         ## Function to check which menu uption is selected.  Sets entry field accordingly
         def modCheckup1(val1):
@@ -732,33 +736,33 @@ class Comms:
             val2 = self.entry_up_2_modulationtype.get()
             if val1 == '10^-2':
                 if val2 == 'FSK':
-                    self.entry_up_2_EBNo.set(8.9)
+                    self.entry_up_2_EbNo.set(8.9)
                 elif val2 == 'BPSK':
                     print('\n2\n')
-                    self.entry_up_2_EBNo.set(4.3)
+                    self.entry_up_2_EbNo.set(4.3)
             elif val1 == '10^-3':
                 if val2 == 'FSK':
-                    self.entry_up_2_EBNo.set(10.9)
+                    self.entry_up_2_EbNo.set(10.9)
                 elif val2 == 'BPSK':
                     print('\n3\n')
-                    self.entry_up_2_EBNo.set(6.5)
+                    self.entry_up_2_EbNo.set(6.5)
             elif val1 == '10^-4':
                 if val2 == 'FSK':
-                    self.entry_up_2_EBNo.set(12)
+                    self.entry_up_2_EbNo.set(12)
                 elif val2 == 'BPSK':
                     print('\n4\n')
-                    self.entry_up_2_EBNo.set(8.1)
+                    self.entry_up_2_EbNo.set(8.1)
             elif val1 == '10^-5':
                 if val2 == 'FSK':
-                    self.entry_up_2_EBNo.set(13.5)
+                    self.entry_up_2_EbNo.set(13.5)
                 elif val2 == 'BPSK':
                     print('\n5\n')
-                    self.entry_up_2_EBNo.set(9.6)
+                    self.entry_up_2_EbNo.set(9.6)
             elif val1 == '10^-6':
                 if val2 == 'FSK':
-                    self.entry_up_2_EBNo.set(0.0)
+                    self.entry_up_2_EbNo.set(0.0)
                 elif val2 == 'BPSK':
-                    self.entry_up_2_EBNo.set(10.6)
+                    self.entry_up_2_EbNo.set(10.6)
 
         ## Function to check which menu uption is selected.  Sets entry field accordingly
         def modCheckup2(val1):
@@ -791,10 +795,10 @@ class Comms:
         self.up_2_freqmenu = ttk.OptionMenu(self.tabUpSecondary, self.entry_up_2_frequencytype, self.up_2_frequencies[0], *self.up_2_frequencies, command=lambda e=self.entry_up_2_frequencytype: bandCheckup2(e))
 
         self.entry_up_1_modulationtype = tk.StringVar(self.commsgui)
-        self.entry_up_1_EBNo = tk.DoubleVar(self.commsgui)
-        self.entry_up_1_EBNoVal = ttk.Entry(self.tabUpPrimary, textvariable=self.entry_up_1_EBNo, width = w)
-        self.entry_up_1_EBNoVal.delete(0, tk.END)
-        self.entry_up_1_EBNoVal.insert(0, 8.9)
+        self.entry_up_1_EbNo = tk.DoubleVar(self.commsgui)
+        self.entry_up_1_EbNoVal = ttk.Entry(self.tabUpPrimary, textvariable=self.entry_up_1_EbNo, width = w)
+        self.entry_up_1_EbNoVal.delete(0, tk.END)
+        self.entry_up_1_EbNoVal.insert(0, 8.9)
         self.up_1_modulationtypes = ('FSK', 'BPSK', 'Other')
         self.entry_up_1_BER = tk.StringVar(self.commsgui)
         #self.entry_up_1_modulationtype.trace('w', lambda e=self.entry_up_1_BER.get() : BERCheckup1(self,e))
@@ -803,10 +807,10 @@ class Comms:
         self.up_1_BERmenu = ttk.OptionMenu(self.tabUpPrimary, self.entry_up_1_BER, self.up_1_BERs[0], *self.up_1_BERs, command=lambda e=self.entry_up_1_BER.get() : BERCheckup1(e))
 
         self.entry_up_2_modulationtype = tk.StringVar(self.commsgui)
-        self.entry_up_2_EBNo = tk.DoubleVar(self.commsgui)
-        self.entry_up_2_EBNoVal = ttk.Entry(self.tabUpSecondary, textvariable=self.entry_up_2_EBNo, width = w)
-        self.entry_up_2_EBNoVal.delete(0, tk.END)
-        self.entry_up_2_EBNoVal.insert(0, 8.9)
+        self.entry_up_2_EbNo = tk.DoubleVar(self.commsgui)
+        self.entry_up_2_EbNoVal = ttk.Entry(self.tabUpSecondary, textvariable=self.entry_up_2_EbNo, width = w)
+        self.entry_up_2_EbNoVal.delete(0, tk.END)
+        self.entry_up_2_EbNoVal.insert(0, 8.9)
         self.up_2_modulationtypes = ('FSK', 'BPSK', 'Other')
         self.entry_up_2_BER = tk.StringVar(self.commsgui)
         #self.entry_up_2_modulationtype.trace('w', lambda e=self.entry_up_2_BER.get() : BERCheckup2(self,e))
@@ -918,7 +922,7 @@ class Comms:
         ttk.Label(self.tabUpPrimary, text='Eb/No [dB]', font=font1).grid(row=R, column=C+2, padx=25, pady=5,sticky='w')
         self.up_1_modmenu.grid(column=C, row=R+1, columnspan = 2, padx = 25, pady = 5,sticky='w')
         self.up_1_BERmenu.grid(column=C+1, row=R+1, columnspan = 2, padx = 25, pady = 5,sticky='w')
-        self.entry_up_1_EBNoVal.grid(row=R+1, column=C+2, padx=25, pady=5,sticky='w')
+        self.entry_up_1_EbNoVal.grid(row=R+1, column=C+2, padx=25, pady=5,sticky='w')
 
         # Primary Uplink Antenna Type 
         R = 7; C = 0
@@ -990,13 +994,13 @@ class Comms:
 
         #TransPower/Datarate Instructions
         R=0; C=6
-        ttk.Label(self.tabUpPrimary, text='If you need to calculate data rate, \ninput transmitter power, and \nleave data rate blank.').grid(row=R, column=C, columnspan = 2, padx=25, pady=5,sticky='w')
-        ttk.Label(self.tabUpPrimary, text='If you need to calculate transmitter \npower, input data rate, and \nleave transmitter power blank.').grid(row=R+1, columnspan = 2, column=C, padx=25, pady=5,sticky='w')
+        ttk.Label(self.tabUpPrimary, text='If you need to calculate data rate, \ninput transmitter RF power, and \nleave data rate blank.').grid(row=R, column=C, columnspan = 2, padx=25, pady=5,sticky='w')
+        ttk.Label(self.tabUpPrimary, text='If you need to calculate transmitter RF\npower, input data rate, and \nleave transmitter power blank.').grid(row=R+1, columnspan = 2, column=C, padx=25, pady=5,sticky='w')
 
  
         #Primary Uplink Transmitter Power
         R = 3; C = 6
-        ttk.Label(self.tabUpPrimary, text='Transmitter Power [W]', font=font1).grid(row=R, column=C, padx=25, pady=5,sticky='w')
+        ttk.Label(self.tabUpPrimary, text='Transmitter RF Power [W]', font=font1).grid(row=R, column=C, padx=25, pady=5,sticky='w')
         self.entry_up_1_transmitterpower.grid(row=R, column=C+1, padx=5, pady=5,stick='w')
 
         #Primary Uplink Data rate
@@ -1027,7 +1031,7 @@ class Comms:
         ttk.Label(self.tabUpSecondary, text='Eb/No [dB]', font=font1).grid(row=R, column=C+2, padx=25, pady=5,sticky='w')
         self.up_2_modmenu.grid(column=C, row=R+1, columnspan = 2, padx = 25, pady = 5,sticky='w')
         self.up_2_BERmenu.grid(column=C+1, row=R+1, columnspan = 2, padx = 25, pady = 5,sticky='w')
-        self.entry_up_2_EBNoVal.grid(row=R+1, column=C+2, padx=25, pady=5,sticky='w')
+        self.entry_up_2_EbNoVal.grid(row=R+1, column=C+2, padx=25, pady=5,sticky='w')
 
         # Secondary Uplink Antenna Type 
         R = 7; C = 0
@@ -1098,13 +1102,13 @@ class Comms:
 
         #Secondary TransPower/Datarate Instructions
         R=0; C=6
-        ttk.Label(self.tabUpSecondary, text='If you need to calculate data rate, \ninput transmitter power, and \nleave data rate blank.').grid(row=R, column=C, columnspan = 2, padx=25, pady=5,sticky='w')
+        ttk.Label(self.tabUpSecondary, text='If you need to calculate data rate, \ninput transmitter RF power, and \nleave data rate blank.').grid(row=R, column=C, columnspan = 2, padx=25, pady=5,sticky='w')
         ttk.Label(self.tabUpSecondary, text='If you need to calculate transmitter \npower, input data rate, and \nleave transmitter power blank.').grid(row=R+1, columnspan = 2, column=C, padx=25, pady=5,sticky='w')
 
  
         #Secondary Uplink Transmitter Power
         R = 3; C = 6
-        ttk.Label(self.tabUpSecondary, text='Transmitter Power [W]', font=font1).grid(row=R, column=C, padx=25, pady=5,sticky='w')
+        ttk.Label(self.tabUpSecondary, text='Transmitter RF Power [W]', font=font1).grid(row=R, column=C, padx=25, pady=5,sticky='w')
         self.entry_up_2_transmitterpower.grid(row=R, column=C+1, padx=5, pady=5,stick='w')
 
         #Secondary Uplink Data rate
@@ -1136,33 +1140,33 @@ class Comms:
             val2 = self.entry_down_1_modulationtype.get()
             if val1 == '10^-2':
                 if val2 == 'FSK':
-                    self.entry_down_1_EBNo.set(8.9)
+                    self.entry_down_1_EbNo.set(8.9)
                 elif val2 == 'BPSK':
                     print('\n2\n')
-                    self.entry_down_1_EBNo.set(4.3)
+                    self.entry_down_1_EbNo.set(4.3)
             elif val1 == '10^-3':
                 if val2 == 'FSK':
-                    self.entry_down_1_EBNo.set(10.9)
+                    self.entry_down_1_EbNo.set(10.9)
                 elif val2 == 'BPSK':
                     print('\n3\n')
-                    self.entry_down_1_EBNo.set(6.5)
+                    self.entry_down_1_EbNo.set(6.5)
             elif val1 == '10^-4':
                 if val2 == 'FSK':
-                    self.entry_down_1_EBNo.set(12)
+                    self.entry_down_1_EbNo.set(12)
                 elif val2 == 'BPSK':
                     print('\n4\n')
-                    self.entry_down_1_EBNo.set(8.1)
+                    self.entry_down_1_EbNo.set(8.1)
             elif val1 == '10^-5':
                 if val2 == 'FSK':
-                    self.entry_down_1_EBNo.set(13.5)
+                    self.entry_down_1_EbNo.set(13.5)
                 elif val2 == 'BPSK':
                     print('\n5\n')
-                    self.entry_down_1_EBNo.set(9.6)
+                    self.entry_down_1_EbNo.set(9.6)
             elif val1 == '10^-6':
                 if val2 == 'FSK':
-                    self.entry_down_1_EBNo.set(0.0)
+                    self.entry_down_1_EbNo.set(0.0)
                 elif val2 == 'BPSK':
-                    self.entry_down_1_EBNo.set(10.6)
+                    self.entry_down_1_EbNo.set(10.6)
 
         ## Function to check which menu uption is selected.  Sets entry field accordingly
         def modCheckdown1(val1):
@@ -1198,33 +1202,33 @@ class Comms:
             val2 = self.entry_down_2_modulationtype.get()
             if val1 == '10^-2':
                 if val2 == 'FSK':
-                    self.entry_down_2_EBNo.set(8.9)
+                    self.entry_down_2_EbNo.set(8.9)
                 elif val2 == 'BPSK':
                     print('\n2\n')
-                    self.entry_down_2_EBNo.set(4.3)
+                    self.entry_down_2_EbNo.set(4.3)
             elif val1 == '10^-3':
                 if val2 == 'FSK':
-                    self.entry_down_2_EBNo.set(10.9)
+                    self.entry_down_2_EbNo.set(10.9)
                 elif val2 == 'BPSK':
                     print('\n3\n')
-                    self.entry_down_2_EBNo.set(6.5)
+                    self.entry_down_2_EbNo.set(6.5)
             elif val1 == '10^-4':
                 if val2 == 'FSK':
-                    self.entry_down_2_EBNo.set(12)
+                    self.entry_down_2_EbNo.set(12)
                 elif val2 == 'BPSK':
                     print('\n4\n')
-                    self.entry_down_2_EBNo.set(8.1)
+                    self.entry_down_2_EbNo.set(8.1)
             elif val1 == '10^-5':
                 if val2 == 'FSK':
-                    self.entry_down_2_EBNo.set(13.5)
+                    self.entry_down_2_EbNo.set(13.5)
                 elif val2 == 'BPSK':
                     print('\n5\n')
-                    self.entry_down_2_EBNo.set(9.6)
+                    self.entry_down_2_EbNo.set(9.6)
             elif val1 == '10^-6':
                 if val2 == 'FSK':
-                    self.entry_down_2_EBNo.set(0.0)
+                    self.entry_down_2_EbNo.set(0.0)
                 elif val2 == 'BPSK':
-                    self.entry_down_2_EBNo.set(10.6)
+                    self.entry_down_2_EbNo.set(10.6)
 
         ## Function to check which menu uption is selected.  Sets entry field accordingly
         def modCheckdown2(val1):
@@ -1257,10 +1261,10 @@ class Comms:
         self.down_2_freqmenu = ttk.OptionMenu(self.tabDownSecondary, self.entry_down_2_frequencytype, self.down_2_frequencies[0], *self.down_2_frequencies, command=lambda e=self.entry_down_2_frequencytype: bandCheckdown2(e))
 
         self.entry_down_1_modulationtype = tk.StringVar(self.commsgui)
-        self.entry_down_1_EBNo = tk.DoubleVar(self.commsgui)
-        self.entry_down_1_EBNoVal = ttk.Entry(self.tabDownPrimary, textvariable=self.entry_down_1_EBNo, width = w)
-        self.entry_down_1_EBNoVal.delete(0, tk.END)
-        self.entry_down_1_EBNoVal.insert(0, 8.9)
+        self.entry_down_1_EbNo = tk.DoubleVar(self.commsgui)
+        self.entry_down_1_EbNoVal = ttk.Entry(self.tabDownPrimary, textvariable=self.entry_down_1_EbNo, width = w)
+        self.entry_down_1_EbNoVal.delete(0, tk.END)
+        self.entry_down_1_EbNoVal.insert(0, 8.9)
         self.down_1_modulationtypes = ('FSK', 'BPSK', 'Other')
         self.entry_down_1_BER = tk.StringVar(self.commsgui)
         #self.entry_down_1_modulationtype.trace('w', lambda e=self.entry_down_1_BER.get() : BERCheckdown1(self,e))
@@ -1269,10 +1273,10 @@ class Comms:
         self.down_1_BERmenu = ttk.OptionMenu(self.tabDownPrimary, self.entry_down_1_BER, self.down_1_BERs[0], *self.down_1_BERs, command=lambda e=self.entry_down_1_BER.get() : BERCheckdown1(e))
 
         self.entry_down_2_modulationtype = tk.StringVar(self.commsgui)
-        self.entry_down_2_EBNo = tk.DoubleVar(self.commsgui)
-        self.entry_down_2_EBNoVal = ttk.Entry(self.tabDownSecondary, textvariable=self.entry_down_2_EBNo, width = w)
-        self.entry_down_2_EBNoVal.delete(0, tk.END)
-        self.entry_down_2_EBNoVal.insert(0, 8.9)
+        self.entry_down_2_EbNo = tk.DoubleVar(self.commsgui)
+        self.entry_down_2_EbNoVal = ttk.Entry(self.tabDownSecondary, textvariable=self.entry_down_2_EbNo, width = w)
+        self.entry_down_2_EbNoVal.delete(0, tk.END)
+        self.entry_down_2_EbNoVal.insert(0, 8.9)
         self.down_2_modulationtypes = ('FSK', 'BPSK', 'Other')
         self.entry_down_2_BER = tk.StringVar(self.commsgui)
         #self.entry_down_2_modulationtype.trace('w', lambda e=self.entry_down_2_BER.get() : BERCheckdown2(self,e))
@@ -1384,7 +1388,7 @@ class Comms:
         ttk.Label(self.tabDownPrimary, text='Eb/No [dB]', font=font1).grid(row=R, column=C+2, padx=25, pady=5,sticky='w')
         self.down_1_modmenu.grid(column=C, row=R+1, columnspan = 2, padx = 25, pady = 5,sticky='w')
         self.down_1_BERmenu.grid(column=C+1, row=R+1, columnspan = 2, padx = 25, pady = 5,sticky='w')
-        self.entry_down_1_EBNoVal.grid(row=R+1, column=C+2, padx=25, pady=5,sticky='w')
+        self.entry_down_1_EbNoVal.grid(row=R+1, column=C+2, padx=25, pady=5,sticky='w')
 
         # Primary Downlink Antenna Type 
         R = 7; C = 0
@@ -1456,13 +1460,13 @@ class Comms:
 
         #Downlink TransPower/Datarate Instructions
         R=0; C=6
-        ttk.Label(self.tabDownPrimary, text='If you need to calculate data rate, \ninput transmitter power, and \nleave data rate blank.').grid(row=R, column=C, columnspan = 2, padx=25, pady=5,sticky='w')
-        ttk.Label(self.tabDownPrimary, text='If you need to calculate transmitter \npower, input data rate, and \nleave transmitter power blank.').grid(row=R+1, columnspan = 2, column=C, padx=25, pady=5,sticky='w')
+        ttk.Label(self.tabDownPrimary, text='If you need to calculate data rate, \ninput transmitter RF power, and \nleave data rate blank.').grid(row=R, column=C, columnspan = 2, padx=25, pady=5,sticky='w')
+        ttk.Label(self.tabDownPrimary, text='If you need to calculate transmitter RF\npower, input data rate, and \nleave transmitter RF power blank.').grid(row=R+1, columnspan = 2, column=C, padx=25, pady=5,sticky='w')
 
  
         #Primary Downlink Transmitter Power
         R = 3; C = 6
-        ttk.Label(self.tabDownPrimary, text='Transmitter Power [W]', font=font1).grid(row=R, column=C, padx=25, pady=5,sticky='w')
+        ttk.Label(self.tabDownPrimary, text='Transmitter RF Power [W]', font=font1).grid(row=R, column=C, padx=25, pady=5,sticky='w')
         self.entry_down_1_transmitterpower.grid(row=R, column=C+1, padx=5, pady=5,stick='w')
 
         #Primary Downlink Data rate
@@ -1493,7 +1497,7 @@ class Comms:
         ttk.Label(self.tabDownSecondary, text='Eb/No [dB]', font=font1).grid(row=R, column=C+2, padx=25, pady=5,sticky='w')
         self.down_2_modmenu.grid(column=C, row=R+1, columnspan = 2, padx = 25, pady = 5,sticky='w')
         self.down_2_BERmenu.grid(column=C+1, row=R+1, columnspan = 2, padx = 25, pady = 5,sticky='w')
-        self.entry_down_2_EBNoVal.grid(row=R+1, column=C+2, padx=25, pady=5,sticky='w')
+        self.entry_down_2_EbNoVal.grid(row=R+1, column=C+2, padx=25, pady=5,sticky='w')
 
         # Secondary Downlink Antenna Type 
         R = 7; C = 0
@@ -1570,7 +1574,7 @@ class Comms:
  
         #Secondary Downlink Transmitter Power
         R = 3; C = 6
-        ttk.Label(self.tabDownSecondary, text='Transmitter Power [W]', font=font1).grid(row=R, column=C, padx=25, pady=5,sticky='w')
+        ttk.Label(self.tabDownSecondary, text='Transmitter RF Power [W]', font=font1).grid(row=R, column=C, padx=25, pady=5,sticky='w')
         self.entry_down_2_transmitterpower.grid(row=R, column=C+1, padx=5, pady=5,stick='w')
 
         #Secondary Downlink Data rate
@@ -1585,6 +1589,7 @@ class Comms:
         self.UseCase = 2
         self.sub_btn = ttk.Button(self.tabDownSecondary, text = "Submit", command = self.inputComms)
         self.sub_btn.grid(column = C, row = R)
+
         # Done Button
         self.fin_btn = ttk.Button(self.tabDownSecondary, text = "Close", command = self.allDone)
         self.fin_btn.grid(column = C+1, row = R,stick='w')
@@ -1619,7 +1624,7 @@ class Comms:
             except:
                 pass
             try:
-                self.up_p_EBNo = float(self.entry_up_p_EBNo.get())
+                self.up_p_EbNo = float(self.entry_up_p_EbNo.get())
             except:
                 pass
             try:
@@ -1647,7 +1652,7 @@ class Comms:
             except:
                 pass
             try:
-                self.up_s_EBNo = float(self.entry_up_s_EBNo.get())
+                self.up_s_EbNo = float(self.entry_up_s_EbNo.get())
             except:
                 pass
             try:
@@ -1695,7 +1700,7 @@ class Comms:
             except:
                 pass
             try:
-                self.down_p_EBNo = float(self.entry_down_p_EBNo.get())
+                self.down_p_EbNo = float(self.entry_down_p_EbNo.get())
             except:
                 pass
             try:
@@ -1723,7 +1728,7 @@ class Comms:
             except:
                 pass
             try:
-                self.down_s_EBNo = float(self.entry_down_s_EBNo.get())
+                self.down_s_EbNo = float(self.entry_down_s_EbNo.get())
             except:
                 pass
             try:
@@ -1746,11 +1751,327 @@ class Comms:
                 self.down_otherloss = int(self.entry_down_otherloss.get())
             except:
                 pass
-        # elif self.UseCase == 2:
-        #     try:
-        #         #self.up_p_sc_transpower= float(self.entry_up_p_sc_transpower.get())
-        #     except:
-        #         pass
+        elif self.UseCase == 2:
+            try:
+                self.up_1_frequency = int(self.entry_up_1_frequency.get())
+            except:
+                pass
+            try:
+                self.up_2_frequency = int(self.entry_up_2_frequency.get())
+            except:
+                pass
+            try:
+                self.down_1_frequency = int(self.entry_down_1_frequency.get())
+            except:
+                pass
+            try:
+                self.down_2_frequency = int(self.entry_down_2_frequency.get())
+            except:
+                pass
+            try:
+                self.up_1_modulationtype = self.entry_up_1_modulationtype.get()
+            except:
+                pass
+            try:
+                self.up_2_modulationtype = self.entry_up_2_modulationtype.get()
+            except:
+                pass
+            try:
+                self.down_1_modulationtype = self.entry_down_1_modulationtype.get()
+            except:
+                pass
+            try:
+                self.down_2_modulationtype = self.entry_down_2_modulationtype.get()
+            except:
+                pass
+            try:
+                self.up_1_EbNo = float(self.entry_up_1_EbNo.get())
+            except:
+                pass
+            try:
+                self.up_2_EbNo = float(self.entry_up_2_EbNo.get())
+            except:
+                pass
+            try:
+                self.down_1_EbNo = float(self.entry_down_1_EbNo.get())
+            except:
+                pass
+            try:
+                self.down_2_EbNo = float(self.entry_down_2_EbNo.get())
+            except:
+                pass
+            try:
+                self.up_1_BER = self.entry_up_1_BER.get()
+            except:
+                pass
+            try:
+                self.up_2_BER = self.entry_up_2_BER.get()
+            except:
+                pass
+            try:
+                self.down_1_BER = self.entry_down_1_BER.get()
+            except:
+                pass
+            try:
+                self.down_2_BER = self.entry_down_2_BER.get()
+            except:
+                pass
+            try:
+                self.up_1_antennatype = self.entry_up_1_antennatype.get()
+            except:
+                pass
+            try:
+                self.up_2_antennatype = self.entry_up_2_antennatype.get()
+            except:
+                pass
+            try:
+                self.down_1_antennatype = self.entry_down_1_antennatype.get()
+            except:
+                pass
+            try:
+                self.down_2_antennatype = self.entry_down_2_antennatype.get()
+            except:
+                pass
+            try:
+                self.up_1_beamwidth = self.entry_up_1_beamwidth.get()
+            except:
+                pass
+            try:
+                self.up_2_beamwidth = self.entry_up_2_beamwidth.get()
+            except:
+                pass
+            try:
+                self.down_1_beamwidth = self.entry_down_1_beamwidth.get()
+            except:
+                pass
+            try:
+                self.down_2_beamwidth = self.entry_down_2_beamwidth.get()
+            except:
+                pass
+            try:
+                self.up_1_atmosphereattenuation = float(self.entry_up_1_atmosphereattenuation.get())
+            except:
+                pass
+            try:
+                self.up_2_atmosphereattenuation = float(self.entry_up_2_atmosphereattenuation.get())
+            except:
+                pass
+            try:
+                self.down_1_atmosphereattenuation = float(self.entry_down_1_atmosphereattenuation.get())
+            except:
+                pass
+            try:
+                self.down_2_atmosphereattenuation = float(self.entry_down_2_atmosphereattenuation.get())
+            except:
+                pass
+            try:
+                self.up_1_rainattenuation = float(self.entry_up_1_rainattenuation.get())
+            except:
+                pass
+            try:
+                self.up_2_rainattenuation = float(self.entry_up_2_rainattenuation.get())
+            except:
+                pass
+            try:
+                self.down_1_rainattenuation = float(self.entry_down_1_rainattenuation.get())
+            except:
+                pass
+            try:
+                self.down_2_rainattenuation = float(self.entry_down_2_rainattenuation.get())
+            except:
+                pass
+            try:
+                self.entry_up_1_systemtemp = float(self.entry_up_1_systemtemp.get())
+            except:
+                pass
+            try:
+                self.entry_up_2_systemtemp = float(self.entry_up_2_systemtemp.get())
+            except:
+                pass
+            try:
+                self.entry_down_1_systemtemp = float(self.entry_down_1_systemtemp.get())
+            except:
+                pass
+            try:
+                self.entry_down_2_systemtemp = float(self.entry_down_2_systemtemp.get())
+            except:
+                pass
+            try:
+                self.up_1_lineloss = float(self.entry_up_1_lineloss.get())
+            except:
+                pass
+            try:
+                self.up_2_lineloss = float(self.entry_up_2_lineloss.get())
+            except:
+                pass
+            try:
+                self.down_1_lineloss = float(self.entry_down_1_lineloss.get())
+            except:
+                pass
+            try:
+                self.down_2_lineloss = float(self.entry_down_2_lineloss.get())
+            except:
+                pass
+            try:
+                self.up_1_spaceloss = float(self.entry_up_1_spaceloss.get())
+            except:
+                pass
+            try:
+                self.up_2_spaceloss = float(self.entry_up_2_spaceloss.get())
+            except:
+                pass
+            try:
+                self.down_1_spaceloss = float(self.entry_down_1_spaceloss.get())
+            except:
+                pass
+            try:
+                self.down_2_spaceloss = float(self.entry_down_2_spaceloss.get())
+            except:
+                pass
+            try:
+                self.up_1_polarizationloss = float(self.entry_up_1_polarizationloss.get())
+            except:
+                pass
+            try:
+                self.up_2_polarizationloss = float(self.entry_up_2_polarizationloss.get())
+            except:
+                pass
+            try:
+                self.down_1_polarizationloss = float(self.entry_down_1_polarizationloss.get())
+            except:
+                pass
+            try:
+                self.down_2_polarizationloss = float(self.entry_down_2_polarizationloss.get())
+            except:
+                pass
+            try:
+                self.up_1_transmitterpointingloss = float(self.entry_up_1_transmitterpointingloss.get())
+            except:
+                pass
+            try:
+                self.up_2_transmitterpointingloss = float(self.entry_up_2_transmitterpointingloss.get())
+            except:
+                pass
+            try:
+                self.down_1_transmitterpointingloss = float(self.entry_down_1_transmitterpointingloss.get())
+            except:
+                pass
+            try:
+                self.down_2_transmitterpointingloss = float(self.entry_down_2_transmitterpointingloss.get())
+            except:
+                pass
+            try:
+                self.up_1_receiverpointingloss = float(self.entry_up_1_receiverpointingloss.get())
+            except:
+                pass
+            try:
+                self.up_2_receiverpointingloss = float(self.entry_up_2_receiverpointingloss.get())
+            except:
+                pass
+            try:
+                self.down_1_receiverpointingloss = float(self.entry_down_1_receiverpointingloss.get())
+            except:
+                pass
+            try:
+                self.down_2_receiverpointingloss = float(self.entry_down_2_receiverpointingloss.get())
+            except:
+                pass
+            try:
+                self.up_1_transmitterdishdiameter = float(self.entry_up_1_transmitterdishdiameter.get())
+            except:
+                pass
+            try:
+                self.up_2_transmitterdishdiameter = float(self.entry_up_2_transmitterdishdiameter.get())
+            except:
+                pass
+            try:
+                self.down_1_transmitterdishdiameter = float(self.entry_down_1_transmitterdishdiameter.get())
+            except:
+                pass
+            try:
+                self.down_2_transmitterdishdiameter = float(self.entry_down_2_transmitterdishdiameter.get())
+            except:
+                pass
+            try:
+                self.up_1_receiverdishdiameter = float(self.entry_up_1_receiverdishdiameter.get())
+            except:
+                pass
+            try:
+                self.up_2_receiverdishdiameter = float(self.entry_up_2_receiverdishdiameter.get())
+            except:
+                pass
+            try:
+                self.down_1_receiverdishdiameter = float(self.entry_down_1_receiverdishdiameter.get())
+            except:
+                pass
+            try:
+                self.down_2_receiverdishdiameter = float(self.entry_down_2_receiverdishdiameter.get())
+            except:
+                pass
+            try:
+                self.up_1_transmitterefficiency = float(self.entry_up_1_transmitterefficiency.get())
+            except:
+                pass
+            try:
+                self.up_2_transmitterefficiency = float(self.entry_up_2_transmitterefficiency.get())
+            except:
+                pass
+            try:
+                self.down_1_transmitterefficiency = float(self.entry_down_1_transmitterefficiency.get())
+            except:
+                pass
+            try:
+                self.down_2_transmitterefficiency = float(self.entry_down_2_transmitterefficiency.get())
+            except:
+                pass
+            try:
+                self.up_1_receiverefficiency = float(self.entry_up_1_receiverefficiency.get())
+            except:
+                pass
+            try:
+                self.up_2_receiverefficiency = float(self.entry_up_2_receiverefficiency.get())
+            except:
+                pass
+            try:
+                self.down_1_receiverefficiency = float(self.entry_down_1_receiverefficiency.get())
+            except:
+                pass
+            try:
+                self.down_2_receiverefficiency = float(self.entry_down_2_receiverefficiency.get())
+            except:
+                pass
+            try:
+                self.up_1_transmitterpower = float(self.entry_up_1_transmitterpower.get())
+            except:
+                pass
+            try:
+                self.up_2_transmitterpower = float(self.entry_up_2_transmitterpower.get())
+            except:
+                pass
+            try:
+                self.down_1_transmitterpower = float(self.entry_down_1_transmitterpower.get())
+            except:
+                pass
+            try:
+                self.down_2_transmitterpower = float(self.entry_down_2_transmitterpower.get())
+            except:
+                pass
+            try:
+                self.up_1_datarate = float(self.entry_up_1_datarate.get())
+            except:
+                pass
+            try:
+                self.up_2_datarate = float(self.entry_up_2_datarate.get())
+            except:
+                pass
+            try:
+                self.down_1_datarate = float(self.entry_down_1_datarate.get())
+            except:
+                pass
+            try:
+                self.down_2_datarate = float(self.entry_down_2_datarate.get())
+            except:
+                pass
     
     def selectionError(self):
             self.commsgui = tk.Tk() # Instance of Tk,
