@@ -64,7 +64,7 @@ class Comms:
         self.down_otherloss = ''
         
         # UPLINK TAB - 2
-        self.up_1_frequency = 0
+        self.up_1_frequency = 1
         self.up_1_modulationtype = ''
         self.up_1_EbNo = ''
         self.up_1_BER = ''
@@ -78,9 +78,9 @@ class Comms:
         self.up_1_polarizationloss = ''
         self.up_1_transmitterpointingloss = ''
         self.up_1_receiverpointingloss = ''
-        self.up_1_transmitterdishdiameter = 0
+        self.up_1_transmitterdishdiameter = 1
         self.up_1_receiverdishdiameter = ''
-        self.up_1_transmitterefficiency = 0
+        self.up_1_transmitterefficiency = 1
         self.up_1_receiverefficiency = ''
         self.up_1_transmitterpower = ''
         self.up_1_datarate = ''
