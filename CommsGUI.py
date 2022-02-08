@@ -64,7 +64,7 @@ class Comms:
         self.down_otherloss = ''
         
         # UPLINK TAB - 2
-        self.up_1_frequency = ''
+        self.up_1_frequency = 0
         self.up_1_modulationtype = ''
         self.up_1_EbNo = ''
         self.up_1_BER = ''
@@ -78,9 +78,9 @@ class Comms:
         self.up_1_polarizationloss = ''
         self.up_1_transmitterpointingloss = ''
         self.up_1_receiverpointingloss = ''
-        self.up_1_transmitterdishdiameter = ''
+        self.up_1_transmitterdishdiameter = 0
         self.up_1_receiverdishdiameter = ''
-        self.up_1_transmitterefficiency = ''
+        self.up_1_transmitterefficiency = 0
         self.up_1_receiverefficiency = ''
         self.up_1_transmitterpower = ''
         self.up_1_datarate = ''
@@ -102,6 +102,8 @@ class Comms:
         self.up_2_receiverdishdiameter = ''
         self.up_2_transmitterefficiency = ''
         self.up_2_receiverefficiency = ''
+        self.up_2_transmitterpower = 0
+        self.up_2_datarate = 0
 
         # DOWNLINK TAB - 2
         self.down_1_frequency = ''
@@ -122,6 +124,8 @@ class Comms:
         self.down_1_receiverdishdiameter = ''
         self.down_1_transmitterefficiency = ''
         self.down_1_receiverefficiency = ''
+        self.down_1_transmitterpower = ''
+        self.down_1_datarate = ''
         self.down_2_frequency = ''
         self.down_2_modulationtype = ''
         self.down_2_EbNo = ''
@@ -140,6 +144,8 @@ class Comms:
         self.down_2_receiverdishdiameter = ''
         self.down_2_transmitterefficiency = ''
         self.down_2_receiverefficiency = ''
+        self.down_2_transmitterpower = 0
+        self.down_2_datarate = 0
 
         # OUTPUTS - 1
         self.out_up_p_sc_transpower: float
@@ -184,6 +190,10 @@ class Comms:
         self.out_up_2_frequency: float
         self.out_down_1_frequency: float
         self.out_down_2_frequency: float
+        self.out_up_1_transmitterantgain: float
+        self.out_up_2_transmitterantgain: float
+        self.out_down_1_transmitterantgain: float
+        self.out_down_2_transmitterantgain: float
         self.out_up_1_EbNo: float
         self.out_up_2_EbNo: float
         self.out_down_1_EbNo: float
@@ -1833,19 +1843,19 @@ class Comms:
             except:
                 pass
             try:
-                self.up_1_beamwidth = self.entry_up_1_beamwidth.get()
+                self.up_1_beamwidth = float(self.entry_up_1_beamwidth.get())
             except:
                 pass
             try:
-                self.up_2_beamwidth = self.entry_up_2_beamwidth.get()
+                self.up_2_beamwidth = float(self.entry_up_2_beamwidth.get())
             except:
                 pass
             try:
-                self.down_1_beamwidth = self.entry_down_1_beamwidth.get()
+                self.down_1_beamwidth = float(self.entry_down_1_beamwidth.get())
             except:
                 pass
             try:
-                self.down_2_beamwidth = self.entry_down_2_beamwidth.get()
+                self.down_2_beamwidth = float(self.entry_down_2_beamwidth.get())
             except:
                 pass
             try:

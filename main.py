@@ -50,8 +50,11 @@ def runDesign():
     pd.writeData(p) """
     
     cd = CM.CommsTool()
-    tool = cd.LinkBudget4Demo_case1(cD) if v1.get() == 1 else cd.LinkBudget4Demo_case2
-    cd.writeData(tool)
+    tool = cd.LinkBudget4Demo_case1(cD) if v1.get() == 1 else cd.LinkBudget4Demo_case2(cD)
+    if v1.get() == 1 :
+        cd.writeData(tool)
+    else : 
+        cd.writeData2(tool)
     
 def outPutData():
     with open('parameters.csv', mode='w') as parameters:

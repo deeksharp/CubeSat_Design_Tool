@@ -1,0 +1,89 @@
+Variable,Variable Name,Value,Units,,,,,,
+Frequency Uplink Primary,out_up_1_frequency,,Hz
+Frequency Uplink Secondary,out_up_2_frequency,,Hz
+Frequency Downlink Primary,out_down_1_frequency,,Hz
+Frequency Downlink Secondary,out_down_2_frequency,,Hz
+Transmit RF Power Uplink Primary,out_up_1_transmitterpower,,W
+Transmit RF Power Uplink Secondary,out_up_2_transmitterpower,,W
+Transmit RF Power Downlink Primary,out_down_1_transmitterpower,,W
+Transmit RF Power Downlink Secondary,out_down_2_transmitterpower,,W
+Transmit RF Power Uplink Primary(dB-W),out_up_1_transmitterpower2,,dB-W
+Transmit RF Power Uplink Secondary(dB-W),out_up_2_transmitterpower2,,dB-W
+Transmit RF Power Downlink Primary(dB-W),out_down_1_transmitterpower2,,dB-W
+Transmit RF Power Downlink Secondary(dB-W),out_down_2_transmitterpower2,,dB-W
+Transmit Antenna Gain Uplink Primary,out_up_1_transmitterantgain,,dBi
+Transmit Antenna Gain Uplink Secondary,out_up_2_transmitterantgain,,dBi
+Transmit Antenna Gain Downlink Primary,out_down_1_transmitterantgain,,dBi
+Transmit Antenna Gain Downlink Secondary,out_down_2_transmitterantgain,,dBi
+Transmit Antenna Efficiency Uplink Primary,out_up_1_transmitterefficiency,,
+Transmit Antenna Efficiency Uplink Secondary,out_up_2_transmitterefficiency,,
+Transmit Antenna Efficiency Downlink Primary,out_down_1_transmitterefficiency,,
+Transmit Antenna Efficiency Downlink Secondary,out_down_2_transmitterefficiency,,
+Transmit Antenna Dish Diameter Uplink Primary,out_up_1_transmitterdishdiameter,,m
+Transmit Antenna Dish Diameter Uplink Secondary,out_up_2_transmitterdishdiameter,,m
+Transmit Antenna Dish Diameter Downlink Primary,out_down_1_transmitterdishdiameter,,m
+Transmit Antenna Dish Diameter Downlink Secondary,out_down_2_transmitterdishdiameter,,m
+Beamwidth Uplink Primary,out_up_1_beamwidth,,deg
+Beamwidth Uplink Secondary,out_up_2_beamwidth,,deg
+Beamwidth Downlink Primary,out_down_1_beamwidth,,deg
+Beamwidth Downlink Secondary,out_down_2_beamwidth,,deg
+Transmit EIRP Uplink Primary,out_up_1_eirp,,dB-W
+Transmit EIRP Uplink Secondary,out_up_2_eirp,,dB-W
+Transmit EIRP Downlink Primary,out_down_1_eirp,,dB-W
+Transmit EIRP Downlink Secondary,out_down_2_eirp,,dB-W
+Space Loss Uplink Primary,out_up_1_spaceloss,,dB
+Space Loss Uplink Secondary,out_up_2_spaceloss,,dB
+Space Loss Downlink Primary,out_down_1_spaceloss,,dB
+Space Loss Downlink Secondary,out_down_2_spaceloss,,dB
+Atmospheric Attenuation Uplink Primary,out_up_1_atmosphereattenuation,,dB
+Atmospheric Attenuation Uplink Secondary,out_up_2_atmosphereattenuation,,dB
+Atmospheric Attenuation Downlink Primary,out_down_1_atmosphereattenuation,,dB
+Atmospheric Attenuation Downlink Secondary,out_down_2_atmosphereattenuation,,dB
+Receiver Antenna Dish Diameter Uplink Primary,out_up_1_receiverdishdiameter,,m
+Receiver Antenna Dish Diameter Uplink Secondary,out_up_2_receiverdishdiameter,,m
+Receiver Antenna Dish Diameter Downlink Primary,out_down_1_receiverdishdiameter,,m
+Receiver Antenna Dish Diameter Downlink Secondary,out_down_2_receiverdishdiameter,,m
+Receiver Antenna Efficiency Uplink Primary,out_up_1_receiverefficiency,,
+Receiver Antenna Efficiency Uplink Secondary,out_up_2_receiverefficiency,,
+Receiver Antenna Efficiency Downlink Primary,out_down_1_receiverefficiency,,
+Receiver Antenna Efficiency Downlink Secondary,out_down_2_receiverefficiency,,
+Receiver Antenna Gain Uplink Primary,out_up_1_receiverantgain,,dBi
+Receiver Antenna Gain Uplink Secondary,out_up_2_receiverantgain,,dBi
+Receiver Antenna Gain Downlink Primary,out_down_1_receiverantgain,,dBi
+Receiver Antenna Gain Downlink Secondary,out_down_2_receiverantgain,,dBi
+System Noise Temperature Uplink Primary,out_up_1_systemtemp,,K
+System Noise Temperature Uplink Secondary,out_up_2_systemtemp,,K
+System Noise Temperature Downlink Primary,out_down_1_systemtemp,,K
+System Noise Temperature Downlink Secondary,out_down_2_systemtemp,,K
+System Noise Temperature Uplink Primary(dB-K),out_up_1_systemtemp2,,dB-K
+System Noise Temperature Uplink Secondary(dB-K),out_up_2_systemtemp2,,dB-K
+System Noise Temperature Downlink Primary(dB-K),out_down_1_systemtemp2,,dB-K
+System Noise Temperature Downlink Secondary(dB-K),out_down_2_systemtemp2,,dB-K
+Receiver Station Antenna Sensitivity(G/T) Uplink Primary,out_up_1_receiversensitivity,,dB/K
+Receiver Station Antenna Sensitivity(G/T) Uplink Secondary,out_up_2_receiversensitivity,,dB/K
+Receiver Station Antenna Sensitivity(G/T) Downlink Primary,out_down_1_receiversensitivity,,dB/K
+Receiver Station Antenna Sensitivity(G/T) Downlink Secondary,out_down_2_receiversensitivity,,dB/K
+System to Noise Power Density Uplink Primary(S/No),out_up_1_powerdensity,,dB-Hz
+System to Noise Power Density Uplink Secondary(S/No),out_up_2_powerdensity,,dB-Hz
+System to Noise Power Density Downlink Primary(S/No),out_down_1_powerdensity,,dB-Hz
+System to Noise Power Density Downlink Secondary(S/No),out_down_2_powerdensity,,dB-Hz
+System to Noise Ratio Threshold Uplink Primary(EB/No),out_up_1_EbNo,,dB
+System to Noise Ratio Threshold Uplink Secondary(EB/No),out_up_2_EbNo,,dB
+System to Noise Ratio Threshold Downlink Primary(EB/No),out_down_1_EbNo,,dB
+System to Noise Ratio Threshold Downlink Secondary(EB/No),out_down_2_EbNo,,dB
+System to Noise Ratio Calculated Uplink Primary(EB/No),out_up_1_EbNocalc,,dB
+System to Noise Ratio Calculated Uplink Secondary(EB/No),out_up_2_EbNocalc,,dB
+System to Noise Ratio Calculated Downlink Primary(EB/No),out_down_1_EbNocalc,,dB
+System to Noise Ratio Calculated Downlink Secondary(EB/No),out_down_2_EbNocalc,,dB
+Data Rate Uplink Primary,out_up_1_datarate,,bps
+Data Rate Uplink Secondary,out_up_2_datarate,,bps
+Data Rate Downlink Primary,out_down_1_datarate,,bps
+Data Rate Downlink Secondary,out_down_2_datarate,,bps
+Data Rate Uplink Primary(dB-Hz),out_up_1_datarate2,,dB-Hz
+Data Rate Uplink Secondary(dB-Hz),out_up_2_datarate2,,dB-Hz
+Data Rate Downlink Primary(dB-Hz),out_down_1_datarate2,,dB-Hz
+Data Rate Downlink Secondary(dB-Hz),out_down_2_datarate2,,dB-Hz
+Link Margin Uplink Primary,out_up_1_margin,,dB
+Link Margin Uplink Secondary,out_up_2_margin,,dB
+Link Margin Downlink Primary,out_down_1_margin,,dB
+Link Margin Downlink Secondary,out_down_2_margin,,dB
