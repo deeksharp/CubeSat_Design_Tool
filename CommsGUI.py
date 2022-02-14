@@ -666,7 +666,7 @@ class Comms:
         self.tabDownlink.add(self.tabDownPrimary, text = 'Primary')
         self.tabDownlink.add(self.tabDownSecondary, text = 'Secondary')
         self.commswindow.pack(expand = 1, fill ="both")
-        font1 = "Helvetica 14 bold"
+        font1 = "Helvetica 11 bold"
 
         ## Function to check which menu option is selected.  Sets entry field accordingly
         def bandCheckup1(value):
