@@ -72,7 +72,7 @@ class Comms:
         self.up_1_beamwidth = ''
         self.up_1_atmosphereattenuation = 0
         self.up_1_rainattenuation = 0
-        self.up_1_systemtemp = 300
+        self.up_1_systemtemp = 0
         self.up_1_lineloss = 0
         self.up_1_spaceloss = 0
         self.up_1_polarizationloss = 0
@@ -92,7 +92,7 @@ class Comms:
         self.up_2_beamwidth = ''
         self.up_2_atmosphereattenuation = 0
         self.up_2_rainattenuation = 0
-        self.up_2_systemtemp = 300
+        self.up_2_systemtemp = 0
         self.up_2_lineloss = 0
         self.up_2_spaceloss = 0
         self.up_2_polarizationloss = 0
@@ -114,7 +114,7 @@ class Comms:
         self.down_1_beamwidth = ''
         self.down_1_atmosphereattenuation = 0
         self.down_1_rainattenuation = 0
-        self.down_1_systemtemp = 300
+        self.down_1_systemtemp = 0
         self.down_1_lineloss = 0
         self.down_1_spaceloss = 0
         self.down_1_polarizationloss = 0
@@ -134,7 +134,7 @@ class Comms:
         self.down_2_beamwidth = ''
         self.down_2_atmosphereattenuation = 0
         self.down_2_rainattenuation = 0
-        self.down_2_systemtemp = 300
+        self.down_2_systemtemp = 0
         self.down_2_lineloss = 0
         self.down_2_spaceloss = 0
         self.down_2_polarizationloss = 0
@@ -1898,19 +1898,19 @@ class Comms:
             except:
                 pass
             try:
-                self.entry_up_1_systemtemp = float(self.entry_up_1_systemtemp.get())
+                self.up_1_systemtemp = float(self.entry_up_1_systemtemp.get())
             except:
                 pass
             try:
-                self.entry_up_2_systemtemp = float(self.entry_up_2_systemtemp.get())
+                self.up_2_systemtemp = float(self.entry_up_2_systemtemp.get())
             except:
                 pass
             try:
-                self.entry_down_1_systemtemp = float(self.entry_down_1_systemtemp.get())
+                self.down_1_systemtemp = float(self.entry_down_1_systemtemp.get())
             except:
                 pass
             try:
-                self.entry_down_2_systemtemp = float(self.entry_down_2_systemtemp.get())
+                self.down_2_systemtemp = float(self.entry_down_2_systemtemp.get())
             except:
                 pass
             try:
