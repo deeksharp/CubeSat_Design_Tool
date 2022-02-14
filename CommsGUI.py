@@ -64,86 +64,86 @@ class Comms:
         self.down_otherloss = ''
         
         # UPLINK TAB - 2
-        self.up_1_frequency = 0
+        self.up_1_frequency = 1
         self.up_1_modulationtype = ''
-        self.up_1_EbNo = ''
+        self.up_1_EbNo = 0
         self.up_1_BER = ''
         self.up_1_antennatype = ''
         self.up_1_beamwidth = ''
-        self.up_1_atmosphereattenuation = ''
-        self.up_1_rainattenuation = ''
-        self.up_1_systemtemp = ''
-        self.up_1_lineloss = ''
-        self.up_1_spaceloss = ''
-        self.up_1_polarizationloss = ''
-        self.up_1_transmitterpointingloss = ''
-        self.up_1_receiverpointingloss = ''
-        self.up_1_transmitterdishdiameter = 0
-        self.up_1_receiverdishdiameter = ''
-        self.up_1_transmitterefficiency = 0
-        self.up_1_receiverefficiency = ''
-        self.up_1_transmitterpower = ''
-        self.up_1_datarate = ''
-        self.up_2_frequency = ''
+        self.up_1_atmosphereattenuation = 0
+        self.up_1_rainattenuation = 0
+        self.up_1_systemtemp = 300
+        self.up_1_lineloss = 0
+        self.up_1_spaceloss = 0
+        self.up_1_polarizationloss = 0
+        self.up_1_transmitterpointingloss = 0
+        self.up_1_receiverpointingloss = 0
+        self.up_1_transmitterdishdiameter = 1
+        self.up_1_receiverdishdiameter = 1
+        self.up_1_transmitterefficiency = 1
+        self.up_1_receiverefficiency = 1
+        self.up_1_transmitterpower = 0
+        self.up_1_datarate = 0
+        self.up_2_frequency = 1
         self.up_2_modulationtype = ''
-        self.up_2_EbNo = ''
+        self.up_2_EbNo = 0
         self.up_2_BER = ''
         self.up_2_antennatype = ''
         self.up_2_beamwidth = ''
-        self.up_2_atmosphereattenuation = ''
-        self.up_2_rainattenuation = ''
-        self.up_2_systemtemp = ''
-        self.up_2_lineloss = ''
-        self.up_2_spaceloss = ''
-        self.up_2_polarizationloss = ''
-        self.up_2_transmitterpointingloss = ''
-        self.up_2_receiverpointingloss = ''
-        self.up_2_transmitterdishdiameter = ''
-        self.up_2_receiverdishdiameter = ''
-        self.up_2_transmitterefficiency = ''
-        self.up_2_receiverefficiency = ''
+        self.up_2_atmosphereattenuation = 0
+        self.up_2_rainattenuation = 0
+        self.up_2_systemtemp = 300
+        self.up_2_lineloss = 0
+        self.up_2_spaceloss = 0
+        self.up_2_polarizationloss = 0
+        self.up_2_transmitterpointingloss = 0
+        self.up_2_receiverpointingloss = 0
+        self.up_2_transmitterdishdiameter = 1
+        self.up_2_receiverdishdiameter = 1
+        self.up_2_transmitterefficiency = 1
+        self.up_2_receiverefficiency = 1
         self.up_2_transmitterpower = 0
         self.up_2_datarate = 0
 
         # DOWNLINK TAB - 2
-        self.down_1_frequency = ''
+        self.down_1_frequency = 1
         self.down_1_modulationtype = ''
-        self.down_1_EbNo = ''
+        self.down_1_EbNo = 0
         self.down_1_BER = ''
         self.down_1_antennatype = ''
         self.down_1_beamwidth = ''
-        self.down_1_atmosphereattenuation = ''
-        self.down_1_rainattenuation = ''
-        self.down_1_systemtemp = ''
-        self.down_1_lineloss = ''
-        self.down_1_spaceloss = ''
-        self.down_1_polarizationloss = ''
-        self.down_1_transmitterpointingloss = ''
-        self.down_1_receiverpointingloss = ''
-        self.down_1_transmitterdishdiameter = ''
-        self.down_1_receiverdishdiameter = ''
-        self.down_1_transmitterefficiency = ''
-        self.down_1_receiverefficiency = ''
-        self.down_1_transmitterpower = ''
-        self.down_1_datarate = ''
-        self.down_2_frequency = ''
+        self.down_1_atmosphereattenuation = 0
+        self.down_1_rainattenuation = 0
+        self.down_1_systemtemp = 300
+        self.down_1_lineloss = 0
+        self.down_1_spaceloss = 0
+        self.down_1_polarizationloss = 0
+        self.down_1_transmitterpointingloss = 0
+        self.down_1_receiverpointingloss = 0
+        self.down_1_transmitterdishdiameter = 1
+        self.down_1_receiverdishdiameter = 1
+        self.down_1_transmitterefficiency = 1
+        self.down_1_receiverefficiency = 1
+        self.down_1_transmitterpower = 0
+        self.down_1_datarate = 0
+        self.down_2_frequency = 1
         self.down_2_modulationtype = ''
-        self.down_2_EbNo = ''
+        self.down_2_EbNo = 0
         self.down_2_BER = ''
         self.down_2_antennatype = ''
         self.down_2_beamwidth = ''
-        self.down_2_atmosphereattenuation = ''
-        self.down_2_rainattenuation = ''
-        self.down_2_systemtemp = ''
-        self.down_2_lineloss = ''
-        self.down_2_spaceloss = ''
-        self.down_2_polarizationloss = ''
-        self.down_2_transmitterpointingloss = ''
-        self.down_2_receiverpointingloss = ''
-        self.down_2_transmitterdishdiameter = ''
-        self.down_2_receiverdishdiameter = ''
-        self.down_2_transmitterefficiency = ''
-        self.down_2_receiverefficiency = ''
+        self.down_2_atmosphereattenuation = 0
+        self.down_2_rainattenuation = 0
+        self.down_2_systemtemp = 300
+        self.down_2_lineloss = 0
+        self.down_2_spaceloss = 0
+        self.down_2_polarizationloss = 0
+        self.down_2_transmitterpointingloss = 0
+        self.down_2_receiverpointingloss = 0
+        self.down_2_transmitterdishdiameter = 1
+        self.down_2_receiverdishdiameter = 1
+        self.down_2_transmitterefficiency = 1
+        self.down_2_receiverefficiency = 1
         self.down_2_transmitterpower = 0
         self.down_2_datarate = 0
 
@@ -266,6 +266,11 @@ class Comms:
         self.out_up_2_datarate: float
         self.out_down_1_datarate: float
         self.out_down_2_datarate: float
+        self.out_up_1_EbNocalc: float
+        self.out_up_2_EbNocalc: float
+        self.out_down_1_EbNocalc: float
+        self.out_down_2_EbNocalc: float
+
 
     def moreInfo(self, x):
         self.commsgui = tk.Tk() # Instance of Tk,
@@ -661,7 +666,7 @@ class Comms:
         self.tabDownlink.add(self.tabDownPrimary, text = 'Primary')
         self.tabDownlink.add(self.tabDownSecondary, text = 'Secondary')
         self.commswindow.pack(expand = 1, fill ="both")
-        font1 = "Helvetica 11 bold"
+        font1 = "Helvetica 14 bold"
 
         ## Function to check which menu option is selected.  Sets entry field accordingly
         def bandCheckup1(value):
@@ -946,52 +951,52 @@ class Comms:
 
         #Primary Uplink Atmosphere Attenuation
         R = 0; C = 4
-        ttk.Label(self.tabUpPrimary, text='Atmosphere Attenuation [dB]', font=font1).grid(row=R, column=C, padx=25, pady=5,sticky='w')
+        ttk.Label(self.tabUpPrimary, text='Atmosphere Attenuation', font=font1).grid(row=R, column=C, padx=25, pady=5,sticky='w')
         self.entry_up_1_atmosphereattenuation.grid(row=R, column=C+1, padx=5, pady=5)
 
         #Primary Uplink Rain Attenuation
         R = 1; C = 4
-        ttk.Label(self.tabUpPrimary, text='Rain Attenuation [dB]', font=font1).grid(row=R, column=C, padx=25, pady=5,sticky='w')
+        ttk.Label(self.tabUpPrimary, text='Rain Attenuation', font=font1).grid(row=R, column=C, padx=25, pady=5,sticky='w')
         self.entry_up_1_rainattenuation.grid(row=R, column=C+1, padx=5, pady=5,stick='w')
 
         #Primary Uplink System Temperature
         R = 2; C = 4
-        ttk.Label(self.tabUpPrimary, text='System Temperature [K]', font=font1).grid(row=R, column=C, padx=25, pady=5,sticky='w')
+        ttk.Label(self.tabUpPrimary, text='System Temperature', font=font1).grid(row=R, column=C, padx=25, pady=5,sticky='w')
         self.entry_up_1_systemtemp.grid(row=R, column=C+1, padx=5, pady=5,stick='w')
 
         #Primary Uplink Line Loss
         R = 3; C = 4
-        ttk.Label(self.tabUpPrimary, text='Line Loss [dB]', font=font1).grid(row=R, column=C, padx=25, pady=5,sticky='w')
+        ttk.Label(self.tabUpPrimary, text='Line Loss', font=font1).grid(row=R, column=C, padx=25, pady=5,sticky='w')
         self.entry_up_1_lineloss.grid(row=R, column=C+1, padx=5, pady=5,stick='w')
 
         #Primary Uplink Space Loss
         R = 4; C = 4
-        ttk.Label(self.tabUpPrimary, text='Space Loss [dB]', font=font1).grid(row=R, column=C, padx=25, pady=5,sticky='w')
+        ttk.Label(self.tabUpPrimary, text='Space Loss', font=font1).grid(row=R, column=C, padx=25, pady=5,sticky='w')
         self.entry_up_1_spaceloss.grid(row=R, column=C+1, padx=5, pady=5,stick='w')
 
         #Primary Uplink Polarization Loss
         R = 5; C = 4
-        ttk.Label(self.tabUpPrimary, text='Polarization Loss [dB]', font=font1).grid(row=R, column=C, padx=25, pady=5,sticky='w')
+        ttk.Label(self.tabUpPrimary, text='Polarization Loss', font=font1).grid(row=R, column=C, padx=25, pady=5,sticky='w')
         self.entry_up_1_polarizationloss.grid(row=R, column=C+1, padx=5, pady=5,stick='w')
 
         #Primary Uplink Transmitter Pointing Loss
         R = 6; C = 4
-        ttk.Label(self.tabUpPrimary, text='Transmitter Pointing Loss [dB]', font=font1).grid(row=R, column=C, padx=25, pady=5,sticky='w')
+        ttk.Label(self.tabUpPrimary, text='Transmitter Pointing Loss', font=font1).grid(row=R, column=C, padx=25, pady=5,sticky='w')
         self.entry_up_1_transmitterpointingloss.grid(row=R, column=C+1, padx=5, pady=5,stick='w')
 
         #Primary Uplink Receiving Pointing Loss
         R = 7; C = 4
-        ttk.Label(self.tabUpPrimary, text='Receiver Pointing Loss [dB]', font=font1).grid(row=R, column=C, padx=25, pady=5,sticky='w')
+        ttk.Label(self.tabUpPrimary, text='Receiver Pointing Loss', font=font1).grid(row=R, column=C, padx=25, pady=5,sticky='w')
         self.entry_up_1_receiverpointingloss.grid(row=R, column=C+1, padx=5, pady=5,stick='w')
 
         #Primary Uplink Transmitter Dish Diameter
         R = 8; C = 4
-        ttk.Label(self.tabUpPrimary, text='Transmitter Dish Diameter [m]', font=font1).grid(row=R, column=C, padx=25, pady=5,sticky='w')
+        ttk.Label(self.tabUpPrimary, text='Transmitter Dish Diameter', font=font1).grid(row=R, column=C, padx=25, pady=5,sticky='w')
         self.entry_up_1_transmitterdishdiameter.grid(row=R, column=C+1, padx=5, pady=5,stick='w')
 
         #Primary Uplink Receiver Dish Diameter
         R = 9; C = 4
-        ttk.Label(self.tabUpPrimary, text='Receiver Dish Diameter [m]', font=font1).grid(row=R, column=C, padx=25, pady=5,sticky='w')
+        ttk.Label(self.tabUpPrimary, text='Receiver Dish Diameter', font=font1).grid(row=R, column=C, padx=25, pady=5,sticky='w')
         self.entry_up_1_receiverdishdiameter.grid(row=R, column=C+1, padx=5, pady=5,stick='w')
 
         #Primary Uplink Transmitter Efficiency
@@ -1054,52 +1059,52 @@ class Comms:
 
         #Secondary Uplink Atmosphere Attenuation
         R = 0; C = 4
-        ttk.Label(self.tabUpSecondary, text='Atmosphere Attenuation [dB]', font=font1).grid(row=R, column=C, padx=25, pady=5,sticky='w')
+        ttk.Label(self.tabUpSecondary, text='Atmosphere Attenuation', font=font1).grid(row=R, column=C, padx=25, pady=5,sticky='w')
         self.entry_up_2_atmosphereattenuation.grid(row=R, column=C+1, padx=5, pady=5)
 
         #Secondary Uplink Rain Attenuation
         R = 1; C = 4
-        ttk.Label(self.tabUpSecondary, text='Rain Attenuation [dB]', font=font1).grid(row=R, column=C, padx=25, pady=5,sticky='w')
+        ttk.Label(self.tabUpSecondary, text='Rain Attenuation', font=font1).grid(row=R, column=C, padx=25, pady=5,sticky='w')
         self.entry_up_2_rainattenuation.grid(row=R, column=C+1, padx=5, pady=5,stick='w')
 
         #Secondary Uplink System Temperature
         R = 2; C = 4
-        ttk.Label(self.tabUpSecondary, text='System Temperature [K]', font=font1).grid(row=R, column=C, padx=25, pady=5,sticky='w')
+        ttk.Label(self.tabUpSecondary, text='System Temperature', font=font1).grid(row=R, column=C, padx=25, pady=5,sticky='w')
         self.entry_up_2_systemtemp.grid(row=R, column=C+1, padx=5, pady=5,stick='w')
 
         #Secondary Uplink Line Loss
         R = 3; C = 4
-        ttk.Label(self.tabUpSecondary, text='Line Loss [dB]', font=font1).grid(row=R, column=C, padx=25, pady=5,sticky='w')
+        ttk.Label(self.tabUpSecondary, text='Line Loss', font=font1).grid(row=R, column=C, padx=25, pady=5,sticky='w')
         self.entry_up_2_lineloss.grid(row=R, column=C+1, padx=5, pady=5,stick='w')
 
         #Secondary Uplink Space Loss
         R = 4; C = 4
-        ttk.Label(self.tabUpSecondary, text='Space Loss [dB]', font=font1).grid(row=R, column=C, padx=25, pady=5,sticky='w')
+        ttk.Label(self.tabUpSecondary, text='Space Loss', font=font1).grid(row=R, column=C, padx=25, pady=5,sticky='w')
         self.entry_up_2_spaceloss.grid(row=R, column=C+1, padx=5, pady=5,stick='w')
 
         #Secondary Uplink Polarization Loss
         R = 5; C = 4
-        ttk.Label(self.tabUpSecondary, text='Polarization Loss [dB]', font=font1).grid(row=R, column=C, padx=25, pady=5,sticky='w')
+        ttk.Label(self.tabUpSecondary, text='Polarization Loss', font=font1).grid(row=R, column=C, padx=25, pady=5,sticky='w')
         self.entry_up_2_polarizationloss.grid(row=R, column=C+1, padx=5, pady=5,stick='w')
 
         #Secondary Uplink Transmitter Pointing Loss
         R = 6; C = 4
-        ttk.Label(self.tabUpSecondary, text='Transmitter Pointing Loss [dB]', font=font1).grid(row=R, column=C, padx=25, pady=5,sticky='w')
+        ttk.Label(self.tabUpSecondary, text='Transmitter Pointing Loss', font=font1).grid(row=R, column=C, padx=25, pady=5,sticky='w')
         self.entry_up_2_transmitterpointingloss.grid(row=R, column=C+1, padx=5, pady=5,stick='w')
 
         #Secondary Uplink Receiving Pointing Loss
         R = 7; C = 4
-        ttk.Label(self.tabUpSecondary, text='Receiver Pointing Loss [dB]', font=font1).grid(row=R, column=C, padx=25, pady=5,sticky='w')
+        ttk.Label(self.tabUpSecondary, text='Receiver Pointing Loss', font=font1).grid(row=R, column=C, padx=25, pady=5,sticky='w')
         self.entry_up_2_receiverpointingloss.grid(row=R, column=C+1, padx=5, pady=5,stick='w')
 
         #Secondary Uplink Transmitter Dish Diameter
         R = 8; C = 4
-        ttk.Label(self.tabUpSecondary, text='Transmitter Dish Diameter [m]', font=font1).grid(row=R, column=C, padx=25, pady=5,sticky='w')
+        ttk.Label(self.tabUpSecondary, text='Transmitter Dish Diameter', font=font1).grid(row=R, column=C, padx=25, pady=5,sticky='w')
         self.entry_up_2_transmitterdishdiameter.grid(row=R, column=C+1, padx=5, pady=5,stick='w')
 
         #Secondary Uplink Receiver Dish Diameter
         R = 9; C = 4
-        ttk.Label(self.tabUpSecondary, text='Receiver Dish Diameter [m]', font=font1).grid(row=R, column=C, padx=25, pady=5,sticky='w')
+        ttk.Label(self.tabUpSecondary, text='Receiver Dish Diameter', font=font1).grid(row=R, column=C, padx=25, pady=5,sticky='w')
         self.entry_up_2_receiverdishdiameter.grid(row=R, column=C+1, padx=5, pady=5,stick='w')
 
         #Secondary Uplink Transmitter Efficiency
@@ -1412,52 +1417,52 @@ class Comms:
 
         #Primary Downlink Atmosphere Attenuation
         R = 0; C = 4
-        ttk.Label(self.tabDownPrimary, text='Atmosphere Attenuation [dB]', font=font1).grid(row=R, column=C, padx=25, pady=5,sticky='w')
+        ttk.Label(self.tabDownPrimary, text='Atmosphere Attenuation', font=font1).grid(row=R, column=C, padx=25, pady=5,sticky='w')
         self.entry_down_1_atmosphereattenuation.grid(row=R, column=C+1, padx=5, pady=5)
 
         #Primary Downlink Rain Attenuation
         R = 1; C = 4
-        ttk.Label(self.tabDownPrimary, text='Rain Attenuation [dB]', font=font1).grid(row=R, column=C, padx=25, pady=5,sticky='w')
+        ttk.Label(self.tabDownPrimary, text='Rain Attenuation', font=font1).grid(row=R, column=C, padx=25, pady=5,sticky='w')
         self.entry_down_1_rainattenuation.grid(row=R, column=C+1, padx=5, pady=5,stick='w')
 
         #Primary Downlink System Temperature
         R = 2; C = 4
-        ttk.Label(self.tabDownPrimary, text='System Temperature [K]', font=font1).grid(row=R, column=C, padx=25, pady=5,sticky='w')
+        ttk.Label(self.tabDownPrimary, text='System Temperature', font=font1).grid(row=R, column=C, padx=25, pady=5,sticky='w')
         self.entry_down_1_systemtemp.grid(row=R, column=C+1, padx=5, pady=5,stick='w')
 
         #Primary Downlink Line Loss
         R = 3; C = 4
-        ttk.Label(self.tabDownPrimary, text='Line Loss [dB]', font=font1).grid(row=R, column=C, padx=25, pady=5,sticky='w')
+        ttk.Label(self.tabDownPrimary, text='Line Loss', font=font1).grid(row=R, column=C, padx=25, pady=5,sticky='w')
         self.entry_down_1_lineloss.grid(row=R, column=C+1, padx=5, pady=5,stick='w')
 
         #Primary Downlink Space Loss
         R = 4; C = 4
-        ttk.Label(self.tabDownPrimary, text='Space Loss [dB]', font=font1).grid(row=R, column=C, padx=25, pady=5,sticky='w')
+        ttk.Label(self.tabDownPrimary, text='Space Loss', font=font1).grid(row=R, column=C, padx=25, pady=5,sticky='w')
         self.entry_down_1_spaceloss.grid(row=R, column=C+1, padx=5, pady=5,stick='w')
 
         #Primary Downlink Polarization Loss
         R = 5; C = 4
-        ttk.Label(self.tabDownPrimary, text='Polarization Loss [dB]', font=font1).grid(row=R, column=C, padx=25, pady=5,sticky='w')
+        ttk.Label(self.tabDownPrimary, text='Polarization Loss', font=font1).grid(row=R, column=C, padx=25, pady=5,sticky='w')
         self.entry_down_1_polarizationloss.grid(row=R, column=C+1, padx=5, pady=5,stick='w')
 
         #Primary Downlink Transmitter Pointing Loss
         R = 6; C = 4
-        ttk.Label(self.tabDownPrimary, text='Transmitter Pointing Loss [dB]', font=font1).grid(row=R, column=C, padx=25, pady=5,sticky='w')
+        ttk.Label(self.tabDownPrimary, text='Transmitter Pointing Loss', font=font1).grid(row=R, column=C, padx=25, pady=5,sticky='w')
         self.entry_down_1_transmitterpointingloss.grid(row=R, column=C+1, padx=5, pady=5,stick='w')
 
         #Primary Downlink Receiving Pointing Loss
         R = 7; C = 4
-        ttk.Label(self.tabDownPrimary, text='Receiver Pointing Loss [dB]', font=font1).grid(row=R, column=C, padx=25, pady=5,sticky='w')
+        ttk.Label(self.tabDownPrimary, text='Receiver Pointing Loss', font=font1).grid(row=R, column=C, padx=25, pady=5,sticky='w')
         self.entry_down_1_receiverpointingloss.grid(row=R, column=C+1, padx=5, pady=5,stick='w')
 
         #Primary Downlink Transmitter Dish Diameter
         R = 8; C = 4
-        ttk.Label(self.tabDownPrimary, text='Transmitter Dish Diameter [m]', font=font1).grid(row=R, column=C, padx=25, pady=5,sticky='w')
+        ttk.Label(self.tabDownPrimary, text='Transmitter Dish Diameter', font=font1).grid(row=R, column=C, padx=25, pady=5,sticky='w')
         self.entry_down_1_transmitterdishdiameter.grid(row=R, column=C+1, padx=5, pady=5,stick='w')
 
         #Primary Downlink Receiver Dish Diameter
         R = 9; C = 4
-        ttk.Label(self.tabDownPrimary, text='Receiver Dish Diameter [m]', font=font1).grid(row=R, column=C, padx=25, pady=5,sticky='w')
+        ttk.Label(self.tabDownPrimary, text='Receiver Dish Diameter', font=font1).grid(row=R, column=C, padx=25, pady=5,sticky='w')
         self.entry_down_1_receiverdishdiameter.grid(row=R, column=C+1, padx=5, pady=5,stick='w')
 
         #Primary Downlink Transmitter Efficiency
@@ -1520,52 +1525,52 @@ class Comms:
 
         #Secondary Downlink Atmosphere Attenuation
         R = 0; C = 4
-        ttk.Label(self.tabDownSecondary, text='Atmosphere Attenuation [dB]', font=font1).grid(row=R, column=C, padx=25, pady=5,sticky='w')
+        ttk.Label(self.tabDownSecondary, text='Atmosphere Attenuation', font=font1).grid(row=R, column=C, padx=25, pady=5,sticky='w')
         self.entry_down_2_atmosphereattenuation.grid(row=R, column=C+1, padx=5, pady=5)
 
         #Secondary Downlink Rain Attenuation
         R = 1; C = 4
-        ttk.Label(self.tabDownSecondary, text='Rain Attenuation [dB]', font=font1).grid(row=R, column=C, padx=25, pady=5,sticky='w')
+        ttk.Label(self.tabDownSecondary, text='Rain Attenuation', font=font1).grid(row=R, column=C, padx=25, pady=5,sticky='w')
         self.entry_down_2_rainattenuation.grid(row=R, column=C+1, padx=5, pady=5,stick='w')
 
         #Secondary Downlink System Temperature
         R = 2; C = 4
-        ttk.Label(self.tabDownSecondary, text='System Temperature [K]', font=font1).grid(row=R, column=C, padx=25, pady=5,sticky='w')
+        ttk.Label(self.tabDownSecondary, text='System Temperature', font=font1).grid(row=R, column=C, padx=25, pady=5,sticky='w')
         self.entry_down_2_systemtemp.grid(row=R, column=C+1, padx=5, pady=5,stick='w')
 
         #Secondary Downlink Line Loss
         R = 3; C = 4
-        ttk.Label(self.tabDownSecondary, text='Line Loss [dB]', font=font1).grid(row=R, column=C, padx=25, pady=5,sticky='w')
+        ttk.Label(self.tabDownSecondary, text='Line Loss', font=font1).grid(row=R, column=C, padx=25, pady=5,sticky='w')
         self.entry_down_2_lineloss.grid(row=R, column=C+1, padx=5, pady=5,stick='w')
 
         #Secondary Downlink Space Loss
         R = 4; C = 4
-        ttk.Label(self.tabDownSecondary, text='Space Loss [dB]', font=font1).grid(row=R, column=C, padx=25, pady=5,sticky='w')
+        ttk.Label(self.tabDownSecondary, text='Space Loss', font=font1).grid(row=R, column=C, padx=25, pady=5,sticky='w')
         self.entry_down_2_spaceloss.grid(row=R, column=C+1, padx=5, pady=5,stick='w')
 
         #Secondary Downlink Polarization Loss
         R = 5; C = 4
-        ttk.Label(self.tabDownSecondary, text='Polarization Loss [dB]', font=font1).grid(row=R, column=C, padx=25, pady=5,sticky='w')
+        ttk.Label(self.tabDownSecondary, text='Polarization Loss', font=font1).grid(row=R, column=C, padx=25, pady=5,sticky='w')
         self.entry_down_2_polarizationloss.grid(row=R, column=C+1, padx=5, pady=5,stick='w')
 
         #Secondary Downlink Transmitter Pointing Loss
         R = 6; C = 4
-        ttk.Label(self.tabDownSecondary, text='Transmitter Pointing Loss [dB]', font=font1).grid(row=R, column=C, padx=25, pady=5,sticky='w')
+        ttk.Label(self.tabDownSecondary, text='Transmitter Pointing Loss', font=font1).grid(row=R, column=C, padx=25, pady=5,sticky='w')
         self.entry_down_2_transmitterpointingloss.grid(row=R, column=C+1, padx=5, pady=5,stick='w')
 
         #Secondary Downlink Receiving Pointing Loss
         R = 7; C = 4
-        ttk.Label(self.tabDownSecondary, text='Receiver Pointing Loss [dB]', font=font1).grid(row=R, column=C, padx=25, pady=5,sticky='w')
+        ttk.Label(self.tabDownSecondary, text='Receiver Pointing Loss', font=font1).grid(row=R, column=C, padx=25, pady=5,sticky='w')
         self.entry_down_2_receiverpointingloss.grid(row=R, column=C+1, padx=5, pady=5,stick='w')
 
         #Secondary Downlink Transmitter Dish Diameter
         R = 8; C = 4
-        ttk.Label(self.tabDownSecondary, text='Transmitter Dish Diameter [m]', font=font1).grid(row=R, column=C, padx=25, pady=5,sticky='w')
+        ttk.Label(self.tabDownSecondary, text='Transmitter Dish Diameter', font=font1).grid(row=R, column=C, padx=25, pady=5,sticky='w')
         self.entry_down_2_transmitterdishdiameter.grid(row=R, column=C+1, padx=5, pady=5,stick='w')
 
         #Secondary Downlink Receiver Dish Diameter
         R = 9; C = 4
-        ttk.Label(self.tabDownSecondary, text='Receiver Dish Diameter [m]', font=font1).grid(row=R, column=C, padx=25, pady=5,sticky='w')
+        ttk.Label(self.tabDownSecondary, text='Receiver Dish Diameter', font=font1).grid(row=R, column=C, padx=25, pady=5,sticky='w')
         self.entry_down_2_receiverdishdiameter.grid(row=R, column=C+1, padx=5, pady=5,stick='w')
 
         #Secondary Downlink Transmitter Efficiency

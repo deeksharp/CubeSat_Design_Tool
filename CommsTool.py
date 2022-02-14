@@ -86,9 +86,6 @@ class CommsTool:
                     self.var_name.append(n)
                     self.data.append(d)
                     self.units.append(u)
-                    ##print("Index: ",row)
-                    print("V: ", v)
-                print("done reading!!!!!!!!!")
 
 
         secondary = True if cD.up_2_datarate > 0 or cD.up_2_transmitterpower > 0 else False 
@@ -147,23 +144,24 @@ class CommsTool:
         cD.out_up_2_systemtemp2 = m.log(cD.up_2_systemtemp)*10 if secondary else 0
         cD.out_down_1_systemtemp2 = m.log(cD.down_1_systemtemp)*10
         cD.out_down_2_systemtemp2 = m.log(cD.down_2_systemtemp)*10 if secondary else 0
-        cD.out_up_1_receiversensitivity = cD.up_1_receiverantgain - cD.up_1_lineloss - cD.out_up_1_systemtemp2
-        cD.out_up_2_receiversensitivity = cD.up_2_receiverantgain - cD.up_2_lineloss - cD.out_up_2_systemtemp2 if secondary else 0
-        cD.out_down_1_receiversensitivity = cD.down_1_receiverantgain - cD.down_1_lineloss - cD.out_down_1_systemtemp2
-        cD.out_down_2_receiversensitivity = cD.down_2_receiverantgain - cD.down_2_lineloss - cD.out_down_2_systemtemp2 if secondary else 0
+        cD.out_up_1_receiversensitivity = cD.out_up_1_receiverantgain - cD.up_1_lineloss - cD.out_up_1_systemtemp2
+        cD.out_up_2_receiversensitivity = cD.out_up_2_receiverantgain - cD.up_2_lineloss - cD.out_up_2_systemtemp2 if secondary else 0
+        cD.out_down_1_receiversensitivity = cD.out_down_1_receiverantgain - cD.down_1_lineloss - cD.out_down_1_systemtemp2
+        cD.out_down_2_receiversensitivity = cD.out_down_2_receiverantgain - cD.down_2_lineloss - cD.out_down_2_systemtemp2 if secondary else 0
         
-        cD.out_up_1_datarate2 = ''
-        cD.out_up_2_datarate2 = ''
-        cD.out_down_1_datarate2 = ''
-        cD.out_down_2_datarate2 = ''
-        cD.out_up_2_transmitterpower2 = ''
-        cD.out_down_2_transmitterpower2 = ''
-        cD.out_up_2_transmitterpower = ''
-        cD.out_down_2_transmitterpower = ''
-        cD.out_up_2_datarate2 = ''
-        cD.out_down_2_datarate2 = ''
-        cD.out_up_2_datarate = ''
-        cD.out_down_2_datarate = '' 
+        cD.out_up_1_datarate2 = 0
+        cD.out_up_2_datarate2 = 0
+        cD.out_down_1_datarate2 = 0
+        cD.out_down_2_datarate2 = 0
+        cD.out_up_2_transmitterpower2 = 0
+        cD.out_down_2_transmitterpower2 = 0
+        cD.out_up_2_transmitterpower = 0
+        cD.out_down_2_transmitterpower = 0
+        cD.out_up_1_datarate = 0
+        cD.out_up_2_datarate = 0
+        cD.out_down_1_datarate = 0
+        cD.out_down_2_datarate = 0
+
 
         if cD.up_1_datarate > 0 : 
             cD.out_up_1_datarate2 = m.log(cD.up_1_datarate)*10
@@ -190,29 +188,29 @@ class CommsTool:
         cD.out_up_2_eirp = cD.out_up_2_transmitterpower2 - cD.up_2_lineloss + cD.out_up_2_transmitterantgain if secondary else 0
         cD.out_down_1_eirp = cD.out_down_1_transmitterpower2 - cD.down_1_lineloss + cD.out_up_1_transmitterantgain
         cD.out_down_2_eirp = cD.out_down_2_transmitterpower2 - cD.down_2_lineloss + cD.out_down_2_transmitterantgain if secondary else 0
-        cD.out_up_1_powerdensity = cD.out_up_1_transmitterpower2 + cD.up_1_spaceloss + cD.up_1_transmitterpointingloss + cD.up_1_polarizationloss + cD.up_1_spaceloss + cD.up_1_atmosphereattenuation + cD.up_1_rainattenuation + cD.up_1_receiverpointingloss - boltzman + cD.up_1_transmitterantgain
-        cD.out_up_2_powerdensity = cD.out_up_2_transmitterpower2 + cD.up_2_spaceloss + cD.up_2_transmitterpointingloss + cD.up_2_polarizationloss + cD.up_2_spaceloss + cD.up_2_atmosphereattenuation + cD.up_2_rainattenuation + cD.up_2_receiverpointingloss - boltzman + cD.up_2_transmitterantgain if secondary else 0
-        cD.out_down_1_powerdensity = cD.out_down_1_transmitterpower2 + cD.down_1_spaceloss + cD.down_1_transmitterpointingloss + cD.down_1_polarizationloss + cD.down_1_spaceloss + cD.down_1_atmosphereattenuation + cD.down_1_rainattenuation + cD.down_1_receiverpointingloss - boltzman + cD.down_1_transmitterantgain
-        cD.out_down_2_powerdensity = cD.out_down_2_transmitterpower2 + cD.down_2_spaceloss + cD.down_2_transmitterpointingloss + cD.down_2_polarizationloss + cD.down_2_spaceloss + cD.down_2_atmosphereattenuation + cD.down_2_rainattenuation + cD.down_2_receiverpointingloss - boltzman + cD.down_2_transmitterantgain if secondary else 0
-        cD.out_up_1_datarate2 = m.log(cD.up_1_datarate)*10 if cD.up_1_datarate > 0 else cD.out_up_1_transmitterpower2 + cD.up_1_spaceloss + cD.up_1_transmitterpointingloss + cD.up_1_polarizationloss + cD.up_1_spaceloss + cD.up_1_atmosphereattenuation + cD.up_1_rainattenuation + cD.up_1_receiverpointingloss + cD.out_up_1_receiverantgain - cD.up_1_EbNo - cD.out_up_1_systemtemp2 - boltzman + cD.up_1_transmitterantgain
-        cD.out_down_1_datarate2 = m.log(cD.down_1_datarate)*10 if cD.down_1_datarate > 0 else cD.out_down_1_transmitterpower2 + cD.down_1_spaceloss + cD.down_1_transmitterpointingloss + cD.down_1_polarizationloss + cD.down_1_spaceloss + cD.down_1_atmosphereattenuation + cD.down_1_rainattenuation + cD.down_1_receiverpointingloss + cD.out_down_1_receiverantgain - cD.down_1_EbNo - cD.out_down_1_systemtemp2 - boltzman + cD.down_1_transmitterantgain
-        cD.out_up_1_datarate = cD.up_1_datarate if cD.up_1_datarate > 0 else 10**(cD.out.up_1_datarate2/10)
-        cD.out_down_1_datarate = cD.down_1_datarate if cD.down_1_datarate > 0 else 10**(cD.out.down_1_datarate2/10)
+        cD.out_up_1_powerdensity = cD.out_up_1_transmitterpower2 + cD.up_1_spaceloss + cD.up_1_transmitterpointingloss + cD.up_1_polarizationloss + cD.up_1_spaceloss + cD.up_1_atmosphereattenuation + cD.up_1_rainattenuation + cD.up_1_receiverpointingloss - boltzman + cD.out_up_1_transmitterantgain
+        cD.out_up_2_powerdensity = cD.out_up_2_transmitterpower2 + cD.up_2_spaceloss + cD.up_2_transmitterpointingloss + cD.up_2_polarizationloss + cD.up_2_spaceloss + cD.up_2_atmosphereattenuation + cD.up_2_rainattenuation + cD.up_2_receiverpointingloss - boltzman + cD.out_up_2_transmitterantgain if secondary else 0
+        cD.out_down_1_powerdensity = cD.out_down_1_transmitterpower2 + cD.down_1_spaceloss + cD.down_1_transmitterpointingloss + cD.down_1_polarizationloss + cD.down_1_spaceloss + cD.down_1_atmosphereattenuation + cD.down_1_rainattenuation + cD.down_1_receiverpointingloss - boltzman + cD.out_down_1_transmitterantgain
+        cD.out_down_2_powerdensity = cD.out_down_2_transmitterpower2 + cD.down_2_spaceloss + cD.down_2_transmitterpointingloss + cD.down_2_polarizationloss + cD.down_2_spaceloss + cD.down_2_atmosphereattenuation + cD.down_2_rainattenuation + cD.down_2_receiverpointingloss - boltzman + cD.out_down_2_transmitterantgain if secondary else 0
+        cD.out_up_1_datarate2 = m.log(cD.up_1_datarate)*10 if cD.up_1_datarate > 0 else cD.out_up_1_transmitterpower2 + cD.up_1_spaceloss + cD.up_1_transmitterpointingloss + cD.up_1_polarizationloss + cD.up_1_spaceloss + cD.up_1_atmosphereattenuation + cD.up_1_rainattenuation + cD.up_1_receiverpointingloss + cD.out_up_1_receiverantgain - cD.up_1_EbNo - cD.out_up_1_systemtemp2 - boltzman + cD.out_up_1_transmitterantgain
+        cD.out_down_1_datarate2 = m.log(cD.down_1_datarate)*10 if cD.down_1_datarate > 0 else cD.out_down_1_transmitterpower2 + cD.down_1_spaceloss + cD.down_1_transmitterpointingloss + cD.down_1_polarizationloss + cD.down_1_spaceloss + cD.down_1_atmosphereattenuation + cD.down_1_rainattenuation + cD.down_1_receiverpointingloss + cD.out_down_1_receiverantgain - cD.down_1_EbNo - cD.out_down_1_systemtemp2 - boltzman + cD.out_down_1_transmitterantgain
+        cD.out_up_1_datarate = cD.up_1_datarate if cD.up_1_datarate > 0 else 10**(cD.out_up_1_datarate2/10)
+        cD.out_down_1_datarate = cD.down_1_datarate if cD.down_1_datarate > 0 else 10**(cD.out_down_1_datarate2/10)
 
         if secondary : 
-            cD.out_up_2_datarate2 = m.log(cD.up_2_datarate)*10 if cD.up_2_datarate > 0 else cD.out_up_2_transmitterpower2 + cD.up_2_spaceloss + cD.up_2_transmitterpointingloss + cD.up_2_polarizationloss + cD.up_2_spaceloss + cD.up_2_atmosphereattenuation + cD.up_2_rainattenuation + cD.up_2_receiverpointingloss + cD.out_up_2_receiverantgain - cD.up_2_EbNo - cD.out_up_2_systemtemp2 - boltzman + cD.up_2_transmitterantgain
-            cD.out_down_2_datarate2 = m.log(cD.down_2_datarate)*10 if cD.down_2_datarate > 0 else cD.out_down_2_transmitterpower2 + cD.down_2_spaceloss + cD.down_2_transmitterpointingloss + cD.down_2_polarizationloss + cD.down_2_spaceloss + cD.down_2_atmosphereattenuation + cD.down_2_rainattenuation + cD.down_2_receiverpointingloss + cD.out_down_2_receiverantgain - cD.down_2_EbNo - cD.out_down_2_systemtemp2 - boltzman + cD.down_2_transmitterantgain
-            cD.out_up_2_datarate = cD.up_2_datarate if cD.up_2_datarate > 0 else 10**(cD.out.up_2_datarate2/10)
-            cD.out_down_2_datarate = cD.down_2_datarate if cD.down_2_datarate > 0 else 10**(cD.out.down_2_datarate2/10)
+            cD.out_up_2_datarate2 = m.log(cD.up_2_datarate)*10 if cD.up_2_datarate > 0 else cD.out_up_2_transmitterpower2 + cD.up_2_spaceloss + cD.up_2_transmitterpointingloss + cD.up_2_polarizationloss + cD.up_2_spaceloss + cD.up_2_atmosphereattenuation + cD.up_2_rainattenuation + cD.up_2_receiverpointingloss + cD.out_up_2_receiverantgain - cD.up_2_EbNo - cD.out_up_2_systemtemp2 - boltzman + cD.out_up_2_transmitterantgain
+            cD.out_down_2_datarate2 = m.log(cD.down_2_datarate)*10 if cD.down_2_datarate > 0 else cD.out_down_2_transmitterpower2 + cD.down_2_spaceloss + cD.down_2_transmitterpointingloss + cD.down_2_polarizationloss + cD.down_2_spaceloss + cD.down_2_atmosphereattenuation + cD.down_2_rainattenuation + cD.down_2_receiverpointingloss + cD.out_down_2_receiverantgain - cD.down_2_EbNo - cD.out_down_2_systemtemp2 - boltzman + cD.out_down_2_transmitterantgain
+            cD.out_up_2_datarate = cD.up_2_datarate if cD.up_2_datarate > 0 else 10**(cD.out_up_2_datarate2/10)
+            cD.out_down_2_datarate = cD.down_2_datarate if cD.down_2_datarate > 0 else 10**(cD.out_down_2_datarate2/10)
 
         cD.out_up_1_EbNocalc = cD.out_up_1_powerdensity - cD.out_up_1_datarate2
         cD.out_up_2_EbNocalc = cD.out_up_2_powerdensity - cD.out_up_2_datarate2 if secondary else 0
         cD.out_down_1_EbNocalc = cD.out_down_1_powerdensity - cD.out_down_1_datarate2
         cD.out_down_2_EbNocalc = cD.out_down_2_powerdensity - cD.out_down_2_datarate2 if secondary else 0
-        cD.out_up_1_margin = cD.out_up_1_EnNocalc - cD.up_1_EbNo
-        cD.out_up_2_margin = cD.out_up_2_EnNocalc - cD.up_2_EbNo if secondary else 0
-        cD.out_down_1_margin = cD.out_down_1_EnNocalc - cD.down_1_EbNo
-        cD.out_down_2_margin = cD.out_down_2_EnNocalc - cD.down_2_EbNo if secondary else 0
+        cD.out_up_1_margin = cD.out_up_1_EbNocalc - cD.up_1_EbNo
+        cD.out_up_2_margin = cD.out_up_2_EbNocalc - cD.up_2_EbNo if secondary else 0
+        cD.out_down_1_margin = cD.out_down_1_EbNocalc - cD.down_1_EbNo
+        cD.out_down_2_margin = cD.out_down_2_EbNocalc - cD.down_2_EbNo if secondary else 0
 
         return cD
 
