@@ -184,10 +184,10 @@ class CommsTool:
             cD.out_down_2_transmitterpower = cD.down_2_transmitterpower if cD.down_2_transmitterpower > 0 else 10**(cD.out_down_2_transmitterpower2/10)
     
 
-        cD.out_up_1_eirp = cD.out_up_1_transmitterpower2 - cD.up_1_lineloss + cD.out_up_1_transmitterantgain
-        cD.out_up_2_eirp = cD.out_up_2_transmitterpower2 - cD.up_2_lineloss + cD.out_up_2_transmitterantgain if secondary else 0
-        cD.out_down_1_eirp = cD.out_down_1_transmitterpower2 - cD.down_1_lineloss + cD.out_up_1_transmitterantgain
-        cD.out_down_2_eirp = cD.out_down_2_transmitterpower2 - cD.down_2_lineloss + cD.out_down_2_transmitterantgain if secondary else 0
+        cD.out_up_1_eirp = cD.out_up_1_transmitterpower2 + cD.up_1_lineloss + cD.out_up_1_transmitterantgain
+        cD.out_up_2_eirp = cD.out_up_2_transmitterpower2 + cD.up_2_lineloss + cD.out_up_2_transmitterantgain if secondary else 0
+        cD.out_down_1_eirp = cD.out_down_1_transmitterpower2 + cD.down_1_lineloss + cD.out_up_1_transmitterantgain
+        cD.out_down_2_eirp = cD.out_down_2_transmitterpower2 + cD.down_2_lineloss + cD.out_down_2_transmitterantgain if secondary else 0
         cD.out_up_1_powerdensity = cD.out_up_1_transmitterpower2 + cD.up_1_spaceloss + cD.up_1_transmitterpointingloss + cD.up_1_polarizationloss + cD.up_1_atmosphereattenuation + cD.up_1_rainattenuation + cD.up_1_receiverpointingloss - boltzman + cD.out_up_1_transmitterantgain
         cD.out_up_2_powerdensity = cD.out_up_2_transmitterpower2 + cD.up_2_spaceloss + cD.up_2_transmitterpointingloss + cD.up_2_polarizationloss + cD.up_2_atmosphereattenuation + cD.up_2_rainattenuation + cD.up_2_receiverpointingloss - boltzman + cD.out_up_2_transmitterantgain if secondary else 0
         cD.out_down_1_powerdensity = cD.out_down_1_transmitterpower2 + cD.down_1_spaceloss + cD.down_1_transmitterpointingloss + cD.down_1_polarizationloss + cD.down_1_atmosphereattenuation + cD.down_1_rainattenuation + cD.down_1_receiverpointingloss - boltzman + cD.out_down_1_transmitterantgain
