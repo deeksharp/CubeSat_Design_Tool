@@ -295,7 +295,8 @@ class Comms:
             # Assumptions
             t = 'Assumed values include line losses, system temp, '\
                 'as well as design sizing parameters for the spacecraft '\
-                'if standard comms is chosen.'
+                'if standard comms is chosen. Pre-populated assumed values '\
+                'are derived from SMAD 3rd edition and ITU Regulations.'
             self.T2_R0_C0 = ttk.Label(self.tabAssums, text=t, wraplength = 350)
             self.T2_R0_C0.grid(row = 0, column = 0, padx = 5, pady = 5,sticky='w')
 
@@ -313,16 +314,17 @@ class Comms:
             t='Ground Sation and Spacecraft parameters for an uplink and downlink budget.'
             self.T1_R0_C1 = ttk.Label(self.tabInputs, text=t, wraplength = 300)
             self.T1_R0_C1.grid(row = 0, column = 1, padx = 5, pady = 5,sticky='w')
-            self.T1_R1_C0 = ttk.Label(self.tabInputs, text='EPS Design Parameters:', wraplength = 100)
+            self.T1_R1_C0 = ttk.Label(self.tabInputs, text='Comms Design Parameters:', wraplength = 100)
             self.T1_R1_C0.grid(row = 1, column = 0, padx = 5, pady = 5,sticky='w')
-            t ='Parameters for calculating transmitter  RF power or max data rates, along with link margin.'
+            t ='Parameters for calculating transmitter RF power or max data rates, along with link margin.'
             self.T1_R1_C1 = ttk.Label(self.tabInputs, text=t, wraplength = 300)
             self.T1_R1_C1.grid(row = 1, column = 1, padx = 5, pady = 5,sticky='w')
             
             # Assumptions
             t = 'Assumed values include frequency (Hz), Eb/No for FSK and BSK modulation, '\
-                'as well as values for losses '\
-                'if non-custom is chosen'
+                'as well as values for losses, if non-custom is chosen.'\
+                'Pre-populated assumed values are derived from '\
+                'SMAD 3rd edition and ITU Regulations.'
             self.T2_R0_C0 = ttk.Label(self.tabAssums, text=t, wraplength = 350)
             self.T2_R0_C0.grid(row = 0, column = 0, padx = 5, pady = 5,sticky='w')
 
