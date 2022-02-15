@@ -89,6 +89,8 @@ class CommsTool:
 
 
         secondary = True if cD.up_2_datarate > 0 or cD.up_2_transmitterpower > 0 else False 
+        def findSolve(first, second, third):
+            return 1 if first == 0 else 2 if second == 0 else 3 if third == 0 else 0 
         boltzman = -228.6
 
         # Line Budget Calcs

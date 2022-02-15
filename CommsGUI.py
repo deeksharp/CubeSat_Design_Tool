@@ -84,6 +84,7 @@ class Comms:
         self.up_1_receiverefficiency = 1
         self.up_1_transmitterpower = 0
         self.up_1_datarate = 0
+        self.up_1_margin = 0
         self.up_2_frequency = 1
         self.up_2_modulationtype = ''
         self.up_2_EbNo = 0
@@ -104,6 +105,7 @@ class Comms:
         self.up_2_receiverefficiency = 1
         self.up_2_transmitterpower = 0
         self.up_2_datarate = 0
+        self.up_2_margin = 0
 
         # DOWNLINK TAB - 2
         self.down_1_frequency = 1
@@ -126,6 +128,7 @@ class Comms:
         self.down_1_receiverefficiency = 1
         self.down_1_transmitterpower = 0
         self.down_1_datarate = 0
+        self.down_1_margin = 0
         self.down_2_frequency = 1
         self.down_2_modulationtype = ''
         self.down_2_EbNo = 0
@@ -146,6 +149,7 @@ class Comms:
         self.down_2_receiverefficiency = 1
         self.down_2_transmitterpower = 0
         self.down_2_datarate = 0
+        self.down_2_margin = 0
 
         # OUTPUTS - 1
         self.out_up_p_sc_transpower: float
@@ -270,6 +274,10 @@ class Comms:
         self.out_up_2_EbNocalc: float
         self.out_down_1_EbNocalc: float
         self.out_down_2_EbNocalc: float
+        self.out_up_1_margin: float
+        self.out_up_2_margin: float
+        self.out_down_1_margin: float
+        self.out_down_2_margin: float
 
 
     def moreInfo(self, x):
@@ -348,6 +356,7 @@ class Comms:
         self.commswindow.add(self.tabUplink, text = 'Uplink')
         self.commswindow.add(self.tabDownlink, text = 'Downlink')
         self.commswindow.pack(expand = 1, fill ="both")
+        font1 = "Helvetica 11 bold"
 
         # Uplink Tab Entry Values
         w = 6
@@ -441,97 +450,97 @@ class Comms:
 
         # Primary Spacecraft Transmitter Power
         R = 3; C = 0
-        ttk.Label(self.tabUplink, text='Primary Spacecraft Transmitter RF Power [W]').grid(row=R, column=C, padx=25, pady=5,sticky='w')
+        ttk.Label(self.tabUplink, text='Primary Spacecraft Transmitter RF Power [W]', font=font1).grid(row=R, column=C, padx=25, pady=5,sticky='w')
         self.entry_up_p_sc_transpower.grid(row=R, column=C+1, padx=5, pady=5)
 
         # Primary Spacecraft Antenna Gain 
         R = 4; C = 0
-        ttk.Label(self.tabUplink, text='Primary Spacecraft Antenna Gain [dB]').grid(row=R, column=C, padx=25, pady=5,sticky='w')
+        ttk.Label(self.tabUplink, text='Primary Spacecraft Antenna Gain [dB]', font=font1).grid(row=R, column=C, padx=25, pady=5,sticky='w')
         self.entry_up_p_sc_antgain.grid(row=R, column=C+1, padx=5, pady=5)
 
          # Primary GroundStation Transmitter Power
         R = 5; C = 0
-        ttk.Label(self.tabUplink, text='Primary GroundStation Transmitter RF Power [W]').grid(row=R, column=C, padx=25, pady=5,sticky='w')
+        ttk.Label(self.tabUplink, text='Primary GroundStation Transmitter RF Power [W]', font=font1).grid(row=R, column=C, padx=25, pady=5,sticky='w')
         self.entry_up_p_gs_transpower.grid(row=R, column=C+1, padx=5, pady=5)
 
         # Primary GroundStation Antenna Gain 
         R = 6; C = 0
-        ttk.Label(self.tabUplink, text='Primary GroundStation Antenna Gain [dB]').grid(row=R, column=C, padx=25, pady=5,sticky='w')
+        ttk.Label(self.tabUplink, text='Primary GroundStation Antenna Gain [dB]', font=font1).grid(row=R, column=C, padx=25, pady=5,sticky='w')
         self.entry_up_p_gs_antgain.grid(row=R, column=C+1, padx=5, pady=5)
 
         #Primary Datarate
         R = 7; C = 0
-        ttk.Label(self.tabUplink, text='Primary Datarate [bps]').grid(row=R, column=C, padx=25, pady=5,sticky='w')
+        ttk.Label(self.tabUplink, text='Primary Datarate [bps]', font=font1).grid(row=R, column=C, padx=25, pady=5,sticky='w')
         self.entry_up_p_datarate.grid(row=R, column=C+1, padx=5, pady=5)
 
         #Primary Frequency
         R = 8; C = 0
-        ttk.Label(self.tabUplink, text='Primary Frequency [Hz]').grid(row=R, column=C, padx=25, pady=5,sticky='w')
+        ttk.Label(self.tabUplink, text='Primary Frequency [Hz]', font=font1).grid(row=R, column=C, padx=25, pady=5,sticky='w')
         self.entry_up_p_frequency.grid(row=R, column=C+1, padx=5, pady=5)
 
         #Primary Eb/N0 
         R = 9; C = 0
-        ttk.Label(self.tabUplink, text='Primary Eb/N0 [dB]').grid(row=R, column=C, padx=25, pady=5,sticky='w')
+        ttk.Label(self.tabUplink, text='Primary Eb/N0 [dB]', font=font1).grid(row=R, column=C, padx=25, pady=5,sticky='w')
         self.entry_up_p_EbNo.grid(row=R, column=C+1, padx=5, pady=5,stick='w')
 
         # Secondary Spacecraft Transmitter Power
         R = 3; C = 2
-        ttk.Label(self.tabUplink, text='Secondary Spacecraft Transmitter RF Power [W]').grid(row=R, column=C, padx=25, pady=5,sticky='w')
+        ttk.Label(self.tabUplink, text='Secondary Spacecraft Transmitter RF Power [W]', font=font1).grid(row=R, column=C, padx=25, pady=5,sticky='w')
         self.entry_up_s_sc_transpower.grid(row=R, column=C+1, padx=5, pady=5)
 
         # Secondary Spacecraft Antenna Gain
         R = 4; C = 2
-        ttk.Label(self.tabUplink, text='Secondary Spacecraft Antenna Gain [dB]').grid(row=R, column=C, padx=25, pady=5,sticky='w')
+        ttk.Label(self.tabUplink, text='Secondary Spacecraft Antenna Gain [dB]', font=font1).grid(row=R, column=C, padx=25, pady=5,sticky='w')
         self.entry_up_s_sc_antgain.grid(row=R, column=C+1, padx=5, pady=5)
 
         # Secondary Spacecraft Transmitter Power
         R = 5; C = 2
-        ttk.Label(self.tabUplink, text='Secondary Spacecraft Transmitter RF Power [W]').grid(row=R, column=C, padx=25, pady=5,sticky='w')
+        ttk.Label(self.tabUplink, text='Secondary Spacecraft Transmitter RF Power [W]', font=font1).grid(row=R, column=C, padx=25, pady=5,sticky='w')
         self.entry_up_s_gs_transpower.grid(row=R, column=C+1, padx=5, pady=5)
 
         # Secondary Spacecraft Antenna Gain
         R = 6; C = 2
-        ttk.Label(self.tabUplink, text='Secondary Spacecraft Antenna Gain [dB]').grid(row=R, column=C, padx=25, pady=5,sticky='w')
+        ttk.Label(self.tabUplink, text='Secondary Spacecraft Antenna Gain [dB]', font=font1).grid(row=R, column=C, padx=25, pady=5,sticky='w')
         self.entry_up_s_gs_antgain.grid(row=R, column=C+1, padx=5, pady=5)
 
         #Secondary Datarate
         R = 7; C = 2
-        ttk.Label(self.tabUplink, text='Secondary Datarate [bps]').grid(row=R, column=C, padx=25, pady=5,sticky='w')
+        ttk.Label(self.tabUplink, text='Secondary Datarate [bps]', font=font1).grid(row=R, column=C, padx=25, pady=5,sticky='w')
         self.entry_up_s_datarate.grid(row=R, column=C+1, padx=5, pady=5)
 
         #Frequency Secondary
         R = 8; C = 2
-        ttk.Label(self.tabUplink, text='Secondary Frequency [Hz]').grid(row=R, column=C, padx=25, pady=5,sticky='w')
+        ttk.Label(self.tabUplink, text='Secondary Frequency [Hz]', font=font1).grid(row=R, column=C, padx=25, pady=5,sticky='w')
         self.entry_up_s_frequency.grid(row=R, column=C+1, padx=5, pady=5)
 
         #EbNo Secondary 
         R = 9; C = 2 
-        ttk.Label(self.tabUplink, text='Secondary Eb/N0 [dB]').grid(row=R, column=C, padx=25, pady=5,sticky='w')
+        ttk.Label(self.tabUplink, text='Secondary Eb/N0 [dB]', font=font1).grid(row=R, column=C, padx=25, pady=5,sticky='w')
         self.entry_up_s_EbNo.grid(row=R, column=C+1, padx=5, pady=5,stick='w')
 
          # System Noise Temp
         R = 3; C = 4
-        ttk.Label(self.tabUplink, text='System Temp [K]').grid(row=R, column=C, padx=25, pady=5,sticky='w')
+        ttk.Label(self.tabUplink, text='System Temp [K]', font=font1).grid(row=R, column=C, padx=25, pady=5,sticky='w')
         self.entry_up_systemp.grid(row=R, column=C+1, padx=5, pady=5,stick='w')
 
         # Maximum Distance From Earth
         R = 4; C = 4
-        ttk.Label(self.tabUplink, text='Max Distance from Earth [km]').grid(row=R, column=C, padx=25, pady=5,sticky='w')
+        ttk.Label(self.tabUplink, text='Max Distance from Earth [km]', font=font1).grid(row=R, column=C, padx=25, pady=5,sticky='w')
         self.entry_up_maxdistanceEarth.grid(row=R, column=C+1, padx=5, pady=5)
 
         # Rain Losses
         R = 5; C = 4
-        ttk.Label(self.tabUplink, text='Rain Losses [dB]').grid(row=R, column=C, padx=25, pady=5,sticky='w')
+        ttk.Label(self.tabUplink, text='Rain Losses [dB]', font=font1).grid(row=R, column=C, padx=25, pady=5,sticky='w')
         self.entry_up_rainloss.grid(row=R, column=C+1, padx=5, pady=5)
         
         # Line Losses
         R = 6; C = 4
-        ttk.Label(self.tabUplink, text='Line Losses [dB]').grid(row=R, column=C, padx=25, pady=5,sticky='w')
+        ttk.Label(self.tabUplink, text='Line Losses [dB]', font=font1).grid(row=R, column=C, padx=25, pady=5,sticky='w')
         self.entry_up_lineloss.grid(row=R, column=C+1, padx=5, pady=5)
 
         # Other Losses
         R = 7; C = 4
-        ttk.Label(self.tabUplink, text='Other Losses [dB]').grid(row=R, column=C, padx=25, pady=5,sticky='w')
+        ttk.Label(self.tabUplink, text='Other Losses [dB]', font=font1).grid(row=R, column=C, padx=25, pady=5,sticky='w')
         self.entry_up_otherloss.grid(row=R, column=C+1, padx=5, pady=5)
 
         ## Downlink: Spacecraft to Groundstation Tab ##
@@ -544,97 +553,97 @@ class Comms:
 
         # Primary Spacecraft Transmitter Power
         R = 3; C = 0
-        ttk.Label(self.tabDownlink, text='Primary Spacecraft Transmitter RF Power [W]').grid(row=R, column=C, padx=25, pady=5,sticky='w')
+        ttk.Label(self.tabDownlink, text='Primary Spacecraft Transmitter RF Power [W]', font=font1).grid(row=R, column=C, padx=25, pady=5,sticky='w')
         self.entry_down_p_sc_transpower.grid(row=R, column=C+1, padx=5, pady=5)
 
         # Primary Spacecraft Antenna Gain 
         R = 4; C = 0
-        ttk.Label(self.tabDownlink, text='Primary Spacecraft Antenna Gain [dB]').grid(row=R, column=C, padx=25, pady=5,sticky='w')
+        ttk.Label(self.tabDownlink, text='Primary Spacecraft Antenna Gain [dB]', font=font1).grid(row=R, column=C, padx=25, pady=5,sticky='w')
         self.entry_down_p_sc_antgain.grid(row=R, column=C+1, padx=5, pady=5)
 
          # Primary GroundStation Transmitter Power
         R = 5; C = 0
-        ttk.Label(self.tabDownlink, text='Primary GroundStation Transmitter RF Power [W]').grid(row=R, column=C, padx=25, pady=5,sticky='w')
+        ttk.Label(self.tabDownlink, text='Primary GroundStation Transmitter RF Power [W]', font=font1).grid(row=R, column=C, padx=25, pady=5,sticky='w')
         self.entry_down_p_gs_transpower.grid(row=R, column=C+1, padx=5, pady=5)
 
         # Primary GroundStation Antenna Gain 
         R = 6; C = 0
-        ttk.Label(self.tabDownlink, text='Primary GroundStation Antenna Gain [dB]').grid(row=R, column=C, padx=25, pady=5,sticky='w')
+        ttk.Label(self.tabDownlink, text='Primary GroundStation Antenna Gain [dB]', font=font1).grid(row=R, column=C, padx=25, pady=5,sticky='w')
         self.entry_down_p_gs_antgain.grid(row=R, column=C+1, padx=5, pady=5)
 
         #Primary Datarate
         R = 7; C = 0
-        ttk.Label(self.tabDownlink, text='Primary Datarate [bps]').grid(row=R, column=C, padx=25, pady=5,sticky='w')
+        ttk.Label(self.tabDownlink, text='Primary Datarate [bps]', font=font1).grid(row=R, column=C, padx=25, pady=5,sticky='w')
         self.entry_down_p_datarate.grid(row=R, column=C+1, padx=5, pady=5)
 
         #Primary Frequency
         R = 8; C = 0
-        ttk.Label(self.tabDownlink, text='Primary Frequency [Hz]').grid(row=R, column=C, padx=25, pady=5,sticky='w')
+        ttk.Label(self.tabDownlink, text='Primary Frequency [Hz]', font=font1).grid(row=R, column=C, padx=25, pady=5,sticky='w')
         self.entry_down_p_frequency.grid(row=R, column=C+1, padx=5, pady=5)
 
         #Primary Eb/N0 
         R = 9; C = 0
-        ttk.Label(self.tabDownlink, text='Primary Eb/N0 [dB]').grid(row=R, column=C, padx=25, pady=5,sticky='w')
+        ttk.Label(self.tabDownlink, text='Primary Eb/N0 [dB]', font=font1).grid(row=R, column=C, padx=25, pady=5,sticky='w')
         self.entry_down_p_EbNo.grid(row=R, column=C+1, padx=5, pady=5,stick='w')
 
         # Secondary Spacecraft Transmitter Power
         R = 3; C = 2
-        ttk.Label(self.tabDownlink, text='Secondary Spacecraft Transmitter RF Power [W]').grid(row=R, column=C, padx=25, pady=5,sticky='w')
+        ttk.Label(self.tabDownlink, text='Secondary Spacecraft Transmitter RF Power [W]', font=font1).grid(row=R, column=C, padx=25, pady=5,sticky='w')
         self.entry_down_s_sc_transpower.grid(row=R, column=C+1, padx=5, pady=5)
 
         # Secondary Spacecraft Antenna Gain
         R = 4; C = 2
-        ttk.Label(self.tabDownlink, text='Secondary Spacecraft Antenna Gain [dB]').grid(row=R, column=C, padx=25, pady=5,sticky='w')
+        ttk.Label(self.tabDownlink, text='Secondary Spacecraft Antenna Gain [dB]', font=font1).grid(row=R, column=C, padx=25, pady=5,sticky='w')
         self.entry_down_s_sc_antgain.grid(row=R, column=C+1, padx=5, pady=5)
 
         # Secondary Spacecraft Transmitter Power
         R = 5; C = 2
-        ttk.Label(self.tabDownlink, text='Secondary Spacecraft Transmitter RF Power [W]').grid(row=R, column=C, padx=25, pady=5,sticky='w')
+        ttk.Label(self.tabDownlink, text='Secondary Spacecraft Transmitter RF Power [W]', font=font1).grid(row=R, column=C, padx=25, pady=5,sticky='w')
         self.entry_down_s_gs_transpower.grid(row=R, column=C+1, padx=5, pady=5)
 
         # Secondary Spacecraft Antenna Gain
         R = 6; C = 2
-        ttk.Label(self.tabDownlink, text='Secondary Spacecraft Antenna Gain [dB]').grid(row=R, column=C, padx=25, pady=5,sticky='w')
+        ttk.Label(self.tabDownlink, text='Secondary Spacecraft Antenna Gain [dB]', font=font1).grid(row=R, column=C, padx=25, pady=5,sticky='w')
         self.entry_down_s_gs_antgain.grid(row=R, column=C+1, padx=5, pady=5)
 
         #Secondary Datarate
         R = 7; C = 2
-        ttk.Label(self.tabDownlink, text='Secondary Datarate [bps]').grid(row=R, column=C, padx=25, pady=5,sticky='w')
+        ttk.Label(self.tabDownlink, text='Secondary Datarate [bps]', font=font1).grid(row=R, column=C, padx=25, pady=5,sticky='w')
         self.entry_down_s_datarate.grid(row=R, column=C+1, padx=5, pady=5)
 
         #Frequency Secondary
         R = 8; C = 2
-        ttk.Label(self.tabDownlink, text='Secondary Frequency [Hz]').grid(row=R, column=C, padx=25, pady=5,sticky='w')
+        ttk.Label(self.tabDownlink, text='Secondary Frequency [Hz]', font=font1).grid(row=R, column=C, padx=25, pady=5,sticky='w')
         self.entry_down_s_frequency.grid(row=R, column=C+1, padx=5, pady=5)
 
         #EbNo Secondary 
         R = 9; C = 2 
-        ttk.Label(self.tabDownlink, text='Secondary Eb/N0 [dB]').grid(row=R, column=C, padx=25, pady=5,sticky='w')
+        ttk.Label(self.tabDownlink, text='Secondary Eb/N0 [dB]', font=font1).grid(row=R, column=C, padx=25, pady=5,sticky='w')
         self.entry_down_s_EbNo.grid(row=R, column=C+1, padx=5, pady=5,stick='w')
 
          # System Noise Temp
         R = 3; C = 4
-        ttk.Label(self.tabDownlink, text='System Temp [K]').grid(row=R, column=C, padx=25, pady=5,sticky='w')
+        ttk.Label(self.tabDownlink, text='System Temp [K]', font=font1).grid(row=R, column=C, padx=25, pady=5,sticky='w')
         self.entry_down_systemp.grid(row=R, column=C+1, padx=5, pady=5,stick='w')
 
         # Maximum Distance From Earth
         R = 4; C = 4
-        ttk.Label(self.tabDownlink, text='Max Distance from Earth [km]').grid(row=R, column=C, padx=25, pady=5,sticky='w')
+        ttk.Label(self.tabDownlink, text='Max Distance from Earth [km]', font=font1).grid(row=R, column=C, padx=25, pady=5,sticky='w')
         self.entry_down_maxdistanceEarth.grid(row=R, column=C+1, padx=5, pady=5)
 
         # Rain Losses
         R = 5; C = 4
-        ttk.Label(self.tabDownlink, text='Rain Losses [dB]').grid(row=R, column=C, padx=25, pady=5,sticky='w')
+        ttk.Label(self.tabDownlink, text='Rain Losses [dB]', font=font1).grid(row=R, column=C, padx=25, pady=5,sticky='w')
         self.entry_down_rainloss.grid(row=R, column=C+1, padx=5, pady=5)
         
         # Line Losses
         R = 6; C = 4
-        ttk.Label(self.tabDownlink, text='Line Losses [dB]').grid(row=R, column=C, padx=25, pady=5,sticky='w')
+        ttk.Label(self.tabDownlink, text='Line Losses [dB]', font=font1).grid(row=R, column=C, padx=25, pady=5,sticky='w')
         self.entry_down_lineloss.grid(row=R, column=C+1, padx=5, pady=5)
 
         # Other Losses
         R = 7; C = 4
-        ttk.Label(self.tabDownlink, text='Other Losses [dB]').grid(row=R, column=C, padx=25, pady=5,sticky='w')
+        ttk.Label(self.tabDownlink, text='Other Losses [dB]', font=font1).grid(row=R, column=C, padx=25, pady=5,sticky='w')
         self.entry_down_otherloss.grid(row=R, column=C+1, padx=5, pady=5)
 
         # Submit Button
@@ -908,6 +917,10 @@ class Comms:
         self.entry_up_1_datarate.insert(0,0)
         self.entry_up_2_datarate = ttk.Entry(self.tabUpSecondary, width = w)
         self.entry_up_2_datarate.insert(0,0)
+        self.entry_up_1_margin = ttk.Entry(self.tabUpPrimary, width = w)
+        self.entry_up_1_margin.insert(0,0)
+        self.entry_up_2_margin = ttk.Entry(self.tabUpSecondary, width = w)
+        self.entry_up_2_margin.insert(0,0)
 
 
         ##Start hereee##
@@ -1011,9 +1024,10 @@ class Comms:
 
         #TransPower/Datarate Instructions
         R=0; C=6
-        ttk.Label(self.tabUpPrimary, text='If you need to calculate data rate, \ninput transmitter RF power, and \nleave data rate as 0.').grid(row=R, column=C, columnspan = 2, padx=25, pady=5,sticky='w')
-        ttk.Label(self.tabUpPrimary, text='If you need to calculate transmitter RF\npower, input data rate, and \nleave transmitter power as 0.').grid(row=R+1, columnspan = 2, column=C, padx=25, pady=5,sticky='w')
-
+        ttk.Label(self.tabUpPrimary, text='If you need to calculate data rate, \ninput transmitter RF power and \nmargin, and leave data rate as 0.').grid(row=R, column=C, columnspan = 2, padx=25, pady=5,sticky='w')
+        ttk.Label(self.tabUpPrimary, text='If you need to calculate transmitter RF\npower, input data rate and \nmargin, and leave transmitter power as 0.').grid(row=R+1, columnspan = 2, column=C, padx=25, pady=5,sticky='w')
+        ttk.Label(self.tabUpPrimary, text='If you need to calculate margin, input \ndata rate and transmitter RF \npower, and leave transmitter power as 0.').grid(row=R+2, columnspan = 2, column=C, padx=25, pady=5,sticky='w')
+        
  
         #Primary Uplink Transmitter Power
         R = 3; C = 6
@@ -1024,6 +1038,12 @@ class Comms:
         R = 4; C = 6
         ttk.Label(self.tabUpPrimary, text='Data Rate [bps]', font=font1).grid(row=R, column=C, padx=25, pady=5,sticky='w')
         self.entry_up_1_datarate.grid(row=R, column=C+1, padx=5, pady=5,stick='w')
+
+        #Primary Uplink Margin
+        R = 5; C = 6
+        ttk.Label(self.tabUpPrimary, text='Margin [dB]', font=font1).grid(row=R, column=C, padx=25, pady=5,sticky='w')
+        self.entry_up_1_margin.grid(row=R, column=C+1, padx=5, pady=5,stick='w')
+
 
         ##SECONDARY UPLINK
         #Header
@@ -1119,9 +1139,10 @@ class Comms:
 
         #Secondary TransPower/Datarate Instructions
         R=0; C=6
-        ttk.Label(self.tabUpSecondary, text='If you need to calculate data rate, \ninput transmitter RF power, and \nleave data rate blank.').grid(row=R, column=C, columnspan = 2, padx=25, pady=5,sticky='w')
-        ttk.Label(self.tabUpSecondary, text='If you need to calculate transmitter \npower, input data rate, and \nleave transmitter power blank.').grid(row=R+1, columnspan = 2, column=C, padx=25, pady=5,sticky='w')
-
+        ttk.Label(self.tabUpSecondary, text='If you need to calculate data rate, \ninput transmitter RF power and \nmargin, and leave data rate as 0.').grid(row=R, column=C, columnspan = 2, padx=25, pady=5,sticky='w')
+        ttk.Label(self.tabUpSecondary, text='If you need to calculate transmitter RF\npower, input data rate and \nmargin, and leave transmitter power as 0.').grid(row=R+1, columnspan = 2, column=C, padx=25, pady=5,sticky='w')
+        ttk.Label(self.tabUpSecondary, text='If you need to calculate margin, input \ndata rate and transmitter RF \npower, and leave transmitter power as 0.').grid(row=R+2, columnspan = 2, column=C, padx=25, pady=5,sticky='w')
+        
  
         #Secondary Uplink Transmitter Power
         R = 3; C = 6
@@ -1132,6 +1153,11 @@ class Comms:
         R = 4; C = 6
         ttk.Label(self.tabUpSecondary, text='Data Rate [bps]', font=font1).grid(row=R, column=C, padx=25, pady=5,sticky='w')
         self.entry_up_2_datarate.grid(row=R, column=C+1, padx=5, pady=5,stick='w')
+
+        #Secondary Uplink Margin
+        R = 5; C = 6
+        ttk.Label(self.tabUpSecondary, text='Margin [dB]', font=font1).grid(row=R, column=C, padx=25, pady=5,sticky='w')
+        self.entry_up_2_margin.grid(row=R, column=C+1, padx=5, pady=5,stick='w')
 
         ## Function to check which menu option is selected.  Sets entry field accordingly
         def bandCheckdown1(value):
@@ -1374,6 +1400,10 @@ class Comms:
         self.entry_down_1_datarate.insert(0,0)
         self.entry_down_2_datarate = ttk.Entry(self.tabDownSecondary, width = w)
         self.entry_down_2_datarate.insert(0,0)
+        self.entry_down_1_margin = ttk.Entry(self.tabDownPrimary, width = w)
+        self.entry_down_1_margin.insert(0,0)
+        self.entry_down_2_margin = ttk.Entry(self.tabDownSecondary, width = w)
+        self.entry_down_2_margin.insert(0,0)
 
         ##Start hereee##
 
@@ -1477,9 +1507,10 @@ class Comms:
 
         #Downlink TransPower/Datarate Instructions
         R=0; C=6
-        ttk.Label(self.tabDownPrimary, text='If you need to calculate data rate, \ninput transmitter RF power, and \nleave data rate blank.').grid(row=R, column=C, columnspan = 2, padx=25, pady=5,sticky='w')
-        ttk.Label(self.tabDownPrimary, text='If you need to calculate transmitter RF\npower, input data rate, and \nleave transmitter RF power blank.').grid(row=R+1, columnspan = 2, column=C, padx=25, pady=5,sticky='w')
-
+        ttk.Label(self.tabDownPrimary, text='If you need to calculate data rate, \ninput transmitter RF power and \nmargin, and leave data rate as 0.').grid(row=R, column=C, columnspan = 2, padx=25, pady=5,sticky='w')
+        ttk.Label(self.tabDownPrimary, text='If you need to calculate transmitter RF\npower, input data rate and \nmargin, and leave transmitter power as 0.').grid(row=R+1, columnspan = 2, column=C, padx=25, pady=5,sticky='w')
+        ttk.Label(self.tabDownPrimary, text='If you need to calculate margin, input \ndata rate and transmitter RF \npower, and leave transmitter power as 0.').grid(row=R+2, columnspan = 2, column=C, padx=25, pady=5,sticky='w')
+        
  
         #Primary Downlink Transmitter Power
         R = 3; C = 6
@@ -1490,6 +1521,11 @@ class Comms:
         R = 4; C = 6
         ttk.Label(self.tabDownPrimary, text='Data Rate [bps]', font=font1).grid(row=R, column=C, padx=25, pady=5,sticky='w')
         self.entry_down_1_datarate.grid(row=R, column=C+1, padx=5, pady=5,stick='w')
+
+        #Primary Downlink Margin
+        R = 5; C = 6
+        ttk.Label(self.tabDownPrimary, text='Margin [dB]', font=font1).grid(row=R, column=C, padx=25, pady=5,sticky='w')
+        self.entry_down_1_margin.grid(row=R, column=C+1, padx=5, pady=5,stick='w')
 
         ##SECONDARY DOWNLINK
         #Header
@@ -1585,9 +1621,10 @@ class Comms:
 
         #Secondary TransPower/Datarate Instructions
         R=0; C=6
-        ttk.Label(self.tabDownSecondary, text='If you need to calculate data rate, \ninput transmitter power, and \nleave data rate blank.').grid(row=R, column=C, columnspan = 2, padx=25, pady=5,sticky='w')
-        ttk.Label(self.tabDownSecondary, text='If you need to calculate transmitter \npower, input data rate, and \nleave transmitter power blank.').grid(row=R+1, columnspan = 2, column=C, padx=25, pady=5,sticky='w')
-
+        ttk.Label(self.tabDownSecondary, text='If you need to calculate data rate, \ninput transmitter RF power and \nmargin, and leave data rate as 0.').grid(row=R, column=C, columnspan = 2, padx=25, pady=5,sticky='w')
+        ttk.Label(self.tabDownSecondary, text='If you need to calculate transmitter RF\npower, input data rate and \nmargin, and leave transmitter power as 0.').grid(row=R+1, columnspan = 2, column=C, padx=25, pady=5,sticky='w')
+        ttk.Label(self.tabDownSecondary, text='If you need to calculate margin, input \ndata rate and transmitter RF \npower, and leave transmitter power as 0.').grid(row=R+2, columnspan = 2, column=C, padx=25, pady=5,sticky='w')
+        
  
         #Secondary Downlink Transmitter Power
         R = 3; C = 6
@@ -1599,7 +1636,10 @@ class Comms:
         ttk.Label(self.tabDownSecondary, text='Data Rate [bps]', font=font1).grid(row=R, column=C, padx=25, pady=5,sticky='w')
         self.entry_down_2_datarate.grid(row=R, column=C+1, padx=5, pady=5,stick='w')
 
-
+        #Secondary Downlink Margin
+        R = 5; C = 6
+        ttk.Label(self.tabDownSecondary, text='Margin [dB]', font=font1).grid(row=R, column=C, padx=25, pady=5,sticky='w')
+        self.entry_down_2_margin.grid(row=R, column=C+1, padx=5, pady=5,stick='w')
 
         # Submit Button
         R = 14; C = 6
@@ -2089,6 +2129,23 @@ class Comms:
                 self.down_2_datarate = float(self.entry_down_2_datarate.get())
             except:
                 pass
+            try:
+                self.up_1_margin = float(self.entry_up_1_margin.get())
+            except: 
+                pass
+            try: 
+                self.up_2_margin = float(self.entry_up_2_margin.get())
+            except: 
+                pass
+            try:
+                self.down_1_margin = float(self.entry_down_1_margin.get())
+            except: 
+                pass
+            try: 
+                self.down_2_margin = float(self.entry_down_2_margin.get())
+            except: 
+                pass
+
     
     def selectionError(self):
             self.commsgui = tk.Tk() # Instance of Tk,
