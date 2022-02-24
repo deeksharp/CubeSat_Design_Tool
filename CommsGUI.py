@@ -1642,7 +1642,7 @@ class Comms:
         self.entry_down_2_margin.grid(row=R, column=C+1, padx=5, pady=5,stick='w')
 
         # Submit Button
-        R = 14; C = 6
+        R = 8; C = 6
         self.UseCase = 2
         self.sub_btn = ttk.Button(self.tabDownSecondary, text = "Submit", command = self.inputComms)
         self.sub_btn.grid(column = C, row = R)
