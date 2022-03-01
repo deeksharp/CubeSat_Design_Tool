@@ -149,6 +149,13 @@ class CommsTool:
 
 
         cD.out_up_1_receiverantgain = m.log10(cD.up_1_receiverdishdiameter)*20 + m.log10(cD.up_1_frequency)*20 + m.log10(cD.up_1_receiverefficiency)*10 - 159.59
+        print('a: ', m.log10(cD.up_1_receiverdishdiameter)*20 )
+        print('b: ',  m.log10(cD.up_1_frequency)*20)
+        print('c: ',  m.log10(cD.up_1_receiverefficiency)*10)
+        print('Out: ', cD.out_up_1_receiverantgain)
+        print('check: ',  m.log10(cD.up_1_receiverdishdiameter)*20 +  m.log10(cD.up_1_frequency)*20 + m.log10(cD.up_1_receiverefficiency)*10 - 159.59)
+
+
         cD.out_up_2_receiverantgain = m.log10(cD.up_2_receiverdishdiameter)*20 + m.log10(cD.up_2_frequency)*20 + m.log10(cD.up_2_receiverefficiency)*10 - 159.59 if secondary else 0
         cD.out_down_1_receiverantgain = m.log10(cD.down_1_receiverdishdiameter)*20 + m.log10(cD.down_1_frequency)*20 + m.log10(cD.down_1_receiverefficiency)*10 - 159.59
         cD.out_down_2_receiverantgain = m.log10(cD.down_2_receiverdishdiameter)*20 + m.log10(cD.down_2_frequency)*20 + m.log10(cD.down_2_receiverefficiency)*10 - 159.59 if secondary else 0
@@ -199,7 +206,7 @@ class CommsTool:
             cD.out_up_1_datarate = cD.up_1_datarate
             cD.out_up_1_powerdensity = cD.out_up_1_EbNocalc + cD.out_up_1_datarate2
             cD.out_up_1_transmitterpower2 = cD.out_up_1_powerdensity - cD.up_1_lineloss - cD.out_up_1_transmitterantgain - cD.out_up_1_receiversensitivity + boltzman - (cD.up_1_spaceloss + cD.up_1_transmitterpointingloss + cD.up_1_polarizationloss + cD.up_1_atmosphereattenuation + cD.up_1_rainattenuation + cD.up_1_receiverpointingloss)
-            cD.out_up_1_transmitterpower = 10**(cD.out_up_2_transmitterpower2/10)
+            cD.out_up_1_transmitterpower = 10**(cD.out_up_1_transmitterpower2/10)
             cD.out_up_1_eirp = cD.out_up_1_transmitterpower2 + cD.up_1_lineloss + cD.out_up_1_transmitterantgain
             
         if up_2_missing == 1 : 
@@ -219,7 +226,7 @@ class CommsTool:
             cD.out_down_1_datarate = cD.down_1_datarate
             cD.out_down_1_powerdensity = cD.out_down_1_EbNocalc + cD.out_down_1_datarate2
             cD.out_down_1_transmitterpower2 = cD.out_down_1_powerdensity - cD.down_1_lineloss - cD.out_down_1_transmitterantgain - cD.out_down_1_receiversensitivity + boltzman - (cD.down_1_spaceloss + cD.down_1_transmitterpointingloss + cD.down_1_polarizationloss + cD.down_1_atmosphereattenuation + cD.down_1_rainattenuation + cD.down_1_receiverpointingloss)
-            cD.out_down_1_transmitterpower = 10**(cD.out_up_2_transmitterpower2/10)
+            cD.out_down_1_transmitterpower = 10**(cD.out_down_1_transmitterpower2/10)
             cD.out_down_1_eirp = cD.out_down_1_transmitterpower2 + cD.down_1_lineloss + cD.out_down_1_transmitterantgain
             
         if down_2_missing == 1 : 
@@ -229,7 +236,7 @@ class CommsTool:
             cD.out_down_2_datarate = cD.down_2_datarate
             cD.out_down_2_powerdensity = cD.out_down_2_EbNocalc + cD.out_down_2_datarate2
             cD.out_down_2_transmitterpower2 = cD.out_down_2_powerdensity - cD.down_2_lineloss - cD.out_down_2_transmitterantgain - cD.out_down_2_receiversensitivity + boltzman - (cD.down_2_spaceloss + cD.down_2_transmitterpointingloss + cD.down_2_polarizationloss + cD.down_2_atmosphereattenuation + cD.down_2_rainattenuation + cD.down_2_receiverpointingloss)
-            cD.out_down_2_transmitterpower = 10**(cD.out_up_2_transmitterpower2/10)
+            cD.out_down_2_transmitterpower = 10**(cD.out_down_2_transmitterpower2/10)
             cD.out_down_2_eirp = cD.out_down_2_transmitterpower2 + cD.down_2_lineloss + cD.out_down_2_transmitterantgain
             
 
