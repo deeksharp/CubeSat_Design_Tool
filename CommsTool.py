@@ -200,7 +200,7 @@ class CommsTool:
 
         
         if up_1_missing == 1 : 
-            cD.out_up_1_EbNocalc = cD.up_1_margin + cD.up_1_EbNo
+            cD.out_up_1_EbNocalc = cD.up_1_margin + cD.up_1_EbNo - cD.up_1_implementationloss
             cD.out_up_1_margin = cD.up_1_margin
             cD.out_up_1_datarate2 = m.log10(cD.up_1_datarate)*10
             cD.out_up_1_datarate = cD.up_1_datarate
@@ -210,7 +210,7 @@ class CommsTool:
             cD.out_up_1_eirp = cD.out_up_1_transmitterpower2 + cD.up_1_lineloss + cD.up_1_transmitterpointingloss + cD.out_up_1_transmitterantgain
             
         if up_2_missing == 1 : 
-            cD.out_up_2_EbNocalc = cD.up_2_margin + cD.up_2_EbNo 
+            cD.out_up_2_EbNocalc = cD.up_2_margin + cD.up_2_EbNo - cD.up_2_implementationloss
             cD.out_up_2_margin = cD.up_2_margin
             cD.out_up_2_datarate2 = m.log10(cD.up_2_datarate)*10
             cD.out_up_2_datarate = cD.up_2_datarate
@@ -220,7 +220,7 @@ class CommsTool:
             cD.out_up_2_eirp = cD.out_up_2_transmitterpower2 + cD.up_2_lineloss + cD.out_up_2_transmitterantgain
             
         if down_1_missing == 1 : 
-            cD.out_down_1_EbNocalc = cD.down_1_margin + cD.down_1_EbNo
+            cD.out_down_1_EbNocalc = cD.down_1_margin + cD.down_1_EbNo - cD.down_1_implementationloss
             cD.out_down_1_margin = cD.down_1_margin
             cD.out_down_1_datarate2 = m.log10(cD.down_1_datarate)*10
             cD.out_down_1_datarate = cD.down_1_datarate
@@ -230,7 +230,7 @@ class CommsTool:
             cD.out_down_1_eirp = cD.out_down_1_transmitterpower2 + cD.down_1_lineloss + cD.out_down_1_transmitterantgain
             
         if down_2_missing == 1 : 
-            cD.out_down_2_EbNocalc = cD.down_2_margin + cD.down_2_EbNo
+            cD.out_down_2_EbNocalc = cD.down_2_margin + cD.down_2_EbNo - cD.down_2_implementationloss
             cD.out_down_2_margin = cD.down_2_margin
             cD.out_down_2_datarate2 = m.log10(cD.down_2_datarate)*10
             cD.out_down_2_datarate = cD.down_2_datarate
@@ -241,7 +241,7 @@ class CommsTool:
             
 
         if up_1_missing == 2 : 
-            cD.out_up_1_EbNocalc = cD.up_1_margin + cD.up_1_EbNo
+            cD.out_up_1_EbNocalc = cD.up_1_margin + cD.up_1_EbNo - cD.up_1_implementationloss
             cD.out_up_1_margin = cD.up_1_margin
             cD.out_up_1_transmitterpower2 = m.log10(cD.up_1_transmitterpower)*10
             cD.out_up_1_transmitterpower = cD.up_1_transmitterpower 
@@ -251,7 +251,7 @@ class CommsTool:
             cD.out_up_1_datarate = 10**(cD.out_up_1_datarate2/10)
 
         if up_2_missing == 2 : 
-            cD.out_up_2_EbNocalc = cD.up_2_margin + cD.up_2_EbNo 
+            cD.out_up_2_EbNocalc = cD.up_2_margin + cD.up_2_EbNo - cD.up_2_implementationloss
             cD.out_up_2_margin = cD.up_2_margin
             cD.out_up_2_transmitterpower2 = m.log10(cD.up_2_transmitterpower)*10
             cD.out_up_2_transmitterpower = cD.up_2_transmitterpower 
@@ -261,7 +261,7 @@ class CommsTool:
             cD.out_up_2_datarate = 10**(cD.out_up_2_datarate2/10)
 
         if down_1_missing == 2 : 
-            cD.out_down_1_EbNocalc = cD.down_1_margin + cD.down_1_EbNo
+            cD.out_down_1_EbNocalc = cD.down_1_margin + cD.down_1_EbNo - cD.down_1_implementationloss
             cD.out_down_1_margin = cD.down_1_margin
             cD.out_down_1_transmitterpower2 = m.log10(cD.down_1_transmitterpower)*10
             cD.out_down_1_transmitterpower = cD.down_1_transmitterpower 
@@ -271,7 +271,7 @@ class CommsTool:
             cD.out_down_1_datarate = 10**(cD.out_down_1_datarate2/10)
 
         if down_2_missing == 2 : 
-            cD.out_down_2_EbNocalc = cD.down_2_margin + cD.down_2_EbNo
+            cD.out_down_2_EbNocalc = cD.down_2_margin + cD.down_2_EbNo - cD.down_2_implementationloss
             cD.out_down_2_margin = cD.down_2_margin
             cD.out_down_2_transmitterpower2 = m.log10(cD.down_2_transmitterpower)*10
             cD.out_down_2_transmitterpower = cD.down_2_transmitterpower 
@@ -282,14 +282,14 @@ class CommsTool:
 
 
         if up_1_missing == 3 : 
-            cD.out_up_1_datarate2 = m.log10(cD.up_1_datarate)*10
+            cD.out_up_1_datarate2 = m.log10(cD.up_1_datarate)*10 
             cD.out_up_1_datarate = cD.up_1_datarate
             cD.out_up_1_transmitterpower2 = m.log10(cD.up_1_transmitterpower)*10 
             cD.out_up_1_transmitterpower = cD.up_1_transmitterpower 
             cD.out_up_1_eirp = cD.out_up_1_transmitterpower2 + cD.up_1_lineloss + cD.out_up_1_transmitterantgain
             cD.out_up_1_powerdensity = cD.out_up_1_eirp + cD.up_1_spaceloss + cD.up_1_transmitterpointingloss + cD.up_1_polarizationloss + cD.up_1_atmosphereattenuation + cD.up_1_rainattenuation + cD.up_1_receiverpointingloss - boltzman + cD.out_up_1_receiversensitivity
             cD.out_up_1_EbNocalc = cD.out_up_1_powerdensity - cD.out_up_1_datarate2
-            cD.out_up_1_margin = cD.out_up_1_EbNocalc - cD.up_1_EbNo
+            cD.out_up_1_margin = cD.out_up_1_EbNocalc - cD.up_1_EbNo + cD.up_1_implementationloss
 
         if up_2_missing == 3 : 
             cD.out_up_2_datarate2 = m.log10(cD.up_2_datarate)*10
@@ -299,7 +299,7 @@ class CommsTool:
             cD.out_up_2_eirp = cD.out_up_2_transmitterpower2 + cD.up_2_lineloss + cD.out_up_2_transmitterantgain 
             cD.out_up_2_powerdensity = cD.out_up_2_eirp + cD.up_2_spaceloss + cD.up_2_transmitterpointingloss + cD.up_2_polarizationloss + cD.up_2_atmosphereattenuation + cD.up_2_rainattenuation + cD.up_2_receiverpointingloss - boltzman + cD.out_up_2_receiversensitivity
             cD.out_up_2_EbNocalc = cD.out_up_2_powerdensity - cD.out_up_2_datarate2
-            cD.out_up_2_margin = cD.out_up_2_EbNocalc - cD.up_2_EbNo 
+            cD.out_up_2_margin = cD.out_up_2_EbNocalc - cD.up_2_EbNo + cD.up_2_implementationloss
 
         if down_1_missing == 3 : 
             cD.out_down_1_datarate2 = m.log10(cD.down_1_datarate)*10
@@ -309,7 +309,7 @@ class CommsTool:
             cD.out_down_1_eirp = cD.out_down_1_transmitterpower2 + cD.down_1_lineloss + cD.out_down_1_transmitterantgain
             cD.out_down_1_powerdensity = cD.out_down_1_eirp + cD.down_1_spaceloss + cD.down_1_transmitterpointingloss + cD.down_1_polarizationloss + cD.down_1_atmosphereattenuation + cD.down_1_rainattenuation + cD.down_1_receiverpointingloss - boltzman + cD.out_down_1_receiversensitivity
             cD.out_down_1_EbNocalc = cD.out_down_1_powerdensity - cD.out_down_1_datarate2
-            cD.out_down_1_margin = cD.out_down_1_EbNocalc - cD.down_1_EbNo
+            cD.out_down_1_margin = cD.out_down_1_EbNocalc - cD.down_1_EbNo + cD.down_1_implementationloss
 
         if down_2_missing == 3 : 
             cD.out_down_2_datarate2 = m.log10(cD.down_2_datarate)*10
@@ -319,7 +319,7 @@ class CommsTool:
             cD.out_down_2_eirp = cD.out_down_2_transmitterpower2 + cD.down_2_lineloss + cD.out_down_2_transmitterantgain 
             cD.out_down_2_powerdensity = cD.out_down_2_eirp + cD.down_2_spaceloss + cD.down_2_transmitterpointingloss + cD.down_2_polarizationloss + cD.down_2_atmosphereattenuation + cD.down_2_rainattenuation + cD.down_2_receiverpointingloss - boltzman + cD.out_down_2_receiversensitivity if secondary else 0
             cD.out_down_2_EbNocalc = cD.out_down_2_powerdensity - cD.out_down_2_datarate2 
-            cD.out_down_2_margin = cD.out_down_2_EbNocalc - cD.down_2_EbNo 
+            cD.out_down_2_margin = cD.out_down_2_EbNocalc - cD.down_2_EbNo + cD.down_2_implementationloss
         
         return cD
 
