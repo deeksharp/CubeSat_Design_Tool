@@ -364,7 +364,7 @@ class Comms:
         self.commswindow.add(self.tabUplink, text = 'Uplink')
         self.commswindow.add(self.tabDownlink, text = 'Downlink')
         self.commswindow.pack(expand = 1, fill ="both")
-        font1 = "Helvetica 11 bold"
+        font1 = "Helvetica 11"
 
         # Uplink Tab Entry Values
         w = 6
@@ -683,7 +683,7 @@ class Comms:
         self.tabDownlink.add(self.tabDownPrimary, text = 'Primary')
         self.tabDownlink.add(self.tabDownSecondary, text = 'Secondary')
         self.commswindow.pack(expand = 1, fill ="both")
-        font1 = "Helvetica 11 bold"
+        font1 = "Helvetica 11"
 
         ## Function to check which menu option is selected.  Sets entry field accordingly
         def bandCheckup1(value):
