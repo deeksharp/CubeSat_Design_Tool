@@ -1,89 +1,89 @@
 Variable,Variable Name,Value,Units
-Frequency Uplink Primary,out_up_1_frequency,7197500000,Hz
-Frequency Uplink Secondary,out_up_2_frequency,0,Hz
-Frequency Downlink Primary,out_down_1_frequency,8450000000,Hz
-Frequency Downlink Secondary,out_down_2_frequency,0,Hz
-Transmit RF Power Uplink Primary,out_up_1_transmitterpower,100.0,W
-Transmit RF Power Uplink Secondary,out_up_2_transmitterpower,0,W
-Transmit RF Power Downlink Primary,out_down_1_transmitterpower,5.0,W
-Transmit RF Power Downlink Secondary,out_down_2_transmitterpower,0,W
-Transmit RF Power Uplink Primary(dB-W),out_up_1_transmitterpower2,20.0,dB-W
-Transmit RF Power Uplink Secondary(dB-W),out_up_2_transmitterpower2,0,dB-W
-Transmit RF Power Downlink Primary(dB-W),out_down_1_transmitterpower2,6.989700043360188,dB-W
-Transmit RF Power Downlink Secondary(dB-W),out_down_2_transmitterpower2,0,dB-W
-Transmit Antenna Gain Uplink Primary,out_up_1_transmitterantgain,50.56393342764218,dBi
-Transmit Antenna Gain Uplink Secondary,out_up_2_transmitterantgain,0,dBi
-Transmit Antenna Gain Downlink Primary,out_down_1_transmitterantgain,29.439314405695654,dBi
+Frequency Uplink Primary,out_up_1_frequency,10000000000,Hz
+Frequency Uplink Secondary,out_up_2_frequency,10000000000,Hz
+Frequency Downlink Primary,out_down_1_frequency,10000000000,Hz
+Frequency Downlink Secondary,out_down_2_frequency,10000000000,Hz
+Transmit RF Power Uplink Primary,out_up_1_transmitterpower,50.0,W
+Transmit RF Power Uplink Secondary,out_up_2_transmitterpower,50.0,W
+Transmit RF Power Downlink Primary,out_down_1_transmitterpower,10.0,W
+Transmit RF Power Downlink Secondary,out_down_2_transmitterpower,1.0,W
+Transmit RF Power Uplink Primary(dB-W),out_up_1_transmitterpower2,16.989700043360187,dB-W
+Transmit RF Power Uplink Secondary(dB-W),out_up_2_transmitterpower2,16.989700043360187,dB-W
+Transmit RF Power Downlink Primary(dB-W),out_down_1_transmitterpower2,10.0,dB-W
+Transmit RF Power Downlink Secondary(dB-W),out_down_2_transmitterpower2,0.0,dB-W
+Transmit Antenna Gain Uplink Primary,out_up_1_transmitterantgain,30.14,dBi
+Transmit Antenna Gain Uplink Secondary,out_up_2_transmitterantgain,20,dBi
+Transmit Antenna Gain Downlink Primary,out_down_1_transmitterantgain,19,dBi
 Transmit Antenna Gain Downlink Secondary,out_down_2_transmitterantgain,0,dBi
-Transmit Antenna Efficiency Uplink Primary,out_up_1_transmitterefficiency,0.8,
-Transmit Antenna Efficiency Uplink Secondary,out_up_2_transmitterefficiency,0,
-Transmit Antenna Efficiency Downlink Primary,out_down_1_transmitterefficiency,0.7,
-Transmit Antenna Efficiency Downlink Secondary,out_down_2_transmitterefficiency,0,
-Transmit Antenna Dish Diameter Uplink Primary,out_up_1_transmitterdishdiameter,5.0,m
-Transmit Antenna Dish Diameter Uplink Secondary,out_up_2_transmitterdishdiameter,0,m
-Transmit Antenna Dish Diameter Downlink Primary,out_down_1_transmitterdishdiameter,0.4,m
-Transmit Antenna Dish Diameter Downlink Secondary,out_down_2_transmitterdishdiameter,0,m
-Beamwidth Uplink Primary,out_up_1_beamwidth,10.0,deg
-Beamwidth Uplink Secondary,out_up_2_beamwidth,0,deg
-Beamwidth Downlink Primary,out_down_1_beamwidth,5.0,deg
-Beamwidth Downlink Secondary,out_down_2_beamwidth,0,deg
-Transmit EIRP Uplink Primary,out_up_1_eirp,69.56393342764218,dB-W
-Transmit EIRP Uplink Secondary,out_up_2_eirp,0,dB-W
-Transmit EIRP Downlink Primary,out_down_1_eirp,35.42901444905584,dB-W
-Transmit EIRP Downlink Secondary,out_down_2_eirp,0,dB-W
-Space Loss Uplink Primary,out_up_1_spaceloss,-221.634833,dB
-Space Loss Uplink Secondary,out_up_2_spaceloss,0,dB
-Space Loss Downlink Primary,out_down_1_spaceloss,-223.028334,dB
-Space Loss Downlink Secondary,out_down_2_spaceloss,0,dB
+Transmit Antenna Efficiency Uplink Primary,out_up_1_transmitterefficiency,0.0,
+Transmit Antenna Efficiency Uplink Secondary,out_up_2_transmitterefficiency,0.0,
+Transmit Antenna Efficiency Downlink Primary,out_down_1_transmitterefficiency,0.0,
+Transmit Antenna Efficiency Downlink Secondary,out_down_2_transmitterefficiency,0.0,
+Transmit Antenna Dish Diameter Uplink Primary,out_up_1_transmitterdishdiameter,0.0,m
+Transmit Antenna Dish Diameter Uplink Secondary,out_up_2_transmitterdishdiameter,0.0,m
+Transmit Antenna Dish Diameter Downlink Primary,out_down_1_transmitterdishdiameter,0.0,m
+Transmit Antenna Dish Diameter Downlink Secondary,out_down_2_transmitterdishdiameter,0.0,m
+Beamwidth Uplink Primary,out_up_1_beamwidth,90.0,deg
+Beamwidth Uplink Secondary,out_up_2_beamwidth,90.0,deg
+Beamwidth Downlink Primary,out_down_1_beamwidth,90.0,deg
+Beamwidth Downlink Secondary,out_down_2_beamwidth,90.0,deg
+Transmit EIRP Uplink Primary,out_up_1_eirp,46.12970004336019,dB-W
+Transmit EIRP Uplink Secondary,out_up_2_eirp,35.98970004336019,dB-W
+Transmit EIRP Downlink Primary,out_down_1_eirp,28.0,dB-W
+Transmit EIRP Downlink Secondary,out_down_2_eirp,-1.0,dB-W
+Space Loss Uplink Primary,out_up_1_spaceloss,-121.08,dB
+Space Loss Uplink Secondary,out_up_2_spaceloss,-93.89,dB
+Space Loss Downlink Primary,out_down_1_spaceloss,-121.08,dB
+Space Loss Downlink Secondary,out_down_2_spaceloss,-93.89,dB
 Atmospheric Attenuation Uplink Primary,out_up_1_atmosphereattenuation,0.0,dB
-Atmospheric Attenuation Uplink Secondary,out_up_2_atmosphereattenuation,0,dB
+Atmospheric Attenuation Uplink Secondary,out_up_2_atmosphereattenuation,0.0,dB
 Atmospheric Attenuation Downlink Primary,out_down_1_atmosphereattenuation,0.0,dB
-Atmospheric Attenuation Downlink Secondary,out_down_2_atmosphereattenuation,0,dB
-Receiver Antenna Dish Diameter Uplink Primary,out_up_1_receiverdishdiameter,0.4,m
-Receiver Antenna Dish Diameter Uplink Secondary,out_up_2_receiverdishdiameter,0,m
-Receiver Antenna Dish Diameter Downlink Primary,out_down_1_receiverdishdiameter,5.0,m
-Receiver Antenna Dish Diameter Downlink Secondary,out_down_2_receiverdishdiameter,0,m
-Receiver Antenna Efficiency Uplink Primary,out_up_1_receiverefficiency,0.7,
-Receiver Antenna Efficiency Uplink Secondary,out_up_2_receiverefficiency,0,
-Receiver Antenna Efficiency Downlink Primary,out_down_1_receiverefficiency,0.8,
-Receiver Antenna Efficiency Downlink Secondary,out_down_2_receiverefficiency,0,
-Receiver Antenna Gain Uplink Primary,out_up_1_receiverantgain,28.045813697704176,dBi
+Atmospheric Attenuation Downlink Secondary,out_down_2_atmosphereattenuation,0.0,dB
+Receiver Antenna Dish Diameter Uplink Primary,out_up_1_receiverdishdiameter,0.0,m
+Receiver Antenna Dish Diameter Uplink Secondary,out_up_2_receiverdishdiameter,0.0,m
+Receiver Antenna Dish Diameter Downlink Primary,out_down_1_receiverdishdiameter,0.0,m
+Receiver Antenna Dish Diameter Downlink Secondary,out_down_2_receiverdishdiameter,0.0,m
+Receiver Antenna Efficiency Uplink Primary,out_up_1_receiverefficiency,0.0,
+Receiver Antenna Efficiency Uplink Secondary,out_up_2_receiverefficiency,0.0,
+Receiver Antenna Efficiency Downlink Primary,out_down_1_receiverefficiency,0.0,
+Receiver Antenna Efficiency Downlink Secondary,out_down_2_receiverefficiency,0.0,
+Receiver Antenna Gain Uplink Primary,out_up_1_receiverantgain,19,dBi
 Receiver Antenna Gain Uplink Secondary,out_up_2_receiverantgain,0,dBi
-Receiver Antenna Gain Downlink Primary,out_down_1_receiverantgain,51.95743413563366,dBi
-Receiver Antenna Gain Downlink Secondary,out_down_2_receiverantgain,0,dBi
-System Noise Temperature Uplink Primary,out_up_1_systemtemp,614.0,K
-System Noise Temperature Uplink Secondary,out_up_2_systemtemp,0,K
-System Noise Temperature Downlink Primary,out_down_1_systemtemp,200.0,K
-System Noise Temperature Downlink Secondary,out_down_2_systemtemp,0,K
-System Noise Temperature Uplink Primary(dB-K),out_up_1_systemtemp2,27.88168371141168,dB-K
-System Noise Temperature Uplink Secondary(dB-K),out_up_2_systemtemp2,0,dB-K
-System Noise Temperature Downlink Primary(dB-K),out_down_1_systemtemp2,23.010299956639813,dB-K
-System Noise Temperature Downlink Secondary(dB-K),out_down_2_systemtemp2,0,dB-K
-Receiver Station Antenna Sensitivity(G/T) Uplink Primary,out_up_1_receiversensitivity,0.16412998629249742,dB/K
-Receiver Station Antenna Sensitivity(G/T) Uplink Secondary,out_up_2_receiversensitivity,0,dB/K
-Receiver Station Antenna Sensitivity(G/T) Downlink Primary,out_down_1_receiversensitivity,28.94713417899385,dB/K
-Receiver Station Antenna Sensitivity(G/T) Downlink Secondary,out_down_2_receiversensitivity,0,dB/K
-System to Noise Power Density Uplink Primary(S/No),out_up_1_powerdensity,75.7322304139347,dB-Hz
-System to Noise Power Density Uplink Secondary(S/No),out_up_2_powerdensity,0,dB-Hz
-System to Noise Power Density Downlink Primary(S/No),out_down_1_powerdensity,68.9868146280497,dB-Hz
-System to Noise Power Density Downlink Secondary(S/No),out_down_2_powerdensity,0,dB-Hz
-System to Noise Ratio Threshold Uplink Primary(EB/No),out_up_1_EbNo,9.6,dB
-System to Noise Ratio Threshold Uplink Secondary(EB/No),out_up_2_EbNo,0,dB
-System to Noise Ratio Threshold Downlink Primary(EB/No),out_down_1_EbNo,9.6,dB
-System to Noise Ratio Threshold Downlink Secondary(EB/No),out_down_2_EbNo,0,dB
-System to Noise Ratio Calculated Uplink Primary(EB/No),out_up_1_EbNocalc,13.971317823377888,dB
-System to Noise Ratio Calculated Uplink Secondary(EB/No),out_up_2_EbNocalc,0,dB
-System to Noise Ratio Calculated Downlink Primary(EB/No),out_down_1_EbNocalc,13.672025457627143,dB
-System to Noise Ratio Calculated Downlink Secondary(EB/No),out_down_2_EbNocalc,0,dB
-Data Rate Uplink Primary,out_up_1_datarate,1500000.0,bps
-Data Rate Uplink Secondary,out_up_2_datarate,0,bps
-Data Rate Downlink Primary,out_down_1_datarate,340000.0,bps
-Data Rate Downlink Secondary,out_down_2_datarate,0,bps
-Data Rate Uplink Primary(dB-Hz),out_up_1_datarate2,61.76091259055681,dB-Hz
-Data Rate Uplink Secondary(dB-Hz),out_up_2_datarate2,0,dB-Hz
-Data Rate Downlink Primary(dB-Hz),out_down_1_datarate2,55.31478917042256,dB-Hz
-Data Rate Downlink Secondary(dB-Hz),out_down_2_datarate2,0,dB-Hz
-Link Margin Uplink Primary,out_up_1_margin,3.371317823377888,dB
-Link Margin Uplink Secondary,out_up_2_margin,0,dB
-Link Margin Downlink Primary,out_down_1_margin,3.0720254576271433,dB
-Link Margin Downlink Secondary,out_down_2_margin,0,dB
+Receiver Antenna Gain Downlink Primary,out_down_1_receiverantgain,30.14,dBi
+Receiver Antenna Gain Downlink Secondary,out_down_2_receiverantgain,20,dBi
+System Noise Temperature Uplink Primary,out_up_1_systemtemp,300.0,K
+System Noise Temperature Uplink Secondary,out_up_2_systemtemp,300.0,K
+System Noise Temperature Downlink Primary,out_down_1_systemtemp,300.0,K
+System Noise Temperature Downlink Secondary,out_down_2_systemtemp,300.0,K
+System Noise Temperature Uplink Primary(dB-K),out_up_1_systemtemp2,24.771212547196626,dB-K
+System Noise Temperature Uplink Secondary(dB-K),out_up_2_systemtemp2,24.771212547196626,dB-K
+System Noise Temperature Downlink Primary(dB-K),out_down_1_systemtemp2,24.771212547196626,dB-K
+System Noise Temperature Downlink Secondary(dB-K),out_down_2_systemtemp2,24.771212547196626,dB-K
+Receiver Station Antenna Sensitivity(G/T) Uplink Primary,out_up_1_receiversensitivity,-5.771212547196626,dB/K
+Receiver Station Antenna Sensitivity(G/T) Uplink Secondary,out_up_2_receiversensitivity,-24.771212547196626,dB/K
+Receiver Station Antenna Sensitivity(G/T) Downlink Primary,out_down_1_receiversensitivity,5.3687874528033745,dB/K
+Receiver Station Antenna Sensitivity(G/T) Downlink Secondary,out_down_2_receiversensitivity,-4.771212547196626,dB/K
+System to Noise Power Density Uplink Primary(S/No),out_up_1_powerdensity,138.87848749616356,dB-Hz
+System to Noise Power Density Uplink Secondary(S/No),out_up_2_powerdensity,136.92848749616354,dB-Hz
+System to Noise Power Density Downlink Primary(S/No),out_down_1_powerdensity,131.88878745280337,dB-Hz
+System to Noise Power Density Downlink Secondary(S/No),out_down_2_powerdensity,119.93878745280337,dB-Hz
+System to Noise Ratio Threshold Uplink Primary(EB/No),out_up_1_EbNo,10.0,dB
+System to Noise Ratio Threshold Uplink Secondary(EB/No),out_up_2_EbNo,13.0,dB
+System to Noise Ratio Threshold Downlink Primary(EB/No),out_down_1_EbNo,10.0,dB
+System to Noise Ratio Threshold Downlink Secondary(EB/No),out_down_2_EbNo,13.0,dB
+System to Noise Ratio Calculated Uplink Primary(EB/No),out_up_1_EbNocalc,99.06,dB
+System to Noise Ratio Calculated Uplink Secondary(EB/No),out_up_2_EbNocalc,97.11,dB
+System to Noise Ratio Calculated Downlink Primary(EB/No),out_down_1_EbNocalc,92.07,dB
+System to Noise Ratio Calculated Downlink Secondary(EB/No),out_down_2_EbNocalc,80.12,dB
+Data Rate Uplink Primary,out_up_1_datarate,9590.66562228593,bps
+Data Rate Uplink Secondary,out_up_2_datarate,9590.6656222859,bps
+Data Rate Downlink Primary,out_down_1_datarate,9591.328049118905,bps
+Data Rate Downlink Secondary,out_down_2_datarate,9591.328049118865,bps
+Data Rate Uplink Primary(dB-Hz),out_up_1_datarate2,39.818487496163556,dB-Hz
+Data Rate Uplink Secondary(dB-Hz),out_up_2_datarate2,39.81848749616354,dB-Hz
+Data Rate Downlink Primary(dB-Hz),out_down_1_datarate2,39.81878745280338,dB-Hz
+Data Rate Downlink Secondary(dB-Hz),out_down_2_datarate2,39.81878745280336,dB-Hz
+Link Margin Uplink Primary,out_up_1_margin,89.06,dB
+Link Margin Uplink Secondary,out_up_2_margin,84.11,dB
+Link Margin Downlink Primary,out_down_1_margin,82.07,dB
+Link Margin Downlink Secondary,out_down_2_margin,67.12,dB

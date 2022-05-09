@@ -7,7 +7,7 @@ class CommsTool:
                 
     def LinkBudget4Demo_case1(self,cD):
         #CSV FILE READ
-        print("start open csv comms file")
+        print("start open csv comms file 1")
         with open('commsAssumptions.csv', mode='r') as file:
                 reader = csv.reader(file)
                 self.var = ['']
@@ -54,22 +54,22 @@ class CommsTool:
         cD.out_down_s_EbNo = cD.down_s_EbNo
         cD.out_up_systemp = m.log10(cD.up_systemp)*10 if cD.up_systemp > 0 else 0 #aka Noise temp
         cD.out_down_systemp = m.log10(cD.down_systemp)*10 if cD.down_systemp > 0 else 0
-        cD.out_up_p_pathloss = m.log10(4*3.14*cD.up_maxdistanceEarth*cD.up_p_frequency/300000000)*20 if cD.up_maxdistanceEarth > 0 and cD.up_p_frequency > 0 else 0
-        cD.out_up_s_pathloss = m.log10(4*3.14*cD.up_maxdistanceEarth*cD.up_s_frequency/300000000)*20 if cD.up_maxdistanceEarth > 0 and cD.up_s_frequency > 0 else 0
-        cD.out_down_p_pathloss = m.log10(4*3.14*cD.down_maxdistanceEarth*cD.down_p_frequency/300000000)*20 if cD.down_maxdistanceEarth > 0 and cD.down_p_frequency > 0 else 0
-        cD.out_down_s_pathloss = m.log10(4*3.14*cD.down_maxdistanceEarth*cD.down_s_frequency/300000000)*20 if cD.down_maxdistanceEarth > 0 and cD.down_s_frequency > 0 else 0
-        cD.out_up_otherloss = cD.up_rainloss + cD.up_lineloss + cD.up_otherloss
+        cD.out_up_p_pathloss = m.log10(4*3.141592653589793*cD.up_maxdistanceEarth*cD.up_p_frequency/300000000)*20 if cD.up_maxdistanceEarth > 0 and cD.up_p_frequency > 0 else 0
+        cD.out_up_s_pathloss = m.log10(4*3.141592653589793*cD.up_maxdistanceEarth*cD.up_s_frequency/300000000)*20 if cD.up_maxdistanceEarth > 0 and cD.up_s_frequency > 0 else 0
+        cD.out_down_p_pathloss = m.log10(4*3.141592653589793*cD.down_maxdistanceEarth*cD.down_p_frequency/300000000)*20 if cD.down_maxdistanceEarth > 0 and cD.down_p_frequency > 0 else 0
+        cD.out_down_s_pathloss = m.log10(4*3.141592653589793*cD.down_maxdistanceEarth*cD.down_s_frequency/300000000)*20 if cD.down_maxdistanceEarth > 0 and cD.down_s_frequency > 0 else 0
+        cD.out_up_otherloss = cD.up_rainloss + cD.up_lineloss + cD.up_otherloss 
         cD.out_down_otherloss = cD.down_rainloss + cD.down_lineloss + cD.down_otherloss
-        cD.out_up_p_margin = cD.out_up_p_gs_transpower + cD.out_up_p_gs_antgain + cD.out_up_p_sc_antgain + 228.6 - cD.out_up_p_EbNo - cD.out_up_p_datarate - cD.out_up_systemp - cD.out_up_p_pathloss - cD.out_up_otherloss
-        cD.out_up_s_margin = cD.out_up_s_gs_transpower + cD.out_up_s_gs_antgain + cD.out_up_s_sc_antgain + 228.6 - cD.out_up_s_EbNo - cD.out_up_s_datarate - cD.out_up_systemp - cD.out_up_s_pathloss - cD.out_up_otherloss
-        cD.out_down_p_margin = cD.out_down_p_sc_transpower + cD.out_down_p_sc_antgain + cD.out_down_p_gs_antgain + 228.6 - cD.out_down_p_EbNo - cD.out_down_p_datarate - cD.out_down_systemp - cD.out_down_p_pathloss - cD.out_down_otherloss
+        cD.out_up_p_margin = cD.out_up_p_gs_transpower + cD.out_up_p_gs_antgain + cD.out_up_p_sc_antgain + 228.6 - cD.out_up_p_EbNo - cD.out_up_p_datarate - cD.out_up_systemp - cD.out_up_otherloss- cD.out_up_p_pathloss
+        cD.out_up_s_margin = cD.out_up_s_gs_transpower + cD.out_up_s_gs_antgain + cD.out_up_s_sc_antgain + 228.6 - cD.out_up_s_EbNo - cD.out_up_s_datarate - cD.out_up_systemp - cD.out_up_s_pathloss - cD.out_up_otherloss 
+        cD.out_down_p_margin = cD.out_down_p_sc_transpower + cD.out_down_p_sc_antgain + cD.out_down_p_gs_antgain + 228.6 - cD.out_down_p_EbNo - cD.out_down_p_datarate - cD.out_down_systemp - cD.out_down_otherloss- cD.out_down_p_pathloss
         cD.out_down_s_margin = cD.out_down_s_sc_transpower + cD.out_down_s_sc_antgain + cD.out_down_s_gs_antgain + 228.6 - cD.out_down_s_EbNo - cD.out_down_s_datarate - cD.out_down_systemp - cD.out_down_s_pathloss - cD.out_down_otherloss
 
         return cD
 
     def LinkBudget4Demo_case2(self,cD):
         #CSV FILE READ
-        print("start open csv comms file")
+        print("start open csv comms file 2")
         with open('commsAssumptions2.csv', mode='r') as file:
                 reader = csv.reader(file)
                 self.var = ['']
@@ -148,14 +148,7 @@ class CommsTool:
         cD.out_down_2_systemtemp2 = m.log10(cD.down_2_systemtemp)*10 if secondary else 0
 
 
-        cD.out_up_1_receiverantgain = m.log10(cD.up_1_receiverdishdiameter)*20 + m.log10(cD.up_1_frequency)*20 + m.log10(cD.up_1_receiverefficiency)*10 - 159.59
-        print('a: ', m.log10(cD.up_1_receiverdishdiameter)*20 )
-        print('b: ',  m.log10(cD.up_1_frequency)*20)
-        print('c: ',  m.log10(cD.up_1_receiverefficiency)*10)
-        print('Out: ', cD.out_up_1_receiverantgain)
-        print('check: ',  m.log10(cD.up_1_receiverdishdiameter)*20 +  m.log10(cD.up_1_frequency)*20 + m.log10(cD.up_1_receiverefficiency)*10 - 159.59)
-
-
+        cD.out_up_1_receiverantgain = m.log10(cD.up_1_receiverdishdiameter)*20 + m.log10(cD.up_1_frequency)*20 + m.log10(cD.up_1_receiverefficiency)*10 - 159.5
         cD.out_up_2_receiverantgain = m.log10(cD.up_2_receiverdishdiameter)*20 + m.log10(cD.up_2_frequency)*20 + m.log10(cD.up_2_receiverefficiency)*10 - 159.59 if secondary else 0
         cD.out_down_1_receiverantgain = m.log10(cD.down_1_receiverdishdiameter)*20 + m.log10(cD.down_1_frequency)*20 + m.log10(cD.down_1_receiverefficiency)*10 - 159.59
         cD.out_down_2_receiverantgain = m.log10(cD.down_2_receiverdishdiameter)*20 + m.log10(cD.down_2_frequency)*20 + m.log10(cD.down_2_receiverefficiency)*10 - 159.59 if secondary else 0
