@@ -23,14 +23,18 @@ System to Noise Ratio Uplink Primary(EB/No),out_up_p_EBNo,,dB
 System to Noise Ratio Uplink Secondary(EB/No),out_up_s_EBNo,,dB
 System to Noise Ratio Downlink Primary(EB/No),out_down_p_EBNo,,dB
 System to Noise Ratio Downlink Secondary(EB/No),out_down_s_EBNo,,dB
-System Noise Temperature Ground,out_up_systemp,,dBK
-System Noise Temperature Spacecraft,out_down_systemp,,dBK
+System Noise Temperature Ground Primary,out_up_p_systemp,,dBK
+System Noise Temperature Ground Secondary,out_up_s_systemp,,dBK
+System Noise Temperature Spacecraft Primary,out_down_p_systemp,,dBK
+System Noise Temperature Spacecraft Secondary,out_down_s_systemp,,dBK
 Path Losses Uplink Primary,out_up_p_pathloss,,dB
 Path Losses Uplink Secondary,out_up_s_pathloss,,dB
 Path Losses Downlink Primary,out_down_p_pathloss,,dB
 Path Losses Downlink Secondary,out_down_s_pathloss,,dB
-Other Losses Uplink,out_up_otherloss,,dB
-Other Losses Downlink,out_down_otherloss,,dB
+Other Losses Uplink Primary,out_up_p_otherloss,,dB
+Other Losses Uplink Secondary,out_up_s_otherloss,,dB
+Other Losses Downlink Primary,out_down_p_otherloss,,dB
+Other Losses Downlink Secondary,out_down_s_otherloss,,dB
 Margin Uplink Primary,out_up_p_margin,,dB
 Margin Uplink Secondary,out_up_s_margin,,dB
 Margin Downlink Primary,out_down_p_margin,,dB

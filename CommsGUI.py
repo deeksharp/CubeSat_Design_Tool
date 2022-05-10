@@ -2,16 +2,16 @@ import tkinter as tk
 from tkinter import StringVar, ttk
         
 #########           NAMING CONVENTION USE CASE 1      ########### 
-#               TAB_*ORDER_*ENTITY_VARIABLE            #
+#               TAB_ORDER_*ENTITY_VARIABLE            #
 ## TAB specifies which tab: 'up' or 'down' for uplink or downlink
-## *ORDER specifies which band: 'p' or 's' for primary or secondary
+## ORDER specifies which band: 'p' or 's' for primary or secondary
 ## *ENTITY specifies which entity: 'sc' or 'gs' for spacecraft or groundstation
 ## VARIABLE specifies variable name: ex: 'transpower', 'antgain', etc. 
-######### please note: * means value is not necessarily required.  ORDER and ENTITY 
-######### labels don't apply to certain variables and may be skipped.  Ex: up_systemp or up_p_datarate
+######### please note: * means value is not necessarily required. ENTITY 
+######### labels don't apply to certain variables and may be skipped.  Ex: up_p_datarate
 
 #########           NAMING CONVENTION USE CASE 2      ########### 
-#               TAB_*ORDER_VARIABLE            #
+#               TAB_ORDER_VARIABLE            #
 ## TAB specifies which tab: 'up' or 'down' for uplink or downlink
 ## *ORDER specifies which band: '1' or '2' for primary or secondary.  different from use case 1 to avoid clashing variable names
 ## VARIABLE specifies variable name: ex: 'transpower', 'antgain', etc. 
