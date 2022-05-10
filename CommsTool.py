@@ -24,7 +24,6 @@ class CommsTool:
                     self.var_name.append(n)
                     self.data.append(d)
                     self.units.append(u)
-                    ##print("Index: ",row)
 
         # Line Budget Calcs
         
@@ -52,18 +51,22 @@ class CommsTool:
         cD.out_up_s_EbNo = cD.up_s_EbNo
         cD.out_down_p_EbNo = cD.down_p_EbNo
         cD.out_down_s_EbNo = cD.down_s_EbNo
-        cD.out_up_systemp = m.log10(cD.up_systemp)*10 if cD.up_systemp > 0 else 0 #aka Noise temp
-        cD.out_down_systemp = m.log10(cD.down_systemp)*10 if cD.down_systemp > 0 else 0
-        cD.out_up_p_pathloss = m.log10(4*3.141592653589793*cD.up_maxdistanceEarth*cD.up_p_frequency/300000000)*20 if cD.up_maxdistanceEarth > 0 and cD.up_p_frequency > 0 else 0
-        cD.out_up_s_pathloss = m.log10(4*3.141592653589793*cD.up_maxdistanceEarth*cD.up_s_frequency/300000000)*20 if cD.up_maxdistanceEarth > 0 and cD.up_s_frequency > 0 else 0
-        cD.out_down_p_pathloss = m.log10(4*3.141592653589793*cD.down_maxdistanceEarth*cD.down_p_frequency/300000000)*20 if cD.down_maxdistanceEarth > 0 and cD.down_p_frequency > 0 else 0
-        cD.out_down_s_pathloss = m.log10(4*3.141592653589793*cD.down_maxdistanceEarth*cD.down_s_frequency/300000000)*20 if cD.down_maxdistanceEarth > 0 and cD.down_s_frequency > 0 else 0
-        cD.out_up_otherloss = cD.up_rainloss + cD.up_lineloss + cD.up_otherloss 
-        cD.out_down_otherloss = cD.down_rainloss + cD.down_lineloss + cD.down_otherloss
-        cD.out_up_p_margin = cD.out_up_p_gs_transpower + cD.out_up_p_gs_antgain + cD.out_up_p_sc_antgain + 228.6 - cD.out_up_p_EbNo - cD.out_up_p_datarate - cD.out_up_systemp - cD.out_up_otherloss- cD.out_up_p_pathloss
-        cD.out_up_s_margin = cD.out_up_s_gs_transpower + cD.out_up_s_gs_antgain + cD.out_up_s_sc_antgain + 228.6 - cD.out_up_s_EbNo - cD.out_up_s_datarate - cD.out_up_systemp - cD.out_up_s_pathloss - cD.out_up_otherloss 
-        cD.out_down_p_margin = cD.out_down_p_sc_transpower + cD.out_down_p_sc_antgain + cD.out_down_p_gs_antgain + 228.6 - cD.out_down_p_EbNo - cD.out_down_p_datarate - cD.out_down_systemp - cD.out_down_otherloss- cD.out_down_p_pathloss
-        cD.out_down_s_margin = cD.out_down_s_sc_transpower + cD.out_down_s_sc_antgain + cD.out_down_s_gs_antgain + 228.6 - cD.out_down_s_EbNo - cD.out_down_s_datarate - cD.out_down_systemp - cD.out_down_s_pathloss - cD.out_down_otherloss
+        cD.out_up_p_systemp = m.log10(cD.up_p_systemp)*10 if cD.up_p_systemp > 0 else 0 #aka Noise temp
+        cD.out_up_s_systemp = m.log10(cD.up_s_systemp)*10 if cD.up_s_systemp > 0 else 0 #aka Noise temp
+        cD.out_down_p_systemp = m.log10(cD.down_p_systemp)*10 if cD.down_p_systemp > 0 else 0
+        cD.out_down_s_systemp = m.log10(cD.down_s_systemp)*10 if cD.down_s_systemp > 0 else 0
+        cD.out_up_p_pathloss = m.log10(4*3.141592653589793*cD.up_p_maxdistanceEarth*cD.up_p_frequency/300000000)*20 if cD.up_p_maxdistanceEarth > 0 and cD.up_p_frequency > 0 else 0
+        cD.out_up_s_pathloss = m.log10(4*3.141592653589793*cD.up_s_maxdistanceEarth*cD.up_s_frequency/300000000)*20 if cD.up_s_maxdistanceEarth > 0 and cD.up_s_frequency > 0 else 0
+        cD.out_down_p_pathloss = m.log10(4*3.141592653589793*cD.down_p_maxdistanceEarth*cD.down_p_frequency/300000000)*20 if cD.down_p_maxdistanceEarth > 0 and cD.down_p_frequency > 0 else 0
+        cD.out_down_s_pathloss = m.log10(4*3.141592653589793*cD.down_s_maxdistanceEarth*cD.down_s_frequency/300000000)*20 if cD.down_s_maxdistanceEarth > 0 and cD.down_s_frequency > 0 else 0
+        cD.out_up_p_otherloss = cD.up_p_rainloss + cD.up_p_lineloss + cD.up_p_otherloss 
+        cD.out_up_s_otherloss = cD.up_s_rainloss + cD.up_s_lineloss + cD.up_s_otherloss 
+        cD.out_down_p_otherloss = cD.down_p_rainloss + cD.down_p_lineloss + cD.down_p_otherloss
+        cD.out_down_s_otherloss = cD.down_s_rainloss + cD.down_s_lineloss + cD.down_s_otherloss
+        cD.out_up_p_margin = cD.out_up_p_gs_transpower + cD.out_up_p_gs_antgain + cD.out_up_p_sc_antgain + 228.6 - cD.out_up_p_EbNo - cD.out_up_p_datarate - cD.out_up_p_systemp - cD.out_up_p_otherloss- cD.out_up_p_pathloss
+        cD.out_up_s_margin = cD.out_up_s_gs_transpower + cD.out_up_s_gs_antgain + cD.out_up_s_sc_antgain + 228.6 - cD.out_up_s_EbNo - cD.out_up_s_datarate - cD.out_up_s_systemp - cD.out_up_s_pathloss - cD.out_up_s_otherloss 
+        cD.out_down_p_margin = cD.out_down_p_sc_transpower + cD.out_down_p_sc_antgain + cD.out_down_p_gs_antgain + 228.6 - cD.out_down_p_EbNo - cD.out_down_p_datarate - cD.out_down_p_systemp - cD.out_down_p_otherloss- cD.out_down_p_pathloss
+        cD.out_down_s_margin = cD.out_down_s_sc_transpower + cD.out_down_s_sc_antgain + cD.out_down_s_gs_antgain + 228.6 - cD.out_down_s_EbNo - cD.out_down_s_datarate - cD.out_down_s_systemp - cD.out_down_s_pathloss - cD.out_down_s_otherloss
 
         return cD
 
