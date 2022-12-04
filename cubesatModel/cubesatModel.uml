@@ -1,0 +1,620 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:Blocks="http://www.eclipse.org/papyrus/sysml/1.4/SysML/Blocks" xmlns:ModelElements="http://www.eclipse.org/papyrus/sysml/1.4/SysML/ModelElements" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xsi:schemaLocation="http://www.eclipse.org/papyrus/sysml/1.4/SysML/Blocks http://www.eclipse.org/papyrus/sysml/1.4/SysML#//blocks http://www.eclipse.org/papyrus/sysml/1.4/SysML/ModelElements http://www.eclipse.org/papyrus/sysml/1.4/SysML#//modelelements">
+  <uml:Model xmi:id="_cpsXoKnfEeu1X4pMkZB-mA" name="cubesatModel">
+    <packageImport xmi:type="uml:PackageImport" xmi:id="_croRUKnfEeu1X4pMkZB-mA">
+      <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
+    </packageImport>
+    <packageImport xmi:type="uml:PackageImport" xmi:id="_crvmEKnfEeu1X4pMkZB-mA">
+      <importedPackage xmi:type="uml:Package" href="pathmap://SysML14_LIBRARIES/SysML-Standard-Library.uml#SysML.package_packagedElement_Libraries"/>
+    </packageImport>
+    <packagedElement xmi:type="uml:Package" xmi:id="_0rwmgKxxEeu1X4pMkZB-mA" name="CubeSat Model">
+      <packagedElement xmi:type="uml:Package" xmi:id="_xuc5IKx3Eeu1X4pMkZB-mA" name="0 - CSM Overview and Navigation pkg">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_jSa38Kx4Eeu1X4pMkZB-mA">
+          <body>Package Notation&#xD;
+&#xD;
+sc- supplemental content such as examples and illustrations&#xD;
+&#xD;
+ec - extended or expert content such as technical measure parametrics</body>
+        </ownedComment>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Package" xmi:id="_t_qlIKx1Eeu1X4pMkZB-mA" name="1 - Stakeholder pkg">
+        <packagedElement xmi:type="uml:Package" xmi:id="_dJURoLkvEeulT7dsO1MbRg" name="1.1 - Regulatory Agency Stakeholders pkg"/>
+        <packagedElement xmi:type="uml:Package" xmi:id="_mPzVALkvEeulT7dsO1MbRg" name="1.2 - Mission Stakeholders pkg"/>
+        <packagedElement xmi:type="uml:Package" xmi:id="_o2bZALkvEeulT7dsO1MbRg" name="1.3 - CubeSat Deployer Systems pkg"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Package" xmi:id="_y1zNoKx1Eeu1X4pMkZB-mA" name="2 - Technical Measures pkg">
+        <packagedElement xmi:type="uml:Package" xmi:id="_yHFFALkvEeulT7dsO1MbRg" name="2.1 - Technical Measures - Concepts and Population pkg"/>
+        <packagedElement xmi:type="uml:Package" xmi:id="_6IZQELkvEeulT7dsO1MbRg" name="2.2 - Technical Measures - Concepts - Illustration 1 sc pkg"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Package" xmi:id="_2hZVoKx1Eeu1X4pMkZB-mA" name="3 - Use Cases pkg"/>
+      <packagedElement xmi:type="uml:Package" xmi:id="_40ahIKx1Eeu1X4pMkZB-mA" name="4 - Requirements pkg">
+        <packagedElement xmi:type="uml:Package" xmi:id="_b11bELkwEeulT7dsO1MbRg" name="L1 Enterprise Requirements pkg"/>
+        <packagedElement xmi:type="uml:Package" xmi:id="_ea71ELkwEeulT7dsO1MbRg" name="L2 Segment Requirements pkg"/>
+        <packagedElement xmi:type="uml:Package" xmi:id="_iMyWELkwEeulT7dsO1MbRg" name="L3 Subsystem Requirements pkg"/>
+        <packagedElement xmi:type="uml:Package" xmi:id="_kwSNkLkwEeulT7dsO1MbRg" name="L4 Component Requirements pkg"/>
+        <packagedElement xmi:type="uml:Package" xmi:id="_pzFZELkwEeulT7dsO1MbRg" name="L5 CubeSat Deployer Interface Requirements pkg"/>
+        <packagedElement xmi:type="uml:Package" xmi:id="_thIYILkwEeulT7dsO1MbRg" name="Requirement Properties - Illustration sc pkg"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Package" xmi:id="_71vkIKx1Eeu1X4pMkZB-mA" name="5 - Architecture pkg">
+        <packagedElement xmi:type="uml:Package" xmi:id="__mxo8Kx5Eeu1X4pMkZB-mA" name="L0_Domain pkg">
+          <packagedElement xmi:type="uml:Package" xmi:id="_0yeW4KyPEeu1X4pMkZB-mA" name="L0.1_Behaviors pkg"/>
+          <packagedElement xmi:type="uml:Package" xmi:id="_3v1f4KyPEeu1X4pMkZB-mA" name="L0.2_Structures pkg">
+            <packagedElement xmi:type="uml:Class" xmi:id="_B_vCYKyQEeu1X4pMkZB-mA" name="CubeSat Domain">
+              <ownedAttribute xmi:type="uml:Property" xmi:id="_KF8poKySEeu1X4pMkZB-mA" name="external constraint" type="_ELz4YKyQEeu1X4pMkZB-mA" association="_KF60cKySEeu1X4pMkZB-mA">
+                <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_KF8poaySEeu1X4pMkZB-mA"/>
+                <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_KF9QsKySEeu1X4pMkZB-mA" value="1"/>
+              </ownedAttribute>
+              <ownedAttribute xmi:type="uml:Property" xmi:id="_LHIZ0qySEeu1X4pMkZB-mA" name="external environment" type="_Gkni0KyQEeu1X4pMkZB-mA" association="_LHHywKySEeu1X4pMkZB-mA">
+                <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_LHIZ06ySEeu1X4pMkZB-mA"/>
+                <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_LHIZ1KySEeu1X4pMkZB-mA" value="1"/>
+              </ownedAttribute>
+              <ownedAttribute xmi:type="uml:Property" xmi:id="_1yStwqySEeu1X4pMkZB-mA" name="cubesat mission enterprise" type="_rTi28KySEeu1X4pMkZB-mA" association="_1ySGsKySEeu1X4pMkZB-mA">
+                <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_1yStw6ySEeu1X4pMkZB-mA"/>
+                <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_1yStxKySEeu1X4pMkZB-mA" value="1"/>
+              </ownedAttribute>
+            </packagedElement>
+            <packagedElement xmi:type="uml:Class" xmi:id="_ELz4YKyQEeu1X4pMkZB-mA" name="External Constraint"/>
+            <packagedElement xmi:type="uml:Class" xmi:id="_Gkni0KyQEeu1X4pMkZB-mA" name="External Environment"/>
+            <packagedElement xmi:type="uml:Association" xmi:id="_KF60cKySEeu1X4pMkZB-mA" memberEnd="_KF8poKySEeu1X4pMkZB-mA _KF9QsaySEeu1X4pMkZB-mA">
+              <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_KF8CkKySEeu1X4pMkZB-mA" source="org.eclipse.papyrus">
+                <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_KF8CkaySEeu1X4pMkZB-mA" key="nature" value="UML_Nature"/>
+              </eAnnotations>
+              <ownedEnd xmi:type="uml:Property" xmi:id="_KF9QsaySEeu1X4pMkZB-mA" name="cubesat domain" type="_B_vCYKyQEeu1X4pMkZB-mA" association="_KF60cKySEeu1X4pMkZB-mA"/>
+            </packagedElement>
+            <packagedElement xmi:type="uml:Association" xmi:id="_LHHywKySEeu1X4pMkZB-mA" memberEnd="_LHIZ0qySEeu1X4pMkZB-mA _LHIZ1aySEeu1X4pMkZB-mA">
+              <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_LHIZ0KySEeu1X4pMkZB-mA" source="org.eclipse.papyrus">
+                <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_LHIZ0aySEeu1X4pMkZB-mA" key="nature" value="UML_Nature"/>
+              </eAnnotations>
+              <ownedEnd xmi:type="uml:Property" xmi:id="_LHIZ1aySEeu1X4pMkZB-mA" name="cubesat domain" type="_B_vCYKyQEeu1X4pMkZB-mA" association="_LHHywKySEeu1X4pMkZB-mA"/>
+            </packagedElement>
+            <packagedElement xmi:type="uml:Association" xmi:id="_1ySGsKySEeu1X4pMkZB-mA" memberEnd="_1yStwqySEeu1X4pMkZB-mA _1yStxaySEeu1X4pMkZB-mA">
+              <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_1yStwKySEeu1X4pMkZB-mA" source="org.eclipse.papyrus">
+                <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_1yStwaySEeu1X4pMkZB-mA" key="nature" value="UML_Nature"/>
+              </eAnnotations>
+              <ownedEnd xmi:type="uml:Property" xmi:id="_1yStxaySEeu1X4pMkZB-mA" name="cubesat domain" type="_B_vCYKyQEeu1X4pMkZB-mA" association="_1ySGsKySEeu1X4pMkZB-mA"/>
+            </packagedElement>
+            <packagedElement xmi:type="uml:Actor" xmi:id="_g5Oi0Lk4EeulT7dsO1MbRg" name="CubeSat Model Stakeholder"/>
+            <packagedElement xmi:type="uml:Class" xmi:id="_VswIAMG3EeuObIGy-H08jQ" name="Block8"/>
+          </packagedElement>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Package" xmi:id="_EdYLgKx6Eeu1X4pMkZB-mA" name="L1_Enterprise pkg">
+          <packagedElement xmi:type="uml:Package" xmi:id="_XDO_cKySEeu1X4pMkZB-mA" name="L1.1_Behaviors pkg">
+            <packagedElement xmi:type="uml:Package" xmi:id="_2exDIKybEeu1X4pMkZB-mA" name="Enterprise Use Cases pkg"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Package" xmi:id="_aEo68KySEeu1X4pMkZB-mA" name="L1.2_Structures pkg">
+            <packagedElement xmi:type="uml:Class" xmi:id="_rTi28KySEeu1X4pMkZB-mA" name="CubeSat Mission Enterprise"/>
+            <packagedElement xmi:type="uml:Class" xmi:id="_7TmEEKybEeu1X4pMkZB-mA" name="GPS"/>
+            <packagedElement xmi:type="uml:Class" xmi:id="_8jj3IKybEeu1X4pMkZB-mA" name="Ground Station Services"/>
+            <packagedElement xmi:type="uml:Class" xmi:id="_-qS6IKybEeu1X4pMkZB-mA" name="Transport, Launch, and Deploy Services"/>
+          </packagedElement>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Package" xmi:id="_HJCggKx6Eeu1X4pMkZB-mA" name="L2_Segment pkg">
+          <packagedElement xmi:type="uml:Package" xmi:id="_LKJlgKx6Eeu1X4pMkZB-mA" name="L2.1_Space Segment pkg">
+            <packagedElement xmi:type="uml:Package" xmi:id="_tI_7sKydEeu1X4pMkZB-mA" name="L2.1.1_Behaviors pkg">
+              <packagedElement xmi:type="uml:Package" xmi:id="_4rXysKydEeu1X4pMkZB-mA" name="CubeSat Use Cases pkg"/>
+            </packagedElement>
+            <packagedElement xmi:type="uml:Package" xmi:id="_eANXoKydEeu1X4pMkZB-mA" name="L2.1.2_Structures pkg">
+              <packagedElement xmi:type="uml:Class" xmi:id="_BEjrMKyeEeu1X4pMkZB-mA" name="CubeSat"/>
+              <packagedElement xmi:type="uml:Class" xmi:id="_CT5zMKyeEeu1X4pMkZB-mA" name="CubeSat Orbit"/>
+              <packagedElement xmi:type="uml:Class" xmi:id="_EOCkoKyeEeu1X4pMkZB-mA" name="Space Segment"/>
+            </packagedElement>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Package" xmi:id="_OGI1gKx6Eeu1X4pMkZB-mA" name="L2.2_Ground Segment pkg">
+            <packagedElement xmi:type="uml:Package" xmi:id="_vm6voKydEeu1X4pMkZB-mA" name="L2.2.1_Behaviors pkg"/>
+            <packagedElement xmi:type="uml:Package" xmi:id="_jvywoKydEeu1X4pMkZB-mA" name="L2.2.2_Structures pkg">
+              <packagedElement xmi:type="uml:Class" xmi:id="_1IjWwKyeEeu1X4pMkZB-mA" name="Block1"/>
+            </packagedElement>
+          </packagedElement>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Package" xmi:id="_SBlXYKx6Eeu1X4pMkZB-mA" name="L3_Subsystems pkg">
+          <packagedElement xmi:type="uml:Package" xmi:id="_VRH1gKx6Eeu1X4pMkZB-mA" name="L3.1_CubeSat Subsystems pkg">
+            <packagedElement xmi:type="uml:Package" xmi:id="_X74BMKyeEeu1X4pMkZB-mA" name="L3.1.1_Behaviors pkg"/>
+            <packagedElement xmi:type="uml:Package" xmi:id="_elmuQKyeEeu1X4pMkZB-mA" name="L3.1.2_Structures pkg">
+              <packagedElement xmi:type="uml:Class" xmi:id="_kBOHIK0GEeu1X4pMkZB-mA" name="Power Subsystem"/>
+            </packagedElement>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Package" xmi:id="_YmDxAKx6Eeu1X4pMkZB-mA" name="L3.2_Ground Subsystems pkg">
+            <packagedElement xmi:type="uml:Package" xmi:id="_cPflILuJEeuTkbOOEGSZ5g" name="L3.2.1_Behaviors pkg"/>
+            <packagedElement xmi:type="uml:Package" xmi:id="_efDM8LuJEeuTkbOOEGSZ5g" name="L3.2.2_Structures pkg"/>
+          </packagedElement>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Package" xmi:id="_czSmcKx6Eeu1X4pMkZB-mA" name="L4_Components pkg">
+          <packagedElement xmi:type="uml:Package" xmi:id="_h1tXcKx6Eeu1X4pMkZB-mA" name="L4.1_CubeSat Subsystems Components pkg">
+            <packagedElement xmi:type="uml:Package" xmi:id="_7i_N8Kx6Eeu1X4pMkZB-mA" name="L4.1.0_Shared Components pkg"/>
+            <packagedElement xmi:type="uml:Package" xmi:id="__AtSAKx6Eeu1X4pMkZB-mA" name="L4.1.1_Mission Payload Components pkg"/>
+            <packagedElement xmi:type="uml:Package" xmi:id="_EOaF8Kx7Eeu1X4pMkZB-mA" name="L4.1.2_Command and Data Handling Components pkg"/>
+            <packagedElement xmi:type="uml:Package" xmi:id="_I9wxAKx7Eeu1X4pMkZB-mA" name="L4.1.3_Communication Components pkg"/>
+            <packagedElement xmi:type="uml:Package" xmi:id="_NKsrgKx7Eeu1X4pMkZB-mA" name="L4.1.4_Attitude Determination and Control Components pkg"/>
+            <packagedElement xmi:type="uml:Package" xmi:id="_T5mzgKx7Eeu1X4pMkZB-mA" name="L4.1.5_Guidance Navigation and Control Components pkg"/>
+            <packagedElement xmi:type="uml:Package" xmi:id="_Y-tFEKx7Eeu1X4pMkZB-mA" name="L4.1.6_Structures and Mechanisms Components pkg"/>
+            <packagedElement xmi:type="uml:Package" xmi:id="_glTqEKx7Eeu1X4pMkZB-mA" name="L4.1.7_Power Components pkg">
+              <packagedElement xmi:type="uml:Package" xmi:id="_-Qy1MLtmEeuukdwlo57wlA" name="L4.1.7.1_Behaviors pkg"/>
+              <packagedElement xmi:type="uml:Package" xmi:id="_7qOYwK0GEeu1X4pMkZB-mA" name="L4.1.7.2_Structures pkg">
+                <packagedElement xmi:type="uml:Class" xmi:id="_fLegMK0GEeu1X4pMkZB-mA" name="Solar Arrays"/>
+                <packagedElement xmi:type="uml:Class" xmi:id="_dJdlIK0GEeu1X4pMkZB-mA" name="Software"/>
+                <packagedElement xmi:type="uml:Class" xmi:id="_X2f2sK0GEeu1X4pMkZB-mA" name="Regulators and Converters" isAbstract="true"/>
+                <packagedElement xmi:type="uml:Class" xmi:id="_4jKWoK0FEeu1X4pMkZB-mA" name="Processor and Memory"/>
+                <packagedElement xmi:type="uml:Class" xmi:id="_0XrNoK0FEeu1X4pMkZB-mA" name="Power Circuits and Switches"/>
+                <packagedElement xmi:type="uml:Class" xmi:id="_gk1VQK0FEeu1X4pMkZB-mA" name="Batteries"/>
+              </packagedElement>
+            </packagedElement>
+            <packagedElement xmi:type="uml:Package" xmi:id="_k1qHIKyKEeu1X4pMkZB-mA" name="L4.1.8_Thermal Components pkg"/>
+            <packagedElement xmi:type="uml:Package" xmi:id="_w__WAKyKEeu1X4pMkZB-mA" name="L4.1.9_Propulsion Components pkg"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Package" xmi:id="_iZlgkKx6Eeu1X4pMkZB-mA" name="L4.2_Ground Subsystems Components pkg">
+            <packagedElement xmi:type="uml:Package" xmi:id="_1kW5EKyKEeu1X4pMkZB-mA" name="L4.2.1_Plan and Schedule Components pkg"/>
+            <packagedElement xmi:type="uml:Package" xmi:id="_8o_ZcKyKEeu1X4pMkZB-mA" name="L4.2.2_Spacecraft Command Components pkg"/>
+            <packagedElement xmi:type="uml:Package" xmi:id="_AkiB8KyLEeu1X4pMkZB-mA" name="L4.2.3_Ground Equipment Control Components pkg"/>
+            <packagedElement xmi:type="uml:Package" xmi:id="_JsH4kKyLEeu1X4pMkZB-mA" name="L4.2.4_Space-Ground Communication Components pkg"/>
+            <packagedElement xmi:type="uml:Package" xmi:id="_SOErgKyLEeu1X4pMkZB-mA" name="L4.2.5_Mission Data Processing Components pkg"/>
+            <packagedElement xmi:type="uml:Package" xmi:id="_W6YCkKyLEeu1X4pMkZB-mA" name="L4.2.6_Mission Data Dissemination Components pkg"/>
+            <packagedElement xmi:type="uml:Package" xmi:id="_kDqNAKyLEeu1X4pMkZB-mA" name="L4.2.7_Network Components pkg"/>
+            <packagedElement xmi:type="uml:Package" xmi:id="_oQJbkKyLEeu1X4pMkZB-mA" name="L4.2.8_Facility Components pkg"/>
+          </packagedElement>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Package" xmi:id="_jcETAK0DEeu1X4pMkZB-mA" name="L5_Parameters pkg">
+          <packagedElement xmi:type="uml:Package" xmi:id="_mPgrAK0DEeu1X4pMkZB-mA" name="L5.1_CubeSat Subsystem Parameters">
+            <packagedElement xmi:type="uml:Package" xmi:id="_tMYWgK0DEeu1X4pMkZB-mA" name="L5.1.7_Power Parameters pkg">
+              <packagedElement xmi:type="uml:Class" xmi:id="_6k940MGqEeuObIGy-H08jQ" name="Power Parameters">
+                <ownedAttribute xmi:type="uml:Property" xmi:id="_dn55gMHfEeuObIGy-H08jQ" name="Use Case" visibility="public" type="_d9WagMHeEeuObIGy-H08jQ">
+                  <defaultValue xmi:type="uml:LiteralString" xmi:id="_vI_xsMHfEeuObIGy-H08jQ" name="Use Case" value="1"/>
+                </ownedAttribute>
+                <ownedAttribute xmi:type="uml:Property" xmi:id="_fqrCgMHfEeuObIGy-H08jQ" name="Design Option" visibility="public" type="_d9WagMHeEeuObIGy-H08jQ">
+                  <defaultValue xmi:type="uml:LiteralString" xmi:id="_qN_3UMHfEeuObIGy-H08jQ" name="Design Option" value="Custom"/>
+                </ownedAttribute>
+                <ownedAttribute xmi:type="uml:Property" xmi:id="_hDB8kMHfEeuObIGy-H08jQ" name="Average Power" visibility="public" type="_WLbT8MGqEeuObIGy-H08jQ">
+                  <defaultValue xmi:type="uml:LiteralString" xmi:id="_mNOwkMHfEeuObIGy-H08jQ" name="Average Power" value="10.7713"/>
+                </ownedAttribute>
+                <ownedAttribute xmi:type="uml:Property" xmi:id="_PjdXEMHOEeuObIGy-H08jQ" name="Average PDU Power Loss" visibility="public" type="_WLbT8MGqEeuObIGy-H08jQ">
+                  <defaultValue xmi:type="uml:LiteralString" xmi:id="_WgfK4MHfEeuObIGy-H08jQ" name="Average PDU Power Loss" value="11.96811111"/>
+                </ownedAttribute>
+                <ownedAttribute xmi:type="uml:Property" xmi:id="_Qt5w8MHOEeuObIGy-H08jQ" name="Power Margin" visibility="public" type="_WLbT8MGqEeuObIGy-H08jQ">
+                  <defaultValue xmi:type="uml:LiteralString" xmi:id="_P54DQMHfEeuObIGy-H08jQ" name="Power Margin" value="2.393622222"/>
+                </ownedAttribute>
+                <ownedAttribute xmi:type="uml:Property" xmi:id="_R6Cz8MHOEeuObIGy-H08jQ" name="Average Power with Margin" visibility="public" type="_WLbT8MGqEeuObIGy-H08jQ">
+                  <defaultValue xmi:type="uml:LiteralString" xmi:id="_KBCAkMHfEeuObIGy-H08jQ" name="Average Power with Margin" value="14.36173333"/>
+                </ownedAttribute>
+                <ownedAttribute xmi:type="uml:Property" xmi:id="_Syb0gMHOEeuObIGy-H08jQ" name="Percent Power Margin" visibility="public" type="_DMZigMHIEeuObIGy-H08jQ">
+                  <defaultValue xmi:type="uml:LiteralString" xmi:id="_07ZqoMHeEeuObIGy-H08jQ" name="Percent Power Margin" value="20"/>
+                </ownedAttribute>
+                <ownedAttribute xmi:type="uml:Property" xmi:id="_Tqp18MHOEeuObIGy-H08jQ" name="Mode 1 Name" visibility="public" type="_d9WagMHeEeuObIGy-H08jQ">
+                  <defaultValue xmi:type="uml:LiteralString" xmi:id="_qphyMMHeEeuObIGy-H08jQ" name="Mode 1 Name" value="Ops"/>
+                </ownedAttribute>
+                <ownedAttribute xmi:type="uml:Property" xmi:id="_UgmmgMHOEeuObIGy-H08jQ" name="Mode 2 Name" visibility="public" type="_d9WagMHeEeuObIGy-H08jQ">
+                  <defaultValue xmi:type="uml:LiteralString" xmi:id="_vSKKMMHeEeuObIGy-H08jQ" name="Mode 2 Name" value="Standby"/>
+                </ownedAttribute>
+                <ownedAttribute xmi:type="uml:Property" xmi:id="_VkWigMHOEeuObIGy-H08jQ" name="Mode 3 Name" visibility="public" type="_d9WagMHeEeuObIGy-H08jQ">
+                  <defaultValue xmi:type="uml:LiteralString" xmi:id="_5uMOwMHfEeuObIGy-H08jQ" name="Mode 3 Name" value="UHF"/>
+                </ownedAttribute>
+                <ownedAttribute xmi:type="uml:Property" xmi:id="_XWencMHOEeuObIGy-H08jQ" name="Mode 4 Name" visibility="public" type="_d9WagMHeEeuObIGy-H08jQ">
+                  <defaultValue xmi:type="uml:LiteralString" xmi:id="_U18xIMHeEeuObIGy-H08jQ" name="Mode 4 Name" value="X-Band"/>
+                </ownedAttribute>
+                <ownedAttribute xmi:type="uml:Property" xmi:id="_e64e8MHMEeuObIGy-H08jQ" name="Mode 1 Duty Cycle" visibility="public" type="_DMZigMHIEeuObIGy-H08jQ">
+                  <defaultValue xmi:type="uml:LiteralString" xmi:id="_-hJEkMHYEeuObIGy-H08jQ" name="Mode 1 Duty Cycle" value="10"/>
+                </ownedAttribute>
+                <ownedAttribute xmi:type="uml:Property" xmi:id="_CJIf8MHOEeuObIGy-H08jQ" name="Mode 2 Duty Cycle" visibility="public" type="_DMZigMHIEeuObIGy-H08jQ">
+                  <defaultValue xmi:type="uml:LiteralString" xmi:id="_3ew0sMHdEeuObIGy-H08jQ" name="Mode 2 Duty Cycle" value="77.4"/>
+                </ownedAttribute>
+                <ownedAttribute xmi:type="uml:Property" xmi:id="_QdRU8MHDEeuObIGy-H08jQ" name="Mode 3 Duty Cycle" visibility="public" type="_DMZigMHIEeuObIGy-H08jQ">
+                  <defaultValue xmi:type="uml:LiteralString" xmi:id="_9Oia8MHdEeuObIGy-H08jQ" name="Mode 3 Duty Cycle" value="11.1"/>
+                </ownedAttribute>
+                <ownedAttribute xmi:type="uml:Property" xmi:id="_TnJP8MHDEeuObIGy-H08jQ" name="Mode 4 Duty Cycle" visibility="public" type="_DMZigMHIEeuObIGy-H08jQ">
+                  <defaultValue xmi:type="uml:LiteralString" xmi:id="_BaOGUMHgEeuObIGy-H08jQ" name="Mode 4 Duty Cycle" value="1.5"/>
+                </ownedAttribute>
+                <ownedAttribute xmi:type="uml:Property" xmi:id="_lxybcMHDEeuObIGy-H08jQ" name="ADCS Power Mode 1" visibility="public" type="_WLbT8MGqEeuObIGy-H08jQ">
+                  <defaultValue xmi:type="uml:LiteralString" xmi:id="_EQGuUMHgEeuObIGy-H08jQ" name="ADCS Power Mode 1" value="2.5"/>
+                </ownedAttribute>
+                <ownedAttribute xmi:type="uml:Property" xmi:id="_11d6cMHDEeuObIGy-H08jQ" name="ADCS Power Mode 2" visibility="public" type="_WLbT8MGqEeuObIGy-H08jQ">
+                  <defaultValue xmi:type="uml:LiteralString" xmi:id="_GI-UcMHgEeuObIGy-H08jQ" name="ADCS Power Mode 2" value="2.5"/>
+                </ownedAttribute>
+                <ownedAttribute xmi:type="uml:Property" xmi:id="_TwRhUMHEEeuObIGy-H08jQ" name="ADCS Power Mode 3" visibility="public" type="_WLbT8MGqEeuObIGy-H08jQ">
+                  <defaultValue xmi:type="uml:LiteralString" xmi:id="_IEeX0MHgEeuObIGy-H08jQ" name="ADCS Power Mode 3" value="2.5"/>
+                </ownedAttribute>
+                <ownedAttribute xmi:type="uml:Property" xmi:id="_U8XhAMHEEeuObIGy-H08jQ" name="ADCS Power Mode 4" visibility="public" type="_WLbT8MGqEeuObIGy-H08jQ">
+                  <defaultValue xmi:type="uml:LiteralString" xmi:id="_JkxF4MHgEeuObIGy-H08jQ" name="ADCS Power Mode 4" value="2.5"/>
+                </ownedAttribute>
+                <ownedAttribute xmi:type="uml:Property" xmi:id="_W95T4MHEEeuObIGy-H08jQ" name="ADCS Average Power" visibility="public" type="_WLbT8MGqEeuObIGy-H08jQ">
+                  <defaultValue xmi:type="uml:LiteralString" xmi:id="_K9BSQMHgEeuObIGy-H08jQ" name="ADCS Average Power" value="2.5"/>
+                </ownedAttribute>
+                <ownedAttribute xmi:type="uml:Property" xmi:id="_YiONYMHEEeuObIGy-H08jQ" name="C&amp;DH Power Mode 1" visibility="public" type="_WLbT8MGqEeuObIGy-H08jQ">
+                  <defaultValue xmi:type="uml:LiteralString" xmi:id="_Nv3NUMHgEeuObIGy-H08jQ" name="C&amp;DH Power Mode 1" value="0.3"/>
+                </ownedAttribute>
+                <ownedAttribute xmi:type="uml:Property" xmi:id="_ai8H8MHEEeuObIGy-H08jQ" name="C&amp;DH Power Mode 2" visibility="public" type="_WLbT8MGqEeuObIGy-H08jQ">
+                  <defaultValue xmi:type="uml:LiteralString" xmi:id="_0_xiYMHgEeuObIGy-H08jQ" name="C&amp;DH Power Mode 2" value="0.3"/>
+                </ownedAttribute>
+                <ownedAttribute xmi:type="uml:Property" xmi:id="_b4sZ8MHEEeuObIGy-H08jQ" name="C&amp;DH Power Mode 3" visibility="public" type="_WLbT8MGqEeuObIGy-H08jQ">
+                  <defaultValue xmi:type="uml:LiteralString" xmi:id="_3DEP0MHgEeuObIGy-H08jQ" name="C&amp;DH Power Mode 3" value="0.3"/>
+                </ownedAttribute>
+                <ownedAttribute xmi:type="uml:Property" xmi:id="_eDKtcMHEEeuObIGy-H08jQ" name="C&amp;DH Power Mode 4" visibility="public" type="_WLbT8MGqEeuObIGy-H08jQ">
+                  <defaultValue xmi:type="uml:LiteralString" xmi:id="_6e0lAMHgEeuObIGy-H08jQ" name="C&amp;DH Power Mode 4" value="0.3"/>
+                </ownedAttribute>
+                <ownedAttribute xmi:type="uml:Property" xmi:id="_ft04cMHEEeuObIGy-H08jQ" name="C&amp;DH Average Power" visibility="public" type="_WLbT8MGqEeuObIGy-H08jQ">
+                  <defaultValue xmi:type="uml:LiteralString" xmi:id="_7-scUMHgEeuObIGy-H08jQ" name="C&amp;DH Average Power" value="0.3"/>
+                </ownedAttribute>
+                <ownedAttribute xmi:type="uml:Property" xmi:id="_hAh2cMHEEeuObIGy-H08jQ" name="Comms Power Mode 1" visibility="public" type="_WLbT8MGqEeuObIGy-H08jQ">
+                  <defaultValue xmi:type="uml:LiteralString" xmi:id="_9vMwoMHgEeuObIGy-H08jQ" name="Comms Power Mode 1" value="6"/>
+                </ownedAttribute>
+                <ownedAttribute xmi:type="uml:Property" xmi:id="_iYuYcMHEEeuObIGy-H08jQ" name="Comms Power Mode 2" visibility="public" type="_WLbT8MGqEeuObIGy-H08jQ">
+                  <defaultValue xmi:type="uml:LiteralString" xmi:id="__zXn0MHgEeuObIGy-H08jQ" name="Comms Power Mode 2" value="6"/>
+                </ownedAttribute>
+                <ownedAttribute xmi:type="uml:Property" xmi:id="_kIpd8MHEEeuObIGy-H08jQ" name="Comms Power Mode 3" visibility="public" type="_WLbT8MGqEeuObIGy-H08jQ">
+                  <defaultValue xmi:type="uml:LiteralString" xmi:id="_BeBLwMHhEeuObIGy-H08jQ" name="Comms Power Mode 3" value="9"/>
+                </ownedAttribute>
+                <ownedAttribute xmi:type="uml:Property" xmi:id="_XPoDcMHMEeuObIGy-H08jQ" name="Comms Power Mode 4" visibility="public" type="_WLbT8MGqEeuObIGy-H08jQ">
+                  <defaultValue xmi:type="uml:LiteralString" xmi:id="_C5aywMHhEeuObIGy-H08jQ" name="Comms Power Mode 4" value="51"/>
+                </ownedAttribute>
+                <ownedAttribute xmi:type="uml:Property" xmi:id="_YzlJgMHMEeuObIGy-H08jQ" name="Comms Average Power" visibility="public" type="_WLbT8MGqEeuObIGy-H08jQ">
+                  <defaultValue xmi:type="uml:LiteralString" xmi:id="_EtsMwMHhEeuObIGy-H08jQ" name="Comms Average Power" value="7.008"/>
+                </ownedAttribute>
+                <ownedAttribute xmi:type="uml:Property" xmi:id="_Zy1AAMHMEeuObIGy-H08jQ" name="EPS Power Mode 1" visibility="public" type="_WLbT8MGqEeuObIGy-H08jQ">
+                  <defaultValue xmi:type="uml:LiteralString" xmi:id="_HGhFUMHhEeuObIGy-H08jQ" name="EPS Power Mode 1" value="0.68"/>
+                </ownedAttribute>
+                <ownedAttribute xmi:type="uml:Property" xmi:id="_ao2CAMHMEeuObIGy-H08jQ" name="EPS Power Mode 2" visibility="public" type="_WLbT8MGqEeuObIGy-H08jQ">
+                  <defaultValue xmi:type="uml:LiteralString" xmi:id="_JEoX0MHhEeuObIGy-H08jQ" name="EPS Power Mode 2" value="0.18"/>
+                </ownedAttribute>
+                <ownedAttribute xmi:type="uml:Property" xmi:id="_b1cYAMHMEeuObIGy-H08jQ" name="EPS Power Mode 3" visibility="public" type="_WLbT8MGqEeuObIGy-H08jQ">
+                  <defaultValue xmi:type="uml:LiteralString" xmi:id="_Kw5sYMHhEeuObIGy-H08jQ" name="EPS Power Mode 3" value="0.48"/>
+                </ownedAttribute>
+                <ownedAttribute xmi:type="uml:Property" xmi:id="_c-E0AMHMEeuObIGy-H08jQ" name="EPS Power Mode 4" visibility="public" type="_WLbT8MGqEeuObIGy-H08jQ">
+                  <defaultValue xmi:type="uml:LiteralString" xmi:id="_MbipQMHhEeuObIGy-H08jQ" name="EPS Power Mode 4" value="0.18"/>
+                </ownedAttribute>
+                <ownedAttribute xmi:type="uml:Property" xmi:id="_d_w6gMHMEeuObIGy-H08jQ" name="EPS Average Power" visibility="public" type="_WLbT8MGqEeuObIGy-H08jQ">
+                  <defaultValue xmi:type="uml:LiteralString" xmi:id="_N3ZjQMHhEeuObIGy-H08jQ" name="EPS Average Power" value="0.2633"/>
+                </ownedAttribute>
+                <ownedAttribute xmi:type="uml:Property" xmi:id="_hu0AUMHmEeuObIGy-H08jQ" name="GNC Power Mode 1" visibility="public" type="_WLbT8MGqEeuObIGy-H08jQ">
+                  <defaultValue xmi:type="uml:LiteralString" xmi:id="_wm5ukMHpEeuObIGy-H08jQ" name="GNC Power Mode 1" value="0"/>
+                </ownedAttribute>
+                <ownedAttribute xmi:type="uml:Property" xmi:id="_m0Nz4MHmEeuObIGy-H08jQ" name="GNC Power Mode 2" visibility="public" type="_WLbT8MGqEeuObIGy-H08jQ">
+                  <defaultValue xmi:type="uml:LiteralString" xmi:id="_yZzPkMHpEeuObIGy-H08jQ" name="GNC Power Mode 2" value="0"/>
+                </ownedAttribute>
+                <ownedAttribute xmi:type="uml:Property" xmi:id="_nt-tcMHmEeuObIGy-H08jQ" name="GNC Power Mode 3" visibility="public" type="_WLbT8MGqEeuObIGy-H08jQ">
+                  <defaultValue xmi:type="uml:LiteralString" xmi:id="_m0XoEMHqEeuObIGy-H08jQ" name="GNC Power Mode 3" value="0"/>
+                </ownedAttribute>
+                <ownedAttribute xmi:type="uml:Property" xmi:id="_o0UqcMHmEeuObIGy-H08jQ" name="GNC Power Mode 4" visibility="public" type="_WLbT8MGqEeuObIGy-H08jQ">
+                  <defaultValue xmi:type="uml:LiteralString" xmi:id="_omGrcMHqEeuObIGy-H08jQ" name="GNC Power Mode 4" value="0"/>
+                </ownedAttribute>
+                <ownedAttribute xmi:type="uml:Property" xmi:id="_plYT8MHmEeuObIGy-H08jQ" name="GNC Average Power" visibility="public" type="_WLbT8MGqEeuObIGy-H08jQ">
+                  <defaultValue xmi:type="uml:LiteralString" xmi:id="_qtKekMHqEeuObIGy-H08jQ" name="GNC Average Power" value="0"/>
+                </ownedAttribute>
+                <ownedAttribute xmi:type="uml:Property" xmi:id="_qqWX8MHmEeuObIGy-H08jQ" name="Payload Power Mode 1" visibility="public" type="_WLbT8MGqEeuObIGy-H08jQ">
+                  <defaultValue xmi:type="uml:LiteralString" xmi:id="_sauMkMHqEeuObIGy-H08jQ" name="Payload Power Mode 1" value="7"/>
+                </ownedAttribute>
+                <ownedAttribute xmi:type="uml:Property" xmi:id="_sP0g8MHmEeuObIGy-H08jQ" name="Payload Power Mode 2" visibility="public" type="_WLbT8MGqEeuObIGy-H08jQ">
+                  <defaultValue xmi:type="uml:LiteralString" xmi:id="_w0ozIMHqEeuObIGy-H08jQ" name="Payload Power Mode 2" value="0"/>
+                </ownedAttribute>
+                <ownedAttribute xmi:type="uml:Property" xmi:id="_tkqM8MHmEeuObIGy-H08jQ" name="Payload Power Mode 3" visibility="public" type="_WLbT8MGqEeuObIGy-H08jQ">
+                  <defaultValue xmi:type="uml:LiteralString" xmi:id="_6WEGEMHqEeuObIGy-H08jQ" name="Payload Power Mode 3" value="0"/>
+                </ownedAttribute>
+                <ownedAttribute xmi:type="uml:Property" xmi:id="_uZ-rYMHmEeuObIGy-H08jQ" name="Payload Power Mode 4" visibility="public" type="_WLbT8MGqEeuObIGy-H08jQ">
+                  <defaultValue xmi:type="uml:LiteralString" xmi:id="_7v7cAMHqEeuObIGy-H08jQ" name="Payload Power Mode 4" value="0"/>
+                </ownedAttribute>
+                <ownedAttribute xmi:type="uml:Property" xmi:id="_vTMyYMHmEeuObIGy-H08jQ" name="Payload Average Power" visibility="public" type="_WLbT8MGqEeuObIGy-H08jQ">
+                  <defaultValue xmi:type="uml:LiteralString" xmi:id="_-OB2IMHqEeuObIGy-H08jQ" name="Payload Average Power" value="0.7"/>
+                </ownedAttribute>
+                <ownedAttribute xmi:type="uml:Property" xmi:id="_wOG7cMHmEeuObIGy-H08jQ" name="Structure Power Mode 1" visibility="public" type="_WLbT8MGqEeuObIGy-H08jQ">
+                  <defaultValue xmi:type="uml:LiteralString" xmi:id="_AECVgMHrEeuObIGy-H08jQ" name="Structure Power Mode 1" value="0"/>
+                </ownedAttribute>
+                <ownedAttribute xmi:type="uml:Property" xmi:id="_xCN48MHmEeuObIGy-H08jQ" name="Structure Power Mode 2" visibility="public" type="_WLbT8MGqEeuObIGy-H08jQ">
+                  <defaultValue xmi:type="uml:LiteralString" xmi:id="_CGLzcMHrEeuObIGy-H08jQ" name="Structure Power Mode 2" value="0"/>
+                </ownedAttribute>
+                <ownedAttribute xmi:type="uml:Property" xmi:id="_x8fv4MHmEeuObIGy-H08jQ" name="Structure Power Mode 3" visibility="public" type="_WLbT8MGqEeuObIGy-H08jQ">
+                  <defaultValue xmi:type="uml:LiteralString" xmi:id="_EcuNAMHrEeuObIGy-H08jQ" name="Structure Power Mode 3" value="0"/>
+                </ownedAttribute>
+                <ownedAttribute xmi:type="uml:Property" xmi:id="_yw62cMHmEeuObIGy-H08jQ" name="Structure Power Mode 4" visibility="public" type="_WLbT8MGqEeuObIGy-H08jQ">
+                  <defaultValue xmi:type="uml:LiteralString" xmi:id="_GozDAMHrEeuObIGy-H08jQ" name="Structure Power Mode 4" value="0"/>
+                </ownedAttribute>
+                <ownedAttribute xmi:type="uml:Property" xmi:id="_z-998MHmEeuObIGy-H08jQ" name="Structure Average Power" visibility="public" type="_WLbT8MGqEeuObIGy-H08jQ">
+                  <defaultValue xmi:type="uml:LiteralString" xmi:id="_Iz4agMHrEeuObIGy-H08jQ" name="Structure Average Power" value="0"/>
+                </ownedAttribute>
+                <ownedAttribute xmi:type="uml:Property" xmi:id="_1DTv0MHmEeuObIGy-H08jQ" name="Thermal Power Mode 1" visibility="public" type="_WLbT8MGqEeuObIGy-H08jQ">
+                  <defaultValue xmi:type="uml:LiteralString" xmi:id="_LhOxkMHrEeuObIGy-H08jQ" name="Thermal Power Mode 1" value="0"/>
+                </ownedAttribute>
+                <ownedAttribute xmi:type="uml:Property" xmi:id="_2MQU4MHmEeuObIGy-H08jQ" name="Thermal Power Mode 2" visibility="public" type="_WLbT8MGqEeuObIGy-H08jQ">
+                  <defaultValue xmi:type="uml:LiteralString" xmi:id="_MxopgMHrEeuObIGy-H08jQ" name="Thermal Power Mode 2" value="0"/>
+                </ownedAttribute>
+                <ownedAttribute xmi:type="uml:Property" xmi:id="_3ZeV8MHmEeuObIGy-H08jQ" name="Thermal Power Mode 3" visibility="public" type="_WLbT8MGqEeuObIGy-H08jQ">
+                  <defaultValue xmi:type="uml:LiteralString" xmi:id="_WnFrsMHrEeuObIGy-H08jQ" name="Thermal Power Mode 3" value="0"/>
+                </ownedAttribute>
+                <ownedAttribute xmi:type="uml:Property" xmi:id="_4htwYMHmEeuObIGy-H08jQ" name="Thermal Power Mode 4" visibility="public" type="_WLbT8MGqEeuObIGy-H08jQ">
+                  <defaultValue xmi:type="uml:LiteralString" xmi:id="_aMJG0MHrEeuObIGy-H08jQ" name="Thermal Power Mode 4" value="0"/>
+                </ownedAttribute>
+                <ownedAttribute xmi:type="uml:Property" xmi:id="_5pcNcMHmEeuObIGy-H08jQ" name="Thermal Average Power" visibility="public" type="_WLbT8MGqEeuObIGy-H08jQ">
+                  <defaultValue xmi:type="uml:LiteralString" xmi:id="_cwq5EMHrEeuObIGy-H08jQ" name="Thermal Average Power" value="0"/>
+                </ownedAttribute>
+                <ownedAttribute xmi:type="uml:Property" xmi:id="_6fJGYMHmEeuObIGy-H08jQ" name="Solar Cell Efficiency BOL" visibility="public" type="_DMZigMHIEeuObIGy-H08jQ">
+                  <defaultValue xmi:type="uml:LiteralString" xmi:id="_fE928MHrEeuObIGy-H08jQ" name="Solar Cell Efficiency BOL" value="29.5"/>
+                </ownedAttribute>
+                <ownedAttribute xmi:type="uml:Property" xmi:id="_9oyX4MHmEeuObIGy-H08jQ" name="Solar Cell Degradation Rate" visibility="public" type="_e0akYMHpEeuObIGy-H08jQ">
+                  <defaultValue xmi:type="uml:LiteralString" xmi:id="_kZ7JcMHrEeuObIGy-H08jQ" name="Solar Cell Degradation Rate" value="2.5"/>
+                </ownedAttribute>
+                <ownedAttribute xmi:type="uml:Property" xmi:id="__K65AMHmEeuObIGy-H08jQ" name="Solar Cell Temp Degradation" visibility="public" type="_eG9BcMHpEeuObIGy-H08jQ">
+                  <defaultValue xmi:type="uml:LiteralString" xmi:id="_mjjvcMHrEeuObIGy-H08jQ" name="Solar Cell Temp Degradation" value="0.5"/>
+                </ownedAttribute>
+                <ownedAttribute xmi:type="uml:Property" xmi:id="_AVTBcMHnEeuObIGy-H08jQ" name="Solar Cell Temperature" visibility="public" type="_dOaP4MHpEeuObIGy-H08jQ">
+                  <defaultValue xmi:type="uml:LiteralString" xmi:id="_q_r8gMHrEeuObIGy-H08jQ" name="Solar Cell Temperature" value="75"/>
+                </ownedAttribute>
+                <ownedAttribute xmi:type="uml:Property" xmi:id="_CLoQ8MHnEeuObIGy-H08jQ" name="Solar Tracking" visibility="public" type="_d9WagMHeEeuObIGy-H08jQ">
+                  <defaultValue xmi:type="uml:LiteralString" xmi:id="_ucCuoMHrEeuObIGy-H08jQ" name="Solar Tracking" value="1"/>
+                </ownedAttribute>
+                <ownedAttribute xmi:type="uml:Property" xmi:id="_EbmvgMHnEeuObIGy-H08jQ" name="Solar Deployable" visibility="public" type="_d9WagMHeEeuObIGy-H08jQ">
+                  <defaultValue xmi:type="uml:LiteralString" xmi:id="_woCFEMHrEeuObIGy-H08jQ" name="Solar Deployable" value="1"/>
+                </ownedAttribute>
+                <ownedAttribute xmi:type="uml:Property" xmi:id="_Gs748MHnEeuObIGy-H08jQ" name="Solar Packing Density" visibility="public" type="_d9WagMHeEeuObIGy-H08jQ">
+                  <defaultValue xmi:type="uml:LiteralString" xmi:id="_y3XqcMHrEeuObIGy-H08jQ" name="Solar Packing Density" value="1"/>
+                </ownedAttribute>
+                <ownedAttribute xmi:type="uml:Property" xmi:id="_Krwe8MHnEeuObIGy-H08jQ" name="Battery One-way Efficiency" visibility="public" type="_DMZigMHIEeuObIGy-H08jQ">
+                  <defaultValue xmi:type="uml:LiteralString" xmi:id="_3JwFoMHrEeuObIGy-H08jQ" name="Battery One-way Efficiency" value="100"/>
+                </ownedAttribute>
+                <ownedAttribute xmi:type="uml:Property" xmi:id="_MHPlgMHnEeuObIGy-H08jQ" name="Battery Cell Mass" visibility="public" type="_PZCegMHIEeuObIGy-H08jQ">
+                  <defaultValue xmi:type="uml:LiteralString" xmi:id="_7GC8EMHrEeuObIGy-H08jQ" name="Battery Cell Mass" value="0.05"/>
+                </ownedAttribute>
+                <ownedAttribute xmi:type="uml:Property" xmi:id="_OD-_AMHnEeuObIGy-H08jQ" name="Battery Cell Energy Capacity" visibility="public" type="_aqW9YMGqEeuObIGy-H08jQ">
+                  <defaultValue xmi:type="uml:LiteralString" xmi:id="_8veYAMHrEeuObIGy-H08jQ" name="Battery Cell Energy Capacity" value="9.14"/>
+                </ownedAttribute>
+                <ownedAttribute xmi:type="uml:Property" xmi:id="_Pip8cMHnEeuObIGy-H08jQ" name="Battery DoD" visibility="public" type="_DMZigMHIEeuObIGy-H08jQ">
+                  <defaultValue xmi:type="uml:LiteralString" xmi:id="_BYfKgMHsEeuObIGy-H08jQ" name="Battery DoD" value="50"/>
+                </ownedAttribute>
+                <ownedAttribute xmi:type="uml:Property" xmi:id="_RY_L8MHnEeuObIGy-H08jQ" name="PDU Efficiency" visibility="public" type="_DMZigMHIEeuObIGy-H08jQ">
+                  <defaultValue xmi:type="uml:LiteralString" xmi:id="_D4UqAMHsEeuObIGy-H08jQ" name="PDU Efficiency" value="90"/>
+                </ownedAttribute>
+                <ownedAttribute xmi:type="uml:Property" xmi:id="_SlIO8MHnEeuObIGy-H08jQ" name="PDU Mass" visibility="public" type="_PZCegMHIEeuObIGy-H08jQ">
+                  <defaultValue xmi:type="uml:LiteralString" xmi:id="_FeU-gMHsEeuObIGy-H08jQ" name="PDU Mass" value="0.1"/>
+                </ownedAttribute>
+                <ownedAttribute xmi:type="uml:Property" xmi:id="_UGxn4MHnEeuObIGy-H08jQ" name="PDU Data Rate" visibility="public" type="_b_Eu8MHpEeuObIGy-H08jQ">
+                  <defaultValue xmi:type="uml:LiteralString" xmi:id="_K7X2AMHsEeuObIGy-H08jQ" name="PDU Data Rate" value="1.5"/>
+                </ownedAttribute>
+                <ownedAttribute xmi:type="uml:Property" xmi:id="_VUrlcMHnEeuObIGy-H08jQ" name="Solar Flux" visibility="public" type="_NwqIcMHpEeuObIGy-H08jQ">
+                  <defaultValue xmi:type="uml:LiteralString" xmi:id="_Mp1i8MHsEeuObIGy-H08jQ" name="Solar Flux" value="1367"/>
+                </ownedAttribute>
+                <ownedAttribute xmi:type="uml:Property" xmi:id="_cN3Dw8HnEeuObIGy-H08jQ" name="Orbit Energy" visibility="public" type="_aqW9YMGqEeuObIGy-H08jQ">
+                  <defaultValue xmi:type="uml:LiteralString" xmi:id="_SmfHkMHsEeuObIGy-H08jQ" name="Orbit Energy" value="23.14259348"/>
+                </ownedAttribute>
+                <ownedAttribute xmi:type="uml:Property" xmi:id="_cN11oMHnEeuObIGy-H08jQ" name="Max Eclipse Energy" visibility="public" type="_aqW9YMGqEeuObIGy-H08jQ">
+                  <defaultValue xmi:type="uml:LiteralString" xmi:id="_UZOQgMHsEeuObIGy-H08jQ" name="Max Eclipse Energy" value="8.494141337"/>
+                </ownedAttribute>
+                <ownedAttribute xmi:type="uml:Property" xmi:id="_cN2csMHnEeuObIGy-H08jQ" name="Min Sun Energy" visibility="public" type="_aqW9YMGqEeuObIGy-H08jQ">
+                  <defaultValue xmi:type="uml:LiteralString" xmi:id="_XdNl8MHsEeuObIGy-H08jQ" name="Min Sun Energy" value="14.64845214"/>
+                </ownedAttribute>
+                <ownedAttribute xmi:type="uml:Property" xmi:id="_cN2cscHnEeuObIGy-H08jQ" name="Battery Roundtrip Efficiency" visibility="public" type="_DMZigMHIEeuObIGy-H08jQ">
+                  <defaultValue xmi:type="uml:LiteralString" xmi:id="_bM8nEMHsEeuObIGy-H08jQ" name="Battery Roundtrip Efficiency" value="100"/>
+                </ownedAttribute>
+                <ownedAttribute xmi:type="uml:Property" xmi:id="_cN2cssHnEeuObIGy-H08jQ" name="Battery Cycles" visibility="public" type="_VPss4MHpEeuObIGy-H08jQ">
+                  <defaultValue xmi:type="uml:LiteralString" xmi:id="_fTK1kMHsEeuObIGy-H08jQ" name="Battery Cycles" value="5439.967414"/>
+                </ownedAttribute>
+                <ownedAttribute xmi:type="uml:Property" xmi:id="_cN2cs8HnEeuObIGy-H08jQ" name="Battery Degradation Rate" visibility="public" type="_SMn9cMHpEeuObIGy-H08jQ">
+                  <defaultValue xmi:type="uml:LiteralString" xmi:id="_mRjkAMHsEeuObIGy-H08jQ" name="Battery Degradation Rate" value="15"/>
+                </ownedAttribute>
+                <ownedAttribute xmi:type="uml:Property" xmi:id="_cN3DwMHnEeuObIGy-H08jQ" name="Battery Degradation" visibility="public" type="_DMZigMHIEeuObIGy-H08jQ">
+                  <defaultValue xmi:type="uml:LiteralString" xmi:id="_nsR1kMHsEeuObIGy-H08jQ" name="Battery Degradation" value="0.837930987"/>
+                </ownedAttribute>
+                <ownedAttribute xmi:type="uml:Property" xmi:id="_cN3DwcHnEeuObIGy-H08jQ" name="Battery Discharge Energy" visibility="public" type="_aqW9YMGqEeuObIGy-H08jQ">
+                  <defaultValue xmi:type="uml:LiteralString" xmi:id="_pQ5C8MHsEeuObIGy-H08jQ" name="Battery Discharge Energy" value="10.13704167"/>
+                </ownedAttribute>
+                <ownedAttribute xmi:type="uml:Property" xmi:id="_cN3DwsHnEeuObIGy-H08jQ" name="Number of Battery Cells" visibility="public" type="_d9WagMHeEeuObIGy-H08jQ">
+                  <defaultValue xmi:type="uml:LiteralString" xmi:id="_wxGFAMHsEeuObIGy-H08jQ" name="Number of Battery Cells" value="3"/>
+                </ownedAttribute>
+                <ownedAttribute xmi:type="uml:Property" xmi:id="_W_80cMHnEeuObIGy-H08jQ" name="Battery Capacity" visibility="public" type="_aqW9YMGqEeuObIGy-H08jQ">
+                  <defaultValue xmi:type="uml:LiteralString" xmi:id="_yBvNgMHsEeuObIGy-H08jQ" name="Battery Capacity" value="27.42"/>
+                </ownedAttribute>
+                <ownedAttribute xmi:type="uml:Property" xmi:id="_2jA9IMHoEeuObIGy-H08jQ" name="Battery Mass" visibility="public" type="_PZCegMHIEeuObIGy-H08jQ">
+                  <defaultValue xmi:type="uml:LiteralString" xmi:id="_1ESYgMHsEeuObIGy-H08jQ" name="Battery Mass" value="0.15"/>
+                </ownedAttribute>
+                <ownedAttribute xmi:type="uml:Property" xmi:id="_2jA9IcHoEeuObIGy-H08jQ" name="Solar Cell Efficiency EOL" visibility="public" type="_DMZigMHIEeuObIGy-H08jQ">
+                  <defaultValue xmi:type="uml:LiteralString" xmi:id="_44qpEMHsEeuObIGy-H08jQ" name="Solar Cell Efficiency EOL" value="22.38621492"/>
+                </ownedAttribute>
+                <ownedAttribute xmi:type="uml:Property" xmi:id="_2jBkMMHoEeuObIGy-H08jQ" name="Lifetime Degradation" visibility="public" type="_DMZigMHIEeuObIGy-H08jQ">
+                  <defaultValue xmi:type="uml:LiteralString" xmi:id="_8Z9lkMHsEeuObIGy-H08jQ" name="Lifetime Degradation" value="0.975"/>
+                </ownedAttribute>
+                <ownedAttribute xmi:type="uml:Property" xmi:id="_2jBkMcHoEeuObIGy-H08jQ" name="Temperature Degradation" visibility="public" type="_DMZigMHIEeuObIGy-H08jQ">
+                  <defaultValue xmi:type="uml:LiteralString" xmi:id="_-mZn8MHsEeuObIGy-H08jQ" name="Temperature Degradation" value="0.778312557"/>
+                </ownedAttribute>
+                <ownedAttribute xmi:type="uml:Property" xmi:id="_2jBkMsHoEeuObIGy-H08jQ" name="Solar Energy Minimum Sun" visibility="public" type="_aqW9YMGqEeuObIGy-H08jQ">
+                  <defaultValue xmi:type="uml:LiteralString" xmi:id="_A7LuAMHtEeuObIGy-H08jQ" name="Solar Energy Minimum Sun" value="23.14259348"/>
+                </ownedAttribute>
+                <ownedAttribute xmi:type="uml:Property" xmi:id="_v3Yj4MHuEeuObIGy-H08jQ" name="Average Solar Power Minimum Sun" visibility="public" type="_WLbT8MGqEeuObIGy-H08jQ">
+                  <defaultValue xmi:type="uml:LiteralString" xmi:id="_6EBXAMHuEeuObIGy-H08jQ" name="Average Solar Power Minimum Sun" value="22.68961614"/>
+                </ownedAttribute>
+                <ownedAttribute xmi:type="uml:Property" xmi:id="_2jBkM8HoEeuObIGy-H08jQ" name="Solar Power Flux - EOL" visibility="public" type="_NwqIcMHpEeuObIGy-H08jQ">
+                  <defaultValue xmi:type="uml:LiteralString" xmi:id="_DCc8gMHtEeuObIGy-H08jQ" name="Solar Power Flux - EOL" value="306.019558"/>
+                </ownedAttribute>
+                <ownedAttribute xmi:type="uml:Property" xmi:id="_2jCLQMHoEeuObIGy-H08jQ" name="Solar Effective Area" visibility="public" type="_LwyicMHpEeuObIGy-H08jQ">
+                  <defaultValue xmi:type="uml:LiteralString" xmi:id="_F1g6AMHtEeuObIGy-H08jQ" name="Solar Effective Area" value="0.074144333"/>
+                </ownedAttribute>
+                <ownedAttribute xmi:type="uml:Property" xmi:id="_H5vYYMHpEeuObIGy-H08jQ" name="Solar Panel Area" visibility="public" type="_LwyicMHpEeuObIGy-H08jQ">
+                  <defaultValue xmi:type="uml:LiteralString" xmi:id="_IopI8MHtEeuObIGy-H08jQ" name="Solar Panel Area" value="0.230696212"/>
+                </ownedAttribute>
+              </packagedElement>
+            </packagedElement>
+          </packagedElement>
+        </packagedElement>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Package" xmi:id="_9zLhMKx1Eeu1X4pMkZB-mA" name="6 - Data Models pkg">
+        <packagedElement xmi:type="uml:Package" xmi:id="_8z1GILkwEeulT7dsO1MbRg" name="L1_Enterprise Data Models pkg"/>
+        <packagedElement xmi:type="uml:Package" xmi:id="_AuXpELkxEeulT7dsO1MbRg" name="L2_Segment Data Models pkg"/>
+        <packagedElement xmi:type="uml:Package" xmi:id="_EOmOkLkxEeulT7dsO1MbRg" name="L3_Subsystem Data Models pkg"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Package" xmi:id="_AxS4IKx2Eeu1X4pMkZB-mA" name="7 - Validation Verification pkg">
+        <packagedElement xmi:type="uml:Package" xmi:id="_Pel8ILkxEeulT7dsO1MbRg" name="7.1 - Validation Activities - Population pkg"/>
+        <packagedElement xmi:type="uml:Package" xmi:id="_SXwhoLkxEeulT7dsO1MbRg" name="7.2 - Verification Activities - Population pkg"/>
+        <packagedElement xmi:type="uml:Package" xmi:id="_aCexoLkxEeulT7dsO1MbRg" name="Validation Verification - Concepts - Illustration sc pkg"/>
+        <packagedElement xmi:type="uml:Package" xmi:id="_du6nILkxEeulT7dsO1MbRg" name="Validation Verification - Concepts sc pkg"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Package" xmi:id="_D0OdoKx2Eeu1X4pMkZB-mA" name="8 - CSM Elements and Population pkg">
+        <packagedElement xmi:type="uml:Package" xmi:id="_yYKsoK0IEeu1X4pMkZB-mA" name="8.1 - CSM Elements pkg">
+          <packagedElement xmi:type="uml:Class" xmi:id="_v5GCIK0IEeu1X4pMkZB-mA" name="Component">
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_p3h7kLueEeuTkbOOEGSZ5g" name="parameters" type="_mcG9kLueEeuTkbOOEGSZ5g"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Class" xmi:id="_-4vHsLkxEeulT7dsO1MbRg" name="Component Requirement"/>
+          <packagedElement xmi:type="uml:Class" xmi:id="_Dhz4sK0KEeu1X4pMkZB-mA" name="CubeSat">
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_CQSEkLueEeuTkbOOEGSZ5g" name="subsystem" type="_lebIIK0KEeu1X4pMkZB-mA"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Class" xmi:id="_E9rssLkyEeulT7dsO1MbRg" name="CubeSat Requirement"/>
+          <packagedElement xmi:type="uml:Class" xmi:id="_I5mvsLkyEeulT7dsO1MbRg" name="Deployer Interface Requirement"/>
+          <packagedElement xmi:type="uml:Class" xmi:id="_OcSCMK0KEeu1X4pMkZB-mA" name="Domain">
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_XgiWILueEeuTkbOOEGSZ5g" name="enterprise" type="_R5iMMK0KEeu1X4pMkZB-mA"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Class" xmi:id="_R5iMMK0KEeu1X4pMkZB-mA" name="Enterprise">
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_aq71kLueEeuTkbOOEGSZ5g" name="segment" type="_h_IWwK0KEeu1X4pMkZB-mA"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Class" xmi:id="_M3lBILkyEeulT7dsO1MbRg" name="Ground Segment Requirement"/>
+          <packagedElement xmi:type="uml:Class" xmi:id="_PkPbsLkyEeulT7dsO1MbRg" name="Mission Constraint"/>
+          <packagedElement xmi:type="uml:Class" xmi:id="_R7DiELkyEeulT7dsO1MbRg" name="MOE Specification"/>
+          <packagedElement xmi:type="uml:Class" xmi:id="_TtDEILkyEeulT7dsO1MbRg" name="MOP Specification"/>
+          <packagedElement xmi:type="uml:Class" xmi:id="_mcG9kLueEeuTkbOOEGSZ5g" name="Parameters"/>
+          <packagedElement xmi:type="uml:Class" xmi:id="_h_IWwK0KEeu1X4pMkZB-mA" name="Segment">
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_deOckLueEeuTkbOOEGSZ5g" name="cubeSat" type="_Dhz4sK0KEeu1X4pMkZB-mA"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Class" xmi:id="_a_fsILk0EeulT7dsO1MbRg" name="Stakeholder Concern"/>
+          <packagedElement xmi:type="uml:Class" xmi:id="_lebIIK0KEeu1X4pMkZB-mA" name="Subsystem">
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_HzvGELueEeuTkbOOEGSZ5g" name="component" type="_v5GCIK0IEeu1X4pMkZB-mA"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Class" xmi:id="_e7HNILk0EeulT7dsO1MbRg" name="Subsystem Requirement"/>
+          <packagedElement xmi:type="uml:Class" xmi:id="_fhposLk0EeulT7dsO1MbRg" name="TPM Specification"/>
+          <packagedElement xmi:type="uml:Class" xmi:id="_gGbJsLk0EeulT7dsO1MbRg" name="Validation Activity"/>
+          <packagedElement xmi:type="uml:Class" xmi:id="_hf-WkLk0EeulT7dsO1MbRg" name="Verification Activity"/>
+          <packagedElement xmi:type="uml:Actor" xmi:id="_sZZXMLk0EeulT7dsO1MbRg" name="Stakeholder"/>
+          <packagedElement xmi:type="uml:UseCase" xmi:id="_xmB0ILk0EeulT7dsO1MbRg" name="Use Case"/>
+          <packagedElement xmi:type="uml:Activity" xmi:id="_9TAYoLk0EeulT7dsO1MbRg" name="Activity"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Package" xmi:id="_mPC1ILkxEeulT7dsO1MbRg" name="8.2 - CSM Population pkg"/>
+        <packagedElement xmi:type="uml:Package" xmi:id="_smck8MGpEeuObIGy-H08jQ" name="8.3 - CSM Types pkg">
+          <packagedElement xmi:type="uml:DataType" xmi:id="_WLbT8MGqEeuObIGy-H08jQ" name="[W]"/>
+          <packagedElement xmi:type="uml:DataType" xmi:id="_aqW9YMGqEeuObIGy-H08jQ" name="[W-hr]"/>
+          <packagedElement xmi:type="uml:DataType" xmi:id="_DMZigMHIEeuObIGy-H08jQ" name="[%]"/>
+          <packagedElement xmi:type="uml:DataType" xmi:id="_PZCegMHIEeuObIGy-H08jQ" name="[kg]"/>
+          <packagedElement xmi:type="uml:DataType" xmi:id="_d9WagMHeEeuObIGy-H08jQ" name="[none]"/>
+          <packagedElement xmi:type="uml:DataType" xmi:id="_LwyicMHpEeuObIGy-H08jQ" name="[m^2]"/>
+          <packagedElement xmi:type="uml:DataType" xmi:id="_NwqIcMHpEeuObIGy-H08jQ" name="[W/m^2]"/>
+          <packagedElement xmi:type="uml:DataType" xmi:id="_SMn9cMHpEeuObIGy-H08jQ" name="[%/5000 cycles]"/>
+          <packagedElement xmi:type="uml:DataType" xmi:id="_VPss4MHpEeuObIGy-H08jQ" name="[cycles]"/>
+          <packagedElement xmi:type="uml:DataType" xmi:id="_b_Eu8MHpEeuObIGy-H08jQ" name="[kb/day]"/>
+          <packagedElement xmi:type="uml:DataType" xmi:id="_dOaP4MHpEeuObIGy-H08jQ" name="[degC]"/>
+          <packagedElement xmi:type="uml:DataType" xmi:id="_eG9BcMHpEeuObIGy-H08jQ" name="[%/degC]"/>
+          <packagedElement xmi:type="uml:DataType" xmi:id="_e0akYMHpEeuObIGy-H08jQ" name="[%/yr]"/>
+        </packagedElement>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Package" xmi:id="_Gt29MKx2Eeu1X4pMkZB-mA" name="9 - CubeSat Reference Information"/>
+      <packagedElement xmi:type="uml:Package" xmi:id="_KepHMKx2Eeu1X4pMkZB-mA" name="10 - Background sc pkg"/>
+    </packagedElement>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_cqPKMKnfEeu1X4pMkZB-mA">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_cqPxQKnfEeu1X4pMkZB-mA" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/sysml/1.4/SysML#/"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://SysML14_PROFILES/SysML.profile.uml#SysML"/>
+    </profileApplication>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_crl1EKnfEeu1X4pMkZB-mA">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_crl1EanfEeu1X4pMkZB-mA" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/sysml/1.4/SysML#//activities"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://SysML14_PROFILES/SysML.profile.uml#SysML.package_packagedElement_Activities"/>
+    </profileApplication>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_crmcIKnfEeu1X4pMkZB-mA">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_crmcIanfEeu1X4pMkZB-mA" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/sysml/1.4/SysML#//allocations"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://SysML14_PROFILES/SysML.profile.uml#SysML.package_packagedElement_Allocations"/>
+    </profileApplication>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_crmcIqnfEeu1X4pMkZB-mA">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_crmcI6nfEeu1X4pMkZB-mA" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/sysml/1.4/SysML#//blocks"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://SysML14_PROFILES/SysML.profile.uml#SysML.package_packagedElement_Blocks"/>
+    </profileApplication>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_crmcJKnfEeu1X4pMkZB-mA">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_crnDMKnfEeu1X4pMkZB-mA" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/sysml/1.4/SysML#//constraintblocks"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://SysML14_PROFILES/SysML.profile.uml#SysML.package_packagedElement_ConstraintBlocks"/>
+    </profileApplication>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_crnDManfEeu1X4pMkZB-mA">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_crnDMqnfEeu1X4pMkZB-mA" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/sysml/1.4/SysML#//deprecatedelements"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://SysML14_PROFILES/SysML.profile.uml#SysML.package_packagedElement_DeprecatedElements"/>
+    </profileApplication>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_crnDM6nfEeu1X4pMkZB-mA">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_crnDNKnfEeu1X4pMkZB-mA" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/sysml/1.4/SysML#//modelelements"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://SysML14_PROFILES/SysML.profile.uml#SysML.package_packagedElement_ModelElements"/>
+    </profileApplication>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_crnDNanfEeu1X4pMkZB-mA">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_crnDNqnfEeu1X4pMkZB-mA" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/sysml/1.4/SysML#//portsandflows"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://SysML14_PROFILES/SysML.profile.uml#SysML.package_packagedElement_Ports_u0026Flows"/>
+    </profileApplication>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_crnqQKnfEeu1X4pMkZB-mA">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_crnqQanfEeu1X4pMkZB-mA" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/sysml/1.4/SysML#//requirements"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://SysML14_PROFILES/SysML.profile.uml#SysML.package_packagedElement_Requirements"/>
+    </profileApplication>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_crnqQqnfEeu1X4pMkZB-mA">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_crnqQ6nfEeu1X4pMkZB-mA" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/uml2/5.0.0/UML/Profile/Standard#/"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://UML_PROFILES/Standard.profile.uml#_0"/>
+    </profileApplication>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_uKmNsLtmEeuukdwlo57wlA">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_uKmNsbtmEeuukdwlo57wlA" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="pathmap://PAPYRUS_ACTIONLANGUAGE_PROFILE/ActionLanguage-Profile.profile.uml#_Kv8EIKFXEeS_KNX0nfvIVQ"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://PAPYRUS_ACTIONLANGUAGE_PROFILE/ActionLanguage-Profile.profile.uml#ActionLanguage"/>
+    </profileApplication>
+  </uml:Model>
+  <Blocks:Block xmi:id="_B_z64KyQEeu1X4pMkZB-mA" base_Class="_B_vCYKyQEeu1X4pMkZB-mA"/>
+  <Blocks:Block xmi:id="_EL2UoKyQEeu1X4pMkZB-mA" base_Class="_ELz4YKyQEeu1X4pMkZB-mA"/>
+  <Blocks:Block xmi:id="_GkpYAKyQEeu1X4pMkZB-mA" base_Class="_Gkni0KyQEeu1X4pMkZB-mA"/>
+  <Blocks:Block xmi:id="_rTksIKySEeu1X4pMkZB-mA" base_Class="_rTi28KySEeu1X4pMkZB-mA"/>
+  <Blocks:Block xmi:id="_7Tn5QKybEeu1X4pMkZB-mA" base_Class="_7TmEEKybEeu1X4pMkZB-mA"/>
+  <Blocks:Block xmi:id="_8jlFQKybEeu1X4pMkZB-mA" base_Class="_8jj3IKybEeu1X4pMkZB-mA"/>
+  <Blocks:Block xmi:id="_-qUIQKybEeu1X4pMkZB-mA" base_Class="_-qS6IKybEeu1X4pMkZB-mA"/>
+  <Blocks:Block xmi:id="_BElgYKyeEeu1X4pMkZB-mA" base_Class="_BEjrMKyeEeu1X4pMkZB-mA"/>
+  <Blocks:Block xmi:id="_CT7oYKyeEeu1X4pMkZB-mA" base_Class="_CT5zMKyeEeu1X4pMkZB-mA"/>
+  <Blocks:Block xmi:id="_EODywKyeEeu1X4pMkZB-mA" base_Class="_EOCkoKyeEeu1X4pMkZB-mA"/>
+  <Blocks:Block xmi:id="_1Ikk4KyeEeu1X4pMkZB-mA" base_Class="_1IjWwKyeEeu1X4pMkZB-mA"/>
+  <Blocks:Block xmi:id="_gk3KcK0FEeu1X4pMkZB-mA" base_Class="_gk1VQK0FEeu1X4pMkZB-mA"/>
+  <Blocks:Block xmi:id="_0XtC0K0FEeu1X4pMkZB-mA" base_Class="_0XrNoK0FEeu1X4pMkZB-mA"/>
+  <Blocks:Block xmi:id="_4jLkwK0FEeu1X4pMkZB-mA" base_Class="_4jKWoK0FEeu1X4pMkZB-mA"/>
+  <Blocks:Block xmi:id="_X2hE0K0GEeu1X4pMkZB-mA" base_Class="_X2f2sK0GEeu1X4pMkZB-mA"/>
+  <Blocks:Block xmi:id="_dJfaUK0GEeu1X4pMkZB-mA" base_Class="_dJdlIK0GEeu1X4pMkZB-mA"/>
+  <Blocks:Block xmi:id="_fLfuUK0GEeu1X4pMkZB-mA" base_Class="_fLegMK0GEeu1X4pMkZB-mA"/>
+  <Blocks:Block xmi:id="_kBP8UK0GEeu1X4pMkZB-mA" base_Class="_kBOHIK0GEeu1X4pMkZB-mA"/>
+  <Blocks:Block xmi:id="_v5H3UK0IEeu1X4pMkZB-mA" base_Class="_v5GCIK0IEeu1X4pMkZB-mA"/>
+  <Blocks:Block xmi:id="_Dh1t4K0KEeu1X4pMkZB-mA" base_Class="_Dhz4sK0KEeu1X4pMkZB-mA"/>
+  <Blocks:Block xmi:id="_OcT3YK0KEeu1X4pMkZB-mA" base_Class="_OcSCMK0KEeu1X4pMkZB-mA"/>
+  <Blocks:Block xmi:id="_R5kBYK0KEeu1X4pMkZB-mA" base_Class="_R5iMMK0KEeu1X4pMkZB-mA"/>
+  <Blocks:Block xmi:id="_h_Jk4K0KEeu1X4pMkZB-mA" base_Class="_h_IWwK0KEeu1X4pMkZB-mA"/>
+  <Blocks:Block xmi:id="_lecWQK0KEeu1X4pMkZB-mA" base_Class="_lebIIK0KEeu1X4pMkZB-mA"/>
+  <Blocks:Block xmi:id="_-40AMLkxEeulT7dsO1MbRg" base_Class="_-4vHsLkxEeulT7dsO1MbRg"/>
+  <Blocks:Block xmi:id="_E9uI8LkyEeulT7dsO1MbRg" base_Class="_E9rssLkyEeulT7dsO1MbRg"/>
+  <Blocks:Block xmi:id="_I5ok4LkyEeulT7dsO1MbRg" base_Class="_I5mvsLkyEeulT7dsO1MbRg"/>
+  <Blocks:Block xmi:id="_M3ndYLkyEeulT7dsO1MbRg" base_Class="_M3lBILkyEeulT7dsO1MbRg"/>
+  <Blocks:Block xmi:id="_PkRQ4LkyEeulT7dsO1MbRg" base_Class="_PkPbsLkyEeulT7dsO1MbRg"/>
+  <Blocks:Block xmi:id="_R7FXQLkyEeulT7dsO1MbRg" base_Class="_R7DiELkyEeulT7dsO1MbRg"/>
+  <Blocks:Block xmi:id="_TtE5ULkyEeulT7dsO1MbRg" base_Class="_TtDEILkyEeulT7dsO1MbRg"/>
+  <Blocks:Block xmi:id="_a_g6QLk0EeulT7dsO1MbRg" base_Class="_a_fsILk0EeulT7dsO1MbRg"/>
+  <Blocks:Block xmi:id="_e7IbQLk0EeulT7dsO1MbRg" base_Class="_e7HNILk0EeulT7dsO1MbRg"/>
+  <Blocks:Block xmi:id="_fhq20Lk0EeulT7dsO1MbRg" base_Class="_fhposLk0EeulT7dsO1MbRg"/>
+  <Blocks:Block xmi:id="_gGcX0Lk0EeulT7dsO1MbRg" base_Class="_gGbJsLk0EeulT7dsO1MbRg"/>
+  <Blocks:Block xmi:id="_hgALwLk0EeulT7dsO1MbRg" base_Class="_hf-WkLk0EeulT7dsO1MbRg"/>
+  <ModelElements:Stakeholder xmi:id="_sZbMYLk0EeulT7dsO1MbRg" base_Classifier="_sZZXMLk0EeulT7dsO1MbRg"/>
+  <ModelElements:Stakeholder xmi:id="_g5Pw8Lk4EeulT7dsO1MbRg" base_Classifier="_g5Oi0Lk4EeulT7dsO1MbRg"/>
+  <Blocks:Block xmi:id="_mcIywLueEeuTkbOOEGSZ5g" base_Class="_mcG9kLueEeuTkbOOEGSZ5g"/>
+  <Blocks:ValueType xmi:id="_WLdJIMGqEeuObIGy-H08jQ" base_DataType="_WLbT8MGqEeuObIGy-H08jQ"/>
+  <Blocks:ValueType xmi:id="_aqYLgMGqEeuObIGy-H08jQ" base_DataType="_aqW9YMGqEeuObIGy-H08jQ"/>
+  <Blocks:Block xmi:id="_6k_uAMGqEeuObIGy-H08jQ" base_Class="_6k940MGqEeuObIGy-H08jQ"/>
+  <Blocks:Block xmi:id="_Vsx9MMG3EeuObIGy-H08jQ" base_Class="_VswIAMG3EeuObIGy-H08jQ"/>
+  <Blocks:ValueType xmi:id="_DMbXsMHIEeuObIGy-H08jQ" base_DataType="_DMZigMHIEeuObIGy-H08jQ"/>
+  <Blocks:ValueType xmi:id="_PZDsoMHIEeuObIGy-H08jQ" base_DataType="_PZCegMHIEeuObIGy-H08jQ"/>
+  <Blocks:ValueType xmi:id="_d9YPsMHeEeuObIGy-H08jQ" base_DataType="_d9WagMHeEeuObIGy-H08jQ"/>
+  <Blocks:ValueType xmi:id="_LwzwkMHpEeuObIGy-H08jQ" base_DataType="_LwyicMHpEeuObIGy-H08jQ"/>
+  <Blocks:ValueType xmi:id="_NwrWkMHpEeuObIGy-H08jQ" base_DataType="_NwqIcMHpEeuObIGy-H08jQ"/>
+  <Blocks:ValueType xmi:id="_SMpLkMHpEeuObIGy-H08jQ" base_DataType="_SMn9cMHpEeuObIGy-H08jQ"/>
+  <Blocks:ValueType xmi:id="_VPuiEMHpEeuObIGy-H08jQ" base_DataType="_VPss4MHpEeuObIGy-H08jQ"/>
+  <Blocks:ValueType xmi:id="_b_F9EMHpEeuObIGy-H08jQ" base_DataType="_b_Eu8MHpEeuObIGy-H08jQ"/>
+  <Blocks:ValueType xmi:id="_dObeAMHpEeuObIGy-H08jQ" base_DataType="_dOaP4MHpEeuObIGy-H08jQ"/>
+  <Blocks:ValueType xmi:id="_eG-PkMHpEeuObIGy-H08jQ" base_DataType="_eG9BcMHpEeuObIGy-H08jQ"/>
+  <Blocks:ValueType xmi:id="_e0bygMHpEeuObIGy-H08jQ" base_DataType="_e0akYMHpEeuObIGy-H08jQ"/>
+</xmi:XMI>
